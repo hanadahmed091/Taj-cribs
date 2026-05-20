@@ -13,6 +13,11 @@ import { pushDataLayer } from '@/lib/utils'
 //   market ADR so landlords are rarely disappointed.
 // - Guaranteed rent: full local market AST rent for that area / bedroom count,
 //   paid as a fixed monthly amount regardless of occupancy.
+//
+// Both figures are derived dynamically from the selected area + bedrooms via
+// area.marketRent[bedrooms] and area.adr[bedrooms]. There is NO hardcoded
+// fallback figure anywhere in this file — change either lookup table below
+// and the calculator updates everywhere it's used.
 type AreaModel = {
   label: string
   postcode: string
@@ -21,18 +26,21 @@ type AreaModel = {
   // realistic year-round occupancy %
   occupancy: number
   // Market AST monthly rent for that area / bedroom count.
+  // 2025/26 figures based on borough averages and ONS / Rightmove data.
+  // Treat these as midpoint indicative; actual offers vary with finish,
+  // furnishing and specific street.
   marketRent: [number, number, number, number]
 }
 
 const AREAS: AreaModel[] = [
-  { label: 'Marylebone',         postcode: 'W1',  adr: [180, 240, 360, 520], occupancy: 0.88, marketRent: [2300, 2900, 4500, 6500] },
-  { label: 'Mayfair',            postcode: 'W1',  adr: [320, 480, 720, 1100], occupancy: 0.84, marketRent: [3000, 4500, 7800, 12000] },
-  { label: 'High St Kensington', postcode: 'W8',  adr: [210, 290, 420, 600], occupancy: 0.94, marketRent: [2400, 3200, 5500, 8000] },
-  { label: 'Pimlico',            postcode: 'SW1', adr: [150, 200, 290, 420], occupancy: 0.86, marketRent: [1900, 2400, 3800, 5500] },
-  { label: 'Chelsea',            postcode: 'SW3', adr: [210, 290, 410, 580], occupancy: 0.9,  marketRent: [2400, 3200, 5500, 8500] },
-  { label: 'Westminster',        postcode: 'SW1', adr: [170, 230, 330, 470], occupancy: 0.85, marketRent: [2100, 2600, 4200, 6200] },
-  { label: 'Notting Hill',       postcode: 'W11', adr: [195, 270, 390, 540], occupancy: 0.88, marketRent: [2200, 2900, 4500, 6800] },
-  { label: 'Canary Wharf',       postcode: 'E14', adr: [135, 180, 245, 340], occupancy: 0.82, marketRent: [1700, 2200, 3200, 4500] },
+  { label: 'Marylebone',         postcode: 'W1',  adr: [180, 240, 360, 520],  occupancy: 0.88, marketRent: [1600, 2200, 3200, 4500] },
+  { label: 'Mayfair',            postcode: 'W1',  adr: [320, 480, 720, 1100], occupancy: 0.84, marketRent: [2000, 3200, 5000, 8000] },
+  { label: 'High St Kensington', postcode: 'W8',  adr: [210, 290, 420, 600],  occupancy: 0.94, marketRent: [1700, 2400, 3500, 5000] },
+  { label: 'Pimlico',            postcode: 'SW1', adr: [150, 200, 290, 420],  occupancy: 0.86, marketRent: [1400, 1900, 2800, 3800] },
+  { label: 'Chelsea',            postcode: 'SW3', adr: [210, 290, 410, 580],  occupancy: 0.9,  marketRent: [1700, 2500, 3800, 5500] },
+  { label: 'Westminster',        postcode: 'SW1', adr: [170, 230, 330, 470],  occupancy: 0.85, marketRent: [1500, 2100, 3000, 4200] },
+  { label: 'Notting Hill',       postcode: 'W11', adr: [195, 270, 390, 540],  occupancy: 0.88, marketRent: [1600, 2300, 3400, 4800] },
+  { label: 'Canary Wharf',       postcode: 'E14', adr: [135, 180, 245, 340],  occupancy: 0.82, marketRent: [1300, 1800, 2500, 3400] },
 ]
 
 const BEDROOM_OPTIONS = [
@@ -83,8 +91,10 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
         Estimate your monthly income.
       </h3>
       <p className="mt-2 text-sm text-navy-900/65">
-        Real figures, modelled on properties we manage today. Short-let
-        projections sit 10% below market ADR — most landlords exceed them.
+        Rough indicative figures, based on 2025/26 Central London market data.
+        Actual offers vary with finish, furnishing and the specific street —
+        figures shown can be higher or lower. Short-let projections sit 10%
+        below market ADR.
       </p>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
