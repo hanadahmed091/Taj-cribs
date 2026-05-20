@@ -1,24 +1,28 @@
-import type { Metadata } from 'next'
+'use client'
+export const dynamic = 'force-dynamic'
+
 import Link from 'next/link'
+import nextDynamic from 'next/dynamic'
 import { ArrowRight, Check } from 'lucide-react'
 import { SectionLabel } from '@/components/ui/SectionLabel'
-import { FadeIn } from '@/components/ui/FadeIn'
-import { FAQ } from '@/components/sections/FAQ'
-import { FinalCTA } from '@/components/sections/FinalCTA'
 import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
 import { PRICING_FAQS } from '@/lib/data/pricing'
 import { pushDataLayer } from '@/lib/utils'
 
-// Vercel static generation was timing out on this route after 3 attempts.
-// Opting out of static generation forces this page to render dynamically.
-export const dynamic = 'force-dynamic'
-
-export const metadata: Metadata = {
-  title: 'Pricing | Short-Let Management & Guaranteed Rent London',
-  description:
-    'Clear, transparent pricing for short-let management and guaranteed rent in Central London. No hidden fees. No setup costs. We only earn when you earn.',
-  alternates: { canonical: '/pricing' },
-}
+// Heavy / animation-driven components — client-only to keep the static
+// generator from timing out trying to render them on the server.
+const FadeIn = nextDynamic(
+  () => import('@/components/ui/FadeIn').then((m) => m.FadeIn),
+  { ssr: false },
+)
+const FAQ = nextDynamic(
+  () => import('@/components/sections/FAQ').then((m) => m.FAQ),
+  { ssr: false },
+)
+const FinalCTA = nextDynamic(
+  () => import('@/components/sections/FinalCTA').then((m) => m.FinalCTA),
+  { ssr: false },
+)
 
 const SHORT_LET_INCLUDES = [
   'Professional photography & listing creation',
