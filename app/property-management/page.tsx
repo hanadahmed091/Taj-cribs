@@ -11,6 +11,7 @@ import { LeadForm } from '@/components/forms/LeadForm'
 import { IncomeCalculator } from '@/components/forms/IncomeCalculator'
 import { FAQ } from '@/components/sections/FAQ'
 import { FinalCTA } from '@/components/sections/FinalCTA'
+import { PrimecoStandard } from '@/components/sections/PrimecoStandard'
 import { SHORT_LET_FAQS } from '@/lib/data/faqs'
 import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
 import { PROPERTIES } from '@/lib/data/properties'
@@ -129,8 +130,10 @@ export default function PropertyManagementPage() {
         </div>
       </section>
 
+      <PrimecoStandard variant="inline" />
+
       {/* CASE STUDIES */}
-      <section className="bg-white section-pad">
+      <section className="bg-cream section-pad">
         <div className="container-edge">
           <div className="max-w-3xl">
             <FadeIn>

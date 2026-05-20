@@ -1,8 +1,13 @@
-import { CalendarCheck, Sparkles, ShieldCheck, BarChart3, Building2, Users } from 'lucide-react'
+import { CalendarCheck, Sparkles, ShieldCheck, BarChart3, Building2, ClipboardCheck } from 'lucide-react'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { FadeIn } from '@/components/ui/FadeIn'
 
 const REASONS = [
+  {
+    icon: ClipboardCheck,
+    title: 'Quality Officer after every checkout',
+    body: 'Every booking ends with a trained Quality Officer on-site, in person, before the next guest arrives. No exceptions.',
+  },
   {
     icon: CalendarCheck,
     title: 'Same-day monthly payments',
@@ -27,11 +32,6 @@ const REASONS = [
     icon: Building2,
     title: 'Block & portfolio specialists',
     body: 'We are one of the only operators in London structured to take on full buildings.',
-  },
-  {
-    icon: Users,
-    title: 'Local team, local knowledge',
-    body: 'Office in Marylebone. Operators across W1, W8, SW1 and SW3 daily.',
   },
 ]
 

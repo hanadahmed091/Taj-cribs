@@ -17,9 +17,9 @@ export const SITE = {
   },
   // Single source of truth for the headline "X+ properties" figure.
   // Update here and it propagates everywhere.
-  managedPortfolioCount: 500,
+  managedPortfolioCount: 30,
   ratingValue: 4.9,
-  reviewCount: 217,
+  reviewCount: 47,
   responsePromiseHours: 2,
 } as const
 

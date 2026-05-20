@@ -25,6 +25,7 @@ const FinalCTA = nextDynamic(
 )
 
 const SHORT_LET_INCLUDES = [
+  'Dedicated Quality Officer inspection after every single checkout',
   'Professional photography & listing creation',
   'Multi-platform distribution (Airbnb, Booking.com, Vrbo, Expedia)',
   'Daily dynamic pricing optimisation',

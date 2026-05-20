@@ -2,8 +2,8 @@ import { SITE } from '@/lib/config'
 import { FadeIn } from '@/components/ui/FadeIn'
 
 const STATS = [
-  { num: `${SITE.managedPortfolioCount}+`, label: 'Properties under management' },
-  { num: '£12.4m', label: 'Annual rent paid to landlords' },
+  { num: `${SITE.managedPortfolioCount}`, label: 'Properties under management' },
+  { num: '£2.4m', label: 'Annual rent paid to landlords' },
   { num: '87%', label: 'Average occupancy rate' },
   { num: '48h', label: 'From sign-off to first booking' },
 ]

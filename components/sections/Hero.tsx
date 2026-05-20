@@ -74,7 +74,7 @@ export function Hero() {
               className="mt-9 max-w-xl text-fluid-lg text-white/75 leading-relaxed"
             >
               Guaranteed rent paid monthly. Full short-let management.
-              Zero hassle for London landlords.
+              Quality-checked after every checkout. Zero hassle for London landlords.
             </motion.p>
 
             <motion.div
@@ -112,7 +112,7 @@ export function Hero() {
               </span>
               <span className="hidden sm:inline">·</span>
               <span className="hidden sm:inline">
-                Trusted by {SITE.managedPortfolioCount}+ London landlords
+                Trusted by Central London landlords across W1, W8, SW1 & SW3
               </span>
             </motion.div>
           </div>
@@ -157,10 +157,10 @@ export function Hero() {
       <div className="container-edge relative mt-16 lg:mt-24">
         <div className="border-t border-navy-line pt-8 grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0">
           {[
-            { num: `${SITE.managedPortfolioCount}+`, label: 'Properties managed' },
+            { num: `${SITE.managedPortfolioCount}`, label: 'Properties managed' },
             { num: '48h', label: 'Average onboarding' },
             { num: `${SITE.ratingValue}/5`, label: 'Landlord rating' },
-            { num: '£12.4m', label: 'Annual rent paid' },
+            { num: '£2.4m', label: 'Annual rent paid' },
           ].map((stat, i) => (
             <div
               key={stat.label}

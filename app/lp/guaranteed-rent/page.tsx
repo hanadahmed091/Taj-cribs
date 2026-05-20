@@ -37,7 +37,7 @@ export default function GuaranteedRentLandingPage() {
         formSource="lp_guaranteed_rent"
         defaultService="guaranteed-rent"
         proofPoints={[
-          { label: 'Properties under guarantee', value: '320+' },
+          { label: 'Properties under guarantee', value: '18' },
           { label: 'Average term', value: '4.2 yrs' },
           { label: 'Missed payments', value: '0' },
           { label: 'Onboarding time', value: '21 days' },
