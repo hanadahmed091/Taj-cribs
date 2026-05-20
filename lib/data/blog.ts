@@ -329,7 +329,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '6 min read',
     author: TEAM,
     heroImage:
-      'https://images.unsplash.com/photo-1598528738937-2b8d87d8a5b3?w=800&q=80',
+      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
     metaTitle:
       'Guaranteed Rent vs Airbnb Management — London Landlord Decision Guide',
     metaDescription:
