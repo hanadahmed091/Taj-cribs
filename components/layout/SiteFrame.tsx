@@ -16,8 +16,9 @@ export function SiteFrame({
 }) {
   const pathname = usePathname()
   const isLanding = pathname?.startsWith('/lp')
+  const isThankYou = pathname === '/thank-you'
 
-  if (isLanding) {
+  if (isLanding || isThankYou) {
     return <main>{children}</main>
   }
 

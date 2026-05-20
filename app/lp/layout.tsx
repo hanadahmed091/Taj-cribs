@@ -26,8 +26,8 @@ export default function LpLayout({ children }: { children: React.ReactNode }) {
         </div>
       </header>
       <div className="flex-1">{children}</div>
-      <footer className="bg-navy-950 text-white/55 py-8 text-center text-xs">
-        © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+      <footer className="bg-navy-950 text-white/55 py-8 text-center text-xs px-4">
+        {SITE.shortName} · Central London Property Specialists · {SITE.email}
       </footer>
     </div>
   )
