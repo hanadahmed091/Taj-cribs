@@ -3,7 +3,7 @@ export type FAQ = { q: string; a: string }
 export const GUARANTEED_RENT_FAQS: FAQ[] = [
   {
     q: 'How does guaranteed rent actually work?',
-    a: 'We sign a corporate lease with you for a fixed term (typically 3-5 years). You receive a fixed monthly payment on the same day every month — regardless of occupancy, voids, or platform performance. We take on all operational risk in exchange for the right to short-let the property.',
+    a: 'We guarantee you the full market rental value of your property as a fixed monthly payment — paid on the same date every month, regardless of occupancy. No voids, no chasing rent, no hassle. We sign a corporate lease for a fixed term (typically 3-5 years) and take on all operational risk in exchange for the right to short-let the property. Our margin comes from optimising short-let upside — not from undercutting your rent.',
   },
   {
     q: 'What is the minimum lease term?',
@@ -50,7 +50,7 @@ export const SHORT_LET_FAQS: FAQ[] = [
   },
   {
     q: 'What is the average income I can expect?',
-    a: 'Use our income calculator for an area-specific estimate. As a benchmark: a 1-bed in Marylebone typically delivers £4,500-£6,500/month gross; a 2-bed in Mayfair £14,000-£25,000/month gross.',
+    a: 'Use our income calculator for an area-specific estimate. Our projections sit 10% below market ADR — we deliberately model conservatively so landlords are never disappointed, and most exceed our estimate. As a benchmark: a 1-bed in Marylebone typically delivers £4,500-£6,500/month gross; a 2-bed in Mayfair £14,000-£25,000/month gross.',
   },
   {
     q: 'How is the property cleaned between guests?',

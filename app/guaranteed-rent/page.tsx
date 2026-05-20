@@ -27,6 +27,7 @@ const STEPS = [
 ]
 
 const COMPARISON = [
+  { feature: 'Rent received', gr: 'Full market rent (guaranteed)', ast: 'Market rent (minus voids)', diy: 'Variable (often below AST net)' },
   { feature: 'Monthly income', gr: 'Fixed', ast: 'Fixed (subject to voids)', diy: 'Variable' },
   { feature: 'Void risk', gr: 'On us', ast: 'On you', diy: 'On you' },
   { feature: 'Maintenance', gr: 'Included', ast: 'You pay', diy: 'You pay' },
@@ -55,11 +56,12 @@ export default function GuaranteedRentPage() {
               <span className="text-gold-500">Fixed. Monthly. Yours.</span>
             </h1>
             <p className="mt-8 max-w-xl text-fluid-lg text-white/75 leading-relaxed">
-              We take on the lease for 3-5 years and pay you a fixed amount every month.
-              No voids. No agency fees. No phone calls about a leaking tap.
+              We guarantee you the <strong className="text-white">full market rental value</strong>
+              {' '}of your property as a fixed monthly payment — paid on the same date every month,
+              regardless of occupancy. No voids, no chasing rent, no hassle.
             </p>
             <ul className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl">
-              {['Same-day monthly payment', 'No void periods, ever', 'Maintenance included', 'Long-term security'].map((b) => (
+              {['Paid at full market rent', 'No void periods, ever', 'Maintenance included', 'Long-term security'].map((b) => (
                 <li key={b} className="flex items-center gap-2 text-sm text-white/85">
                   <Check size={16} className="text-gold-500 shrink-0" /> {b}
                 </li>

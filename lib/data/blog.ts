@@ -355,7 +355,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'ul',
         items: [
-          'Guaranteed rent: fixed monthly income, no involvement, three-to-five-year term. Lower upside in exchange for certainty.',
+          'Guaranteed rent: full market rent, fixed every month, zero involvement, three-to-five-year term. Lower upside than short-let but absolute certainty.',
           'Short-let management: higher gross income, variable month-to-month, 18% management fee, rolling agreement. Higher upside in exchange for variability.',
         ],
       },
@@ -363,12 +363,12 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'p',
         text:
-          'We sign a corporate lease with you for 3, 4 or 5 years. We pay you a fixed monthly amount on the same date every month for the duration of the agreement. We take responsibility for utilities, council tax, internet, cleaning, maintenance under £250 per incident and consumables. You retain ownership, building insurance and the mortgage.',
+          'We sign a corporate lease with you for 3, 4 or 5 years and pay you the full market rental value of your property as a fixed monthly amount, on the same date every month, for the duration of the agreement. We take responsibility for utilities, council tax, internet, cleaning, maintenance under £250 per incident and consumables. You retain ownership, building insurance and the mortgage.',
       },
       {
         type: 'p',
         text:
-          'During the term, we operate the property as a short-let. Some months we do better than the guaranteed figure; some months we do worse. That variance is entirely our problem. You receive the same number every month, regardless.',
+          'During the term, we operate the property as a short-let. Some months we do better than market rent; some months we do worse. That variance is entirely our problem, not yours — our margin comes from optimising short-let upside, not from undercutting your rent. You receive the full market figure every month, regardless of occupancy.',
       },
       { type: 'h2', text: 'Who guaranteed rent suits' },
       {
@@ -408,9 +408,10 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'table',
         headers: ['', 'Guaranteed Rent', 'Short-Let Management'],
         rows: [
+          ['Rent received', 'Full market rent (guaranteed)', 'Variable — typically 2-3x AST gross'],
           ['Monthly income', 'Fixed', 'Variable'],
           ['Income certainty', 'Total', 'Probabilistic'],
-          ['Income potential', 'Lower', 'Higher (2-3x AST)'],
+          ['Income potential', 'Market rent, certain', 'Higher upside, variable'],
           ['Operational involvement', 'Zero', 'Light (calendar control)'],
           ['Fees', 'None to you', '18% + VAT'],
           ['Contract length', '3-5 years', 'Rolling, no lock-in'],

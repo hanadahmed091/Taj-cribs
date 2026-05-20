@@ -142,8 +142,9 @@ export default function PricingPage() {
                     <span className="text-navy-950/70 text-fluid-lg">commission</span>
                   </div>
                   <p className="mt-2 text-sm text-navy-950/80 leading-relaxed">
-                    We take the margin — you receive a fixed monthly amount. <br />
-                    No setup fee. No void risk. Ever.
+                    Paid at <span className="font-semibold">full market rent</span>. <br />
+                    No setup fee. No voids. Ever. Our margin comes from optimising
+                    short-let upside — not from undercutting your rent.
                   </p>
                 </div>
 

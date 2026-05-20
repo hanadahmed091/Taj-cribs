@@ -2,34 +2,37 @@
 
 import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
-import { TrendingUp, ArrowRight } from 'lucide-react'
+import { ShieldCheck, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { pushDataLayer } from '@/lib/utils'
 
-// Realistic nightly ADR × occupancy assumptions per Central London postcode.
-// These match figures in lib/data/areas.ts.
+// Pricing model:
+// - Short-let projection: ADR × 0.9 (10% conservative cushion) × 30 × occupancy
+//   then minus our 18% management fee. We intentionally project below true
+//   market ADR so landlords are rarely disappointed.
+// - Guaranteed rent: full local market AST rent for that area / bedroom count,
+//   paid as a fixed monthly amount regardless of occupancy.
 type AreaModel = {
   label: string
   postcode: string
-  // [studio, 1bed, 2bed, 3bed]  base nightly ADR for short-let
+  // [studio, 1bed, 2bed, 3bed]  market nightly ADR for short-let
   adr: [number, number, number, number]
   // realistic year-round occupancy %
   occupancy: number
-  // guaranteed rent factor: monthly = adr * 30 * occupancy * factor
-  // (factor reflects our risk premium ~ 0.72 of net short-let take)
-  guaranteedFactor: number
+  // Market AST monthly rent for that area / bedroom count.
+  marketRent: [number, number, number, number]
 }
 
 const AREAS: AreaModel[] = [
-  { label: 'Marylebone', postcode: 'W1', adr: [180, 240, 360, 520], occupancy: 0.88, guaranteedFactor: 0.55 },
-  { label: 'Mayfair', postcode: 'W1', adr: [320, 480, 720, 1100], occupancy: 0.84, guaranteedFactor: 0.5 },
-  { label: 'High St Kensington', postcode: 'W8', adr: [210, 290, 420, 600], occupancy: 0.94, guaranteedFactor: 0.55 },
-  { label: 'Pimlico', postcode: 'SW1', adr: [150, 200, 290, 420], occupancy: 0.86, guaranteedFactor: 0.6 },
-  { label: 'Chelsea', postcode: 'SW3', adr: [210, 290, 410, 580], occupancy: 0.9, guaranteedFactor: 0.55 },
-  { label: 'Westminster', postcode: 'SW1', adr: [170, 230, 330, 470], occupancy: 0.85, guaranteedFactor: 0.55 },
-  { label: 'Notting Hill', postcode: 'W11', adr: [195, 270, 390, 540], occupancy: 0.88, guaranteedFactor: 0.55 },
-  { label: 'Canary Wharf', postcode: 'E14', adr: [135, 180, 245, 340], occupancy: 0.82, guaranteedFactor: 0.6 },
+  { label: 'Marylebone',         postcode: 'W1',  adr: [180, 240, 360, 520], occupancy: 0.88, marketRent: [2300, 2900, 4500, 6500] },
+  { label: 'Mayfair',            postcode: 'W1',  adr: [320, 480, 720, 1100], occupancy: 0.84, marketRent: [3000, 4500, 7800, 12000] },
+  { label: 'High St Kensington', postcode: 'W8',  adr: [210, 290, 420, 600], occupancy: 0.94, marketRent: [2400, 3200, 5500, 8000] },
+  { label: 'Pimlico',            postcode: 'SW1', adr: [150, 200, 290, 420], occupancy: 0.86, marketRent: [1900, 2400, 3800, 5500] },
+  { label: 'Chelsea',            postcode: 'SW3', adr: [210, 290, 410, 580], occupancy: 0.9,  marketRent: [2400, 3200, 5500, 8500] },
+  { label: 'Westminster',        postcode: 'SW1', adr: [170, 230, 330, 470], occupancy: 0.85, marketRent: [2100, 2600, 4200, 6200] },
+  { label: 'Notting Hill',       postcode: 'W11', adr: [195, 270, 390, 540], occupancy: 0.88, marketRent: [2200, 2900, 4500, 6800] },
+  { label: 'Canary Wharf',       postcode: 'E14', adr: [135, 180, 245, 340], occupancy: 0.82, marketRent: [1700, 2200, 3200, 4500] },
 ]
 
 const BEDROOM_OPTIONS = [
@@ -38,6 +41,9 @@ const BEDROOM_OPTIONS = [
   { value: 2, label: '2 Bedroom' },
   { value: 3, label: '3+ Bedroom' },
 ]
+
+const CONSERVATIVE_FACTOR = 0.9 // 10% below market ADR
+const MGMT_NET_FACTOR = 0.82    // after 18% management fee
 
 function fmt(n: number) {
   return new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 }).format(n)
@@ -50,12 +56,22 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
   const area = AREAS.find((a) => a.label === areaLabel) ?? AREAS[0]
 
   const calc = useMemo(() => {
-    const nightly = area.adr[bedrooms]
-    const monthlyGross = Math.round(nightly * 30 * area.occupancy)
-    const monthlyNet = Math.round(monthlyGross * 0.82) // 18% mgmt fee
-    const guaranteedMonthly = Math.round(monthlyGross * area.guaranteedFactor)
+    const marketAdr = area.adr[bedrooms]
+    const conservativeAdr = Math.round(marketAdr * CONSERVATIVE_FACTOR)
+    const monthlyGross = Math.round(conservativeAdr * 30 * area.occupancy)
+    const monthlyNet = Math.round(monthlyGross * MGMT_NET_FACTOR)
+    const guaranteedMonthly = area.marketRent[bedrooms]
     const annualNet = monthlyNet * 12
-    return { nightly, monthlyGross, monthlyNet, guaranteedMonthly, annualNet }
+    const annualGuaranteed = guaranteedMonthly * 12
+    return {
+      marketAdr,
+      conservativeAdr,
+      monthlyGross,
+      monthlyNet,
+      guaranteedMonthly,
+      annualNet,
+      annualGuaranteed,
+    }
   }, [area, bedrooms])
 
   return (
@@ -67,7 +83,8 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
         Estimate your monthly income.
       </h3>
       <p className="mt-2 text-sm text-navy-900/65">
-        Real figures, modelled on the properties we manage today.
+        Real figures, modelled on properties we manage today. Short-let
+        projections sit 10% below market ADR — most landlords exceed them.
       </p>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -114,38 +131,58 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
         transition={{ duration: 0.5 }}
         className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4"
       >
+        {/* SHORT-LET — conservative projection */}
         <div className="bg-cream rounded-md p-6 border border-light-line">
           <p className="eyebrow">Short-let Management</p>
           <p className="mt-4 text-3xl font-extrabold tabular-nums tracking-tighter text-navy-900">
             {fmt(calc.monthlyNet)}<span className="text-base text-navy-900/55">/mo</span>
           </p>
-          <p className="mt-1 text-xs text-navy-900/55">Net of our 18% fee</p>
+          <p className="mt-1 text-xs text-navy-900/55">
+            Conservative estimate, net of our 18% fee
+          </p>
           <div className="mt-5 pt-4 border-t border-light-line">
             <div className="flex justify-between text-xs text-navy-900/65 mt-1">
               <span>Gross / month</span>
               <span className="font-semibold tabular-nums">{fmt(calc.monthlyGross)}</span>
             </div>
             <div className="flex justify-between text-xs text-navy-900/65 mt-1">
-              <span>ADR</span>
-              <span className="font-semibold tabular-nums">{fmt(calc.nightly)} / night</span>
+              <span>ADR (conservative)</span>
+              <span className="font-semibold tabular-nums">{fmt(calc.conservativeAdr)} / night</span>
             </div>
             <div className="flex justify-between text-xs text-navy-900/65 mt-1">
               <span>Annual net</span>
               <span className="font-semibold tabular-nums">{fmt(calc.annualNet)}</span>
             </div>
+            <p className="mt-4 text-[11px] leading-relaxed text-navy-900/60 italic">
+              Our estimates are based on conservative projections — most landlords exceed these figures.
+            </p>
           </div>
         </div>
 
+        {/* GUARANTEED RENT — full market AST rent */}
         <div className="bg-navy-900 text-white rounded-md p-6 border border-navy-700">
           <p className="eyebrow !text-gold-400">Guaranteed Rent</p>
           <p className="mt-4 text-3xl font-extrabold tabular-nums tracking-tighter text-gold-500">
             {fmt(calc.guaranteedMonthly)}<span className="text-base text-white/55">/mo</span>
           </p>
-          <p className="mt-1 text-xs text-white/55">Fixed for 3–5 years</p>
+          <p className="mt-1 text-xs text-white/55">
+            Full market rent, paid same day every month
+          </p>
           <div className="mt-5 pt-4 border-t border-white/10">
-            <div className="flex items-start gap-2 text-xs text-white/70 mt-1 leading-relaxed">
-              <TrendingUp size={14} className="mt-0.5 text-gold-400 shrink-0" />
-              <span>Lower upside than short-let — but absolutely predictable. Paid same day every month.</span>
+            <div className="flex justify-between text-xs text-white/65 mt-1">
+              <span>Annual guaranteed</span>
+              <span className="font-semibold tabular-nums">{fmt(calc.annualGuaranteed)}</span>
+            </div>
+            <div className="flex justify-between text-xs text-white/65 mt-1">
+              <span>Vacancy risk</span>
+              <span className="font-semibold">On us, not you</span>
+            </div>
+            <div className="flex items-start gap-2 text-[11px] text-white/70 mt-4 leading-relaxed">
+              <ShieldCheck size={14} className="mt-0.5 text-gold-400 shrink-0" />
+              <span>
+                We guarantee you the <strong className="text-white">full market rental value</strong>
+                {' '}of your property — regardless of occupancy. No voids, no chasing rent, no hassle.
+              </span>
             </div>
           </div>
         </div>
@@ -166,7 +203,9 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
         <ArrowRight size={18} />
       </Link>
       <p className="mt-4 text-xs text-navy-900/55">
-        Estimates only. Final figures depend on furnishing, finish quality, calendar timing, and platform performance.
+        Indicative figures. Final guaranteed rent offer depends on furnishing,
+        finish quality and condition; final short-let income depends on calendar
+        timing and platform performance.
       </p>
     </div>
   )
