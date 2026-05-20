@@ -29,8 +29,7 @@ export type BlogPost = {
   body: BlogBlock[]
 }
 
-const PRIMECO = 'Primeco Property'
-const TEAM = 'Primeco Team'
+const TEAM = 'Taj Cribs Team'
 
 export const BLOG_POSTS: BlogPost[] = [
   {

@@ -23,7 +23,7 @@ const STEPS = [
   },
 ]
 
-export function PrimecoStandard({ variant = 'home' }: { variant?: 'home' | 'inline' }) {
+export function TajCribsStandard({ variant = 'home' }: { variant?: 'home' | 'inline' }) {
   const reduce = useReducedMotion()
 
   return (
@@ -37,7 +37,7 @@ export function PrimecoStandard({ variant = 'home' }: { variant?: 'home' | 'inli
       <div className="container-edge">
         <div className="max-w-3xl">
           <FadeIn>
-            <SectionLabel>The Primeco Standard</SectionLabel>
+            <SectionLabel>The Taj Cribs Standard</SectionLabel>
             <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
               Every checkout. Every time. <span className="text-gold-600">No exceptions.</span>
             </h2>

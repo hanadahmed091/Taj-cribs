@@ -16,7 +16,7 @@ export function UtmCapture() {
       }
       if (Object.keys(captured).length > 0) {
         sessionStorage.setItem(
-          'primeco_utm',
+          'taj_cribs_utm',
           JSON.stringify({ ...captured, landed_at: new Date().toISOString() }),
         )
       }

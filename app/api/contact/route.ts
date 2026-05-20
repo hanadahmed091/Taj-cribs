@@ -25,14 +25,14 @@ export async function POST(req: Request) {
 
     // Send via Resend if configured, otherwise log only.
     const apiKey = process.env.RESEND_API_KEY
-    const to = process.env.LEAD_RECIPIENT || 'hello@primeco.co.uk'
+    const to = process.env.LEAD_RECIPIENT || 'hello@tajcribs.co.uk'
 
     if (apiKey) {
       const { Resend } = await import('resend')
       const resend = new Resend(apiKey)
       const payload = parsed.data
       await resend.emails.send({
-        from: 'Primeco Leads <leads@primeco.co.uk>',
+        from: 'Taj Cribs Leads <leads@tajcribs.co.uk>',
         to,
         subject: `New lead: ${payload.name} — ${payload.service ?? 'service unspecified'}`,
         text: JSON.stringify(payload, null, 2),

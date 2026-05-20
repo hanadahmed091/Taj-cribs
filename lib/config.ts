@@ -1,10 +1,10 @@
 export const SITE = {
-  name: 'Primeco Property',
-  shortName: 'Primeco',
-  domain: 'https://www.primeco.co.uk',
+  name: 'Taj Cribs Property',
+  shortName: 'Taj Cribs',
+  domain: 'https://www.tajcribs.co.uk',
   phone: '+44 20 7946 0000',
   phoneDisplay: '+44 (0)20 7946 0000',
-  email: 'hello@primeco.co.uk',
+  email: 'hello@tajcribs.co.uk',
   address: {
     line1: '48 Marylebone High Street',
     locality: 'London',
@@ -12,8 +12,8 @@ export const SITE = {
     country: 'United Kingdom',
   },
   social: {
-    instagram: 'https://instagram.com/primeco',
-    linkedin: 'https://linkedin.com/company/primeco',
+    instagram: 'https://instagram.com/tajcribs',
+    linkedin: 'https://linkedin.com/company/tajcribs',
   },
   // Single source of truth for the headline "X+ properties" figure.
   // Update here and it propagates everywhere.

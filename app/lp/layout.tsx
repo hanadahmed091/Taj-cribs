@@ -13,7 +13,7 @@ export default function LpLayout({ children }: { children: React.ReactNode }) {
             href="/"
             className="text-white font-extrabold tracking-tighter text-xl flex items-center gap-2"
           >
-            <span className="text-gold-500">P</span>
+            <span className="text-gold-500">T</span>
             {SITE.shortName}
           </Link>
           <a

@@ -46,7 +46,7 @@ export function Testimonials() {
                   <div className="relative aspect-[4/3] rounded-md overflow-hidden">
                     <Image
                       src={t.propertyImage}
-                      alt={`${t.propertyLabel} — managed by Primeco`}
+                      alt={`${t.propertyLabel} — managed by Taj Cribs`}
                       fill
                       sizes="(max-width: 1024px) 100vw, 720px"
                       className="object-cover"

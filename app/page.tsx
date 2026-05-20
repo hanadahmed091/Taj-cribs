@@ -3,7 +3,7 @@ import { Marquee } from '@/components/sections/Marquee'
 import { ServicesOverview } from '@/components/sections/ServicesOverview'
 import { HowItWorks } from '@/components/sections/HowItWorks'
 import { StatsStrip } from '@/components/sections/StatsStrip'
-import { PrimecoStandard } from '@/components/sections/PrimecoStandard'
+import { TajCribsStandard } from '@/components/sections/TajCribsStandard'
 import { Portfolio } from '@/components/sections/Portfolio'
 import { Testimonials } from '@/components/sections/Testimonials'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
@@ -19,7 +19,7 @@ export default function HomePage() {
       <ServicesOverview />
       <HowItWorks />
       <StatsStrip />
-      <PrimecoStandard />
+      <TajCribsStandard />
       <Portfolio />
       <Testimonials />
       <WhyChooseUs />

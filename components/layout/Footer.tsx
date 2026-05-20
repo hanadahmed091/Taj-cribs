@@ -13,7 +13,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
             <Link href="/" className="text-white font-extrabold tracking-tighter text-2xl flex items-center gap-2">
-              <span className="text-gold-500">P</span>
+              <span className="text-gold-500">T</span>
               {SITE.shortName}
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/65">

@@ -20,8 +20,8 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
   title: {
-    default: 'Primeco | Short-Let Management & Guaranteed Rent | Central London',
-    template: '%s | Primeco Property',
+    default: 'Taj Cribs | Short-Let Management & Guaranteed Rent | Central London',
+    template: '%s | Taj Cribs Property',
   },
   description:
     'Central London short-let management and guaranteed rent specialists. Managing blocks in Marylebone, Kensington, Pimlico and across W1, W8, SW1, SW3. Free valuation 24hrs.',
@@ -40,12 +40,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    siteName: 'Primeco Property',
+    siteName: 'Taj Cribs Property',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Primeco | Short-Let Management & Guaranteed Rent | Central London',
+    title: 'Taj Cribs | Short-Let Management & Guaranteed Rent | Central London',
   },
   robots: { index: true, follow: true },
   alternates: { canonical: '/' },

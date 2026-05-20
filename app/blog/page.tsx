@@ -6,7 +6,7 @@ import { BLOG_POSTS, getAllCategories } from '@/lib/data/blog'
 import { BlogFilter } from '@/components/blog/BlogFilter'
 
 export const metadata: Metadata = {
-  title: 'Insights & Landlord Guides | Primeco Property London',
+  title: 'Insights & Landlord Guides | Taj Cribs Property London',
   description:
     'Field notes, market analysis and regulatory guides for Central London landlords — written by the team that manages the properties.',
   alternates: { canonical: '/blog' },

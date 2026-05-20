@@ -41,7 +41,7 @@ export function WhyChooseUs() {
       <div className="container-edge">
         <div className="max-w-3xl">
           <FadeIn>
-            <SectionLabel>Why Primeco</SectionLabel>
+            <SectionLabel>Why Taj Cribs</SectionLabel>
             <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
               The operator London landlords actually <span className="text-gold-600">trust.</span>
             </h2>

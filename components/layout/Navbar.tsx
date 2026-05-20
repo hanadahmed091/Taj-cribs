@@ -37,7 +37,7 @@ export function Navbar() {
           className="text-white font-extrabold tracking-tighter text-xl flex items-center gap-2"
           aria-label={SITE.name}
         >
-          <span className="text-gold-500">P</span>
+          <span className="text-gold-500">T</span>
           <span>{SITE.shortName}</span>
         </Link>
 

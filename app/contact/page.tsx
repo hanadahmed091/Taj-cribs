@@ -5,9 +5,9 @@ import { SectionLabel } from '@/components/ui/SectionLabel'
 import { SITE } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Contact Primeco | Free Valuation in 24 Hours',
+  title: 'Contact Taj Cribs | Free Valuation in 24 Hours',
   description:
-    'Speak to Primeco Property about guaranteed rent or short-let management for your Central London property. Free 24-hour valuation, 2-hour response.',
+    'Speak to Taj Cribs Property about guaranteed rent or short-let management for your Central London property. Free 24-hour valuation, 2-hour response.',
   alternates: { canonical: '/contact' },
 }
 
@@ -89,7 +89,7 @@ export default function ContactPage() {
 
               <div className="rounded-md overflow-hidden border border-light-line">
                 <iframe
-                  title="Primeco Property office map"
+                  title="Taj Cribs Property office map"
                   src="https://maps.google.com/maps?q=Marylebone%20High%20Street%20London&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   className="w-full aspect-[4/3]"
                   loading="lazy"

@@ -1,4 +1,4 @@
-# Primeco Property — Central London Short-Let & Guaranteed Rent
+# Taj Cribs Property — Central London Short-Let & Guaranteed Rent
 
 Awwwards-style Next.js 14 marketing site for a Central London property management & guaranteed rent company. Navy & gold editorial design.
 

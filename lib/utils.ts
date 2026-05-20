@@ -15,7 +15,7 @@ export function pushDataLayer(event: string, payload: Record<string, unknown> = 
 export function getStoredUtm() {
   if (typeof window === 'undefined') return {}
   try {
-    const raw = sessionStorage.getItem('primeco_utm')
+    const raw = sessionStorage.getItem('taj_cribs_utm')
     return raw ? JSON.parse(raw) : {}
   } catch {
     return {}
