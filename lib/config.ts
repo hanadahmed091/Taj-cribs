@@ -4,7 +4,7 @@ export const SITE = {
   domain: 'https://www.tajcribs.co.uk',
   phone: '+44 20 7946 0000',
   phoneDisplay: '+44 (0)20 7946 0000',
-  email: 'hello@tajcribs.co.uk',
+  email: 'support@tajcribs.co.uk',
   address: {
     line1: '48 Marylebone High Street',
     locality: 'London',
