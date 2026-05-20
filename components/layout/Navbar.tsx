@@ -39,9 +39,6 @@ export function Navbar() {
         >
           <span className="text-gold-500">P</span>
           <span>{SITE.shortName}</span>
-          <span className="hidden sm:inline-block text-[10px] uppercase tracking-widest text-muted font-semibold ml-2 border-l border-white/10 pl-2">
-            Central London
-          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9">
