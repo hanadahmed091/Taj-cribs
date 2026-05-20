@@ -43,7 +43,7 @@ export function LandingPageLayout({
   return (
     <>
       {/* HERO + FORM SPLIT */}
-      <section className="relative hero-bg text-white pt-[110px] pb-20 lg:pt-[140px] lg:pb-28 overflow-hidden">
+      <section className="relative hero-bg text-white pt-[110px] pb-10 lg:pt-[140px] lg:pb-14 overflow-hidden">
         <div className="absolute inset-0 hero-grid opacity-60 pointer-events-none" />
         <div className="container-edge relative grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* LEFT — HEADLINE */}
@@ -60,36 +60,30 @@ export function LandingPageLayout({
             </p>
           </div>
 
-          {/* RIGHT — FORM */}
+          {/* RIGHT — FORM + TRUST BADGES */}
           <div className="lg:col-span-5 lg:sticky lg:top-24">
             <LandingForm
               title={formTitle}
               source={source}
               defaultService={defaultService}
             />
+            <ul className="mt-6 grid grid-cols-2 gap-3 text-white">
+              {TRUST_BADGES.map((b) => {
+                const Icon = b.icon
+                return (
+                  <li
+                    key={b.label}
+                    className="flex items-center gap-3 rounded-sm bg-white/5 border border-white/10 px-3 py-3 text-sm font-semibold"
+                  >
+                    <span className="w-9 h-9 shrink-0 rounded-sm bg-navy-700 flex items-center justify-center text-gold-500">
+                      <Icon size={18} />
+                    </span>
+                    <span className="leading-snug">{b.label}</span>
+                  </li>
+                )
+              })}
+            </ul>
           </div>
-        </div>
-      </section>
-
-      {/* TRUST BADGES ROW */}
-      <section className="bg-navy-950 text-white border-t border-white/5 py-8 lg:py-10">
-        <div className="container-edge">
-          <ul className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
-            {TRUST_BADGES.map((b) => {
-              const Icon = b.icon
-              return (
-                <li
-                  key={b.label}
-                  className="flex items-center gap-3 lg:justify-center text-sm lg:text-base font-semibold"
-                >
-                  <span className="w-10 h-10 shrink-0 rounded-sm bg-navy-700 flex items-center justify-center text-gold-500">
-                    <Icon size={18} />
-                  </span>
-                  <span className="leading-snug">{b.label}</span>
-                </li>
-              )
-            })}
-          </ul>
         </div>
       </section>
 
