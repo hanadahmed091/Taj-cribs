@@ -20,7 +20,7 @@ const TABS = [
     key: 'short-let',
     label: 'Short-Let Management',
     steps: [
-      { n: '01', title: 'Onboarding call', body: '30-minute consultation. We confirm strategy, pricing model and expected returns.' },
+      { n: '01', title: 'Onboarding call', body: 'Free 20-minute call. We confirm strategy, pricing model and expected returns.' },
       { n: '02', title: 'Go live in less than a week', body: 'Professional photography, multi-platform listings, dynamic pricing engaged.' },
       { n: '03', title: 'We operate', body: 'Bookings, guest comms, housekeeping, maintenance — all in-house.' },
       { n: '04', title: 'Net payout monthly', body: 'Net rental income transferred on the 5th of every month, with full reporting.' },

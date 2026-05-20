@@ -2,6 +2,34 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import type { BlogBlock } from '@/lib/data/blog'
 
+// Parses inline `[label](/href)` link syntax and renders the labels as
+// next/link components with the brand underline style. Anything outside a
+// link is emitted as a plain string. Used by p/ul/ol/quote blocks so post
+// authors can sprinkle internal links naturally in prose.
+function renderInline(text: string): React.ReactNode[] {
+  const parts: React.ReactNode[] = []
+  const linkRe = /\[([^\]]+)\]\(([^)]+)\)/g
+  let lastIndex = 0
+  let match: RegExpExecArray | null
+  while ((match = linkRe.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index))
+    }
+    parts.push(
+      <Link
+        key={`${match.index}-${parts.length}`}
+        href={match[2]}
+        className="text-navy-900 font-medium underline decoration-gold-500 decoration-2 underline-offset-4 hover:text-gold-600 transition-colors"
+      >
+        {match[1]}
+      </Link>,
+    )
+    lastIndex = match.index + match[0].length
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex))
+  return parts
+}
+
 export function PostBody({ blocks }: { blocks: BlogBlock[] }) {
   return (
     <div className="article-body">
@@ -13,7 +41,7 @@ export function PostBody({ blocks }: { blocks: BlogBlock[] }) {
                 key={i}
                 className="text-base leading-[1.85] text-navy-900/85 mb-6"
               >
-                {b.text}
+                {renderInline(b.text)}
               </p>
             )
           case 'h2':
@@ -37,13 +65,13 @@ export function PostBody({ blocks }: { blocks: BlogBlock[] }) {
           case 'ul':
             return (
               <ul key={i} className="my-6 space-y-3">
-                {b.items.map((item) => (
+                {b.items.map((item, ii) => (
                   <li
-                    key={item}
+                    key={ii}
                     className="flex items-start gap-3 text-navy-900/85 leading-[1.75]"
                   >
                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold-500 shrink-0" />
-                    <span>{item}</span>
+                    <span>{renderInline(item)}</span>
                   </li>
                 ))}
               </ul>
@@ -53,13 +81,13 @@ export function PostBody({ blocks }: { blocks: BlogBlock[] }) {
               <ol key={i} className="my-6 space-y-4 counter-reset">
                 {b.items.map((item, idx) => (
                   <li
-                    key={item}
+                    key={idx}
                     className="flex items-start gap-4 text-navy-900/85 leading-[1.75]"
                   >
                     <span className="font-extrabold text-gold-500 tabular-nums shrink-0 mt-0.5">
                       {String(idx + 1).padStart(2, '0')}
                     </span>
-                    <span>{item}</span>
+                    <span>{renderInline(item)}</span>
                   </li>
                 ))}
               </ol>
@@ -70,7 +98,7 @@ export function PostBody({ blocks }: { blocks: BlogBlock[] }) {
                 key={i}
                 className="my-8 border-l-4 border-gold-500 pl-6 italic text-navy-900/90 text-fluid-lg leading-relaxed"
               >
-                {b.text}
+                {renderInline(b.text)}
               </blockquote>
             )
           case 'table':
