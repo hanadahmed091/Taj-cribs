@@ -9,6 +9,10 @@ import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
 import { PRICING_FAQS } from '@/lib/data/pricing'
 import { pushDataLayer } from '@/lib/utils'
 
+// Vercel static generation was timing out on this route after 3 attempts.
+// Opting out of static generation forces this page to render dynamically.
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Pricing | Short-Let Management & Guaranteed Rent London',
   description:
