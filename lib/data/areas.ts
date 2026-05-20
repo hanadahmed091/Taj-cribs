@@ -7,6 +7,8 @@ export type AreaMeta = {
   name: string         // e.g. "Marylebone"
   postcode: string     // e.g. "W1"
   tagline: string
+  // Empty string = do not display this stat in the UI. Use this for new
+  // areas where we don't yet want to publish an indicative rate.
   avgNightlyRate: string
   avgMonthlyRate: string
   intro: string        // long-form copy used on /areas/[slug]
@@ -101,6 +103,50 @@ export const AREA_META: Record<string, AreaMeta> = {
     intro:
       'Canary Wharf E14 is the easiest London market to model: predictable corporate weekday demand, strong mid-stay bookings (7-30 nights) and high renewal rates. We manage tower apartments in South Quay, Westferry and Wood Wharf, almost exclusively under short-let management for executives and project teams.',
     demand: 'Mid-stay corporate. Lower weekend rates but predictable Mon-Fri.',
+  },
+  'kings-cross': {
+    slug: 'kings-cross',
+    name: "King's Cross",
+    postcode: 'N1',
+    tagline: 'Short-let & guaranteed rent specialists',
+    avgNightlyRate: '',
+    avgMonthlyRate: '',
+    intro:
+      "King's Cross has transformed into one of London's most dynamic neighbourhoods — home to Google, Central Saint Martins and outstanding transport links across the city and internationally via St Pancras. Strong year-round demand from corporate travellers, students and tourists makes it an excellent short-let and guaranteed rent location.",
+    demand: 'Year-round corporate, student and international traveller demand.',
+  },
+  'earls-court': {
+    slug: 'earls-court',
+    name: "Earl's Court",
+    postcode: 'SW5',
+    tagline: 'Short-let & guaranteed rent specialists',
+    avgNightlyRate: '',
+    avgMonthlyRate: '',
+    intro:
+      "Earl's Court sits between Kensington and Fulham, offering excellent value for short-let investors. Strong demand from international visitors, exhibition guests and professionals makes it a consistent performer year-round. We manage properties across SW5 and the surrounding streets.",
+    demand: 'International visitor + exhibition guest + professional demand.',
+  },
+  'nine-elms': {
+    slug: 'nine-elms',
+    name: 'Nine Elms',
+    postcode: 'SW8',
+    tagline: 'Short-let & guaranteed rent specialists',
+    avgNightlyRate: '',
+    avgMonthlyRate: '',
+    intro:
+      "Nine Elms is one of London's most exciting regeneration areas — home to the new US Embassy, Battersea Power Station and a rapidly growing residential community. Corporate short-let and guaranteed rent demand is increasing strongly as the area matures.",
+    demand: 'Growing corporate short-let demand as the area matures.',
+  },
+  waterloo: {
+    slug: 'waterloo',
+    name: 'Waterloo',
+    postcode: 'SE1',
+    tagline: 'Short-let & guaranteed rent specialists',
+    avgNightlyRate: '',
+    avgMonthlyRate: '',
+    intro:
+      'Waterloo and the South Bank attract a premium mix of corporate travellers, cultural tourists and professionals. Walking distance from the City, Westminster and world-class venues including the Tate Modern and Royal Festival Hall. Excellent short-let and guaranteed rent potential year-round.',
+    demand: 'Corporate + cultural tourism. Strong year-round.',
   },
 }
 

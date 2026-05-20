@@ -48,12 +48,25 @@ export function AreasSection() {
                   />
                 </div>
                 <div className="mt-8 pt-5 border-t border-light-line group-hover:border-white/15 transition-colors">
-                  <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400">
-                    Average rate
-                  </p>
-                  <p className="mt-1 font-bold tabular-nums text-fluid-lg">
-                    {area.avgMonthlyRate}
-                  </p>
+                  {area.avgMonthlyRate ? (
+                    <>
+                      <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400">
+                        Average rate
+                      </p>
+                      <p className="mt-1 font-bold tabular-nums text-fluid-lg">
+                        {area.avgMonthlyRate}
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400">
+                        Coverage
+                      </p>
+                      <p className="mt-1 font-bold text-fluid-lg">
+                        Available now
+                      </p>
+                    </>
+                  )}
                 </div>
               </Link>
             </FadeIn>

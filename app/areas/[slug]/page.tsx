@@ -89,20 +89,31 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
             {area.intro}
           </p>
 
-          <div className="mt-12 grid grid-cols-3 gap-6 pt-8 border-t border-navy-line">
-            <div>
-              <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Postcode</p>
-              <p className="mt-1 font-bold text-fluid-xl">{area.postcode}</p>
-            </div>
-            <div>
-              <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Avg monthly</p>
-              <p className="mt-1 font-bold text-fluid-xl tabular-nums">{area.avgMonthlyRate}</p>
-            </div>
-            <div>
-              <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Avg nightly</p>
-              <p className="mt-1 font-bold text-fluid-xl tabular-nums">{area.avgNightlyRate}</p>
-            </div>
-          </div>
+          {(() => {
+            const hasRates = area.avgMonthlyRate || area.avgNightlyRate
+            return (
+              <div
+                className={`mt-12 grid ${hasRates ? 'grid-cols-3' : 'grid-cols-1'} gap-6 pt-8 border-t border-navy-line`}
+              >
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Postcode</p>
+                  <p className="mt-1 font-bold text-fluid-xl">{area.postcode}</p>
+                </div>
+                {hasRates && (
+                  <>
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Avg monthly</p>
+                      <p className="mt-1 font-bold text-fluid-xl tabular-nums">{area.avgMonthlyRate || '—'}</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Avg nightly</p>
+                      <p className="mt-1 font-bold text-fluid-xl tabular-nums">{area.avgNightlyRate || '—'}</p>
+                    </div>
+                  </>
+                )}
+              </div>
+            )
+          })()}
         </div>
       </section>
 
@@ -160,6 +171,21 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
       )}
 
       <FAQ items={faqs} heading={`${area.name} — common questions.`} />
+
+      {/* AREA-SPECIFIC CTA */}
+      <section className="bg-navy-900 text-white py-16 lg:py-20">
+        <div className="container-edge text-center max-w-3xl">
+          <FadeIn>
+            <Link
+              href="/contact"
+              className="btn-gold inline-flex"
+            >
+              Get a free valuation for your {area.name} property
+              <ArrowRight size={18} />
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
 
       {/* CTA FORM */}
       <section className="bg-cream section-pad">

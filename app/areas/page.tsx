@@ -56,18 +56,29 @@ export default function AreasIndexPage() {
                     />
                   </div>
                   <div className="mt-8 pt-6 border-t border-light-line group-hover:border-white/15 transition-colors grid grid-cols-2 gap-4">
-                    <div>
-                      <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400/80">
-                        Avg monthly
-                      </p>
-                      <p className="mt-1 font-bold tabular-nums">{area.avgMonthlyRate}</p>
-                    </div>
-                    <div>
-                      <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400/80">
-                        Avg nightly
-                      </p>
-                      <p className="mt-1 font-bold tabular-nums">{area.avgNightlyRate}</p>
-                    </div>
+                    {area.avgMonthlyRate || area.avgNightlyRate ? (
+                      <>
+                        <div>
+                          <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400/80">
+                            Avg monthly
+                          </p>
+                          <p className="mt-1 font-bold tabular-nums">{area.avgMonthlyRate || '—'}</p>
+                        </div>
+                        <div>
+                          <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400/80">
+                            Avg nightly
+                          </p>
+                          <p className="mt-1 font-bold tabular-nums">{area.avgNightlyRate || '—'}</p>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="col-span-2">
+                        <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400/80">
+                          Service
+                        </p>
+                        <p className="mt-1 font-bold">{area.tagline}</p>
+                      </div>
+                    )}
                   </div>
                 </Link>
               </FadeIn>
