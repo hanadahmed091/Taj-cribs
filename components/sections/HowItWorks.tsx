@@ -11,7 +11,7 @@ const TABS = [
     label: 'Guaranteed Rent',
     steps: [
       { n: '01', title: 'Free valuation', body: 'We assess your property and confirm a guaranteed monthly figure within 24 hours.' },
-      { n: '02', title: 'Sign lease', body: 'Corporate lease signed for 3–5 years. Fixed term, fixed monthly payment.' },
+      { n: '02', title: 'Sign lease', body: 'Corporate lease signed for 1–5 years. Fixed term, fixed monthly payment.' },
       { n: '03', title: 'We onboard', body: 'Furnishing, photography, listing, compliance, insurance — all handled.' },
       { n: '04', title: 'You get paid', body: 'Same day of the month. Every month. Regardless of occupancy.' },
     ],
@@ -21,7 +21,7 @@ const TABS = [
     label: 'Short-Let Management',
     steps: [
       { n: '01', title: 'Onboarding call', body: '30-minute consultation. We confirm strategy, pricing model and expected returns.' },
-      { n: '02', title: 'Go live in 48h', body: 'Professional photography, multi-platform listings, dynamic pricing engaged.' },
+      { n: '02', title: 'Go live in less than a week', body: 'Professional photography, multi-platform listings, dynamic pricing engaged.' },
       { n: '03', title: 'We operate', body: 'Bookings, guest comms, housekeeping, maintenance — all in-house.' },
       { n: '04', title: 'Net payout monthly', body: 'Net rental income transferred on the 5th of every month, with full reporting.' },
     ],

@@ -31,7 +31,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Private Landlord',
     area: 'High Street Kensington',
     stars: 5,
-    propertyImage: 'https://images.unsplash.com/photo-1520986606214-8b456906c813?w=800&q=80',
+    propertyImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
     propertyLabel: 'Kensington Gate, W8',
     service: 'Short-Let Management',
   },
@@ -62,12 +62,12 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 5,
     quote:
-      'The onboarding was 48 hours flat. Professional photographer came, listing went live, first booking confirmed the same week. The management dashboard gives me full visibility without any involvement.',
+      'The onboarding took less than a week. Professional photographer came, listing went live, first booking confirmed the same week. The management dashboard gives me full visibility without any involvement.',
     name: 'Priya M.',
     role: 'Buy-to-Let Investor',
     area: 'Chelsea',
     stars: 5,
-    propertyImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    propertyImage: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
     propertyLabel: 'Chelsea Reach, SW3',
     service: 'Short-Let Management',
   },

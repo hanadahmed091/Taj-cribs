@@ -43,7 +43,7 @@ const GUARANTEED_BEST_FOR = [
 
 const GUARANTEED_HOW = [
   'We assess your property and make a fixed monthly offer',
-  'You accept and sign a simple agreement (3–5 year terms available)',
+  'You accept and sign a simple agreement (1–5 year terms available)',
   'We pay you on the same date every month, regardless of occupancy',
   'We manage the property entirely — you have zero involvement',
 ]

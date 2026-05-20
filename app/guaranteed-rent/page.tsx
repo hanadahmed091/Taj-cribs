@@ -15,13 +15,13 @@ import { PROPERTIES } from '@/lib/data/properties'
 export const metadata: Metadata = {
   title: 'Guaranteed Rent London | Fixed Monthly Income | No Void Periods',
   description:
-    'Guaranteed rent for Central London landlords. Fixed monthly income for 3-5 years. No voids, no agency fees, no hassle. Free valuation in 24 hours.',
+    'Guaranteed rent for Central London landlords. Fixed monthly income for 1–5 years. No voids, no agency fees, no hassle. Free valuation in 24 hours.',
   alternates: { canonical: '/guaranteed-rent' },
 }
 
 const STEPS = [
   { n: '01', title: 'Free valuation', body: 'Tell us about your property. We confirm a guaranteed monthly figure within 24 hours.' },
-  { n: '02', title: 'Sign corporate lease', body: 'A simple 3-5 year corporate lease — fixed monthly payment, on the same date.' },
+  { n: '02', title: 'Sign corporate lease', body: 'A simple 1–5 year corporate lease — fixed monthly payment, on the same date.' },
   { n: '03', title: 'We onboard', body: 'Photography, listing, compliance, insurance, furnishing. Two weeks, hands-off.' },
   { n: '04', title: 'You get paid', body: 'Fixed payment lands in your account. Same day, every month, for the full term.' },
 ]
@@ -32,9 +32,9 @@ const COMPARISON = [
   { feature: 'Void risk', gr: 'On us', ast: 'On you', diy: 'On you' },
   { feature: 'Maintenance', gr: 'Included', ast: 'You pay', diy: 'You pay' },
   { feature: 'Tenant find fees', gr: 'None', ast: 'On you', diy: 'On you' },
-  { feature: 'Onboarding time', gr: '21 days', ast: '4–8 weeks', diy: '4–10 weeks' },
+  { feature: 'Onboarding time', gr: 'Less than a week', ast: '4–8 weeks', diy: '4–10 weeks' },
   { feature: 'Property condition', gr: 'Hotel standard', ast: 'Variable', diy: 'Owner-managed' },
-  { feature: 'Lease term', gr: '3–5 years', ast: '6–12 months', diy: 'N/A' },
+  { feature: 'Lease term', gr: '1–5 years', ast: '6–12 months', diy: 'N/A' },
   { feature: 'Operational involvement', gr: 'Zero', ast: 'Moderate', diy: 'High' },
 ]
 

@@ -17,7 +17,7 @@ export default function CanaryWharfLandingPage() {
       subheadline="Corporate short-let management across Canary Wharf and E14. Strong demand from financial sector professionals and business travellers year-round."
       formTitle="Get a free estimate for your Canary Wharf property"
       defaultService="short-let-management"
-      testimonialQuote="The onboarding was 48 hours flat. Professional photographer came, listing went live, first booking confirmed the same week. The management dashboard gives me full visibility."
+      testimonialQuote="The onboarding took less than a week. Professional photographer came, listing went live, first booking confirmed the same week. The management dashboard gives me full visibility."
       testimonialName="Priya M."
       testimonialRole="Buy-to-Let Investor"
       testimonialProperty="Canary Wharf E14"

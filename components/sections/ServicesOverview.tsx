@@ -9,7 +9,7 @@ const SERVICES = [
     eyebrow: 'For predictable income',
     title: 'Guaranteed Rent',
     description:
-      'Your full market rent, paid as a fixed monthly amount. Same day. Every month. For 3–5 years. No voids, no chasing rent — we carry all the operational risk.',
+      'Your full market rent, paid as a fixed monthly amount. Same day. Every month. For 1–5 years. No voids, no chasing rent — we carry all the operational risk.',
     bullets: [
       'Paid at full market rent',
       'No void periods, ever',

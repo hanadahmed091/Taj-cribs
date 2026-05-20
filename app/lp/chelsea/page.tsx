@@ -17,7 +17,7 @@ export default function ChelseaLandingPage() {
       subheadline="Premium short-let management across Chelsea and SW3. Consistently achieving high occupancy rates with the Taj Cribs quality standard."
       formTitle="Get a free estimate for your Chelsea property"
       defaultService="short-let-management"
-      testimonialQuote="The onboarding was 48 hours flat. Professional photographer came, listing went live, first booking confirmed the same week."
+      testimonialQuote="The onboarding took less than a week. Professional photographer came, listing went live, first booking confirmed the same week."
       testimonialName="Priya M."
       testimonialRole="Buy-to-Let Investor"
       testimonialProperty="Chelsea Reach, SW3"

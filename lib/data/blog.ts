@@ -354,7 +354,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'ul',
         items: [
-          'Guaranteed rent: full market rent, fixed every month, zero involvement, three-to-five-year term. Lower upside than short-let but absolute certainty.',
+          'Guaranteed rent: full market rent, fixed every month, zero involvement, one-to-five-year term. Lower upside than short-let but absolute certainty.',
           'Short-let management: higher gross income, variable month-to-month, 18% management fee, rolling agreement. Higher upside in exchange for variability.',
         ],
       },
@@ -362,7 +362,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'p',
         text:
-          'We sign a corporate lease with you for 3, 4 or 5 years and pay you the full market rental value of your property as a fixed monthly amount, on the same date every month, for the duration of the agreement. We take responsibility for utilities, council tax, internet, cleaning, maintenance under £250 per incident and consumables. You retain ownership, building insurance and the mortgage.',
+          'We sign a corporate lease with you for any term between 1 and 5 years and pay you the full market rental value of your property as a fixed monthly amount, on the same date every month, for the duration of the agreement. We take responsibility for utilities, council tax, internet, cleaning, maintenance under £250 per incident and consumables. You retain ownership, building insurance and the mortgage.',
       },
       {
         type: 'p',
@@ -413,7 +413,7 @@ export const BLOG_POSTS: BlogPost[] = [
           ['Income potential', 'Market rent, certain', 'Higher upside, variable'],
           ['Operational involvement', 'Zero', 'Light (calendar control)'],
           ['Fees', 'None to you', '18% + VAT'],
-          ['Contract length', '3-5 years', 'Rolling, no lock-in'],
+          ['Contract length', '1–5 years', 'Rolling, no lock-in'],
           ['Personal use of property', 'Restricted', 'Free to block dates'],
           ['Maintenance under £250', 'Covered by us', 'Coordinated, charged to you'],
         ],

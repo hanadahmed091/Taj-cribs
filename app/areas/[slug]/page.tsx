@@ -44,11 +44,11 @@ function buildAreaFaqs(areaName: string, postcode: string): FAQType[] {
     },
     {
       q: `Can I get guaranteed rent on a property in ${areaName}?`,
-      a: `Yes — guaranteed rent is available across all of our ${postcode} stock, subject to a free valuation. We offer 3-5 year corporate leases with fixed monthly payments.`,
+      a: `Yes — guaranteed rent is available across all of our ${postcode} stock, subject to a free valuation. We offer 1–5 year corporate leases with fixed monthly payments.`,
     },
     {
       q: `How fast can a ${areaName} property be onboarded?`,
-      a: `For a furnished property: typically 48 hours to live. For unfurnished or properties needing minor works: 5-10 days.`,
+      a: `For a furnished property: typically less than a week to live. For unfurnished or properties needing minor works: 1-2 weeks.`,
     },
   ]
 }

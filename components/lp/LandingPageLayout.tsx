@@ -21,7 +21,7 @@ export type LandingPageProps = {
 const TRUST_BADGES = [
   { icon: Building2,   label: `${SITE.managedPortfolioCount}+ Properties Managed` },
   { icon: ShieldCheck, label: 'Quality Officer Every Checkout' },
-  { icon: Clock,       label: '48hr Onboarding' },
+  { icon: Clock,       label: 'Less than a week onboarding' },
   { icon: Star,        label: `${SITE.ratingValue}/5 Rating` },
 ]
 

@@ -3,11 +3,11 @@ export type FAQ = { q: string; a: string }
 export const GUARANTEED_RENT_FAQS: FAQ[] = [
   {
     q: 'How does guaranteed rent actually work?',
-    a: 'We guarantee you the full market rental value of your property as a fixed monthly payment — paid on the same date every month, regardless of occupancy. No voids, no chasing rent, no hassle. We sign a corporate lease for a fixed term (typically 3-5 years) and take on all operational risk in exchange for the right to short-let the property. Our margin comes from optimising short-let upside — not from undercutting your rent.',
+    a: 'We guarantee you the full market rental value of your property as a fixed monthly payment — paid on the same date every month, regardless of occupancy. No voids, no chasing rent, no hassle. We sign a corporate lease for a fixed term (typically 1–5 years) and take on all operational risk in exchange for the right to short-let the property. Our margin comes from optimising short-let upside — not from undercutting your rent.',
   },
   {
     q: 'What is the minimum lease term?',
-    a: 'We typically agree 3-year lease terms with 5-year extensions. Shorter terms are possible on premium Central London stock; longer terms are usually preferred for purpose-managed blocks.',
+    a: 'We offer 1, 3 and 5-year terms (1–5 years), with longer terms commanding a higher monthly figure. Shorter terms suit landlords trialling the model; longer terms are usually preferred for purpose-managed blocks.',
   },
   {
     q: 'Do I still pay the mortgage and bills?',
@@ -23,7 +23,7 @@ export const GUARANTEED_RENT_FAQS: FAQ[] = [
   },
   {
     q: 'How quickly can guaranteed rent start?',
-    a: 'For a property ready to let, we can usually start the first guaranteed payment within 21 days of contract. Properties needing furnishing or minor works can take 4-6 weeks.',
+    a: 'For a property ready to let, we can usually start the first guaranteed payment in less than a week from contract. Properties needing furnishing or minor works can take 4-6 weeks.',
   },
   {
     q: 'Do I need to furnish the property?',
@@ -46,7 +46,7 @@ export const SHORT_LET_FAQS: FAQ[] = [
   },
   {
     q: 'How fast can I be live and earning?',
-    a: 'For a furnished, photo-ready property: 48 hours. For properties needing photography, styling or minor furniture additions: 5-10 days.',
+    a: 'For a furnished, photo-ready property: less than a week. For properties needing photography, styling or minor furniture additions: 1-2 weeks.',
   },
   {
     q: 'What is the average income I can expect?',

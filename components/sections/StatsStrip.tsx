@@ -5,7 +5,7 @@ const STATS = [
   { num: `${SITE.managedPortfolioCount}`, label: 'Properties under management' },
   { num: '£2.4m', label: 'Annual rent paid to landlords' },
   { num: '87%', label: 'Average occupancy rate' },
-  { num: '48h', label: 'From sign-off to first booking' },
+  { num: 'Less than a week', label: 'From sign-off to first booking' },
 ]
 
 export function StatsStrip() {
