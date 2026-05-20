@@ -26,7 +26,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 2,
     quote:
-      'Our High Street Kensington flat was sitting with a standard letting agent at £2,800/month. After switching to short-let management we’re averaging £11,200/month. The numbers speak for themselves.',
+      'After switching from a standard letting agent to short-let management, we saw over a 50% increase in revenue within the first three months. The difference has been remarkable.',
     name: 'James T.',
     role: 'Private Landlord',
     area: 'High Street Kensington',
@@ -43,7 +43,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Overseas Investors',
     area: 'Pimlico / Waterloo',
     stars: 5,
-    propertyImage: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&q=80',
+    propertyImage: 'https://images.unsplash.com/photo-1529408632839-a54952c491e5?w=800&q=80',
     propertyLabel: 'Vauxhall Bridge House, SW1',
     service: 'Guaranteed Rent',
   },
@@ -67,7 +67,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Buy-to-Let Investor',
     area: 'Chelsea',
     stars: 5,
-    propertyImage: 'https://images.unsplash.com/photo-1587351021759-3772687aee6b?w=800&q=80',
+    propertyImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
     propertyLabel: 'Chelsea Reach, SW3',
     service: 'Short-Let Management',
   },
