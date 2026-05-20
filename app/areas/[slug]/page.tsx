@@ -89,7 +89,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
             {area.intro}
           </p>
 
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-navy-line">
+          <div className="mt-12 grid grid-cols-3 gap-6 pt-8 border-t border-navy-line">
             <div>
               <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Postcode</p>
               <p className="mt-1 font-bold text-fluid-xl">{area.postcode}</p>
@@ -101,10 +101,6 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
             <div>
               <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Avg nightly</p>
               <p className="mt-1 font-bold text-fluid-xl tabular-nums">{area.avgNightlyRate}</p>
-            </div>
-            <div>
-              <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Managed here</p>
-              <p className="mt-1 font-bold text-fluid-xl tabular-nums">{area.propertyCount}</p>
             </div>
           </div>
         </div>
