@@ -86,11 +86,11 @@ export const PROPERTIES: Property[] = [
     area: 'Chelsea, SW3',
     areaSlug: 'chelsea',
     description:
-      'A pair of riverside apartments in Chelsea on our guaranteed rent scheme. Currently let to a corporate client on a three-year contract.',
+      'A pair of riverside apartments in Chelsea under our property management service. One is currently let to a corporate tenant on a 10-month contract.',
     bedrooms: '1-bed & 2-bed',
-    service: 'guaranteed-rent',
-    monthlyIncome: '£7,000/month guaranteed',
-    highlight: 'Corporate client secured. 3 year contract.',
+    service: 'short-let-management',
+    monthlyIncome: '£6,500/month',
+    highlight: 'Corporate tenant. 10 month let.',
     imageQuery: 'london thames riverside apartment chelsea',
     imageUrl: 'https://images.unsplash.com/photo-1584412181991-bf85c8e01f58?w=800&q=80',
     badge: null,
@@ -144,10 +144,10 @@ export const PROPERTIES: Property[] = [
 
 export const SERVICE_LABELS: Record<ServiceType, string> = {
   'guaranteed-rent': 'Guaranteed Rent',
-  'short-let-management': 'Short-Let Management',
+  'short-let-management': 'Property Management',
 }
 
 export const SERVICE_LABELS_SHORT: Record<ServiceType, string> = {
   'guaranteed-rent': 'Guaranteed Rent',
-  'short-let-management': 'Short-Let Mgmt',
+  'short-let-management': 'Property Management',
 }

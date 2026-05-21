@@ -50,13 +50,13 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 4,
     quote:
-      'We signed a 3 year guaranteed rent agreement with Taj Cribs on two apartments in Chelsea. The payment lands on the same day every month, regardless of whether the flats are occupied. No chasing tenants, no void periods, no surprises. Exactly what we wanted from a hands-off investment.',
+      "We put two Chelsea apartments under management with Taj Cribs and they sourced a corporate tenant on one of them within weeks. A 10 month let at £6,500 a month on the two-bed. The team handles the day to day completely. We see the income come through and don't have to think about anything else.",
     name: 'Priya M.',
     role: 'Buy-to-Let Investor',
     area: 'Chelsea',
     stars: 5,
     propertyImage: 'https://images.unsplash.com/photo-1584412181991-bf85c8e01f58?w=800&q=80',
     propertyLabel: 'Chelsea Reach, SW3',
-    service: 'Guaranteed Rent',
+    service: 'Property Management',
   },
 ]
