@@ -129,6 +129,44 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
+      {/* PROPERTY GALLERY (if any property in this area has extra photos) */}
+      {(() => {
+        const gallerySources = area.properties.flatMap((p) =>
+          p.gallery && p.gallery.length > 0
+            ? [{ name: p.name, photos: [p.imageUrl, ...p.gallery] }]
+            : [],
+        )
+        if (gallerySources.length === 0) return null
+        return (
+          <section className="bg-white section-pad !pb-0">
+            <div className="container-edge">
+              <FadeIn>
+                <SectionLabel>Inside the property</SectionLabel>
+                <h2 className="mt-5 text-fluid-3xl font-extrabold tracking-tighter leading-tight">
+                  A look at {gallerySources[0].name}.
+                </h2>
+              </FadeIn>
+
+              <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
+                {gallerySources[0].photos.map((src, i) => (
+                  <FadeIn key={src} delay={i * 0.05}>
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-cream">
+                      <Image
+                        src={src}
+                        alt={`${gallerySources[0].name} — photo ${i + 1}`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
+          </section>
+        )
+      })()}
+
       {/* PROPERTIES IN AREA */}
       {area.properties.length > 0 && (
         <section className="bg-white section-pad">

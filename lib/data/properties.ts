@@ -13,6 +13,11 @@ export type Property = {
   highlight: string
   imageQuery: string
   imageUrl: string
+  /**
+   * Optional additional photos beyond imageUrl. Rendered on the area page
+   * as an "Inside the property" gallery when present.
+   */
+  gallery?: string[]
   badge: string | null
   location: { lat: number; lng: number }
 }
@@ -102,6 +107,28 @@ export const PROPERTIES: Property[] = [
     imageUrl: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
     badge: null,
     location: { lat: 51.4871, lng: -0.1678 },
+  },
+  {
+    id: 'waterloo-apartments',
+    name: 'Waterloo Apartments',
+    type: 'Serviced Apartments',
+    area: 'Waterloo, SE1',
+    areaSlug: 'waterloo',
+    description:
+      'Modern serviced apartments minutes from Waterloo Station and the South Bank. Operated under our guaranteed rent scheme with a corporate-let focus and consistent year-round demand.',
+    bedrooms: '1-bed & 2-bed apartments',
+    service: 'guaranteed-rent',
+    monthlyIncome: '£3,500/month guaranteed',
+    highlight: 'Corporate let focus — high yield',
+    imageQuery: 'waterloo london serviced apartment bedroom interior',
+    imageUrl:
+      'https://bookingenginecdn.hostaway.com/listing/67835-432700-wpQjLbHqDwghT6RiCTA438253xvnIUY--YLTLl4d----tI-68c4d195da1b7?width=1920&quality=70&format=webp&v=2',
+    gallery: [
+      'https://bookingenginecdn.hostaway.com/listing/67835-432700-kKATe3pyKt8CJGkJm7lYODkYhkT7T13Rf8YsmgHVChw-68c4d15635df5?width=1920&quality=70&format=webp&v=2',
+      'https://bookingenginecdn.hostaway.com/listing/67835-432700-seTJHcnS11YjoGxvX1gl9MHVwGf-NYlb8pqv8Rn6MeA-68c4d173456ce?width=1920&quality=70&format=webp&v=2',
+    ],
+    badge: null,
+    location: { lat: 51.5036, lng: -0.1143 },
   },
 ]
 
