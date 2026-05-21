@@ -60,7 +60,23 @@ export function CoverageMapClient() {
       'top-right',
     )
 
+    // Resize on container size changes. Mapbox's canvas dimensions are
+    // measured once at init; if the container resolves to a different
+    // size later (CSS transitions, lg-breakpoint height change, mobile
+    // browser chrome bar toggling) the canvas keeps its initial size
+    // and tiles paint into a region that's no longer visible. The
+    // observer keeps the canvas in sync with the container.
+    const resizeObserver = new ResizeObserver(() => {
+      mapRef.current?.resize()
+    })
+    resizeObserver.observe(containerRef.current)
+
     map.on('load', () => {
+      // Force a resize in case the container had its final dimensions
+      // resolved after init. Without this, tiles can paint into a
+      // canvas sized to a stale measurement.
+      map.resize()
+
       map.addSource('coverage', {
         type: 'geojson',
         data: coverageGeoJson,
@@ -141,6 +157,7 @@ export function CoverageMapClient() {
     })
 
     return () => {
+      resizeObserver.disconnect()
       popupRef.current?.remove()
       popupRef.current = null
       map.remove()
@@ -166,17 +183,21 @@ export function CoverageMapClient() {
 
   return (
     <div>
-      {/* Map container — taller on desktop. Mapbox needs a known size
-          to render; the height classes below provide one. */}
+      {/* Map container — taller on desktop. The ref'd inner div uses
+          h-full w-full instead of `absolute inset-0` because Mapbox
+          forces position: relative on the container at init time,
+          which would otherwise collapse an absolute+inset-0 element
+          to zero height. Explicit dimensions make the container
+          robust against that override. */}
       <div className="relative h-[400px] lg:h-[500px] rounded-md overflow-hidden border border-light-line bg-navy-950">
-        <div ref={containerRef} className="absolute inset-0" />
+        <div ref={containerRef} className="h-full w-full" />
         {tokenMissing && (
           <div className="absolute inset-0 flex items-center justify-center bg-navy-950 text-white/80 text-sm px-6 text-center">
             Map unavailable. The area list below covers everywhere we operate.
           </div>
         )}
         {!ready && !tokenMissing && (
-          <div className="absolute inset-0 flex items-center justify-center text-white/55 text-xs uppercase tracking-widest">
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center text-white/55 text-xs uppercase tracking-widest">
             Loading map…
           </div>
         )}
