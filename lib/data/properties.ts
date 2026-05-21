@@ -86,11 +86,11 @@ export const PROPERTIES: Property[] = [
     area: 'Chelsea, SW3',
     areaSlug: 'chelsea',
     description:
-      'A pair of riverside apartments in Chelsea on our guaranteed rent scheme. Currently let to a corporate client on a one-year contract.',
+      'A pair of riverside apartments in Chelsea on our guaranteed rent scheme. Currently let to a corporate client on a three-year contract.',
     bedrooms: '1-bed & 2-bed',
     service: 'guaranteed-rent',
     monthlyIncome: '£7,000/month guaranteed',
-    highlight: 'Corporate client secured. 1 year contract.',
+    highlight: 'Corporate client secured. 3 year contract.',
     imageQuery: 'london thames riverside apartment chelsea',
     imageUrl: 'https://images.unsplash.com/photo-1584412181991-bf85c8e01f58?w=800&q=80',
     badge: null,

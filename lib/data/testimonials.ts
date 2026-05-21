@@ -50,7 +50,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 4,
     quote:
-      'Onboarding took just 7 days. The team brought us a corporate tenant on a one-year lease and the guaranteed payment lands on the same day every month. Hands-off. Exactly what we wanted.',
+      'Onboarding took just 7 days. The team brought us a corporate tenant on a three-year lease and the guaranteed payment lands on the same day every month. Hands-off. Exactly what we wanted.',
     name: 'Priya M.',
     role: 'Buy-to-Let Investor',
     area: 'Chelsea',
