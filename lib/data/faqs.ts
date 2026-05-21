@@ -38,7 +38,7 @@ export const GUARANTEED_RENT_FAQS: FAQ[] = [
 export const SHORT_LET_FAQS: FAQ[] = [
   {
     q: 'What is a "managed short let"?',
-    a: 'We take over the full operation of letting your property on short-stay platforms (Airbnb, Booking.com, Vrbo, Expedia and direct) and corporate channels. You receive net income after our management fee, typically 2-3x what a standard AST would deliver.',
+    a: 'We take over the full operation of letting your property on short-stay platforms (Airbnb, Booking.com, Vrbo, Expedia and direct) and corporate channels. You receive net income after our management fee, typically significantly more than a standard AST would deliver.',
   },
   {
     q: 'What is the management fee?',

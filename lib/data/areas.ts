@@ -32,7 +32,7 @@ export const AREA_META: Record<string, AreaMeta> = {
     postcode: 'W8',
     tagline: 'Short-let specialists',
     intro:
-      'High Street Kensington consistently outperforms standard letting yields by 2-3x once optimised for short-let. We manage premium units across W8, working closely with Kensington Palace and Holland Park footfall. Our portfolio here is overwhelmingly short-let, with average occupancy of 94% across the year.',
+      'High Street Kensington significantly outperforms standard letting yields once optimised for short-let. We manage premium units across W8, working closely with Kensington Palace and Holland Park footfall. Our portfolio here is overwhelmingly short-let, with average occupancy of 94% across the year.',
     demand: 'Tourist & corporate. Peak nightly rates exceed £600 in summer.',
   },
   pimlico: {

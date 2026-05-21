@@ -1518,7 +1518,6 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'table',
         headers: ['Property type', 'Avg nightly (peak)', 'Avg nightly (off-peak)', 'Net monthly'],
         rows: [
-          ['Studio', '£260', '£190', '£3,500-£4,800'],
           ['1-bed', '£350', '£260', '£5,000-£7,000'],
           ['2-bed', '£550', '£400', '£8,200-£11,500'],
           ['3-bed', '£800', '£580', '£12,000-£16,000'],
