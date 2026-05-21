@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { PROPERTIES } from '@/lib/data/properties'
 import { SITE } from '@/lib/config'
@@ -45,26 +45,28 @@ export function Hero() {
             </motion.div>
 
             <h1 className="text-hero font-extrabold tracking-tightest leading-[0.95]">
-              {headlineWords.map((word, i) => (
-                <motion.span
-                  key={`${word}-${i}`}
-                  initial={{ opacity: 0, y: reduce ? 0 : 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.7,
-                    delay: 0.15 + i * 0.08,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="inline-block mr-4"
-                >
-                  {i === 1 || i === 3 ? (
-                    <span className="text-gold-500">{word}</span>
-                  ) : (
-                    word
-                  )}
-                  {i === 1 && <br />}
-                </motion.span>
-              ))}
+              {headlineWords.map((word, i) => {
+                const isGold = i === 1 || i === 3
+                const lineBreak = i === 1
+                const isLast = i === headlineWords.length - 1
+                return (
+                  <Fragment key={`${word}-${i}`}>
+                    <motion.span
+                      initial={{ opacity: 0, y: reduce ? 0 : 40 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.7,
+                        delay: 0.15 + i * 0.08,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      className="inline-block"
+                    >
+                      {isGold ? <span className="text-gold-500">{word}</span> : word}
+                    </motion.span>
+                    {lineBreak ? <br /> : !isLast && ' '}
+                  </Fragment>
+                )
+              })}
             </h1>
 
             <motion.p
