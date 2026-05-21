@@ -62,14 +62,24 @@ export function Footer() {
 
           <div className="md:col-span-3">
             <h4 className="eyebrow !text-white/40 mb-5">Areas We Cover</h4>
-            <ul className="space-y-3 text-sm grid grid-cols-2 gap-x-4">
-              {areas.map((a) => (
-                <li key={a.slug}>
-                  <Link href={`/areas/${a.slug}`} className="hover:text-gold-400 transition-colors">
-                    {a.name}
-                  </Link>
-                </li>
-              ))}
+            {/* Pure 2-column grid with explicit gap-y. Footer-local
+                short-name override for High Street Kensington keeps
+                every row to a single line so the grid reads tight
+                and uniform. */}
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+              {areas.map((a) => {
+                const label =
+                  a.slug === 'high-street-kensington'
+                    ? 'High St Kensington'
+                    : a.name
+                return (
+                  <li key={a.slug}>
+                    <Link href={`/areas/${a.slug}`} className="hover:text-gold-400 transition-colors">
+                      {label}
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </div>
 
