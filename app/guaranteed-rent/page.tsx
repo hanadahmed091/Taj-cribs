@@ -7,6 +7,7 @@ import { FAQ } from '@/components/sections/FAQ'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { FinalCTA } from '@/components/sections/FinalCTA'
+import { PortfolioCardImages } from '@/components/sections/PortfolioCardImages'
 import { GUARANTEED_RENT_FAQS } from '@/lib/data/faqs'
 import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
 import { PROPERTIES } from '@/lib/data/properties'
@@ -39,6 +40,25 @@ const COMPARISON = [
 ]
 
 const CASE_STUDIES = PROPERTIES.filter((p) => p.service === 'guaranteed-rent').slice(0, 3)
+
+// Liverpool Street Apartments lives only on this page, so it is defined
+// inline rather than added to the global PROPERTIES list (which would
+// also surface it on the homepage portfolio grid and try to route to a
+// /areas/liverpool-street page that does not exist).
+const LIVERPOOL_STREET_CARD = {
+  id: 'liverpool-street-apartments',
+  area: 'Liverpool Street, EC2',
+  name: 'Liverpool Street Apartments',
+  description:
+    'Two apartments near Liverpool Street station in the City, operated under our guaranteed rent scheme. The landlord receives a fixed monthly payment on a four-year term and has no involvement in day-to-day operations.',
+  monthlyIncome: '£3,000/month guaranteed',
+  highlight: '4 years fixed',
+  images: [
+    'https://bookingenginecdn.hostaway.com/listing/67835-400511-sR0IbsUNfCwYAShH6sjhJuxIjhjEAuNtX4kMTekssaI-68475279d0e82?width=1920&quality=70&format=webp&v=2',
+    'https://bookingenginecdn.hostaway.com/listing/67835-400511-FwDNYXkJe54lH1McFFdW9iz2VWDD--XlzGaAQnwYiRFk-68476a18240c8?width=1920&quality=70&format=webp&v=2',
+    'https://bookingenginecdn.hostaway.com/listing/67835-400511-QC-v1-6-WpVGT63-qmmffOm5IZsjIHMlZrGavhHFzJI-6847527517d81?width=1920&quality=70&format=webp&v=2',
+  ],
+} as const
 
 export default function GuaranteedRentPage() {
   return (
@@ -232,6 +252,31 @@ export default function GuaranteedRentPage() {
                 </article>
               </FadeIn>
             ))}
+
+            {/* Liverpool Street Apartments — only card on this page that uses
+                the auto-advancing carousel (3 photos). PortfolioCardImages
+                handles the interval, hover-pause, crossfade and dot
+                indicators internally, and respects prefers-reduced-motion. */}
+            <FadeIn key={LIVERPOOL_STREET_CARD.id}>
+              <article className="rounded-md border border-navy-line overflow-hidden">
+                <div className="relative aspect-[3/2]">
+                  <PortfolioCardImages
+                    images={[...LIVERPOOL_STREET_CARD.images]}
+                    alt={`${LIVERPOOL_STREET_CARD.name}, ${LIVERPOOL_STREET_CARD.area}`}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="p-7">
+                  <span className="eyebrow">{LIVERPOOL_STREET_CARD.area}</span>
+                  <h3 className="mt-3 font-bold text-fluid-2xl tracking-tight">{LIVERPOOL_STREET_CARD.name}</h3>
+                  <p className="mt-3 text-white/65 text-sm leading-relaxed">{LIVERPOOL_STREET_CARD.description}</p>
+                  <div className="mt-5 pt-5 border-t border-navy-line">
+                    <p className="text-gold-500 font-bold text-fluid-xl tabular-nums">{LIVERPOOL_STREET_CARD.monthlyIncome}</p>
+                    <p className="text-xs text-white/55 mt-1">{LIVERPOOL_STREET_CARD.highlight}</p>
+                  </div>
+                </div>
+              </article>
+            </FadeIn>
           </div>
         </div>
       </section>
