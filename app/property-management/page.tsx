@@ -39,12 +39,21 @@ const SERVICES_INCLUDED = [
   { icon: Banknote, title: 'Monthly owner reporting' },
 ]
 
-const PLATFORMS = [
-  { name: 'Airbnb' },
-  { name: 'Booking.com' },
-  { name: 'Vrbo' },
-  { name: 'Expedia' },
-  { name: 'Direct' },
+// Platforms shown in the "We list and optimise..." row. The first three
+// have monochrome SVG logos saved under public/logos/. Vrbo isn't in
+// Simple Icons so it renders as a styled wordmark text element. Direct
+// is a direct-booking channel, not a third-party platform, and renders
+// as text with a small "via taj cribs" sub-label.
+type PlatformItem =
+  | { kind: 'logo'; name: string; src: string; widthClass: string }
+  | { kind: 'text'; name: string; subtitle?: string }
+
+const PLATFORMS: PlatformItem[] = [
+  { kind: 'logo', name: 'Airbnb',      src: '/logos/airbnb.svg',  widthClass: 'w-8 sm:w-10' },
+  { kind: 'logo', name: 'Booking.com', src: '/logos/booking.svg', widthClass: 'w-8 sm:w-10' },
+  { kind: 'text', name: 'Vrbo' },
+  { kind: 'logo', name: 'Expedia',     src: '/logos/expedia.svg', widthClass: 'w-8 sm:w-10' },
+  { kind: 'text', name: 'Direct', subtitle: 'via taj cribs' },
 ]
 
 const CASE_STUDIES = PROPERTIES.filter((p) => p.service === 'short-let-management')
@@ -145,14 +154,47 @@ export default function PropertyManagementPage() {
         <div className="container-edge">
           <FadeIn>
             <p className="text-center text-[10px] uppercase tracking-widest font-semibold text-navy-900/45">
-              Your property listed and optimised across
+              We list and optimise your property across leading platforms
             </p>
-            <div className="mt-8 flex flex-wrap justify-center items-center gap-x-12 gap-y-4">
-              {PLATFORMS.map((p) => (
-                <span key={p.name} className="text-fluid-2xl font-extrabold tracking-tighter text-navy-900/40">
-                  {p.name}
-                </span>
-              ))}
+            {/* Single navy colour drives every logo. SVGs are rendered as
+                CSS masks with bg-current so the logo shape picks up
+                text-navy-900/55 from this wrapper. Text-only items
+                (Vrbo, Direct) sit in the same row at matched height. */}
+            <div className="mt-10 flex flex-wrap justify-center items-center text-navy-900/55 gap-x-6 sm:gap-x-10 lg:gap-x-12 gap-y-6">
+              {PLATFORMS.map((p) =>
+                p.kind === 'logo' ? (
+                  <span
+                    key={p.name}
+                    role="img"
+                    aria-label={p.name}
+                    className={`inline-block h-8 sm:h-10 ${p.widthClass} bg-current`}
+                    style={{
+                      WebkitMaskImage: `url(${p.src})`,
+                      maskImage: `url(${p.src})`,
+                      WebkitMaskRepeat: 'no-repeat',
+                      maskRepeat: 'no-repeat',
+                      WebkitMaskPosition: 'center',
+                      maskPosition: 'center',
+                      WebkitMaskSize: 'contain',
+                      maskSize: 'contain',
+                    }}
+                  />
+                ) : (
+                  <span
+                    key={p.name}
+                    className="flex flex-col items-center leading-none"
+                  >
+                    <span className="text-xl sm:text-2xl font-extrabold tracking-tight">
+                      {p.name}
+                    </span>
+                    {p.subtitle && (
+                      <span className="mt-1 text-[10px] uppercase tracking-widest text-navy-900/40">
+                        {p.subtitle}
+                      </span>
+                    )}
+                  </span>
+                ),
+              )}
             </div>
           </FadeIn>
         </div>
