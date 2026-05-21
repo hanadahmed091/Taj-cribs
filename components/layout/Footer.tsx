@@ -47,10 +47,16 @@ export function Footer() {
             <h4 className="eyebrow !text-white/40 mb-5">Services</h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/guaranteed-rent" className="hover:text-gold-400 transition-colors">Guaranteed Rent</Link></li>
-              <li><Link href="/property-management" className="hover:text-gold-400 transition-colors">Short-Let Management</Link></li>
+              <li><Link href="/property-management" className="hover:text-gold-400 transition-colors">Property Management</Link></li>
               <li><Link href="/pricing" className="hover:text-gold-400 transition-colors">Pricing</Link></li>
               <li><Link href="/blog" className="hover:text-gold-400 transition-colors">Insights</Link></li>
               <li><Link href="/contact" className="hover:text-gold-400 transition-colors">Free Valuation</Link></li>
+            </ul>
+
+            <h4 className="eyebrow !text-white/40 mb-5 mt-10">Legal</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link href="/privacy-policy" className="hover:text-gold-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-gold-400 transition-colors">Terms and Conditions</Link></li>
             </ul>
           </div>
 
