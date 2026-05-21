@@ -216,7 +216,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'The honest take from where we sit' },
       {
         type: 'p',
-        text: "We operate properties across [Marylebone](/areas/marylebone), Kensington, Pimlico, Chelsea, [Earl's Court](/areas/earls-court) and [Waterloo](/areas/waterloo), on both guaranteed rent and short-let models. Since May we've seen a sharp uptick in enquiries from landlords who were doing standard AST lettings and have realised, often after one difficult tenant experience, that they don't want to do it any more under the new rules.",
+        text: "We operate properties across Central London, on both guaranteed rent and short-let models. Since May we've seen a sharp uptick in enquiries from landlords who were doing standard AST lettings and have realised, often after one difficult tenant experience, that they don't want to do it any more under the new rules.",
       },
       {
         type: 'p',
