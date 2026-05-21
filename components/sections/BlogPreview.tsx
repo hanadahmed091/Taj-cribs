@@ -3,10 +3,10 @@ import { ArrowUpRight } from 'lucide-react'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { BlogCard } from '@/components/blog/BlogCard'
-import { BLOG_POSTS } from '@/lib/data/blog'
+import { VISIBLE_BLOG_POSTS } from '@/lib/data/blog'
 
 export function BlogPreview() {
-  const posts = BLOG_POSTS.slice(0, 3)
+  const posts = VISIBLE_BLOG_POSTS.slice(0, 3)
 
   return (
     <section className="bg-white section-pad">

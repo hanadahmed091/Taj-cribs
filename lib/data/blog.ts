@@ -30,6 +30,13 @@ export type BlogPost = {
   metaDescription: string
   keywords: string[]
   body: BlogBlock[]
+  /**
+   * When true, the post is excluded from the /blog index list and the
+   * homepage "Insights" preview. The article page itself (/blog/[slug])
+   * remains live, so direct links and the sitemap still work.
+   * Flip to false (or remove the line) to bring an article back to the index.
+   */
+  hiddenFromIndex?: boolean
 }
 
 const TEAM = 'Taj Cribs Team'
@@ -663,6 +670,7 @@ export const BLOG_POSTS: BlogPost[] = [
   // POST 7 — Tue 9 Jun 2026 — Market Insights
   // ─────────────────────────────────────────────────────────────────────
   {
+    hiddenFromIndex: true,
     slug: 'private-rented-sector-london-2026',
     title: "London's Private Rented Sector in 2026: What Landlords Need to Know",
     excerpt:
@@ -760,6 +768,7 @@ export const BLOG_POSTS: BlogPost[] = [
   // POST 8 — Thu 11 Jun 2026 — Regulations
   // ─────────────────────────────────────────────────────────────────────
   {
+    hiddenFromIndex: true,
     slug: 'ast-tenancy-agreement-guide-landlords',
     title: 'AST Tenancy Agreements: A Plain English Guide for London Landlords',
     excerpt:
@@ -872,6 +881,7 @@ export const BLOG_POSTS: BlogPost[] = [
   // POST 9 — Sun 14 Jun 2026 — Landlord Guides
   // ─────────────────────────────────────────────────────────────────────
   {
+    hiddenFromIndex: true,
     slug: 'property-management-central-london',
     title: 'Property Management in Central London: What to Look For and What to Avoid',
     excerpt:
@@ -980,6 +990,7 @@ export const BLOG_POSTS: BlogPost[] = [
   // POST 10 — Tue 16 Jun 2026 — Tax & Finance
   // ─────────────────────────────────────────────────────────────────────
   {
+    hiddenFromIndex: true,
     slug: 'airbnb-tax-guide-london-2026',
     title: 'Airbnb Tax Guide for London Landlords 2026: What You Actually Need to Know',
     excerpt:
@@ -1101,6 +1112,7 @@ export const BLOG_POSTS: BlogPost[] = [
   // POST 11 — Thu 18 Jun 2026 — Area Guides
   // ─────────────────────────────────────────────────────────────────────
   {
+    hiddenFromIndex: true,
     slug: 'marylebone-property-investment',
     title: "Why Marylebone Is One of London's Best Areas for Short-Let Property Investment",
     excerpt:
@@ -1229,6 +1241,7 @@ export const BLOG_POSTS: BlogPost[] = [
   // POST 12 — Sun 21 Jun 2026 — Area Guides
   // ─────────────────────────────────────────────────────────────────────
   {
+    hiddenFromIndex: true,
     slug: 'kensington-short-let-guide',
     title: "Short-Let Management in Kensington: A Landlord's Complete Guide",
     excerpt:
@@ -1364,6 +1377,16 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 ]
 
+/**
+ * Posts that should appear on the /blog index list and the homepage preview.
+ * Direct article URLs, the sitemap, and slug lookups continue to use the
+ * full BLOG_POSTS array — so posts hidden from the index remain reachable
+ * by direct link and can be restored by flipping their hiddenFromIndex flag.
+ */
+export const VISIBLE_BLOG_POSTS: BlogPost[] = BLOG_POSTS.filter(
+  (p) => !p.hiddenFromIndex,
+)
+
 export function getBlogPostBySlug(slug: string): BlogPost | null {
   return BLOG_POSTS.find((p) => p.slug === slug) ?? null
 }
@@ -1374,7 +1397,7 @@ export function getRelatedPosts(currentSlug: string, n = 3): BlogPost[] {
 
 export function getAllCategories(): BlogCategory[] {
   const set = new Set<BlogCategory>()
-  for (const p of BLOG_POSTS) set.add(p.category)
+  for (const p of VISIBLE_BLOG_POSTS) set.add(p.category)
   return Array.from(set)
 }
 

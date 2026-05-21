@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { FinalCTA } from '@/components/sections/FinalCTA'
-import { BLOG_POSTS, getAllCategories } from '@/lib/data/blog'
+import { VISIBLE_BLOG_POSTS, getAllCategories } from '@/lib/data/blog'
 import { BlogFilter } from '@/components/blog/BlogFilter'
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export default function BlogIndexPage() {
       <section className="bg-cream section-pad !pt-16">
         <div className="container-edge">
           <FadeIn>
-            <BlogFilter posts={BLOG_POSTS} categories={categories} />
+            <BlogFilter posts={VISIBLE_BLOG_POSTS} categories={categories} />
           </FadeIn>
         </div>
       </section>
