@@ -1,6 +1,8 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import type { BlogBlock } from '@/lib/data/blog'
+import { SITE } from '@/lib/config'
 
 // Parses inline `[label](/href)` link syntax and renders the labels as
 // next/link components with the brand underline style. Anything outside a
@@ -151,7 +153,38 @@ export function PostBody({ blocks }: { blocks: BlogBlock[] }) {
                   {b.label}
                   <ArrowRight size={16} />
                 </Link>
+                {b.secondaryPhone && (
+                  <p className="mt-5 text-sm text-white/60">
+                    Or call us on{' '}
+                    <a
+                      href={`tel:${SITE.phone.replace(/\s/g, '')}`}
+                      className="font-semibold text-white hover:text-gold-400 transition-colors"
+                    >
+                      {SITE.phoneDisplay}
+                    </a>
+                    .
+                  </p>
+                )}
               </aside>
+            )
+          case 'img':
+            return (
+              <figure key={i} className="my-10 not-prose">
+                <div className="relative aspect-[16/9] overflow-hidden rounded-md bg-cream">
+                  <Image
+                    src={b.src}
+                    alt={b.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 720px"
+                    className="object-cover"
+                  />
+                </div>
+                {b.caption && (
+                  <figcaption className="mt-3 text-sm italic text-navy-900/60 text-center">
+                    {b.caption}
+                  </figcaption>
+                )}
+              </figure>
             )
           default:
             return null

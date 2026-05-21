@@ -14,8 +14,27 @@ export type BlogBlock =
   | { type: 'ul'; items: string[] }
   | { type: 'ol'; items: string[] }
   | { type: 'quote'; text: string }
-  | { type: 'cta'; headline: string; body: string; href: string; label: string }
+  | {
+      type: 'cta'
+      headline: string
+      body: string
+      href: string
+      label: string
+      /**
+       * When true, the CTA card renders an "Or call us on {phone}" line
+       * below the button, using SITE.phoneDisplay so the number stays
+       * in sync sitewide.
+       */
+      secondaryPhone?: boolean
+    }
   | { type: 'table'; headers: string[]; rows: string[][] }
+  | {
+      type: 'img'
+      src: string
+      alt: string
+      /** Optional caption rendered below the image as small italic text. */
+      caption?: string
+    }
 
 export type BlogPost = {
   slug: string
@@ -49,6 +68,177 @@ const CLOSING_PARA: BlogBlock = {
 }
 
 export const BLOG_POSTS: BlogPost[] = [
+  // ─────────────────────────────────────────────────────────────────────
+  // POST 0 — Thu 21 May 2026 — Regulations
+  // Operational playbook published a few days after the 1 May 2026
+  // commencement of the Renters Rights Act.
+  // ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'section-21-abolished-what-london-landlords-do-now',
+    title:
+      "Section 21 Has Been Abolished. Here's What Every London Landlord Actually Needs to Do Now",
+    excerpt:
+      "Section 21 is gone. Fixed-term ASTs are gone. Here's the honest playbook for Central London landlords from people operating under the new rules every day.",
+    category: 'Regulations',
+    date: '2026-05-21',
+    readTime: '8 min read',
+    author: TEAM,
+    heroImage:
+      'https://images.unsplash.com/photo-1661626740414-2a88f8e1b406?w=1600&q=80',
+    metaTitle:
+      'Section 21 Has Been Abolished. The London Landlord Playbook for 2026',
+    metaDescription:
+      "Section 21 is gone. Fixed-term ASTs are gone. Here's the honest playbook for Central London landlords from people operating under the new rules every day.",
+    keywords: [
+      'section 21 abolished',
+      'london landlord renters rights act',
+      'section 8 eviction london',
+      'guaranteed rent landlord london',
+      'section 21 alternative',
+    ],
+    body: [
+      {
+        type: 'p',
+        text: "If you're a landlord in London and you've just realised Section 21 is gone, take a breath. There's a lot of panic online and a fair bit of misinformation. This is the straightforward version, written by people who manage property in Central London every day and have been operating under the new rules since they came in.",
+      },
+      {
+        type: 'p',
+        text: "We'll cover what's actually changed, what it means in practice, the three biggest mistakes we're seeing landlords make right now, and the routes that protect your income going forward.",
+      },
+
+      { type: 'h2', text: 'What actually happened' },
+      {
+        type: 'p',
+        text: 'Section 21 of the Housing Act 1988 was the so-called "no-fault eviction" notice. For decades it let a landlord end an assured shorthold tenancy by serving two months\' notice, without giving a reason. The [Renters Rights Act 2026](/blog/renters-rights-act-2026-london-landlords) abolished it. From 1 May 2026, you cannot serve a Section 21 notice on any tenancy in England, full stop.',
+      },
+      {
+        type: 'p',
+        text: "Fixed-term ASTs are also gone. Every new tenancy is now a single open-ended periodic tenancy, rolling month to month, with the tenant able to leave on two months' notice at any time. You don't get to lock them in for twelve months any more.",
+      },
+      {
+        type: 'p',
+        text: 'If you want to regain possession of your property, you now have to use Section 8, which means proving a specific ground. Rent arrears, anti-social behaviour, the landlord wanting to move back in, the landlord wanting to sell. Each ground has its own evidence requirements and its own notice period.',
+      },
+      {
+        type: 'p',
+        text: 'This is a fundamental shift. The balance of power between landlord and tenant has moved towards the tenant, and the government has been explicit that this was the intention.',
+      },
+
+      { type: 'h2', text: 'What it means in practice' },
+      {
+        type: 'p',
+        text: "A few honest realities most letting agents won't tell you upfront.",
+      },
+      {
+        type: 'p',
+        text: 'If you have a difficult tenant and no formal grounds to evict them, you are now stuck with them. You cannot quietly end the tenancy and find someone else. You either resolve the issue or you take it to court under Section 8, which takes months and is not guaranteed to succeed.',
+      },
+      {
+        type: 'p',
+        text: "The court backlog for possession claims in London is already at over six months and is expected to worsen as Section 8 becomes the only route. Build that into your planning if you're relying on being able to recover a property quickly.",
+      },
+      {
+        type: 'p',
+        text: "Tenants now know they can leave on two months' notice. Void periods are going to become more common, especially in areas where tenants are price-sensitive and shopping around.",
+      },
+      {
+        type: 'p',
+        text: "The mandatory landlord database is coming. Every landlord will have to register, every property will have to be listed, and serious or repeated breaches can result in being struck off, which means you can't legally let property at all.",
+      },
+      {
+        type: 'p',
+        text: 'Insurance is changing. Several landlord rent guarantee insurers have already adjusted their products to reflect higher risk under the new regime. Premiums are up. Some have stopped covering certain scenarios entirely.',
+      },
+
+      {
+        type: 'img',
+        src: 'https://images.unsplash.com/photo-1759429255330-51145b170dad?w=1600&q=80',
+        alt: 'House plans, miniature properties and keys on a desk',
+      },
+
+      {
+        type: 'h2',
+        text: "The three mistakes we're seeing landlords make right now",
+      },
+      {
+        type: 'p',
+        text: "We're seeing landlords across our portfolio and in conversations with new enquiries making the same three calls, and each one is going to cost them.",
+      },
+      {
+        type: 'p',
+        text: "The first mistake is sitting tight and hoping it'll be fine. The new regime isn't a phase. Section 21 is not coming back. If your business model relied on being able to remove tenants quickly when needed, that model no longer works and waiting won't change it.",
+      },
+      {
+        type: 'p',
+        text: 'The second mistake is rushing into the wrong tenant out of fear of voids. We\'ve heard landlords say "I\'ll just accept anyone now because if they\'re bad I\'m stuck either way." That\'s the worst possible logic. Under the new rules tenant selection is more important than ever, not less. A bad tenant is now a problem you cannot easily fix. Vetting matters more, not less.',
+      },
+      {
+        type: 'p',
+        text: "The third mistake is assuming a traditional letting agent will protect you. Most agents are reactive. They find tenants and forward problems to you. Under Section 21 that was annoying. Under Section 8 it's expensive. You're the one who has to build the evidence case, attend court, fund the legal costs. The agent collects their fee either way.",
+      },
+
+      {
+        type: 'h2',
+        text: 'The routes that actually protect your income now',
+      },
+      {
+        type: 'p',
+        text: 'There are three sensible models for a London landlord under the new regime, and each one suits different situations.',
+      },
+      {
+        type: 'p',
+        text: 'The first is [guaranteed rent](/guaranteed-rent). A specialist operator takes a lease on your property for a fixed term, typically one to five years, and pays you a fixed monthly amount regardless of what happens with the underlying tenant. The void risk, the bad-debt risk, the Section 8 risk, the court risk all sit with the operator, not you. You collect the same amount on the same date every month and you genuinely never need to think about it.',
+      },
+      {
+        type: 'p',
+        text: "For most landlords with one to three properties who don't want to become amateur court-case managers, this is now the most sensible option that exists.",
+      },
+
+      {
+        type: 'img',
+        src: 'https://images.unsplash.com/photo-1718579019220-98697dc2fd72?w=1600&q=80',
+        alt: 'Pastel-coloured terraced houses on a Notting Hill street in Central London',
+      },
+
+      {
+        type: 'p',
+        text: "It was always a strong product. Under the new regime it's become close to essential for anyone who can't afford a six-month void or a contested possession case.",
+      },
+      {
+        type: 'p',
+        text: "The second is [short-let management](/property-management). Your property goes on Airbnb, Booking.com, Vrbo and similar platforms, managed by an operator who handles the listings, pricing, cleaning, guest vetting and turnaround. There are no tenants in the legal sense. They are paying guests, and short-let stays under 90 nights aren't subject to the new tenancy rules at all. This works well in Central London where short-let demand is consistent year-round, and it can deliver up to two times the income of a standard AST.",
+      },
+      {
+        type: 'p',
+        text: "The third is keeping things AST but tightening up dramatically on tenant vetting, deposit protection, and documentation. This is the right call only if you have time to learn the new evidence rules properly and the appetite to attend court if it comes to that. For most landlords it's not realistic.",
+      },
+
+      { type: 'h2', text: 'The honest take from where we sit' },
+      {
+        type: 'p',
+        text: "We operate properties across [Marylebone](/areas/marylebone), Kensington, Pimlico, Chelsea, [Earl's Court](/areas/earls-court) and [Waterloo](/areas/waterloo), on both guaranteed rent and short-let models. Since May we've seen a sharp uptick in enquiries from landlords who were doing standard AST lettings and have realised, often after one difficult tenant experience, that they don't want to do it any more under the new rules.",
+      },
+      {
+        type: 'p',
+        text: "The truth is that property letting has become a more professional, higher-stakes game. The amateur landlord with a single buy-to-let and a friendly letting agent is the operating model most exposed to the new regime. The landlords who'll do well are the ones who either become full professionals themselves or hand the operational risk to someone whose job it is.",
+      },
+      {
+        type: 'p',
+        text: "If you're sitting on a Central London property right now and you're not sure what to do, the worst answer is to do nothing and find out the hard way.",
+      },
+
+      {
+        type: 'cta',
+        headline: 'Still not sure what to do?',
+        body:
+          "Talk to one of our experts. We'll look at your property, your situation, and give you a straight answer about whether guaranteed rent, short-let management or something else makes sense for you. No sales pressure, no obligation, no jargon.",
+        href: '/contact',
+        label: 'Get a free consultation',
+        secondaryPhone: true,
+      },
+    ],
+  },
+
   // ─────────────────────────────────────────────────────────────────────
   // POST 1 — Tue 26 May 2026 — Regulations
   // ─────────────────────────────────────────────────────────────────────
