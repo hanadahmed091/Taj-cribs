@@ -514,7 +514,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: "We mention it because it's the single biggest thing landlords should ask any manager about. Not whether they 'have a quality process' but who specifically is on-site between guests, and how often." },
 
       { type: 'h2', text: 'What to expect financially' },
-      { type: 'p', text: 'Realistic expectations matter. Short-let in Central London typically delivers 2 to 3 times standard AST yields gross, before our 18% management fee.' },
+      { type: 'p', text: 'Realistic expectations matter. Short-let in Central London typically delivers significantly more than a standard AST yield gross, before our 18% management fee.' },
       { type: 'p', text: "The numbers vary considerably with property, area, finish and how well a listing is marketed. Rather than quote ranges that might not apply to your situation, we give every landlord a tailored figure based on their actual property." },
       { type: 'p', text: 'For a specific estimate, [request a free valuation](/contact). We come back with a guaranteed monthly figure and a projected short-let income within one business day.' },
 
@@ -1360,7 +1360,7 @@ export const BLOG_POSTS: BlogPost[] = [
         items: [
           '1-bed apartments in mansion blocks (Chiltern Street, Devonshire Street, Wimpole Street). Consistent corporate and medical demand',
           '2-bed apartments above ground-floor retail on Marylebone High Street. Family and longer-stay leisure',
-          'Studios near Harley Street. Single medical patients and short-stay business',
+          '1-bed apartments near Harley Street. Single medical patients and short-stay business',
           'Full residential blocks. We operate a 14-unit block ([Beaumont Court](/areas/marylebone)) under [guaranteed rent](/guaranteed-rent), and the model works exceptionally well for block-level ownership',
         ],
       },
@@ -1498,7 +1498,7 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'ul',
         items: [
           'Walk-up flats above the second floor in buildings without lifts. Limits family guest pool',
-          'Studios in interior blocks (no view, no light). Lower nightly rate',
+          '1-bed apartments in interior blocks (no view, no light). Lower nightly rate',
           'Properties on Cromwell Road specifically (heavy traffic, noise complaints)',
         ],
       },

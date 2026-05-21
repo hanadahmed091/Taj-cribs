@@ -65,7 +65,7 @@ export const PROPERTIES: Property[] = [
     areaSlug: 'pimlico',
     description:
       'A couple of apartments within a managed block near Pimlico and Waterloo, operated under our guaranteed rent scheme. Minutes from the South Bank and Westminster.',
-    bedrooms: 'Studios & 1-bed apartments',
+    bedrooms: '1-bed apartments',
     service: 'guaranteed-rent',
     monthlyIncome: '£11,300/month guaranteed',
     highlight: '2 years fixed',

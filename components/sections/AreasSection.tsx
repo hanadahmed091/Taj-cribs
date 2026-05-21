@@ -29,11 +29,15 @@ export function AreasSection() {
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <p className="mt-10 text-sm text-navy-900/60 text-center">
+          <p className="mt-14 text-fluid-lg text-navy-900/80 text-center leading-relaxed">
             Properties outside these areas considered.{' '}
-            <Link href="/contact" className="text-navy-900 underline decoration-gold-500 underline-offset-4 hover:text-gold-600 transition-colors">
+            <Link
+              href="/contact"
+              className="font-semibold text-navy-900 underline decoration-gold-500 decoration-2 underline-offset-4 hover:text-gold-600 transition-colors"
+            >
               Get in touch
-            </Link>.
+            </Link>
+            .
           </p>
         </FadeIn>
       </div>

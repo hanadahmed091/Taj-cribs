@@ -20,7 +20,7 @@ import { SITE } from '@/lib/config'
 export const metadata: Metadata = {
   title: 'Short-Let & Airbnb Management London',
   description:
-    'Full-service short-let and Airbnb property management in Central London. Multi-platform listings, dynamic pricing, in-house housekeeping. 2-3x standard yields.',
+    'Full-service short-let and Airbnb property management in Central London. Multi-platform listings, dynamic pricing, in-house housekeeping. Significantly more than a standard AST.',
   alternates: { canonical: '/property-management' },
 }
 

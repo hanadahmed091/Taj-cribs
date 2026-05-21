@@ -4,12 +4,12 @@ import { SectionLabel } from '@/components/ui/SectionLabel'
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How Taj Cribs collects, uses and protects personal data under UK GDPR. Last updated [date].',
+    'How Taj Cribs collects, uses and protects personal data under UK GDPR. Last updated 22 May 2026.',
   alternates: { canonical: '/privacy-policy' },
 }
 
-const CONTACT_EMAIL_PLACEHOLDER = '[CONTACT EMAIL TO BE INSERTED]'
-const LAST_UPDATED_PLACEHOLDER = '[LAST UPDATED DATE]'
+const CONTACT_EMAIL = 'support@tajcribs.co.uk'
+const LAST_UPDATED = '22 May 2026'
 
 export default function PrivacyPolicyPage() {
   return (
@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="mt-6 text-sm text-white/60">
-            Last updated: {LAST_UPDATED_PLACEHOLDER}
+            Last updated: {LAST_UPDATED}
           </p>
         </div>
       </section>
@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <p>
               If you have any questions about this policy or how we handle
-              your data, contact us at {CONTACT_EMAIL_PLACEHOLDER}.
+              your data, contact us at {CONTACT_EMAIL}.
             </p>
 
             <h2 className="mt-12 mb-4 text-fluid-2xl font-bold tracking-tight">
@@ -181,7 +181,7 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p>
               To exercise any of these rights, email us at{' '}
-              {CONTACT_EMAIL_PLACEHOLDER}.
+              {CONTACT_EMAIL}.
             </p>
             <p>
               You also have the right to complain to the Information
@@ -249,7 +249,7 @@ export default function PrivacyPolicyPage() {
             </h2>
             <p>
               For any questions about this policy or how we handle your data,
-              email us at {CONTACT_EMAIL_PLACEHOLDER}.
+              email us at {CONTACT_EMAIL}.
             </p>
           </article>
         </div>

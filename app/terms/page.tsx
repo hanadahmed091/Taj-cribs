@@ -4,12 +4,12 @@ import { SectionLabel } from '@/components/ui/SectionLabel'
 export const metadata: Metadata = {
   title: 'Terms and Conditions',
   description:
-    'Terms governing use of the Taj Cribs website. Last updated [date].',
+    'Terms governing use of the Taj Cribs website. Last updated 22 May 2026.',
   alternates: { canonical: '/terms' },
 }
 
-const CONTACT_EMAIL_PLACEHOLDER = '[CONTACT EMAIL TO BE INSERTED]'
-const LAST_UPDATED_PLACEHOLDER = '[LAST UPDATED DATE]'
+const CONTACT_EMAIL = 'support@tajcribs.co.uk'
+const LAST_UPDATED = '22 May 2026'
 
 export default function TermsPage() {
   return (
@@ -23,7 +23,7 @@ export default function TermsPage() {
             Terms and Conditions
           </h1>
           <p className="mt-6 text-sm text-white/60">
-            Last updated: {LAST_UPDATED_PLACEHOLDER}
+            Last updated: {LAST_UPDATED}
           </p>
         </div>
       </section>
@@ -164,7 +164,7 @@ export default function TermsPage() {
             </h2>
             <p>
               For any questions about these terms, email us at{' '}
-              {CONTACT_EMAIL_PLACEHOLDER}.
+              {CONTACT_EMAIL}.
             </p>
           </article>
         </div>
