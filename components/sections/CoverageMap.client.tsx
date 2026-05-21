@@ -101,20 +101,13 @@ export function CoverageMapClient() {
       setReady(true)
     })
 
-    // Tapping the Zone 1 fill opens a single generic popup with a
-    // free-valuation link. No per-area data here because the polygon
-    // is one big shape.
-    map.on('click', 'zone1-fill', (e) => {
-      openZone1Popup(map, e.lngLat)
-    })
-
-    // Cursor feedback so the polygon reads as interactive.
-    map.on('mouseenter', 'zone1-fill', () => {
-      map.getCanvas().style.cursor = 'pointer'
-    })
-    map.on('mouseleave', 'zone1-fill', () => {
-      map.getCanvas().style.cursor = ''
-    })
+    // The Zone 1 polygon is intentionally a passive visual indicator.
+    // Earlier we attached a click handler that opened a "We cover all
+    // of Zone 1" popup, but it ended up hijacking the map (clicks
+    // anywhere on the polygon area opened the popup and obstructed
+    // zoom / pan). The headline above the map already explains the
+    // coverage, so the popup was redundant. Polygon stays visual-only.
+    // Per-area popups still open via the area list below the map.
 
     return () => {
       resizeObserver.disconnect()
@@ -168,8 +161,8 @@ export function CoverageMapClient() {
               onClick={() => focusArea(area.slug)}
               className="w-full text-left text-navy-900/70 hover:text-gold-600 transition-colors"
             >
-              {area.name}{' '}
-              <span className="text-navy-900/40 font-medium">
+              <span className="font-bold">{area.name}</span>{' '}
+              <span className="font-medium text-navy-900/40">
                 {area.postcode}
               </span>
             </button>
@@ -208,30 +201,6 @@ export function CoverageMapClient() {
       .addTo(map)
   }
 
-  /**
-   * Open (or replace) the single popup with the generic Zone 1
-   * message. Used when the user taps the polygon itself.
-   */
-  function openZone1Popup(map: mapboxgl.Map, coords: mapboxgl.LngLatLike) {
-    popupRef.current?.remove()
-    const html = `
-      <div class="coverage-popup-content">
-        <p class="coverage-popup-title">All of Zone 1</p>
-        <p class="coverage-popup-body">We operate across the whole of central London. Short-let, medium-term and guaranteed rent.</p>
-        <a href="/contact" class="coverage-popup-cta">Free valuation</a>
-      </div>
-    `
-    popupRef.current = new mapboxgl.Popup({
-      offset: 12,
-      closeButton: true,
-      closeOnClick: true,
-      className: 'coverage-popup',
-      maxWidth: '260px',
-    })
-      .setLngLat(coords)
-      .setHTML(html)
-      .addTo(map)
-  }
 }
 
 function escapeHtml(s: string): string {
