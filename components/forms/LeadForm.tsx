@@ -7,17 +7,47 @@ import { z } from 'zod'
 import { ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react'
 import { cn, getStoredUtm, pushDataLayer } from '@/lib/utils'
 
-const schema = z.object({
-  name: z.string().min(2, 'Please enter your name'),
-  email: z.string().email('Please enter a valid email'),
-  phone: z.string().min(7, 'Please enter your phone'),
-  propertyAddress: z.string().optional(),
-  postcode: z.string().min(2, 'Postcode required'),
-  propertyType: z.string().optional(),
-  service: z.string().optional(),
-  message: z.string().optional(),
-  hearAbout: z.string().optional(),
-})
+// The dropdown value that reveals the free-text postcode input.
+const OTHER_CENTRAL_LONDON = 'Other Central London'
+
+// Loose UK postcode pattern. Not exhaustive, just enough to catch
+// obvious typos. Case-insensitive, optional space before the inward
+// code.
+const UK_POSTCODE_REGEX = /^[A-Z]{1,2}[0-9][A-Z0-9]?\s?[0-9][A-Z]{2}$/i
+
+const schema = z
+  .object({
+    name: z.string().min(2, 'Please enter your name'),
+    email: z.string().email('Please enter a valid email'),
+    phone: z.string().min(7, 'Please enter your phone'),
+    propertyAddress: z.string().optional(),
+    postcode: z.string().min(2, 'Postcode required'),
+    customPostcode: z.string().optional(),
+    propertyType: z.string().optional(),
+    service: z.string().optional(),
+    message: z.string().optional(),
+    hearAbout: z.string().optional(),
+  })
+  .superRefine((data, ctx) => {
+    // When "Other Central London" is chosen, the free-text postcode
+    // becomes required and must roughly look like a UK postcode.
+    if (data.postcode === OTHER_CENTRAL_LONDON) {
+      const value = data.customPostcode?.trim() ?? ''
+      if (value === '') {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['customPostcode'],
+          message: 'Please enter your postcode',
+        })
+      } else if (!UK_POSTCODE_REGEX.test(value)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['customPostcode'],
+          message: 'Please enter a valid UK postcode',
+        })
+      }
+    }
+  })
 
 type FormValues = z.infer<typeof schema>
 
@@ -28,7 +58,7 @@ const POSTCODE_OPTIONS = [
   'SW3 (Chelsea)',
   'W11 (Notting Hill)',
   'E14 (Canary Wharf)',
-  'Other Central London',
+  OTHER_CENTRAL_LONDON,
 ]
 
 const PROPERTY_TYPES = ['1 Bedroom', '2 Bedroom', '3 Bedroom', '4+ Bedroom', 'Full Block', 'Portfolio (multiple)']
@@ -50,6 +80,8 @@ export function LeadForm({
   const {
     register,
     handleSubmit,
+    watch,
+    setValue,
     formState: { errors },
     reset,
   } = useForm<FormValues>({
@@ -57,14 +89,25 @@ export function LeadForm({
     defaultValues: { service: defaultService },
   })
 
+  const showCustomPostcode = watch('postcode') === OTHER_CENTRAL_LONDON
+
   async function onSubmit(values: FormValues) {
     setStatus('submitting')
     try {
       const utm = getStoredUtm()
+      // Collapse the postcode into a single clean field for the
+      // downstream handler: the typed postcode when "Other Central
+      // London" was chosen, otherwise the selected area. customPostcode
+      // is dropped from the payload so the receiver gets one field.
+      const { customPostcode, ...rest } = values
+      const postcode =
+        values.postcode === OTHER_CENTRAL_LONDON && customPostcode
+          ? customPostcode.trim()
+          : values.postcode
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...values, source, utm }),
+        body: JSON.stringify({ ...rest, postcode, source, utm }),
       })
       if (!res.ok) throw new Error('Submission failed')
       pushDataLayer('form_submission_valuation', { source, service: values.service })
@@ -138,7 +181,19 @@ export function LeadForm({
           </Field>
         )}
         <Field label="Postcode area" error={errors.postcode?.message}>
-          <select {...register('postcode')} className={inputCls} defaultValue="">
+          <select
+            {...register('postcode', {
+              onChange: (e) => {
+                // Clear the typed postcode whenever the user picks a
+                // known area, so a stale value can't be submitted.
+                if (e.target.value !== OTHER_CENTRAL_LONDON) {
+                  setValue('customPostcode', '', { shouldValidate: false })
+                }
+              },
+            })}
+            className={inputCls}
+            defaultValue=""
+          >
             <option value="" disabled>Select postcode area</option>
             {POSTCODE_OPTIONS.map((p) => (
               <option key={p} value={p}>{p}</option>
@@ -146,6 +201,18 @@ export function LeadForm({
           </select>
         </Field>
       </div>
+
+      {showCustomPostcode && (
+        <Field label="Your postcode" error={errors.customPostcode?.message}>
+          <input
+            type="text"
+            autoComplete="postal-code"
+            {...register('customPostcode')}
+            className={inputCls}
+            placeholder="e.g. SW7 2AA"
+          />
+        </Field>
+      )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <Field label="Property type">
