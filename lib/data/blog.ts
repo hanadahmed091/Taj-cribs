@@ -515,7 +515,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
       { type: 'h2', text: 'What to expect financially' },
       { type: 'p', text: 'Realistic expectations matter. Short-let in Central London typically delivers 2 to 3 times standard AST yields gross, before our 18% management fee.' },
-      { type: 'p', text: "A 1-bed in Marylebone that lets at £2,200/month on a standard AST might deliver £4,500-£6,500 gross on short-let. A 2-bed in Mayfair that lets at £5,000 long-term might command £14,000-£25,000 gross on short-let. The numbers depend on the property, area, finish, and how well it's marketed." },
+      { type: 'p', text: "A 1-bed in Marylebone that lets at £2,200/month on a standard AST might deliver £3,800–£5,500 gross on short-let. A 2-bed near Liverpool Street that lets at £3,000 long-term might command £5,500–£7,500 gross on short-let. The numbers depend on the property, area, finish, and how well it's marketed." },
       { type: 'p', text: 'If you want a specific estimate for your property, our [income calculator on the property management page](/property-management) is a good starting point. But a free valuation gives you a sharper figure.' },
 
       { type: 'h2', text: 'How to choose the right manager' },

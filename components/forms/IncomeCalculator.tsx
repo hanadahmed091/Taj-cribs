@@ -235,8 +235,8 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
       <p className="mt-2 text-sm text-navy-900/65">
         Rough indicative figures, based on 2025/26 Central London market data.
         Actual offers vary with finish, furnishing and the specific street, so
-        figures shown can be higher or lower. Short-let projections sit 10%
-        below market ADR.
+        figures shown can be higher or lower. We model conservatively, around
+        10% below market rates.
       </p>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">

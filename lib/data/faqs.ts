@@ -50,7 +50,7 @@ export const SHORT_LET_FAQS: FAQ[] = [
   },
   {
     q: 'What is the average income I can expect?',
-    a: 'Use our income calculator for an area-specific estimate. Our projections sit 10% below market ADR. We deliberately model conservatively so landlords are never disappointed, and most exceed our estimate. As a benchmark: a 1-bed in Marylebone typically delivers £4,500-£6,500/month gross; a 2-bed in Mayfair £14,000-£25,000/month gross.',
+    a: 'Use our income calculator for an area-specific estimate. We model conservatively, around 10% below market rates, so landlords are never disappointed. Most exceed the figure we quote. As a benchmark: a 1-bed in Marylebone typically delivers £3,800–£5,500 per month gross; a 2-bed near Liverpool Street £5,500–£7,500.',
   },
   {
     q: 'How is the property cleaned between guests?',
@@ -66,6 +66,6 @@ export const SHORT_LET_FAQS: FAQ[] = [
   },
   {
     q: 'What if occupancy is low one month?',
-    a: 'Short-let income is variable by nature, but our average across the portfolio is 80% occupancy with average monthly variance under 12%. If predictability matters more than upside, our guaranteed rent product may suit better.',
+    a: 'Short-let income is variable by nature. Our average across the portfolio is 80% occupancy with month-to-month variation typically under 12%. Income also rises and falls with the season. Summer and Christmas tend to be the strongest months, while January and February are quieter. We aim to maximise both occupancy and rate, but a fully booked low-season month will still earn less than a busy peak-season month. If predictability matters more than maximising returns, our guaranteed rent product may suit better.',
   },
 ]

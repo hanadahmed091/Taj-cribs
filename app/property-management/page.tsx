@@ -66,8 +66,8 @@ export default function PropertyManagementPage() {
             </h1>
             <p className="mt-8 max-w-xl text-fluid-lg text-white/75 leading-relaxed">
               We handle everything: listings, bookings, guests, housekeeping, maintenance.
-              You see one number on the 5th of every month: your net. Our estimates sit 10%
-              below market ADR. Most landlords exceed them.
+              You see one number on the 5th of every month: your net. We model conservatively,
+              around 10% below market rates. Most landlords exceed our estimate.
             </p>
           </div>
           <div className="lg:col-span-5">
