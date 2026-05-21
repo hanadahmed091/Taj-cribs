@@ -90,26 +90,33 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
           </p>
 
           {(() => {
-            const hasRates = area.avgMonthlyRate || area.avgNightlyRate
+            // Each rate column is independent — empty values hide the column
+            // entirely rather than showing a misleading dash. Guaranteed Rent
+            // areas without a nightly rate skip the nightly column.
+            const showMonthly = Boolean(area.avgMonthlyRate)
+            const showNightly = Boolean(area.avgNightlyRate)
+            const colCount = 1 + (showMonthly ? 1 : 0) + (showNightly ? 1 : 0)
+            const colsClass =
+              colCount === 3 ? 'grid-cols-3' : colCount === 2 ? 'grid-cols-2' : 'grid-cols-1'
             return (
               <div
-                className={`mt-12 grid ${hasRates ? 'grid-cols-3' : 'grid-cols-1'} gap-6 pt-8 border-t border-navy-line`}
+                className={`mt-12 grid ${colsClass} gap-6 pt-8 border-t border-navy-line`}
               >
                 <div>
                   <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Postcode</p>
                   <p className="mt-1 font-bold text-fluid-xl">{area.postcode}</p>
                 </div>
-                {hasRates && (
-                  <>
-                    <div>
-                      <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Avg monthly</p>
-                      <p className="mt-1 font-bold text-fluid-xl tabular-nums">{area.avgMonthlyRate || '—'}</p>
-                    </div>
-                    <div>
-                      <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Avg nightly</p>
-                      <p className="mt-1 font-bold text-fluid-xl tabular-nums">{area.avgNightlyRate || '—'}</p>
-                    </div>
-                  </>
+                {showMonthly && (
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Avg monthly</p>
+                    <p className="mt-1 font-bold text-fluid-xl tabular-nums">{area.avgMonthlyRate}</p>
+                  </div>
+                )}
+                {showNightly && (
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Avg nightly</p>
+                    <p className="mt-1 font-bold text-fluid-xl tabular-nums">{area.avgNightlyRate}</p>
+                  </div>
                 )}
               </div>
             )

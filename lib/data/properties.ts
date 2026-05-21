@@ -119,7 +119,7 @@ export const PROPERTIES: Property[] = [
     bedrooms: '1-bed & 2-bed apartments',
     service: 'guaranteed-rent',
     monthlyIncome: '£3,500/month guaranteed',
-    highlight: 'Hands-off — guaranteed monthly income',
+    highlight: '2 years fixed',
     imageQuery: 'waterloo london serviced apartment bedroom interior',
     imageUrl:
       'https://bookingenginecdn.hostaway.com/listing/67835-432700-wpQjLbHqDwghT6RiCTA438253xvnIUY--YLTLl4d----tI-68c4d195da1b7?width=1920&quality=70&format=webp&v=2',
