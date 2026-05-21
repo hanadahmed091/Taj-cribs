@@ -25,7 +25,13 @@ export function AreasSection() {
           </FadeIn>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-light-line border border-light-line">
+        <FadeIn delay={0.15}>
+          <p className="mt-8 text-sm text-navy-900/55 leading-relaxed">
+            Rates shown are starting figures. Final rate depends on property size, condition and specifics.
+          </p>
+        </FadeIn>
+
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-light-line border border-light-line">
           {areas.map((area, idx) => (
             <FadeIn key={area.slug} delay={idx * 0.04}>
               <Link

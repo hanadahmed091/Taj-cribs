@@ -36,6 +36,12 @@ export default function AreasIndexPage() {
 
       <section className="bg-cream section-pad">
         <div className="container-edge">
+          <FadeIn>
+            <p className="mb-10 text-sm text-navy-900/55 leading-relaxed">
+              Rates shown are starting figures. Final rate depends on property size, condition and specifics.
+            </p>
+          </FadeIn>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-light-line border border-light-line">
             {areas.map((area, idx) => (
               <FadeIn key={area.slug} delay={idx * 0.05}>
