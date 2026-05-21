@@ -15,13 +15,17 @@ import { cn, pushDataLayer } from '@/lib/utils'
 //   paid as a fixed monthly amount regardless of occupancy.
 //
 // Both figures are derived dynamically from the selected area + bedrooms via
-// area.marketRent[bedrooms] and area.adr[bedrooms]. There is NO hardcoded
-// fallback figure anywhere in this file — change either lookup table below
-// and the calculator updates everywhere it's used.
+// area.marketRent[bedrooms - 1] and area.adr[bedrooms - 1]. There is NO
+// hardcoded fallback figure anywhere in this file. Change either lookup
+// table below and the calculator updates everywhere it's used.
+//
+// Bedroom counts of 5+, or the OTHER_LONDON area, do not consult these
+// tables — they trigger the "Let's talk." card instead, because both
+// scenarios vary too much for a calculator to give a useful figure.
 type AreaModel = {
   label: string
   postcode: string
-  // [studio, 1bed, 2bed, 3bed]  market nightly ADR for short-let
+  // [1bed, 2bed, 3bed, 4bed]  market nightly ADR for short-let
   adr: [number, number, number, number]
   // realistic year-round occupancy %
   occupancy: number
@@ -29,25 +33,31 @@ type AreaModel = {
   // 2025/26 figures based on borough averages and ONS / Rightmove data.
   // Treat these as midpoint indicative; actual offers vary with finish,
   // furnishing and specific street.
+  // [1bed, 2bed, 3bed, 4bed]
   marketRent: [number, number, number, number]
 }
 
+const OTHER_LONDON = 'Other Central London'
+
 const AREAS: AreaModel[] = [
-  { label: 'Marylebone',         postcode: 'W1',  adr: [180, 240, 360, 520],  occupancy: 0.88, marketRent: [1600, 2200, 3200, 4500] },
-  { label: 'Mayfair',            postcode: 'W1',  adr: [320, 480, 720, 1100], occupancy: 0.84, marketRent: [2000, 3200, 5000, 8000] },
-  { label: 'High St Kensington', postcode: 'W8',  adr: [210, 290, 420, 600],  occupancy: 0.94, marketRent: [1700, 2400, 3500, 5000] },
-  { label: 'Pimlico',            postcode: 'SW1', adr: [150, 200, 290, 420],  occupancy: 0.86, marketRent: [1400, 1900, 2800, 3800] },
-  { label: 'Chelsea',            postcode: 'SW3', adr: [210, 290, 410, 580],  occupancy: 0.9,  marketRent: [1700, 2500, 3800, 5500] },
-  { label: 'Westminster',        postcode: 'SW1', adr: [170, 230, 330, 470],  occupancy: 0.85, marketRent: [1500, 2100, 3000, 4200] },
-  { label: 'Notting Hill',       postcode: 'W11', adr: [195, 270, 390, 540],  occupancy: 0.88, marketRent: [1600, 2300, 3400, 4800] },
-  { label: 'Canary Wharf',       postcode: 'E14', adr: [135, 180, 245, 340],  occupancy: 0.82, marketRent: [1300, 1800, 2500, 3400] },
+  { label: 'Marylebone',         postcode: 'W1',  adr: [240, 360, 520, 680],   occupancy: 0.88, marketRent: [2200, 3200, 4500, 6200]  },
+  { label: 'Mayfair',            postcode: 'W1',  adr: [480, 720, 1100, 1500], occupancy: 0.84, marketRent: [3200, 5000, 8000, 11000] },
+  { label: 'High St Kensington', postcode: 'W8',  adr: [290, 420, 600, 800],   occupancy: 0.94, marketRent: [2400, 3500, 5000, 6800]  },
+  { label: 'Pimlico',            postcode: 'SW1', adr: [200, 290, 420, 560],   occupancy: 0.86, marketRent: [1900, 2800, 3800, 5000]  },
+  { label: 'Chelsea',            postcode: 'SW3', adr: [290, 410, 580, 780],   occupancy: 0.9,  marketRent: [2500, 3800, 5500, 7200]  },
+  { label: 'Westminster',        postcode: 'SW1', adr: [230, 330, 470, 620],   occupancy: 0.85, marketRent: [2100, 3000, 4200, 5500]  },
+  { label: 'Notting Hill',       postcode: 'W11', adr: [270, 390, 540, 720],   occupancy: 0.88, marketRent: [2300, 3400, 4800, 6500]  },
+  { label: 'Canary Wharf',       postcode: 'E14', adr: [180, 245, 340, 450],   occupancy: 0.82, marketRent: [1800, 2500, 3400, 4500]  },
 ]
 
+// Bedroom values are used directly as labels (1, 2, 3, 4) and as a
+// sentinel for the catch-all 5+. Lookup into area tuples uses value-1.
 const BEDROOM_OPTIONS = [
-  { value: 0, label: 'Studio' },
-  { value: 1, label: '1 Bedroom' },
-  { value: 2, label: '2 Bedroom' },
-  { value: 3, label: '3+ Bedroom' },
+  { value: 1, label: '1 bedroom' },
+  { value: 2, label: '2 bedrooms' },
+  { value: 3, label: '3 bedrooms' },
+  { value: 4, label: '4 bedrooms' },
+  { value: 5, label: '5+ bedrooms' },
 ]
 
 const CONSERVATIVE_FACTOR = 0.9 // 10% below market ADR
@@ -79,7 +89,12 @@ function CalcDropdown<T extends string | number>({
   ariaLabel,
 }: {
   value: T
-  options: { value: T; label: string }[]
+  /**
+   * Options to render. Set `divider: true` on an option to draw a thin
+   * separator line above it — used to set "Other Central London" apart
+   * from the named areas above it in the list.
+   */
+  options: { value: T; label: string; divider?: boolean }[]
   onChange: (v: T) => void
   ariaLabel: string
 }) {
@@ -170,6 +185,7 @@ function CalcDropdown<T extends string | number>({
                 key={String(opt.value)}
                 role="option"
                 aria-selected={isSelected}
+                className={opt.divider ? 'border-t border-light-line' : undefined}
               >
                 <button
                   type="button"
@@ -203,14 +219,22 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
   const [areaLabel, setAreaLabel] = useState(defaultArea)
   const [bedrooms, setBedrooms] = useState(1)
 
+  // True when the chosen combination is outside what a calculator can
+  // model usefully: either 5+ bedrooms (catch-all) or an area outside
+  // our named coverage. Triggers the "Let's talk." message card.
+  const showLetsTalk = bedrooms === 5 || areaLabel === OTHER_LONDON
+
   const area = AREAS.find((a) => a.label === areaLabel) ?? AREAS[0]
 
   const calc = useMemo(() => {
-    const marketAdr = area.adr[bedrooms]
+    // Bedroom values are 1..4 here; 5 (catch-all) never reaches this
+    // branch because the renderer short-circuits to the Let's talk card.
+    const idx = Math.max(0, Math.min(bedrooms - 1, area.adr.length - 1))
+    const marketAdr = area.adr[idx]
     const conservativeAdr = Math.round(marketAdr * CONSERVATIVE_FACTOR)
     const monthlyGross = Math.round(conservativeAdr * 30 * area.occupancy)
     const monthlyNet = Math.round(monthlyGross * MGMT_NET_FACTOR)
-    const guaranteedMonthly = area.marketRent[bedrooms]
+    const guaranteedMonthly = area.marketRent[idx]
     const annualNet = monthlyNet * 12
     const annualGuaranteed = guaranteedMonthly * 12
     return {
@@ -247,10 +271,13 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
           <CalcDropdown
             ariaLabel="Area"
             value={areaLabel}
-            options={AREAS.map((a) => ({
-              value: a.label,
-              label: `${a.label} ${a.postcode}`,
-            }))}
+            options={[
+              ...AREAS.map((a) => ({
+                value: a.label,
+                label: `${a.label} ${a.postcode}`,
+              })),
+              { value: OTHER_LONDON, label: OTHER_LONDON, divider: true },
+            ]}
             onChange={(v) => {
               setAreaLabel(v)
               pushDataLayer('calculator_area_changed', { area: v })
@@ -271,6 +298,40 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
         </div>
       </div>
 
+      {showLetsTalk ? (
+        <motion.div
+          key={`letstalk-${areaLabel}-${bedrooms}`}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mt-10"
+        >
+          <div className="bg-navy-900 text-white rounded-md p-6 lg:p-8 border border-navy-700">
+            <p className="eyebrow !text-gold-400">Tailored estimate</p>
+            <p className="mt-4 text-3xl font-extrabold tracking-tighter text-gold-500">
+              Let&apos;s talk.
+            </p>
+            <p className="mt-4 text-white/80 leading-relaxed">
+              This combination needs a tailored estimate. Speak to our team for
+              a specific figure for your property.
+            </p>
+            <Link
+              href="/contact"
+              onClick={() =>
+                pushDataLayer('cta_valuation_request', {
+                  location: 'income_calculator_lets_talk',
+                  area: areaLabel,
+                  bedrooms,
+                })
+              }
+              className="btn-gold mt-7 inline-flex !text-navy-950"
+            >
+              Speak to our team
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+        </motion.div>
+      ) : (
       <motion.div
         key={`${areaLabel}-${bedrooms}`}
         initial={{ opacity: 0, y: 12 }}
@@ -334,6 +395,7 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
           </div>
         </div>
       </motion.div>
+      )}
 
       <Link
         href="/contact"
