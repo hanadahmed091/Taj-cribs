@@ -160,9 +160,9 @@ export function Hero() {
         <div className="border-t border-navy-line pt-8 grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0">
           {[
             { num: `${SITE.managedPortfolioCount}`, label: 'Properties managed' },
-            { num: 'Less than a week', label: 'Average onboarding' },
+            { num: '7 days', label: 'Average onboarding' },
             { num: `${SITE.ratingValue}/5`, label: 'Landlord rating' },
-            { num: '£2.4m', label: 'Annual rent paid' },
+            { num: '£1.4m', label: 'Annual rent paid' },
           ].map((stat, i) => (
             <div
               key={stat.label}

@@ -20,7 +20,7 @@ export default function MayfairLandingPage() {
       testimonialQuote="My Mayfair apartment had been difficult to let on a long-term basis. Short-let management was the obvious answer and the team delivered immediately. Guest quality is exceptional."
       testimonialName="Amir K."
       testimonialRole="Luxury Property Owner"
-      testimonialProperty="Mayfair Residences, W1"
+      testimonialProperty="Mayfair Apartment, W1"
     />
   )
 }

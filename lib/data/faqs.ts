@@ -66,6 +66,6 @@ export const SHORT_LET_FAQS: FAQ[] = [
   },
   {
     q: 'What if occupancy is low one month?',
-    a: 'Short-let income is variable by nature, but our average across the portfolio is 87% occupancy with average monthly variance under 12%. If predictability matters more than upside, our guaranteed rent product may suit better.',
+    a: 'Short-let income is variable by nature, but our average across the portfolio is 80% occupancy with average monthly variance under 12%. If predictability matters more than upside, our guaranteed rent product may suit better.',
   },
 ]

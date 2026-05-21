@@ -20,7 +20,7 @@ export const TESTIMONIALS: Testimonial[] = [
     area: 'Marylebone Block',
     stars: 5,
     propertyImage: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80',
-    propertyLabel: 'Beaumont Court, Marylebone W1',
+    propertyLabel: 'Marylebone Apartments, W1',
     service: 'Guaranteed Rent',
   },
   {
@@ -31,7 +31,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Private Landlord',
     area: 'High Street Kensington',
     stars: 5,
-    propertyImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+    propertyImage: 'https://images.unsplash.com/photo-1526654196244-3bdc251b0965?w=800&q=80',
     propertyLabel: 'Kensington Gate, W8',
     service: 'Short-Let Management',
   },
@@ -50,25 +50,13 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 4,
     quote:
-      'My Mayfair apartment had been difficult to let — the nightly rate put off long-term tenants. Short-let management was the obvious answer and the team delivered immediately. Guest quality is exceptional.',
-    name: 'Amir K.',
-    role: 'Luxury Property Owner',
-    area: 'Mayfair',
-    stars: 5,
-    propertyImage: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80',
-    propertyLabel: 'Mayfair Residences, W1',
-    service: 'Short-Let Management',
-  },
-  {
-    id: 5,
-    quote:
-      'The onboarding took less than a week. Professional photographer came, listing went live, first booking confirmed the same week. The management dashboard gives me full visibility without any involvement.',
+      'Onboarding took just 7 days. The team brought us a corporate tenant on a one-year lease and the guaranteed payment lands on the same day every month. Hands-off — exactly what we wanted.',
     name: 'Priya M.',
     role: 'Buy-to-Let Investor',
     area: 'Chelsea',
     stars: 5,
-    propertyImage: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+    propertyImage: 'https://images.unsplash.com/photo-1584412181991-bf85c8e01f58?w=800&q=80',
     propertyLabel: 'Chelsea Reach, SW3',
-    service: 'Short-Let Management',
+    service: 'Guaranteed Rent',
   },
 ]

@@ -32,7 +32,7 @@ const COMPARISON = [
   { feature: 'Void risk', gr: 'On us', ast: 'On you', diy: 'On you' },
   { feature: 'Maintenance', gr: 'Included', ast: 'You pay', diy: 'You pay' },
   { feature: 'Tenant find fees', gr: 'None', ast: 'On you', diy: 'On you' },
-  { feature: 'Onboarding time', gr: 'Less than a week', ast: '4–8 weeks', diy: '4–10 weeks' },
+  { feature: 'Onboarding time', gr: '7 days', ast: '4–8 weeks', diy: '4–10 weeks' },
   { feature: 'Property condition', gr: 'Hotel standard', ast: 'Variable', diy: 'Owner-managed' },
   { feature: 'Lease term', gr: '1–5 years', ast: '6–12 months', diy: 'N/A' },
   { feature: 'Operational involvement', gr: 'Zero', ast: 'Moderate', diy: 'High' },

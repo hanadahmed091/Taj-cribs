@@ -320,7 +320,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
       { type: 'h2', text: 'The Quality Officer standard — what makes us different' },
       { type: 'p', text: "Here's what we do that most operators don't. After every guest checks out, one of our dedicated Quality Officers inspects the property in person before the next arrival. Not a checklist sent to a cleaner. A trained member of our team, on-site, every single time." },
-      { type: 'p', text: "It catches the small things before they become guest complaints — a stained sheet, a broken kettle, a low towel count, a dusty skirting. It's the operational reason our Central London portfolio averages 4.9 stars and 87% occupancy." },
+      { type: 'p', text: "It catches the small things before they become guest complaints — a stained sheet, a broken kettle, a low towel count, a dusty skirting. It's the operational reason our Central London portfolio averages 4.9 stars and 80% occupancy." },
       { type: 'p', text: "We mention it because it's the single biggest thing landlords should ask any manager about. Not whether they 'have a quality process' but who specifically is on-site between guests, and how often." },
 
       { type: 'h2', text: 'What to expect financially' },
@@ -394,7 +394,7 @@ export const BLOG_POSTS: BlogPost[] = [
           ['1-bed Pimlico SW1', '£1,900', '£3,200', '1.7x'],
         ],
       },
-      { type: 'p', text: 'These are conservative net figures — after our 18% management fee, 10% conservative ADR cushion, platform commissions and 87% average occupancy. Most owners exceed them.' },
+      { type: 'p', text: 'These are conservative net figures — after our 18% management fee, 10% conservative ADR cushion, platform commissions and 80% average occupancy. Most owners exceed them.' },
 
       { type: 'h2', text: 'When long-let still wins' },
       { type: 'p', text: 'Long-let beats short-let in a few specific situations that landlords often underweight.' },
@@ -890,7 +890,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-06-14',
     readTime: '7 min read',
     author: TEAM,
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1526654196244-3bdc251b0965?w=1600&q=80',
     metaTitle: 'Property Management Central London — What to Look For and Avoid',
     metaDescription:
       'How to choose a property manager in Central London: red flags, green flags, questions to ask, and what good management actually looks like.',
@@ -999,7 +999,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-06-16',
     readTime: '8 min read',
     author: TEAM,
-    heroImage: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1772588627354-ca3617853217?w=1600&q=80',
     metaTitle: 'Airbnb Tax London Landlord 2026 — Plain English Guide',
     metaDescription:
       '2026 tax guide for London short-let landlords: declaring income, post-FHL rules, allowable expenses, the £90k VAT threshold and council tax vs business rates.',
@@ -1250,7 +1250,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-06-21',
     readTime: '6 min read',
     author: TEAM,
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1526654196244-3bdc251b0965?w=1600&q=80',
     metaTitle: 'Kensington Short-Let Management — Complete Landlord Guide W8',
     metaDescription:
       'Everything London landlords need to know about short-let management in Kensington W8: demand, guest mix, best streets, realistic returns.',
@@ -1277,7 +1277,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Kensington is a primary destination for affluent international families visiting London for 2-4 week stays — typically renting 2 and 3-bed apartments. Average daily rate for these stays is significantly higher than tourist demand.' },
 
       { type: 'h2', text: 'The 94% occupancy story' },
-      { type: 'p', text: "Our Kensington Gate portfolio averages 94% across 12 months. That's substantially higher than the London average (~70%) and our overall portfolio average (~87%)." },
+      { type: 'p', text: "Our Kensington Gate portfolio averages 94% across 12 months. That's substantially higher than the London average (~70%) and our overall portfolio average (~80%)." },
       { type: 'p', text: 'Three things drive it:' },
       {
         type: 'ol',

@@ -1,11 +1,18 @@
 import { SITE } from '@/lib/config'
 import { FadeIn } from '@/components/ui/FadeIn'
 
-const STATS = [
+type Stat = {
+  num: string
+  label: string
+  /** Optional comparison line shown beneath the main label */
+  sublabel?: string
+}
+
+const STATS: Stat[] = [
   { num: `${SITE.managedPortfolioCount}`, label: 'Properties under management' },
-  { num: '£2.4m', label: 'Annual rent paid to landlords' },
-  { num: '87%', label: 'Average occupancy rate' },
-  { num: 'Less than a week', label: 'From sign-off to first booking' },
+  { num: '£1.4m', label: 'Annual rent paid to landlords' },
+  { num: '80%', label: 'Average occupancy', sublabel: 'vs 70% London average' },
+  { num: '7 days', label: 'From sign-off to first booking' },
 ]
 
 export function StatsStrip() {
@@ -22,6 +29,11 @@ export function StatsStrip() {
                 <span className="text-xs uppercase tracking-widest text-white/55 font-semibold">
                   {s.label}
                 </span>
+                {s.sublabel && (
+                  <span className="text-[11px] tracking-wide text-white/45">
+                    {s.sublabel}
+                  </span>
+                )}
               </div>
             </FadeIn>
           ))}
