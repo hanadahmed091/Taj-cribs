@@ -24,7 +24,7 @@ const SERVICES = [
     eyebrow: 'For maximum returns',
     title: 'Short-Let Management',
     description:
-      'Full-service short-let management. Multi-platform listings, dynamic pricing, professional housekeeping. Typically 2–3× standard AST yields.',
+      'Full-service short-let management. Multi-platform listings, dynamic pricing, professional housekeeping. Generates significantly more than a standard AST.',
     bullets: [
       '18% flat management fee',
       'Listed on Airbnb, Booking, Vrbo',
