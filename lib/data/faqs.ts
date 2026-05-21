@@ -50,7 +50,7 @@ export const SHORT_LET_FAQS: FAQ[] = [
   },
   {
     q: 'What is the average income I can expect?',
-    a: 'Use our income calculator for an area-specific estimate. We model conservatively, around 10% below market rates, so landlords are never disappointed. Most exceed the figure we quote. As a benchmark: a 1-bed in Marylebone typically delivers £3,800–£5,500 per month gross; a 2-bed near Liverpool Street £5,500–£7,500.',
+    a: 'It depends on your property, location, finish and the model you choose. Rather than quote ranges that may not apply to your situation, we give every landlord a tailored figure within one business day. Get a free valuation to see what your property would earn under guaranteed rent and under short-let management.',
   },
   {
     q: 'How is the property cleaned between guests?',

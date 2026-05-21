@@ -25,19 +25,19 @@ export function AreasSection() {
           </FadeIn>
         </div>
 
-        <FadeIn delay={0.15}>
-          <p className="mt-8 text-sm text-navy-900/55 leading-relaxed">
-            Rates shown are starting figures. Final rate depends on property size, condition and specifics.
-          </p>
-        </FadeIn>
-
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-light-line border border-light-line">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-light-line border border-light-line">
           {areas.map((area, idx) => (
             <FadeIn key={area.slug} delay={idx * 0.04}>
-              <Link
-                href={`/areas/${area.slug}`}
-                className="group block bg-white p-8 lg:p-10 h-full transition-colors duration-300 hover:bg-navy-900 hover:text-white"
-              >
+              {/* Card-link with an inner exception: the whole card links
+                  to the area page via an invisible absolutely-positioned
+                  overlay link, while the "Free valuation" inner link sits
+                  on top with a higher z-index and routes to /contact. */}
+              <div className="group relative block bg-white p-8 lg:p-10 h-full transition-colors duration-300 hover:bg-navy-900 hover:text-white">
+                <Link
+                  href={`/areas/${area.slug}`}
+                  aria-label={`View ${area.name} area page`}
+                  className="absolute inset-0 z-10"
+                />
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h3 className="font-bold text-fluid-xl tracking-tight">
@@ -54,27 +54,17 @@ export function AreasSection() {
                   />
                 </div>
                 <div className="mt-8 pt-5 border-t border-light-line group-hover:border-white/15 transition-colors">
-                  {area.avgMonthlyRate ? (
-                    <>
-                      <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400">
-                        Average rate
-                      </p>
-                      <p className="mt-1 font-bold tabular-nums text-fluid-lg">
-                        {area.avgMonthlyRate}
-                      </p>
-                    </>
-                  ) : (
-                    <>
-                      <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400">
-                        Coverage
-                      </p>
-                      <p className="mt-1 font-bold text-fluid-lg">
-                        Available now
-                      </p>
-                    </>
-                  )}
+                  <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400">
+                    Rent guide
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="relative z-20 mt-1 inline-flex items-center gap-1 font-bold text-fluid-lg border-b border-navy-900/30 group-hover:border-gold-400 group-hover:text-gold-400 transition-colors"
+                  >
+                    Free valuation
+                  </Link>
                 </div>
-              </Link>
+              </div>
             </FadeIn>
           ))}
         </div>

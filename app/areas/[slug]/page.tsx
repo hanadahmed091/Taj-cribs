@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
-import { getAllAreaSlugs, getAreaBySlug } from '@/lib/data/areas'
+import { getAllAreaSlugs, getAreaBySlug, getAreaProductLabel } from '@/lib/data/areas'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { LeadForm } from '@/components/forms/LeadForm'
@@ -89,38 +89,20 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
             {area.intro}
           </p>
 
-          {(() => {
-            // Each rate column is independent — empty values hide the column
-            // entirely rather than showing a misleading dash. Guaranteed Rent
-            // areas without a nightly rate skip the nightly column.
-            const showMonthly = Boolean(area.avgMonthlyRate)
-            const showNightly = Boolean(area.avgNightlyRate)
-            const colCount = 1 + (showMonthly ? 1 : 0) + (showNightly ? 1 : 0)
-            const colsClass =
-              colCount === 3 ? 'grid-cols-3' : colCount === 2 ? 'grid-cols-2' : 'grid-cols-1'
-            return (
-              <div
-                className={`mt-12 grid ${colsClass} gap-6 pt-8 border-t border-navy-line`}
-              >
-                <div>
-                  <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Postcode</p>
-                  <p className="mt-1 font-bold text-fluid-xl">{area.postcode}</p>
-                </div>
-                {showMonthly && (
-                  <div>
-                    <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Avg monthly</p>
-                    <p className="mt-1 font-bold text-fluid-xl tabular-nums">{area.avgMonthlyRate}</p>
-                  </div>
-                )}
-                {showNightly && (
-                  <div>
-                    <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Avg nightly</p>
-                    <p className="mt-1 font-bold text-fluid-xl tabular-nums">{area.avgNightlyRate}</p>
-                  </div>
-                )}
-              </div>
-            )
-          })()}
+          <div className="mt-12 grid grid-cols-3 gap-6 pt-8 border-t border-navy-line">
+            <div>
+              <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Postcode</p>
+              <p className="mt-1 font-bold text-fluid-xl">{area.postcode}</p>
+            </div>
+            <div>
+              <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Product</p>
+              <p className="mt-1 font-bold text-fluid-lg leading-snug">{getAreaProductLabel(area)}</p>
+            </div>
+            <div>
+              <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Valuation</p>
+              <p className="mt-1 font-bold text-fluid-lg leading-snug">Free, within 24 hours</p>
+            </div>
+          </div>
         </div>
       </section>
 

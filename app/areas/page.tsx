@@ -28,27 +28,27 @@ export default function AreasIndexPage() {
           </h1>
           <p className="mt-8 text-fluid-lg text-white/75 leading-relaxed">
             We are operators, not just agents, and that means we operate exclusively
-            in postcodes we know intimately. Pick an area below to see our portfolio,
-            local demand and average yields.
+            in postcodes we know intimately. Pick an area below to see our portfolio
+            and local demand.
           </p>
         </div>
       </section>
 
       <section className="bg-cream section-pad">
         <div className="container-edge">
-          <FadeIn>
-            <p className="mb-10 text-sm text-navy-900/55 leading-relaxed">
-              Rates shown are starting figures. Final rate depends on property size, condition and specifics.
-            </p>
-          </FadeIn>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-light-line border border-light-line">
             {areas.map((area, idx) => (
               <FadeIn key={area.slug} delay={idx * 0.05}>
-                <Link
-                  href={`/areas/${area.slug}`}
-                  className="group block bg-white p-8 lg:p-10 h-full transition-colors duration-300 hover:bg-navy-900 hover:text-white"
-                >
+                {/* Card-link with inner exception: outer absolutely-positioned
+                    Link routes the whole card to /areas/[slug], the inner
+                    Free Valuation link sits above it (z-20) and routes to
+                    /contact. */}
+                <div className="group relative block bg-white p-8 lg:p-10 h-full transition-colors duration-300 hover:bg-navy-900 hover:text-white">
+                  <Link
+                    href={`/areas/${area.slug}`}
+                    aria-label={`View ${area.name} area page`}
+                    className="absolute inset-0 z-10"
+                  />
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="eyebrow group-hover:!text-gold-400 transition-colors">{area.tagline}</p>
@@ -61,32 +61,18 @@ export default function AreasIndexPage() {
                       className="shrink-0 text-navy-900/40 group-hover:text-gold-400 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                     />
                   </div>
-                  <div className="mt-8 pt-6 border-t border-light-line group-hover:border-white/15 transition-colors grid grid-cols-2 gap-4">
-                    {area.avgMonthlyRate || area.avgNightlyRate ? (
-                      <>
-                        <div>
-                          <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400/80">
-                            Avg monthly
-                          </p>
-                          <p className="mt-1 font-bold tabular-nums">{area.avgMonthlyRate || '-'}</p>
-                        </div>
-                        <div>
-                          <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400/80">
-                            Avg nightly
-                          </p>
-                          <p className="mt-1 font-bold tabular-nums">{area.avgNightlyRate || '-'}</p>
-                        </div>
-                      </>
-                    ) : (
-                      <div className="col-span-2">
-                        <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400/80">
-                          Service
-                        </p>
-                        <p className="mt-1 font-bold">{area.tagline}</p>
-                      </div>
-                    )}
+                  <div className="mt-8 pt-6 border-t border-light-line group-hover:border-white/15 transition-colors">
+                    <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400/80">
+                      Rent guide
+                    </p>
+                    <Link
+                      href="/contact"
+                      className="relative z-20 mt-1 inline-flex items-center gap-1 font-bold border-b border-navy-900/30 group-hover:border-gold-400 group-hover:text-gold-400 transition-colors"
+                    >
+                      Free valuation
+                    </Link>
                   </div>
-                </Link>
+                </div>
               </FadeIn>
             ))}
           </div>

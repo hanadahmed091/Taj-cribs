@@ -515,8 +515,8 @@ export const BLOG_POSTS: BlogPost[] = [
 
       { type: 'h2', text: 'What to expect financially' },
       { type: 'p', text: 'Realistic expectations matter. Short-let in Central London typically delivers 2 to 3 times standard AST yields gross, before our 18% management fee.' },
-      { type: 'p', text: "A 1-bed in Marylebone that lets at £2,200/month on a standard AST might deliver £3,800–£5,500 gross on short-let. A 2-bed near Liverpool Street that lets at £3,000 long-term might command £5,500–£7,500 gross on short-let. The numbers depend on the property, area, finish, and how well it's marketed." },
-      { type: 'p', text: 'If you want a specific estimate for your property, our [income calculator on the property management page](/property-management) is a good starting point. But a free valuation gives you a sharper figure.' },
+      { type: 'p', text: "The numbers vary considerably with property, area, finish and how well a listing is marketed. Rather than quote ranges that might not apply to your situation, we give every landlord a tailored figure based on their actual property." },
+      { type: 'p', text: 'For a specific estimate, [request a free valuation](/contact). We come back with a guaranteed monthly figure and a projected short-let income within one business day.' },
 
       { type: 'h2', text: 'How to choose the right manager' },
       { type: 'p', text: 'Five questions worth asking every operator you speak to.' },
@@ -1386,18 +1386,8 @@ export const BLOG_POSTS: BlogPost[] = [
       },
 
       { type: 'h2', text: 'Realistic returns in Marylebone' },
-      { type: 'p', text: 'Conservative short-let estimates for Marylebone properties. Net of our 18% management fee and 10% conservative ADR cushion. Typically come out as follows. These are realistic targets, not headline figures, and most landlords exceed them in year one.' },
-      {
-        type: 'table',
-        headers: ['Property type', 'Long-let / mo', 'Short-let net / mo', 'Guaranteed rent / mo'],
-        rows: [
-          ['Studio', '£1,600', '£3,200', '£1,600'],
-          ['1-bed', '£2,200', '£4,200', '£2,200'],
-          ['2-bed', '£3,200', '£6,400', '£3,200'],
-          ['3-bed', '£4,500', '£8,800', '£4,500'],
-        ],
-      },
-      { type: 'p', text: "Long-let and guaranteed rent are pegged at full market rate. They're the same number. Short-let net is conservative and most landlords beat it." },
+      { type: 'p', text: 'Marylebone short-let returns vary with bedroom count, finish, building, street and how well the listing is operated. Generic ranges rarely apply to a specific property, so we give every landlord a tailored figure rather than a number you have to discount in your head.' },
+      { type: 'p', text: '[Request a free valuation](/contact) and we will come back within one business day with a guaranteed monthly figure and a projected short-let income for your specific property.' },
 
       { type: 'h2', text: 'Risks specific to Marylebone' },
       { type: 'p', text: 'Three things to be aware of:' },

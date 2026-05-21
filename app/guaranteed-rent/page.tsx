@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Check, X, Minus } from 'lucide-react'
 import { LeadForm } from '@/components/forms/LeadForm'
-import { IncomeCalculator } from '@/components/forms/IncomeCalculator'
 import { FAQ } from '@/components/sections/FAQ'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { FadeIn } from '@/components/ui/FadeIn'
@@ -11,6 +10,7 @@ import { FinalCTA } from '@/components/sections/FinalCTA'
 import { GUARANTEED_RENT_FAQS } from '@/lib/data/faqs'
 import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
 import { PROPERTIES } from '@/lib/data/properties'
+import { SITE } from '@/lib/config'
 
 export const metadata: Metadata = {
   title: 'Guaranteed Rent London | Fixed Monthly Income | No Void Periods',
@@ -103,10 +103,36 @@ export default function GuaranteedRentPage() {
         </div>
       </section>
 
-      {/* CALCULATOR */}
+      {/* FREE VALUATION CTA */}
       <section className="bg-cream section-pad">
         <div className="container-edge max-w-4xl">
-          <IncomeCalculator />
+          <div className="bg-white rounded-md border border-light-line p-8 lg:p-12">
+            <SectionLabel>Free Valuation</SectionLabel>
+            <h2 className="mt-5 text-fluid-3xl font-extrabold tracking-tighter leading-tight text-navy-900">
+              Want a real number for your property?
+            </h2>
+            <p className="mt-6 text-fluid-lg text-navy-900/75 leading-relaxed max-w-2xl">
+              Calculators don&apos;t know your finish, your street, or what your
+              property actually looks like. We do. Tell us about your property
+              and we&apos;ll send back a guaranteed monthly figure and a projected
+              short-let income within one business day.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
+              <Link href="/contact" className="btn-gold">
+                Get a free valuation
+                <ArrowRight size={18} />
+              </Link>
+              <p className="text-sm text-navy-900/65">
+                Or call us on{' '}
+                <a
+                  href={`tel:${SITE.phone.replace(/\s/g, '')}`}
+                  className="font-semibold text-navy-900 hover:text-gold-600 transition-colors"
+                >
+                  {SITE.phoneDisplay}
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
