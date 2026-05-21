@@ -1,11 +1,11 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { ShieldCheck, ArrowRight } from 'lucide-react'
+import { ShieldCheck, ArrowRight, ChevronDown, Check } from 'lucide-react'
 import Link from 'next/link'
 import { SectionLabel } from '@/components/ui/SectionLabel'
-import { pushDataLayer } from '@/lib/utils'
+import { cn, pushDataLayer } from '@/lib/utils'
 
 // Pricing model:
 // - Short-let projection: ADR × 0.9 (10% conservative cushion) × 30 × occupancy
@@ -57,6 +57,148 @@ function fmt(n: number) {
   return new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 }).format(n)
 }
 
+/**
+ * Custom dropdown used for the calculator's Area and Bedrooms inputs.
+ *
+ * Native <select> elements opened their dropdown menu as a layout-flow
+ * overlay that hid the Bedrooms field on mobile and looked broken on
+ * DevTools mobile emulation. This component renders the menu as an
+ * absolutely-positioned floating panel with z-50, so the surrounding
+ * form layout never shifts and the menu paints cleanly above every
+ * field below it. When the menu closes, the page is in exactly the
+ * same state as before it opened.
+ *
+ * Keyboard: Space / Enter / ArrowDown to open; ArrowUp/ArrowDown to
+ * move highlight; Enter to commit; Escape to close. Outside-click
+ * closes the menu.
+ */
+function CalcDropdown<T extends string | number>({
+  value,
+  options,
+  onChange,
+  ariaLabel,
+}: {
+  value: T
+  options: { value: T; label: string }[]
+  onChange: (v: T) => void
+  ariaLabel: string
+}) {
+  const [open, setOpen] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const selectedIdx = options.findIndex((o) => o.value === value)
+  const selectedLabel = selectedIdx >= 0 ? options[selectedIdx].label : ''
+  const [activeIdx, setActiveIdx] = useState(selectedIdx >= 0 ? selectedIdx : 0)
+
+  // Reset active highlight when selection changes externally or menu opens.
+  useEffect(() => {
+    if (open) setActiveIdx(selectedIdx >= 0 ? selectedIdx : 0)
+  }, [open, selectedIdx])
+
+  // Close on outside click.
+  useEffect(() => {
+    if (!open) return
+    const onDown = (e: MouseEvent | TouchEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', onDown)
+    document.addEventListener('touchstart', onDown)
+    return () => {
+      document.removeEventListener('mousedown', onDown)
+      document.removeEventListener('touchstart', onDown)
+    }
+  }, [open])
+
+  // Keyboard handlers while open.
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        setOpen(false)
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault()
+        setActiveIdx((i) => (i + 1) % options.length)
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault()
+        setActiveIdx((i) => (i - 1 + options.length) % options.length)
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault()
+        onChange(options[activeIdx].value)
+        setOpen(false)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open, options, activeIdx, onChange])
+
+  return (
+    <div ref={containerRef} className="relative">
+      <button
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-label={ariaLabel}
+        onClick={() => setOpen((v) => !v)}
+        onKeyDown={(e) => {
+          if (!open && (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ')) {
+            e.preventDefault()
+            setOpen(true)
+          }
+        }}
+        className="w-full px-4 py-3 text-sm border border-light-line bg-white rounded-sm font-medium focus:outline-none focus:border-navy-900 flex items-center justify-between text-left text-navy-900"
+      >
+        <span className="truncate">{selectedLabel}</span>
+        <ChevronDown
+          size={16}
+          className={cn('shrink-0 text-navy-900/55 transition-transform duration-200', open && 'rotate-180')}
+        />
+      </button>
+
+      {open && (
+        <ul
+          role="listbox"
+          aria-label={ariaLabel}
+          className="absolute top-full left-0 right-0 z-50 mt-1 max-h-64 overflow-auto border border-light-line bg-white rounded-sm shadow-[0_20px_40px_-12px_rgba(6,19,37,0.25)]"
+        >
+          {options.map((opt, i) => {
+            const isSelected = opt.value === value
+            const isActive = i === activeIdx
+            return (
+              <li
+                key={String(opt.value)}
+                role="option"
+                aria-selected={isSelected}
+              >
+                <button
+                  type="button"
+                  onClick={() => {
+                    onChange(opt.value)
+                    setOpen(false)
+                  }}
+                  onMouseEnter={() => setActiveIdx(i)}
+                  className={cn(
+                    'w-full px-4 py-3 text-sm text-left font-medium flex items-center justify-between gap-3 transition-colors',
+                    isSelected
+                      ? 'bg-navy-900 text-white'
+                      : isActive
+                        ? 'bg-cream text-navy-900'
+                        : 'bg-white text-navy-900 hover:bg-cream',
+                  )}
+                >
+                  <span className="truncate">{opt.label}</span>
+                  {isSelected && <Check size={14} className="shrink-0" />}
+                </button>
+              </li>
+            )
+          })}
+        </ul>
+      )}
+    </div>
+  )
+}
+
 export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?: string }) {
   const [areaLabel, setAreaLabel] = useState(defaultArea)
   const [bedrooms, setBedrooms] = useState(1)
@@ -98,40 +240,35 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
       </p>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <label className="block">
+        <div>
           <span className="block text-[10px] uppercase tracking-widest font-semibold text-navy-900/60 mb-2">
             Area
           </span>
-          <select
+          <CalcDropdown
+            ariaLabel="Area"
             value={areaLabel}
-            onChange={(e) => {
-              setAreaLabel(e.target.value)
-              pushDataLayer('calculator_area_changed', { area: e.target.value })
+            options={AREAS.map((a) => ({
+              value: a.label,
+              label: `${a.label} ${a.postcode}`,
+            }))}
+            onChange={(v) => {
+              setAreaLabel(v)
+              pushDataLayer('calculator_area_changed', { area: v })
             }}
-            className="w-full px-4 py-3 text-sm border border-light-line bg-white rounded-sm font-medium focus:outline-none focus:border-navy-900"
-          >
-            {AREAS.map((a) => (
-              <option key={a.label} value={a.label}>
-                {a.label} {a.postcode}
-              </option>
-            ))}
-          </select>
-        </label>
+          />
+        </div>
 
-        <label className="block">
+        <div>
           <span className="block text-[10px] uppercase tracking-widest font-semibold text-navy-900/60 mb-2">
             Bedrooms
           </span>
-          <select
+          <CalcDropdown
+            ariaLabel="Bedrooms"
             value={bedrooms}
-            onChange={(e) => setBedrooms(Number(e.target.value))}
-            className="w-full px-4 py-3 text-sm border border-light-line bg-white rounded-sm font-medium focus:outline-none focus:border-navy-900"
-          >
-            {BEDROOM_OPTIONS.map((b) => (
-              <option key={b.value} value={b.value}>{b.label}</option>
-            ))}
-          </select>
-        </label>
+            options={BEDROOM_OPTIONS}
+            onChange={(v) => setBedrooms(v)}
+          />
+        </div>
       </div>
 
       <motion.div
