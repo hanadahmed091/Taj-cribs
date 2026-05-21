@@ -45,7 +45,7 @@ const GUARANTEED_HOW = [
   'We assess your property and make a fixed monthly offer',
   'You accept and sign a simple agreement (1–5 year terms available)',
   'We pay you on the same date every month, regardless of occupancy',
-  'We manage the property entirely — you have zero involvement',
+  'We manage the property entirely. You have zero involvement',
 ]
 
 export default function PricingPage() {
@@ -64,7 +64,7 @@ export default function PricingPage() {
           </h1>
           <p className="mt-8 text-fluid-lg text-white/75 leading-relaxed max-w-2xl">
             We compete on results, not on being the cheapest. One flat fee for full short-let
-            management — or no commission at all under our guaranteed rent scheme.
+            management. Or no commission at all under our guaranteed rent scheme.
           </p>
         </div>
       </section>
@@ -145,7 +145,7 @@ export default function PricingPage() {
                   <p className="mt-2 text-sm text-navy-950/80 leading-relaxed">
                     Paid at <span className="font-semibold">full market rent</span>. <br />
                     No setup fee. No voids. Ever. Our margin comes from optimising
-                    short-let upside — not from undercutting your rent.
+                    short-let upside, not from undercutting your rent.
                   </p>
                 </div>
 
@@ -216,7 +216,7 @@ export default function PricingPage() {
               <div className="bg-white p-8 lg:p-10 h-full">
                 <span className="font-extrabold text-fluid-3xl text-gold-500 tabular-nums">01</span>
                 <h3 className="mt-5 font-bold text-fluid-xl tracking-tight leading-snug">
-                  We don&apos;t compete on price — we compete on performance.
+                  We don&apos;t compete on price. We compete on performance.
                 </h3>
                 <p className="mt-4 text-navy-900/70 leading-relaxed text-sm">
                   We charge 18% because that&apos;s what genuine full-service management costs to do
@@ -235,7 +235,7 @@ export default function PricingPage() {
                 <p className="mt-4 text-navy-900/70 leading-relaxed text-sm">
                   Our management fee is calculated on your income. If your property isn&apos;t
                   earning, we&apos;re not charging. Our incentives are perfectly aligned with yours
-                  — we only do well when you do well.
+                  . We only do well when you do well.
                 </p>
               </div>
             </FadeIn>
@@ -248,7 +248,7 @@ export default function PricingPage() {
                 <p className="mt-4 text-navy-900/70 leading-relaxed text-sm">
                   No add-ons for photography. No extra charge for dynamic pricing tools. No
                   surprise maintenance call-out fees. The 18% covers the full end-to-end
-                  operation — top to bottom.
+                  operation, top to bottom.
                 </p>
               </div>
             </FadeIn>

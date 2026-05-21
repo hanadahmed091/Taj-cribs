@@ -21,12 +21,12 @@ const REASONS = [
   {
     icon: Sparkles,
     title: 'In-house housekeeping team',
-    body: 'No outsourced cleaners. Our team does the turnaround — same standard, every time.',
+    body: 'No outsourced cleaners. Our team does the turnaround. Same standard, every time.',
   },
   {
     icon: BarChart3,
     title: 'Live owner dashboard',
-    body: 'Bookings, revenue, occupancy, payouts — visible to you in real time.',
+    body: 'Bookings, revenue, occupancy, payouts. All visible to you in real time.',
   },
   {
     icon: Building2,

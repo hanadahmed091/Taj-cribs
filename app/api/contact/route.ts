@@ -35,7 +35,7 @@ export async function POST(req: Request) {
       await resend.emails.send({
         from: 'Taj Cribs Leads <support@tajcribs.co.uk>',
         to,
-        subject: `New lead: ${payload.name} — ${payload.service ?? 'service unspecified'}`,
+        subject: `New lead: ${payload.name}, ${payload.service ?? 'service unspecified'}`,
         text: JSON.stringify(payload, null, 2),
       })
     } else {

@@ -27,7 +27,7 @@ export default function AreasIndexPage() {
             <span className="text-gold-500">inside out.</span>
           </h1>
           <p className="mt-8 text-fluid-lg text-white/75 leading-relaxed">
-            We are operators, not just agents — and that means we operate exclusively
+            We are operators, not just agents, and that means we operate exclusively
             in postcodes we know intimately. Pick an area below to see our portfolio,
             local demand and average yields.
           </p>
@@ -62,13 +62,13 @@ export default function AreasIndexPage() {
                           <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400/80">
                             Avg monthly
                           </p>
-                          <p className="mt-1 font-bold tabular-nums">{area.avgMonthlyRate || '—'}</p>
+                          <p className="mt-1 font-bold tabular-nums">{area.avgMonthlyRate || '-'}</p>
                         </div>
                         <div>
                           <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400/80">
                             Avg nightly
                           </p>
-                          <p className="mt-1 font-bold tabular-nums">{area.avgNightlyRate || '—'}</p>
+                          <p className="mt-1 font-bold tabular-nums">{area.avgNightlyRate || '-'}</p>
                         </div>
                       </>
                     ) : (

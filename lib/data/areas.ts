@@ -112,7 +112,7 @@ export const AREA_META: Record<string, AreaMeta> = {
     avgNightlyRate: '',
     avgMonthlyRate: '',
     intro:
-      "King's Cross has transformed into one of London's most dynamic neighbourhoods — home to Google, Central Saint Martins and outstanding transport links across the city and internationally via St Pancras. Strong year-round demand from corporate travellers, students and tourists makes it an excellent short-let and guaranteed rent location.",
+      "King's Cross has transformed into one of London's most dynamic neighbourhoods. Home to Google, Central Saint Martins and outstanding transport links across the city and internationally via St Pancras. Strong year-round demand from corporate travellers, students and tourists makes it an excellent short-let and guaranteed rent location.",
     demand: 'Year-round corporate, student and international traveller demand.',
   },
   'earls-court': {
@@ -134,7 +134,7 @@ export const AREA_META: Record<string, AreaMeta> = {
     avgNightlyRate: '',
     avgMonthlyRate: '',
     intro:
-      "Nine Elms is one of London's most exciting regeneration areas — home to the new US Embassy, Battersea Power Station and a rapidly growing residential community. Corporate short-let and guaranteed rent demand is increasing strongly as the area matures.",
+      "Nine Elms is one of London's most exciting regeneration areas. Home to the new US Embassy, Battersea Power Station and a rapidly growing residential community. Corporate short-let and guaranteed rent demand is increasing strongly as the area matures.",
     demand: 'Growing corporate short-let demand as the area matures.',
   },
   waterloo: {
@@ -145,7 +145,7 @@ export const AREA_META: Record<string, AreaMeta> = {
     avgNightlyRate: '',
     avgMonthlyRate: '£3,500+/mo',
     intro:
-      'Waterloo SE1 sits at the centre of one of London’s busiest transport hubs — Waterloo and Waterloo East together feed the Jubilee, Northern, Bakerloo and Waterloo & City lines, with direct National Rail across the south of England and a short walk to Eurostar at St Pancras. The City, Westminster and the South Bank cultural quarter are all on foot. Corporate-guest demand is consistent Monday-to-Friday, with strong weekend leisure top-up driven by the National Theatre, Royal Festival Hall, the Tate Modern and the London Eye. Regulation here is straightforward — Waterloo falls outside the harshest 90-day enforcement pressure that hits prime W1, but we still operate every unit Rule-compliant. We took on Waterloo Apartments because the demand profile fits our guaranteed-rent model precisely: high mid-week occupancy, low seasonality, and a guest mix that values service over price.',
+      'Waterloo SE1 sits at the centre of one of London’s busiest transport hubs. Waterloo and Waterloo East together feed the Jubilee, Northern, Bakerloo and Waterloo & City lines, with direct National Rail across the south of England and a short walk to Eurostar at St Pancras. The City, Westminster and the South Bank cultural quarter are all on foot. Corporate-guest demand is consistent Monday-to-Friday, with strong weekend leisure top-up driven by the National Theatre, Royal Festival Hall, the Tate Modern and the London Eye. Regulation here is straightforward. Waterloo falls outside the harshest 90-day enforcement pressure that hits prime W1, but we still operate every unit Rule-compliant. We took on Waterloo Apartments because the demand profile fits our guaranteed-rent model precisely: high mid-week occupancy, low seasonality, and a guest mix that values service over price.',
     demand: 'Corporate weekday + cultural-tourism weekend. Strong year-round occupancy.',
   },
 }

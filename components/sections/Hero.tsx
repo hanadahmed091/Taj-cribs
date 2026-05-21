@@ -132,7 +132,7 @@ export function Hero() {
                   <Image
                     key={featured.id}
                     src={featured.imageUrl}
-                    alt={`${featured.name} — ${featured.area}`}
+                    alt={`${featured.name}, ${featured.area}`}
                     fill
                     sizes="(max-width: 1024px) 90vw, 480px"
                     className="object-cover"

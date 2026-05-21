@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AirbnbManagementLandingPage() {
   return (
     <LandingPageLayout
-      areaLabel="Airbnb & Short-Let Management — Central London"
+      areaLabel="Airbnb & Short-Let Management, Central London"
       headline="Your London property. Fully managed. Maximum returns."
       subheadline="We handle listings, bookings, guests, housekeeping and maintenance. You receive one monthly payment. Nothing else required from you."
       formTitle="Get your free income estimate"

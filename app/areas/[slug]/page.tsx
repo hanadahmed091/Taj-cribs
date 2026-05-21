@@ -36,7 +36,7 @@ function buildAreaFaqs(areaName: string, postcode: string): FAQType[] {
   return [
     {
       q: `Do you manage short-let properties in ${areaName} ${postcode}?`,
-      a: `Yes — ${areaName} is one of our core operating areas. We currently manage a portfolio in the ${postcode} postcode under both short-let and guaranteed rent arrangements.`,
+      a: `Yes. ${areaName} is one of our core operating areas. We currently manage a portfolio in the ${postcode} postcode under both short-let and guaranteed rent arrangements.`,
     },
     {
       q: `What is the average short-let income in ${areaName}?`,
@@ -44,7 +44,7 @@ function buildAreaFaqs(areaName: string, postcode: string): FAQType[] {
     },
     {
       q: `Can I get guaranteed rent on a property in ${areaName}?`,
-      a: `Yes — guaranteed rent is available across all of our ${postcode} stock, subject to a free valuation. We offer 1–5 year corporate leases with fixed monthly payments.`,
+      a: `Yes. Guaranteed rent is available across all of our ${postcode} stock, subject to a free valuation. We offer 1–5 year corporate leases with fixed monthly payments.`,
     },
     {
       q: `How fast can a ${areaName} property be onboarded?`,
@@ -160,7 +160,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
                     <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-cream">
                       <Image
                         src={src}
-                        alt={`${gallerySources[0].name} — photo ${i + 1}`}
+                        alt={`${gallerySources[0].name}, photo ${i + 1}`}
                         fill
                         sizes="(max-width: 768px) 100vw, 33vw"
                         className="object-cover"
@@ -215,7 +215,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
         </section>
       )}
 
-      <FAQ items={faqs} heading={`${area.name} — common questions.`} />
+      <FAQ items={faqs} heading={`${area.name}. Common questions.`} />
 
       {/* AREA-SPECIFIC CTA */}
       <section className="bg-navy-900 text-white py-16 lg:py-20">

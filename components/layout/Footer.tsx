@@ -18,7 +18,7 @@ export function Footer() {
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/65">
               Central London short-let management and guaranteed rent specialists.
-              We manage blocks and portfolios across W1, W8, SW1 and SW3 — and pay
+              We manage blocks and portfolios across W1, W8, SW1 and SW3, and pay
               landlords on time, every time.
             </p>
             <div className="mt-7 flex items-center gap-4">

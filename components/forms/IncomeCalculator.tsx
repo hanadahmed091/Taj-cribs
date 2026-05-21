@@ -92,7 +92,7 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
       </h3>
       <p className="mt-2 text-sm text-navy-900/65">
         Rough indicative figures, based on 2025/26 Central London market data.
-        Actual offers vary with finish, furnishing and the specific street —
+        Actual offers vary with finish, furnishing and the specific street, so
         figures shown can be higher or lower. Short-let projections sit 10%
         below market ADR.
       </p>
@@ -164,7 +164,7 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
               <span className="font-semibold tabular-nums">{fmt(calc.annualNet)}</span>
             </div>
             <p className="mt-4 text-[11px] leading-relaxed text-navy-900/60 italic">
-              Our estimates are based on conservative projections — most landlords exceed these figures.
+              Our estimates are based on conservative projections. Most landlords exceed these figures.
             </p>
           </div>
         </div>
@@ -191,7 +191,7 @@ export function IncomeCalculator({ defaultArea = 'Marylebone' }: { defaultArea?:
               <ShieldCheck size={14} className="mt-0.5 text-gold-400 shrink-0" />
               <span>
                 We guarantee you the <strong className="text-white">full market rental value</strong>
-                {' '}of your property — regardless of occupancy. No voids, no chasing rent, no hassle.
+                {' '}of your property, regardless of occupancy. No voids, no chasing rent, no hassle.
               </span>
             </div>
           </div>

@@ -25,7 +25,7 @@ export function FinalCTA() {
           <FadeIn delay={0.1}>
             <p className="mt-8 max-w-xl text-fluid-lg text-white/70 leading-relaxed">
               Tell us about your property. We&apos;ll come back with a guaranteed monthly
-              figure and a projected short-let income — within one business day.
+              figure and a projected short-let income, within one business day.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>

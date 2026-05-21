@@ -19,7 +19,7 @@ export function AreasSection() {
           </FadeIn>
           <FadeIn className="lg:col-span-5" delay={0.1}>
             <p className="text-fluid-lg text-navy-900/70 leading-relaxed">
-              We operate exclusively across prime Central London postcodes —
+              We operate exclusively across prime Central London postcodes,
               with deep portfolios in the areas below.
             </p>
           </FadeIn>
@@ -75,9 +75,9 @@ export function AreasSection() {
 
         <FadeIn delay={0.2}>
           <p className="mt-12 text-sm text-navy-900/60 text-center">
-            Properties outside these areas considered —{' '}
+            Properties outside these areas considered.{' '}
             <Link href="/contact" className="text-navy-900 underline decoration-gold-500 underline-offset-4 hover:text-gold-600 transition-colors">
-              get in touch
+              Get in touch
             </Link>.
           </p>
         </FadeIn>

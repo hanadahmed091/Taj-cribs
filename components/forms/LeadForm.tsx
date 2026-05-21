@@ -22,12 +22,12 @@ const schema = z.object({
 type FormValues = z.infer<typeof schema>
 
 const POSTCODE_OPTIONS = [
-  'W1 - Marylebone / Mayfair',
-  'W8 - Kensington',
-  'SW1 - Pimlico / Westminster',
-  'SW3 - Chelsea',
-  'W11 - Notting Hill',
-  'E14 - Canary Wharf',
+  'W1 (Marylebone / Mayfair)',
+  'W8 (Kensington)',
+  'SW1 (Pimlico / Westminster)',
+  'SW3 (Chelsea)',
+  'W11 (Notting Hill)',
+  'E14 (Canary Wharf)',
   'Other Central London',
 ]
 
@@ -161,7 +161,7 @@ export function LeadForm({
             <option value="" disabled>Select service</option>
             <option value="guaranteed-rent">Guaranteed Rent</option>
             <option value="short-let-management">Short-Let Management</option>
-            <option value="not-sure">Not sure — advise me</option>
+            <option value="not-sure">Not sure, advise me</option>
           </select>
         </Field>
       </div>
@@ -204,7 +204,7 @@ export function LeadForm({
       )}
 
       <p className="text-xs text-navy-900/55">
-        We respond within 2 business hours. No spam — your details are private.
+        We respond within 2 business hours. No spam. Your details are private.
       </p>
     </form>
   )

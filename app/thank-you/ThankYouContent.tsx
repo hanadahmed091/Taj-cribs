@@ -83,8 +83,8 @@ export function ThankYouContent() {
             transition={{ duration: 0.6, delay: reduce ? 0 : 0.8 }}
             className="mt-10 text-fluid-4xl font-extrabold tracking-tightest leading-[1.05]"
           >
-            Thank you — <br />
-            <span className="text-gold-500">we will be in touch within 2 hours.</span>
+            Thank you. <br />
+            <span className="text-gold-500">We will be in touch within 2 hours.</span>
           </motion.h1>
 
           <motion.p

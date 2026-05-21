@@ -9,7 +9,7 @@ const SERVICES = [
     eyebrow: 'For predictable income',
     title: 'Guaranteed Rent',
     description:
-      'Your full market rent, paid as a fixed monthly amount. Same day. Every month. For 1–5 years. No voids, no chasing rent — we carry all the operational risk.',
+      'Your full market rent, paid as a fixed monthly amount. Same day. Every month. For 1–5 years. No voids, no chasing rent. We carry all the operational risk.',
     bullets: [
       'Paid at full market rent',
       'No void periods, ever',
@@ -24,7 +24,7 @@ const SERVICES = [
     eyebrow: 'For maximum returns',
     title: 'Short-Let Management',
     description:
-      'Full-service short-let management. Multi-platform listings, dynamic pricing, professional housekeeping — typically 2–3× standard AST yields.',
+      'Full-service short-let management. Multi-platform listings, dynamic pricing, professional housekeeping. Typically 2–3× standard AST yields.',
     bullets: [
       '18% flat management fee',
       'Listed on Airbnb, Booking, Vrbo',

@@ -90,7 +90,7 @@ export const PROPERTIES: Property[] = [
     bedrooms: '1-bed & 2-bed',
     service: 'guaranteed-rent',
     monthlyIncome: '£7,000/month guaranteed',
-    highlight: 'Corporate client secured — 1 year contract',
+    highlight: 'Corporate client secured. 1 year contract.',
     imageQuery: 'london thames riverside apartment chelsea',
     imageUrl: 'https://images.unsplash.com/photo-1584412181991-bf85c8e01f58?w=800&q=80',
     badge: null,

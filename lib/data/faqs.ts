@@ -3,7 +3,7 @@ export type FAQ = { q: string; a: string }
 export const GUARANTEED_RENT_FAQS: FAQ[] = [
   {
     q: 'How does guaranteed rent actually work?',
-    a: 'We guarantee you the full market rental value of your property as a fixed monthly payment — paid on the same date every month, regardless of occupancy. No voids, no chasing rent, no hassle. We sign a corporate lease for a fixed term (typically 1–5 years) and take on all operational risk in exchange for the right to short-let the property. Our margin comes from optimising short-let upside — not from undercutting your rent.',
+    a: 'We guarantee you the full market rental value of your property as a fixed monthly payment, paid on the same date every month, regardless of occupancy. No voids, no chasing rent, no hassle. We sign a corporate lease for a fixed term (typically 1–5 years) and take on all operational risk in exchange for the right to short-let the property. Our margin comes from optimising short-let upside, not from undercutting your rent.',
   },
   {
     q: 'What is the minimum lease term?',
@@ -31,14 +31,14 @@ export const GUARANTEED_RENT_FAQS: FAQ[] = [
   },
   {
     q: 'Is this Rent-to-Rent? Is it legal?',
-    a: 'Yes — this is a corporate let arrangement (sometimes called Rent-to-SA or Rent-to-Rent). It is fully legal, regulated, and we are licensed where applicable. We can provide references from existing landlords on request.',
+    a: 'Yes. This is a corporate let arrangement (sometimes called Rent-to-SA or Rent-to-Rent). It is fully legal, regulated, and we are licensed where applicable. We can provide references from existing landlords on request.',
   },
 ]
 
 export const SHORT_LET_FAQS: FAQ[] = [
   {
     q: 'What is a "managed short let"?',
-    a: 'We take over the full operation of letting your property on short-stay platforms (Airbnb, Booking.com, Vrbo, Expedia and direct) and corporate channels. You receive net income after our management fee — typically 2-3x what a standard AST would deliver.',
+    a: 'We take over the full operation of letting your property on short-stay platforms (Airbnb, Booking.com, Vrbo, Expedia and direct) and corporate channels. You receive net income after our management fee, typically 2-3x what a standard AST would deliver.',
   },
   {
     q: 'What is the management fee?',
@@ -50,7 +50,7 @@ export const SHORT_LET_FAQS: FAQ[] = [
   },
   {
     q: 'What is the average income I can expect?',
-    a: 'Use our income calculator for an area-specific estimate. Our projections sit 10% below market ADR — we deliberately model conservatively so landlords are never disappointed, and most exceed our estimate. As a benchmark: a 1-bed in Marylebone typically delivers £4,500-£6,500/month gross; a 2-bed in Mayfair £14,000-£25,000/month gross.',
+    a: 'Use our income calculator for an area-specific estimate. Our projections sit 10% below market ADR. We deliberately model conservatively so landlords are never disappointed, and most exceed our estimate. As a benchmark: a 1-bed in Marylebone typically delivers £4,500-£6,500/month gross; a 2-bed in Mayfair £14,000-£25,000/month gross.',
   },
   {
     q: 'How is the property cleaned between guests?',
@@ -62,7 +62,7 @@ export const SHORT_LET_FAQS: FAQ[] = [
   },
   {
     q: 'Can I block out dates for personal use?',
-    a: 'Yes — you have full calendar control through your owner dashboard. Block dates instantly for your own stays or family use.',
+    a: 'Yes. You have full calendar control through your owner dashboard. Block dates instantly for your own stays or family use.',
   },
   {
     q: 'What if occupancy is low one month?',

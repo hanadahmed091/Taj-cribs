@@ -14,13 +14,13 @@ export default function GuaranteedRentLandingPage() {
     <LandingPageLayout
       areaLabel="Central London Property Specialists"
       headline="Guaranteed rent. Market rate. Every month."
-      subheadline="We pay you the full market rental value of your Central London property on the same date every month — whether it is occupied or not. Zero voids. Zero hassle."
+      subheadline="We pay you the full market rental value of your Central London property on the same date every month, whether it is occupied or not. Zero voids. Zero hassle."
       formTitle="Get your free guaranteed rent offer"
       defaultService="guaranteed-rent"
-      testimonialQuote="We handed over the full Marylebone block and have not thought about it since. Guaranteed rent hits our account on the same day every month without fail."
+      testimonialQuote="We handed over our Marylebone apartments and have not thought about them since. Guaranteed rent hits our account on the same day every month without fail."
       testimonialName="Richard & Caroline H."
       testimonialRole="Property Investors"
-      testimonialProperty="Beaumont Court, Marylebone W1"
+      testimonialProperty="Marylebone Apartments, W1"
     />
   )
 }

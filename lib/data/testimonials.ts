@@ -38,7 +38,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 3,
     quote:
-      "We moved abroad and needed certainty. The guaranteed rent on our Pimlico block means we don't look at property prices or booking calendars — we just receive the payment. Absolute peace of mind.",
+      "We moved abroad and needed certainty. The guaranteed rent on our Pimlico block means we don't look at property prices or booking calendars. We just receive the payment. Absolute peace of mind.",
     name: 'Sarah & Tom W.',
     role: 'Overseas Investors',
     area: 'Pimlico / Waterloo',
@@ -50,7 +50,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 4,
     quote:
-      'Onboarding took just 7 days. The team brought us a corporate tenant on a one-year lease and the guaranteed payment lands on the same day every month. Hands-off — exactly what we wanted.',
+      'Onboarding took just 7 days. The team brought us a corporate tenant on a one-year lease and the guaranteed payment lands on the same day every month. Hands-off. Exactly what we wanted.',
     name: 'Priya M.',
     role: 'Buy-to-Let Investor',
     area: 'Chelsea',

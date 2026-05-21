@@ -3,7 +3,7 @@ import type { FAQ } from './faqs'
 export const PRICING_FAQS: FAQ[] = [
   {
     q: 'What is your management fee?',
-    a: '18% + VAT on your net payout (rent and cleaning income combined) for short-let management. For guaranteed rent we take no commission from you — we pay you a fixed monthly amount directly.',
+    a: '18% + VAT on your net payout (rent and cleaning income combined) for short-let management. For guaranteed rent we take no commission from you. We pay you a fixed monthly amount directly.',
   },
   {
     q: 'Are there any setup or onboarding costs?',
@@ -19,7 +19,7 @@ export const PRICING_FAQS: FAQ[] = [
   },
   {
     q: 'What is the minimum contract length?',
-    a: 'For short-let management — rolling agreements, no lock-in. For guaranteed rent we offer 1, 3 and 5-year terms, with longer terms commanding a higher monthly figure.',
+    a: 'For short-let management: rolling agreements, no lock-in. For guaranteed rent we offer 1, 3 and 5-year terms, with longer terms commanding a higher monthly figure.',
   },
   {
     q: 'Do you manage blocks and portfolios?',

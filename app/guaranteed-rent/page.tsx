@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 const STEPS = [
   { n: '01', title: 'Free valuation', body: 'Tell us about your property. We confirm a guaranteed monthly figure within 24 hours.' },
-  { n: '02', title: 'Sign corporate lease', body: 'A simple 1–5 year corporate lease — fixed monthly payment, on the same date.' },
+  { n: '02', title: 'Sign corporate lease', body: 'A simple 1–5 year corporate lease. Fixed monthly payment, on the same date.' },
   { n: '03', title: 'We onboard', body: 'Photography, listing, compliance, insurance, furnishing. Two weeks, hands-off.' },
   { n: '04', title: 'You get paid', body: 'Fixed payment lands in your account. Same day, every month, for the full term.' },
 ]
@@ -57,7 +57,7 @@ export default function GuaranteedRentPage() {
             </h1>
             <p className="mt-8 max-w-xl text-fluid-lg text-white/75 leading-relaxed">
               We guarantee you the <strong className="text-white">full market rental value</strong>
-              {' '}of your property as a fixed monthly payment — paid on the same date every month,
+              {' '}of your property as a fixed monthly payment, paid on the same date every month,
               regardless of occupancy. No voids, no chasing rent, no hassle.
             </p>
             <ul className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl">
@@ -223,7 +223,7 @@ export default function GuaranteedRentPage() {
               <FadeIn>
                 <SectionLabel>Get Started</SectionLabel>
                 <h2 className="mt-5 text-fluid-3xl font-extrabold tracking-tighter leading-tight">
-                  Get your guaranteed monthly figure — in 24 hours.
+                  Get your guaranteed monthly figure in 24 hours.
                 </h2>
                 <p className="mt-5 text-navy-900/70 leading-relaxed">
                   Tell us about your property. We&apos;ll review and come back with

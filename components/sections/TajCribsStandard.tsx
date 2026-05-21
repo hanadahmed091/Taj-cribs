@@ -44,7 +44,7 @@ export function TajCribsStandard({ variant = 'home' }: { variant?: 'home' | 'inl
             <p className="mt-7 text-fluid-lg text-navy-900/75 leading-relaxed">
               After every guest checks out, one of our dedicated Quality Officers personally
               inspects the property before the next arrival. Not a checklist sent to a
-              cleaner — a trained member of our team, on-site, every single time. It&apos;s
+              cleaner. A trained member of our team, on-site, every single time. It&apos;s
               how we protect your property, maintain 5-star reviews, and ensure every
               guest arrives to a hotel-standard home.
             </p>

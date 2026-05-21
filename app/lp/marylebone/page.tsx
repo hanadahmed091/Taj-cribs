@@ -14,12 +14,12 @@ export default function MaryleboneLandingPage() {
     <LandingPageLayout
       areaLabel="Marylebone & W1 Property Specialists"
       headline="Property management in Marylebone. W1 specialists."
-      subheadline="From guaranteed rent on full residential blocks to premium short-let management — we are Marylebone’s most experienced property management partner."
+      subheadline="From guaranteed rent on full residential blocks to premium short-let management. We are Marylebone’s most experienced property management partner."
       formTitle="Get a free valuation for your Marylebone property"
-      testimonialQuote="We handed over the full Marylebone block and have not thought about it since. Guaranteed rent hits our account on the same day every month without fail."
+      testimonialQuote="We handed over our Marylebone apartments and have not thought about them since. Guaranteed rent hits our account on the same day every month without fail."
       testimonialName="Richard & Caroline H."
       testimonialRole="Property Investors"
-      testimonialProperty="Beaumont Court, Marylebone W1"
+      testimonialProperty="Marylebone Apartments, W1"
     />
   )
 }
