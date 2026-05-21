@@ -21,7 +21,7 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>
 
-const BEDROOM_OPTIONS = ['Studio', '1 Bed', '2 Bed', '3 Bed', '4 Bed+']
+const BEDROOM_OPTIONS = ['1 Bed', '2 Bed', '3 Bed', '4 Bed+']
 const SERVICE_OPTIONS = [
   { value: 'guaranteed-rent', label: 'Guaranteed Rent' },
   { value: 'short-let-management', label: 'Short-Let Management' },

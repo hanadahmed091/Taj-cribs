@@ -31,7 +31,7 @@ const POSTCODE_OPTIONS = [
   'Other Central London',
 ]
 
-const PROPERTY_TYPES = ['Studio', '1 Bedroom', '2 Bedroom', '3 Bedroom', '4+ Bedroom', 'Full Block', 'Portfolio (multiple)']
+const PROPERTY_TYPES = ['1 Bedroom', '2 Bedroom', '3 Bedroom', '4+ Bedroom', 'Full Block', 'Portfolio (multiple)']
 
 const HEAR_ABOUT = ['Google Search', 'Google Ads', 'Friend / Referral', 'Instagram', 'LinkedIn', 'Other']
 
