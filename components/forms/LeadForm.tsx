@@ -10,6 +10,9 @@ import { cn, getStoredUtm, pushDataLayer } from '@/lib/utils'
 // The dropdown value that reveals the free-text postcode input.
 const OTHER_CENTRAL_LONDON = 'Other Central London'
 
+// The property-type value that reveals the portfolio details textarea.
+const PORTFOLIO_MULTIPLE = 'Portfolio (multiple)'
+
 // Loose UK postcode pattern. Not exhaustive, just enough to catch
 // obvious typos. Case-insensitive, optional space before the inward
 // code.
@@ -24,6 +27,10 @@ const schema = z
     postcode: z.string().min(2, 'Postcode required'),
     customPostcode: z.string().optional(),
     propertyType: z.string().optional(),
+    portfolioDetails: z
+      .string()
+      .max(1000, 'Please keep this under 1000 characters')
+      .optional(),
     service: z.string().optional(),
     message: z.string().optional(),
     hearAbout: z.string().optional(),
@@ -44,6 +51,20 @@ const schema = z
           code: z.ZodIssueCode.custom,
           path: ['customPostcode'],
           message: 'Please enter a valid UK postcode',
+        })
+      }
+    }
+
+    // When "Portfolio (multiple)" is chosen, the portfolio details
+    // textarea becomes required with a sensible minimum so it isn't
+    // just whitespace.
+    if (data.propertyType === PORTFOLIO_MULTIPLE) {
+      const value = data.portfolioDetails?.trim() ?? ''
+      if (value.length < 10) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['portfolioDetails'],
+          message: 'Please tell us a little about your properties',
         })
       }
     }
@@ -90,6 +111,7 @@ export function LeadForm({
   })
 
   const showCustomPostcode = watch('postcode') === OTHER_CENTRAL_LONDON
+  const showPortfolio = watch('propertyType') === PORTFOLIO_MULTIPLE
 
   async function onSubmit(values: FormValues) {
     setStatus('submitting')
@@ -99,15 +121,21 @@ export function LeadForm({
       // downstream handler: the typed postcode when "Other Central
       // London" was chosen, otherwise the selected area. customPostcode
       // is dropped from the payload so the receiver gets one field.
-      const { customPostcode, ...rest } = values
+      const { customPostcode, portfolioDetails, ...rest } = values
       const postcode =
         values.postcode === OTHER_CENTRAL_LONDON && customPostcode
           ? customPostcode.trim()
           : values.postcode
+      // Only send portfolioDetails when a portfolio was selected and
+      // the field has content. Otherwise it is omitted entirely.
+      const portfolio =
+        values.propertyType === PORTFOLIO_MULTIPLE && portfolioDetails?.trim()
+          ? { portfolioDetails: portfolioDetails.trim() }
+          : {}
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...rest, postcode, source, utm }),
+        body: JSON.stringify({ ...rest, postcode, ...portfolio, source, utm }),
       })
       if (!res.ok) throw new Error('Submission failed')
       pushDataLayer('form_submission_valuation', { source, service: values.service })
@@ -216,7 +244,19 @@ export function LeadForm({
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <Field label="Property type">
-          <select {...register('propertyType')} className={inputCls} defaultValue="">
+          <select
+            {...register('propertyType', {
+              onChange: (e) => {
+                // Clear the portfolio details whenever the user picks a
+                // single property type, so a stale value can't be sent.
+                if (e.target.value !== PORTFOLIO_MULTIPLE) {
+                  setValue('portfolioDetails', '', { shouldValidate: false })
+                }
+              },
+            })}
+            className={inputCls}
+            defaultValue=""
+          >
             <option value="" disabled>Select type</option>
             {PROPERTY_TYPES.map((t) => (
               <option key={t} value={t}>{t}</option>
@@ -232,6 +272,18 @@ export function LeadForm({
           </select>
         </Field>
       </div>
+
+      {showPortfolio && (
+        <Field label="Tell us about your properties" error={errors.portfolioDetails?.message}>
+          <textarea
+            {...register('portfolioDetails')}
+            rows={4}
+            maxLength={1000}
+            className={cn(inputCls, 'resize-y')}
+            placeholder="e.g. 2 x 2-bed in Chelsea SW3, 1 x studio in Marylebone W1, 3-bed townhouse in Pimlico SW1"
+          />
+        </Field>
+      )}
 
       {variant === 'full' && (
         <>

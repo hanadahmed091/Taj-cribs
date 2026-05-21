@@ -8,6 +8,7 @@ const schema = z.object({
   propertyAddress: z.string().optional(),
   postcode: z.string(),
   propertyType: z.string().optional(),
+  portfolioDetails: z.string().optional(),
   bedrooms: z.string().optional(),
   service: z.string().optional(),
   message: z.string().optional(),
