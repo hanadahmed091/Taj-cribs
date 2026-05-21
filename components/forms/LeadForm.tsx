@@ -82,7 +82,7 @@ export function LeadForm({
         <CheckCircle2 className="mx-auto text-gold-600" size={42} />
         <h3 className="mt-5 font-bold text-fluid-2xl tracking-tight">Thank you.</h3>
         <p className="mt-3 text-navy-900/70 text-fluid-lg leading-relaxed">
-          We&apos;ve received your enquiry. Expect a call back within 2 business hours.
+          We&apos;ve received your enquiry. We aim to respond as soon as possible.
         </p>
       </div>
     )
@@ -204,7 +204,7 @@ export function LeadForm({
       )}
 
       <p className="text-xs text-navy-900/55">
-        We respond within 2 business hours. No spam. Your details are private.
+        We aim to respond as soon as possible. No spam. Your details are private.
       </p>
     </form>
   )

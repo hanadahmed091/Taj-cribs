@@ -1,7 +1,13 @@
 import { SITE } from '@/lib/config'
 
 export function OrganizationJsonLd() {
-  const data = {
+  // Only emit the postal address when a real one is configured. While
+  // SITE.address.line1 is set to the 'ADDRESS_HERE' placeholder, the
+  // address block is omitted from structured data so we don't tell
+  // Google our address is "ADDRESS_HERE".
+  const hasRealAddress = SITE.address.line1 !== 'ADDRESS_HERE'
+
+  const data: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `${SITE.domain}#organization`,
@@ -21,18 +27,21 @@ export function OrganizationJsonLd() {
       'Notting Hill',
       'Canary Wharf',
     ],
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: SITE.address.line1,
-      addressLocality: SITE.address.locality,
-      postalCode: SITE.address.postcode,
-      addressCountry: 'GB',
-    },
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: SITE.ratingValue,
       reviewCount: SITE.reviewCount,
     },
+  }
+
+  if (hasRealAddress) {
+    data.address = {
+      '@type': 'PostalAddress',
+      streetAddress: SITE.address.line1,
+      addressLocality: SITE.address.locality,
+      postalCode: SITE.address.postcode,
+      addressCountry: 'GB',
+    }
   }
 
   return (

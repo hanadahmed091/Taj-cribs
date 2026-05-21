@@ -4,7 +4,7 @@ import { ThankYouContent } from './ThankYouContent'
 export const metadata: Metadata = {
   title: 'Thank you | Taj Cribs',
   description:
-    'Thank you for your enquiry. One of our Central London property specialists will be in touch within 2 hours.',
+    'Thank you for your enquiry. One of our Central London property specialists will be in touch as soon as possible.',
   robots: { index: false, follow: false },
   alternates: { canonical: '/thank-you' },
 }

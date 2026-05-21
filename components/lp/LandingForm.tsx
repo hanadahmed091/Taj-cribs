@@ -106,7 +106,7 @@ export function LandingForm({
           {title}
         </h3>
         <p className="mt-1 text-sm text-navy-900/60">
-          We respond within 2 business hours.
+          We aim to respond as soon as possible.
         </p>
       </div>
 

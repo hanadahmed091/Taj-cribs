@@ -84,7 +84,7 @@ export function ThankYouContent() {
             className="mt-10 text-fluid-4xl font-extrabold tracking-tightest leading-[1.05]"
           >
             Thank you. <br />
-            <span className="text-gold-500">We will be in touch within 2 hours.</span>
+            <span className="text-gold-500">We will be in touch as soon as possible.</span>
           </motion.h1>
 
           <motion.p

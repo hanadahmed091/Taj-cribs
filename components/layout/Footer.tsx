@@ -18,7 +18,7 @@ export function Footer() {
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/65">
               Central London short-let management and guaranteed rent specialists.
-              We manage blocks and portfolios across W1, W8, SW1 and SW3, and pay
+              We manage blocks and portfolios across Central London, and pay
               landlords on time, every time.
             </p>
             <div className="mt-7 flex items-center gap-4">
@@ -84,10 +84,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-gold-500" />
-                <span>
-                  {SITE.address.line1}<br />
-                  {SITE.address.locality} {SITE.address.postcode}
-                </span>
+                <span>{SITE.address.line1}</span>
               </li>
             </ul>
           </div>

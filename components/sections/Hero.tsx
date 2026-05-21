@@ -114,7 +114,7 @@ export function Hero() {
               </span>
               <span className="hidden sm:inline">·</span>
               <span className="hidden sm:inline">
-                Trusted by Central London landlords across W1, W8, SW1 & SW3
+                Trusted by Central London landlords.
               </span>
             </motion.div>
           </div>

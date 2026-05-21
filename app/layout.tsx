@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: '%s | Taj Cribs Property',
   },
   description:
-    'Central London short-let management and guaranteed rent specialists. Managing blocks in Marylebone, Kensington, Pimlico and across W1, W8, SW1, SW3. Free valuation 24hrs.',
+    'Central London short-let management and guaranteed rent specialists. Free valuation.',
   keywords: [
     'guaranteed rent london',
     'guaranteed rent marylebone',

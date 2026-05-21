@@ -7,7 +7,7 @@ import { SITE } from '@/lib/config'
 export const metadata: Metadata = {
   title: 'Contact Taj Cribs | Free Valuation in 24 Hours',
   description:
-    'Speak to Taj Cribs Property about guaranteed rent or short-let management for your Central London property. Free 24-hour valuation, 2-hour response.',
+    'Speak to Taj Cribs Property about guaranteed rent or short-let management for your Central London property. Free valuation, no obligation.',
   alternates: { canonical: '/contact' },
 }
 
@@ -67,9 +67,7 @@ export default function ContactPage() {
                 label="Office"
                 value={
                   <p className="font-medium leading-relaxed">
-                    {SITE.address.line1}<br />
-                    {SITE.address.locality} {SITE.address.postcode}<br />
-                    {SITE.address.country}
+                    {SITE.address.line1}
                   </p>
                 }
               />
@@ -79,23 +77,11 @@ export default function ContactPage() {
                 label="Response time"
                 value={
                   <p className="font-medium leading-relaxed">
-                    We respond to all enquiries within{' '}
-                    <span className="font-bold text-navy-900">
-                      {SITE.responsePromiseHours} business hours
-                    </span>.
+                    We aim to respond as soon as possible.
                   </p>
                 }
               />
 
-              <div className="rounded-md overflow-hidden border border-light-line">
-                <iframe
-                  title="Taj Cribs Property office map"
-                  src="https://maps.google.com/maps?q=Marylebone%20High%20Street%20London&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                  className="w-full aspect-[4/3]"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
             </aside>
           </div>
         </div>
