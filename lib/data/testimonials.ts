@@ -38,19 +38,19 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 3,
     quote:
-      "We moved abroad and needed certainty. The guaranteed rent on our Pimlico block means we don't look at property prices or booking calendars. We just receive the payment. Absolute peace of mind.",
+      "We own two one-bedroom apartments in Nine Elms and live abroad, so we needed someone we could fully trust to run them. Taj Cribs handles everything: guests, cleaning, maintenance, the lot. The payments come through reliably every month and we barely lift a finger. Knowing the flats are looked after properly while we're overseas is worth a lot.",
     name: 'Sarah & Tom W.',
     role: 'Overseas Investors',
-    area: 'Pimlico / Waterloo',
+    area: 'Nine Elms',
     stars: 5,
     propertyImage: 'https://images.unsplash.com/photo-1529408632839-a54952c491e5?w=800&q=80',
-    propertyLabel: 'Vauxhall Bridge House, SW1',
-    service: 'Guaranteed Rent',
+    propertyLabel: 'Nine Elms apartments, SW8',
+    service: 'Property Management',
   },
   {
     id: 4,
     quote:
-      'Onboarding took just 7 days. The team brought us a corporate tenant on a three-year lease and the guaranteed payment lands on the same day every month. Hands-off. Exactly what we wanted.',
+      'We signed a 3 year guaranteed rent agreement with Taj Cribs on two apartments in Chelsea. The payment lands on the same day every month, regardless of whether the flats are occupied. No chasing tenants, no void periods, no surprises. Exactly what we wanted from a hands-off investment.',
     name: 'Priya M.',
     role: 'Buy-to-Let Investor',
     area: 'Chelsea',
