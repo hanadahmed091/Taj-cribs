@@ -189,3 +189,73 @@ body {
 .no-scrollbar {
   scrollbar-width: none;
 }
+
+/* Brand-styled Mapbox popup. Used by the coverage map on the
+   homepage Where We Operate section and the /areas page. */
+.mapboxgl-popup.coverage-popup .mapboxgl-popup-content {
+  background: var(--navy-950);
+  color: #fff;
+  padding: 1rem 1.1rem 1.1rem;
+  border-radius: 4px;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.55);
+  font-family: inherit;
+}
+.mapboxgl-popup.coverage-popup .mapboxgl-popup-close-button {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.1rem;
+  padding: 0 0.4rem;
+  line-height: 1;
+}
+.mapboxgl-popup.coverage-popup .mapboxgl-popup-close-button:hover {
+  color: #fff;
+  background: transparent;
+}
+.mapboxgl-popup.coverage-popup.mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
+.mapboxgl-popup.coverage-popup.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+.mapboxgl-popup.coverage-popup.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+  border-bottom-color: var(--navy-950);
+}
+.mapboxgl-popup.coverage-popup.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+.mapboxgl-popup.coverage-popup.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+.mapboxgl-popup.coverage-popup.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+  border-top-color: var(--navy-950);
+}
+.mapboxgl-popup.coverage-popup.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+  border-right-color: var(--navy-950);
+}
+.mapboxgl-popup.coverage-popup.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+  border-left-color: var(--navy-950);
+}
+.coverage-popup-title {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 0;
+}
+.coverage-popup-title span {
+  color: var(--gold-500);
+  font-weight: 600;
+  margin-left: 0.25rem;
+}
+.coverage-popup-body {
+  margin: 0.5rem 0 0.9rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.75);
+}
+.coverage-popup-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: var(--gold-500);
+  color: var(--navy-950);
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 200ms ease;
+}
+.coverage-popup-cta:hover {
+  background: var(--gold-400);
+}

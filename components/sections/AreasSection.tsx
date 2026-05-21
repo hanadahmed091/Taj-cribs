@@ -1,12 +1,9 @@
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
-import { deriveAreas } from '@/lib/data/areas'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { FadeIn } from '@/components/ui/FadeIn'
+import { CoverageMap } from '@/components/sections/CoverageMap'
 
 export function AreasSection() {
-  const areas = deriveAreas()
-
   return (
     <section className="bg-cream section-pad">
       <div className="container-edge">
@@ -19,58 +16,20 @@ export function AreasSection() {
           </FadeIn>
           <FadeIn className="lg:col-span-5" delay={0.1}>
             <p className="text-fluid-lg text-navy-900/70 leading-relaxed">
-              We operate exclusively across prime Central London postcodes,
-              with deep portfolios in the areas below.
+              We operate exclusively across prime Central London postcodes.
+              Tap any area on the map to see what we cover.
             </p>
           </FadeIn>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-light-line border border-light-line">
-          {areas.map((area, idx) => (
-            <FadeIn key={area.slug} delay={idx * 0.04}>
-              {/* Card-link with an inner exception: the whole card links
-                  to the area page via an invisible absolutely-positioned
-                  overlay link, while the "Free valuation" inner link sits
-                  on top with a higher z-index and routes to /contact. */}
-              <div className="group relative block bg-white p-8 lg:p-10 h-full transition-colors duration-300 hover:bg-navy-900 hover:text-white">
-                <Link
-                  href={`/areas/${area.slug}`}
-                  aria-label={`View ${area.name} area page`}
-                  className="absolute inset-0 z-10"
-                />
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="font-bold text-fluid-xl tracking-tight">
-                      {area.name}{' '}
-                      <span className="text-gold-500 font-semibold">{area.postcode}</span>
-                    </h3>
-                    <p className="mt-2 text-sm text-navy-900/65 group-hover:text-white/70 transition-colors">
-                      {area.tagline}
-                    </p>
-                  </div>
-                  <ArrowUpRight
-                    size={18}
-                    className="shrink-0 text-navy-900/40 group-hover:text-gold-400 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  />
-                </div>
-                <div className="mt-8 pt-5 border-t border-light-line group-hover:border-white/15 transition-colors">
-                  <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/45 group-hover:text-gold-400">
-                    Rent guide
-                  </p>
-                  <Link
-                    href="/contact"
-                    className="relative z-20 mt-1 inline-flex items-center gap-1 font-bold text-fluid-lg border-b border-navy-900/30 group-hover:border-gold-400 group-hover:text-gold-400 transition-colors"
-                  >
-                    Free valuation
-                  </Link>
-                </div>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
+        <FadeIn delay={0.15}>
+          <div className="mt-12">
+            <CoverageMap />
+          </div>
+        </FadeIn>
 
         <FadeIn delay={0.2}>
-          <p className="mt-12 text-sm text-navy-900/60 text-center">
+          <p className="mt-10 text-sm text-navy-900/60 text-center">
             Properties outside these areas considered.{' '}
             <Link href="/contact" className="text-navy-900 underline decoration-gold-500 underline-offset-4 hover:text-gold-600 transition-colors">
               Get in touch
