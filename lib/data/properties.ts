@@ -82,12 +82,12 @@ export const PROPERTIES: Property[] = [
   {
     id: 'chelsea',
     name: 'Chelsea Reach',
-    type: 'Boutique Apartments',
+    type: 'Boutique Apartment',
     area: 'Chelsea, SW3',
     areaSlug: 'chelsea',
     description:
-      'A pair of riverside apartments in Chelsea under our property management service. One is currently let to a corporate tenant on a 10-month contract.',
-    bedrooms: '1-bed & 2-bed',
+      'A riverside apartment in Chelsea under our property management service. Currently let to a corporate tenant on a 10 month contract.',
+    bedrooms: '2-bed apartment',
     service: 'short-let-management',
     monthlyIncome: '£6,500/month',
     highlight: 'Corporate tenant. 10 month let.',
