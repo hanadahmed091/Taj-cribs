@@ -18,15 +18,14 @@ export default function AreasIndexPage() {
       <section className="relative hero-bg text-white pt-[120px] pb-20 lg:pt-[160px] lg:pb-32 overflow-hidden">
         <div className="absolute inset-0 hero-grid opacity-60 pointer-events-none" />
         <div className="container-edge relative max-w-3xl">
-          <SectionLabel className="!justify-start">Coverage Map</SectionLabel>
+          <SectionLabel className="!justify-start">Coverage</SectionLabel>
           <h1 className="mt-6 text-hero font-extrabold tracking-tightest leading-[0.95]">
-            Central London, <br />
-            <span className="text-gold-500">inside out.</span>
+            We cover all of <br />
+            <span className="text-gold-500">Zone 1.</span>
           </h1>
           <p className="mt-8 text-fluid-lg text-white/75 leading-relaxed">
-            We are operators, not just agents, and that means we operate exclusively
-            in postcodes we know intimately. Tap any area on the map below to see
-            what we cover.
+            Short-let, medium-term and guaranteed rent across central London. Tap any
+            area below to fly the map and see what we operate there.
           </p>
         </div>
       </section>

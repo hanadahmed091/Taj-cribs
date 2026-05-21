@@ -1,12 +1,14 @@
 // Coverage areas displayed on the "Where We Operate" map (homepage)
-// and the /areas page. Each area gets a near-circular polygon drawn
-// around its centre point; polygons are computed at module load time
-// so we don't need turf.js or anything heavier.
+// and the /areas page.
 //
-// The Mapbox source layer consumes `coverageGeoJson` directly. The
-// `COVERAGE_AREAS` array drives the condensed area list below the map
-// so a tap in the list can fly the map to the corresponding centre
-// and open the matching popup.
+// We don't draw per-area shapes any more. Coverage is the entire TfL
+// Zone 1 area, rendered as a single soft-filled polygon. The map
+// stays interactive via the area list below it: tapping a name flies
+// the map to that area's centre and opens a small popup.
+//
+// COVERAGE_AREAS drives the area-list buttons and the per-area popups
+// triggered from the list.
+// zone1GeoJson is what the Mapbox source consumes for the polygon.
 
 export type CoverageArea = {
   slug: string
@@ -15,27 +17,6 @@ export type CoverageArea = {
   oneLiner: string
   /** [lng, lat] in Mapbox order, NOT Google Maps order. */
   centre: [number, number]
-}
-
-/**
- * Generate a ~32-vertex closed ring approximating a circle of the
- * given radius around a lng/lat centre. Returns coords in [lng, lat]
- * GeoJSON order.
- */
-function circlePolygon(
-  centre: [number, number],
-  radiusKm = 1.1,
-  segments = 32,
-): number[][] {
-  const [lng, lat] = centre
-  const ring: number[][] = []
-  const dLat = radiusKm / 111.32
-  const dLng = radiusKm / (111.32 * Math.cos((lat * Math.PI) / 180))
-  for (let i = 0; i <= segments; i++) {
-    const t = (i / segments) * 2 * Math.PI
-    ring.push([lng + dLng * Math.cos(t), lat + dLat * Math.sin(t)])
-  }
-  return ring
 }
 
 export const COVERAGE_AREAS: CoverageArea[] = [
@@ -126,26 +107,63 @@ export const COVERAGE_AREAS: CoverageArea[] = [
 ]
 
 /**
- * FeatureCollection consumed by the Mapbox `coverage` source. Each
- * feature carries the area metadata in its `properties` block so the
- * click handler can read it back without a separate lookup.
+ * Hand-traced approximation of the TfL Zone 1 boundary. Coordinates
+ * are [lng, lat] (GeoJSON order). Traced clockwise from Paddington
+ * in the north-west. Not GIS-accurate, but reads correctly as a
+ * coverage shape over Central London.
  */
-export const coverageGeoJson = {
+const zone1Boundary: number[][] = [
+  [-0.185, 51.521], // NW: Paddington / Edgware Rd
+  [-0.165, 51.527], // N: Marylebone / Regent's Park edge
+  [-0.140, 51.531], // N: north of Marylebone Rd
+  [-0.120, 51.536], // King's Cross / Euston
+  [-0.098, 51.535], // Angel / Pentonville
+  [-0.080, 51.527], // Old Street
+  [-0.070, 51.520], // Shoreditch
+  [-0.068, 51.514], // Aldgate / Liverpool Street
+  [-0.073, 51.509], // Tower Hill
+  [-0.082, 51.504], // London Bridge
+  [-0.090, 51.500], // Borough
+  [-0.098, 51.495], // Southwark
+  [-0.103, 51.490], // Elephant & Castle
+  [-0.115, 51.487], // Lambeth North
+  [-0.125, 51.485], // Vauxhall north
+  [-0.140, 51.485], // Pimlico south edge
+  [-0.155, 51.488], // Belgravia south
+  [-0.170, 51.490], // Chelsea (King's Rd)
+  [-0.190, 51.491], // Earl's Court east
+  [-0.205, 51.495], // Earl's Court / West Brompton
+  [-0.212, 51.503], // Holland Park south
+  [-0.210, 51.512], // Holland Park / Notting Hill
+  [-0.205, 51.518], // Notting Hill Gate
+  [-0.195, 51.520], // Bayswater
+  [-0.185, 51.521], // close to start
+]
+
+/**
+ * FeatureCollection consumed by the Mapbox `coverage` source.
+ * One feature: the Zone 1 polygon.
+ */
+export const zone1GeoJson = {
   type: 'FeatureCollection' as const,
-  features: COVERAGE_AREAS.map((area, idx) => ({
-    type: 'Feature' as const,
-    id: idx + 1, // numeric id required by setFeatureState
-    geometry: {
-      type: 'Polygon' as const,
-      coordinates: [circlePolygon(area.centre)],
+  features: [
+    {
+      type: 'Feature' as const,
+      id: 1,
+      geometry: {
+        type: 'Polygon' as const,
+        coordinates: [zone1Boundary],
+      },
+      properties: {
+        name: 'Zone 1',
+      },
     },
-    properties: {
-      slug: area.slug,
-      name: area.name,
-      postcode: area.postcode,
-      oneLiner: area.oneLiner,
-    },
-  })),
+  ],
 }
 
-export type CoverageFeatureId = number
+/**
+ * Suggested map view: Westminster-centred with enough zoom to fit
+ * Zone 1 in view on most viewports.
+ */
+export const ZONE1_CENTRE: [number, number] = [-0.1278, 51.5074]
+export const ZONE1_DEFAULT_ZOOM = 11.6

@@ -200,6 +200,109 @@ export default function PropertyManagementPage() {
         </div>
       </section>
 
+      {/* MEDIUM-TERM RENTALS */}
+      <section className="bg-white section-pad">
+        <div className="container-edge">
+          <div className="max-w-3xl">
+            <FadeIn>
+              <SectionLabel>Medium-Term Rentals</SectionLabel>
+              <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
+                One of central London&apos;s <span className="text-gold-600">strongest segments right now.</span>
+              </h2>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <p className="mt-7 text-fluid-lg text-navy-900/75 leading-relaxed">
+                Corporate relocations, contractors, insurance housing, professionals
+                between homes. They all need furnished one to six month stays.
+                Demand consistently outstrips supply in Zone 1, and there aren&apos;t
+                enough quality operators serving them.
+              </p>
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={0.15}>
+            <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-px bg-light-line border border-light-line">
+              <div className="bg-white p-8 lg:p-10">
+                <p className="font-extrabold text-fluid-3xl text-gold-500 tabular-nums tracking-tighter">
+                  30 to 50%
+                </p>
+                <p className="mt-3 text-xs uppercase tracking-widest font-semibold text-navy-900/55">
+                  Uplift on long-let
+                </p>
+                <p className="mt-3 text-sm text-navy-900/70 leading-relaxed">
+                  What you typically earn from a well-managed mix of short and
+                  medium-term stays vs. a traditional long-term tenancy.
+                </p>
+              </div>
+              <div className="bg-white p-8 lg:p-10">
+                <p className="font-extrabold text-fluid-3xl text-gold-500 tabular-nums tracking-tighter">
+                  1 to 6 months
+                </p>
+                <p className="mt-3 text-xs uppercase tracking-widest font-semibold text-navy-900/55">
+                  Typical stay length
+                </p>
+                <p className="mt-3 text-sm text-navy-900/70 leading-relaxed">
+                  Longer than a holiday booking, shorter than an AST. Lower
+                  turnover means less wear on your property and fewer operational
+                  headaches.
+                </p>
+              </div>
+              <div className="bg-white p-8 lg:p-10">
+                <p className="font-extrabold text-fluid-3xl text-gold-500 tabular-nums tracking-tighter">
+                  Zero
+                </p>
+                <p className="mt-3 text-xs uppercase tracking-widest font-semibold text-navy-900/55">
+                  AST deposit disputes
+                </p>
+                <p className="mt-3 text-sm text-navy-900/70 leading-relaxed">
+                  Corporate lets sit outside the AST framework. No protected
+                  tenancies, no end-of-term deposit fights, no Section 8 hearings.
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+
+          <div className="mt-14 max-w-3xl space-y-5 text-fluid-lg text-navy-900/75 leading-relaxed">
+            <FadeIn delay={0.2}>
+              <p>
+                A well-managed mix of short and medium-term stays gives you the
+                uplift of short-let with the stability of longer stays. You get
+                regular property inspections between guests, and no six-year AST
+                locking you in.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.25}>
+              <p>
+                For this guest profile we don&apos;t just rely on Airbnb. We market
+                through corporate housing platforms, relocation agents, and direct
+                booking channels. The right channels reach the right guests.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.3}>
+              <p>
+                Operationally it&apos;s the full thing. Guest vetting, contracts,
+                check-in and check-out, cleaning, linen, maintenance coordination,
+                and 24/7 guest support.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.35}>
+              <p>
+                Well above long-let yields, without the AST risk profile.
+              </p>
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={0.4}>
+            <div className="mt-12">
+              <Link href="/contact" className="btn-gold">
+                Get a free valuation
+                <ArrowRight size={18} />
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       <TajCribsStandard variant="inline" />
 
       {/* CASE STUDIES */}

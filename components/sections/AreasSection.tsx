@@ -11,13 +11,13 @@ export function AreasSection() {
           <FadeIn className="lg:col-span-7">
             <SectionLabel>Where We Operate</SectionLabel>
             <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
-              Central London, <span className="text-gold-600">inside out.</span>
+              We cover all of <span className="text-gold-600">Zone 1.</span>
             </h2>
           </FadeIn>
           <FadeIn className="lg:col-span-5" delay={0.1}>
             <p className="text-fluid-lg text-navy-900/70 leading-relaxed">
-              We operate exclusively across prime Central London postcodes.
-              Tap any area on the map to see what we cover.
+              Short-let, medium-term and guaranteed rent across central London.
+              Tap any area below to fly the map and see what we operate there.
             </p>
           </FadeIn>
         </div>
