@@ -119,12 +119,12 @@ export const AREA_META: Record<string, AreaMeta> = {
     slug: 'earls-court',
     name: "Earl's Court",
     postcode: 'SW5',
-    tagline: 'Short-let & guaranteed rent specialists',
+    tagline: 'Guaranteed Rent specialists',
     avgNightlyRate: '',
-    avgMonthlyRate: '',
+    avgMonthlyRate: '£4,200+/mo',
     intro:
-      "Earl's Court sits between Kensington and Fulham, offering excellent value for short-let investors. Strong demand from international visitors, exhibition guests and professionals makes it a consistent performer year-round. We manage properties across SW5 and the surrounding streets.",
-    demand: 'International visitor + exhibition guest + professional demand.',
+      "Earl's Court SW5 sits at one of London's best-connected interchanges. The District and Piccadilly lines meet at Earl's Court station, putting Heathrow on a direct ride and the City, Westminster and the West End within 15-20 minutes. Kensington and Chelsea border the postcode to the north and east, with Fulham to the south. The guest mix here is unusually balanced: international visitors arriving via Heathrow, professionals on mid-stay corporate assignments, and steady leisure demand around museums and the King's Road. Regulation is straightforward. SW5 sits outside the prime W1 enforcement pressure on the 90-day rule, but we still operate every unit Rule-compliant. We took on Earl's Court Apartments because the demand profile is consistent year-round and the postcode supports our guaranteed-rent model on a longer fixed lease.",
+    demand: "International + corporate weekday + leisure weekend. Strong year-round occupancy.",
   },
   'nine-elms': {
     slug: 'nine-elms',

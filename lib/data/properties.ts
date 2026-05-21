@@ -118,6 +118,28 @@ export const PROPERTIES: Property[] = [
     badge: null,
     location: { lat: 51.5036, lng: -0.1143 },
   },
+  {
+    id: 'earls-court-apartments',
+    name: "Earl's Court Apartments",
+    type: 'Apartments',
+    area: "Earl's Court, SW5",
+    areaSlug: 'earls-court',
+    description:
+      "A pair of serviced apartments in Earl's Court SW5, operated under our guaranteed rent scheme. Three-year fixed lease, fixed monthly payment to the landlord.",
+    bedrooms: '1-bed & 2-bed apartments',
+    service: 'guaranteed-rent',
+    monthlyIncome: '£4,200/month guaranteed',
+    highlight: '3 years fixed',
+    imageQuery: "earl's court london apartment interior",
+    imageUrl:
+      'https://bookingenginecdn.hostaway.com/listing/67835-498290-qVwJqig9yVH0JUcXAtJGEsWEpK4AqDp114UJ0GcemVA-6a0ef52005b1e?width=1920&quality=70&format=webp&v=2',
+    gallery: [
+      'https://bookingenginecdn.hostaway.com/listing/67835-498290-lhbn582xB7WIpSBEeE42sFrJUhIPhQBj4P246s2AUlQ-6a0ef79b5a228?width=1920&quality=70&format=webp&v=2',
+      'https://bookingenginecdn.hostaway.com/listing/67835-498290-xlH4yMdsQoBD46D1QTnhBB--Zp3p0Fs6O--QT--xaNGkzw-6a0ef4ebc9855?width=1920&quality=70&format=webp&v=2',
+    ],
+    badge: null,
+    location: { lat: 51.4912, lng: -0.1947 },
+  },
 ]
 
 export const SERVICE_LABELS: Record<ServiceType, string> = {

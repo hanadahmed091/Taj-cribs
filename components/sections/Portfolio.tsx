@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import {
@@ -10,6 +9,7 @@ import {
 } from '@/lib/data/properties'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { FadeIn } from '@/components/ui/FadeIn'
+import { PortfolioCardImages } from '@/components/sections/PortfolioCardImages'
 import { pushDataLayer } from '@/lib/utils'
 
 export function Portfolio() {
@@ -52,14 +52,12 @@ export function Portfolio() {
                 }
                 className="group relative block overflow-hidden rounded-md border border-navy-line aspect-[3/2.1]"
               >
-                <Image
-                  src={property.imageUrl}
+                <PortfolioCardImages
+                  images={[property.imageUrl, ...(property.gallery ?? [])]}
                   alt={`${property.name}, ${property.area}`}
-                  fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-700 ease-smooth group-hover:scale-[1.04]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/30 to-transparent pointer-events-none" />
 
                 <span className="absolute top-4 left-4 bg-gold-500 text-navy-950 px-3 py-1 rounded-sm text-[10px] uppercase tracking-widest font-bold">
                   {property.area.split(',')[0]} {property.area.split(',')[1]?.trim()}
