@@ -8,6 +8,7 @@ import { SiteFrame } from '@/components/layout/SiteFrame'
 import { LenisProvider } from '@/components/providers/LenisProvider'
 import { AnalyticsScripts } from '@/components/providers/AnalyticsScripts'
 import { UtmCapture } from '@/components/providers/UtmCapture'
+import { CookieConsent } from '@/components/providers/CookieConsent'
 import { OrganizationJsonLd } from '@/components/seo/OrganizationJsonLd'
 
 const poppins = Poppins({
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {children}
           </SiteFrame>
         </LenisProvider>
+        <CookieConsent />
       </body>
     </html>
   )
