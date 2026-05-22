@@ -1,4 +1,56 @@
-export type FAQ = { q: string; a: string }
+export type FAQ = {
+  q: string
+  a: string
+  // Optional in-UI link shown after the answer. Not included in the
+  // FAQPage JSON-LD, which uses the plain `a` text only.
+  cta?: { label: string; href: string }
+}
+
+// General landlord FAQs used on the homepage and the /faqs page.
+export const HOMEPAGE_FAQS: FAQ[] = [
+  {
+    q: 'What is the difference between guaranteed rent and short-let management?',
+    a: 'Guaranteed rent means we lease your property on a fixed corporate contract and pay you the same amount every month, whether or not it is occupied. Short-let management means we run your property across the booking platforms for you and pass on the income, less our fee, so your monthly figure moves with demand. Guaranteed rent trades a little upside for total certainty. Management gives you the full earning potential with some month-to-month variation.',
+  },
+  {
+    q: 'How much do you charge?',
+    a: 'For short-let management we charge a flat 18% of gross booking revenue, with no listing fees, photography fees or call-out charges. For guaranteed rent there is no fee at all. We pay you an agreed monthly figure and keep the difference between that and what the property earns. Either way, the number we quote you is the number you receive.',
+  },
+  {
+    q: 'What happens if my property is empty?',
+    a: 'On guaranteed rent, an empty property changes nothing for you. You are paid the same agreed amount on the same date regardless of occupancy, because the void risk sits with us. On management, your income reflects actual bookings, and our Central London portfolio averages around 80% occupancy across the year. Quieter winter months earn less than peak summer ones, which is the trade-off for the higher earning ceiling.',
+  },
+  {
+    q: 'Who pays for repairs and maintenance?',
+    a: 'We coordinate all maintenance and handle the minor day-to-day repairs. On guaranteed rent we cover repairs under £250, plus cleaning, consumables and the running costs of letting. On management we arrange repairs on your behalf and bill them at cost, never marked up. Larger and structural works stay with you as the owner, as do your mortgage and building insurance, and we always get your approval before any significant spend.',
+  },
+  {
+    q: 'How and when do I get paid?',
+    a: 'You are paid by bank transfer once a month. On guaranteed rent the payment lands on the same fixed date every month, set in your contract. On management we pay your net income on a set date with a clear statement showing the gross bookings, our 18% fee and your balance. No chasing and no surprises.',
+  },
+  {
+    q: 'What about the London 90-day short-let rule?',
+    a: 'In Greater London, letting an entire home on short stays is capped at 90 nights per calendar year unless you hold planning permission for more. We track every property’s night count and switch to medium-term and corporate lets once the cap is reached, so you stay compliant and keep earning year-round. It is one of the main reasons our properties mix short stays with longer corporate bookings.',
+    cta: { label: 'Read our guide to the 90-day rule', href: '/blog/90-day-rule-airbnb-london' },
+  },
+  {
+    q: 'How long are your contracts?',
+    a: 'Guaranteed rent contracts run from one to five years, with longer terms earning you a higher monthly figure. Short-let management is more flexible, with a rolling agreement and no long lock-in. We are happy to start with a shorter term so you can see how the model performs before committing further.',
+  },
+  {
+    q: 'Do you take on whole blocks and portfolios?',
+    a: 'Yes. We are structured for whole blocks and multi-property portfolios, which most short-let operators are not. We already manage full residential blocks and landlords with several units across Central London, with one point of contact and one consolidated statement. If you own a block or a portfolio, this is exactly the kind of work we are built for.',
+  },
+  {
+    q: 'How quickly can you onboard my property?',
+    a: 'A furnished, photo-ready property can be live and taking bookings in less than a week from signing. If it needs photography, styling or a few furniture additions, allow one to two weeks. We move as fast as the property allows, and we tell you honestly what is needed before we start.',
+  },
+  {
+    q: 'What areas do you cover?',
+    a: 'We focus on Central London, broadly Zone 1, including Marylebone, Mayfair, Kensington, Chelsea, Pimlico, Westminster, Notting Hill and Canary Wharf. Concentrating on these postcodes is how we keep occupancy and standards high. We do consider strong properties just outside these areas, so it is always worth asking.',
+    cta: { label: 'See the areas we cover', href: '/areas' },
+  },
+]
 
 export const GUARANTEED_RENT_FAQS: FAQ[] = [
   {

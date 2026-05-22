@@ -48,6 +48,7 @@ export function Footer() {
               <li><Link href="/guaranteed-rent" className="hover:text-gold-400 transition-colors">Guaranteed Rent</Link></li>
               <li><Link href="/property-management" className="hover:text-gold-400 transition-colors">Property Management</Link></li>
               <li><Link href="/pricing" className="hover:text-gold-400 transition-colors">Pricing</Link></li>
+              <li><Link href="/faqs" className="hover:text-gold-400 transition-colors">FAQs</Link></li>
               <li><Link href="/blog" className="hover:text-gold-400 transition-colors">Insights</Link></li>
               <li><Link href="/contact" className="hover:text-gold-400 transition-colors">Free Valuation</Link></li>
             </ul>

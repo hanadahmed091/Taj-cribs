@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Plus } from 'lucide-react'
 import type { FAQ as FAQType } from '@/lib/data/faqs'
@@ -51,9 +52,19 @@ export function FAQ({ items, label = 'Common Questions', heading }: { items: FAQ
                       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-6 pr-10 text-navy-900/75 leading-relaxed text-fluid-lg">
-                        {item.a}
-                      </p>
+                      <div className="pb-6 pr-10">
+                        <p className="text-navy-900/75 leading-relaxed text-fluid-lg">
+                          {item.a}
+                        </p>
+                        {item.cta && (
+                          <Link
+                            href={item.cta.href}
+                            className="mt-3 inline-block font-semibold text-navy-900 underline decoration-gold-500 decoration-2 underline-offset-4 hover:text-gold-600 transition-colors"
+                          >
+                            {item.cta.label}
+                          </Link>
+                        )}
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>

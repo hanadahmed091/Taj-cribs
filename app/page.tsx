@@ -9,11 +9,15 @@ import { Testimonials } from '@/components/sections/Testimonials'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import { AreasSection } from '@/components/sections/AreasSection'
 import { BlogPreview } from '@/components/sections/BlogPreview'
+import { FAQ } from '@/components/sections/FAQ'
 import { FinalCTA } from '@/components/sections/FinalCTA'
+import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
+import { HOMEPAGE_FAQS } from '@/lib/data/faqs'
 
 export default function HomePage() {
   return (
     <>
+      <FaqJsonLd faqs={HOMEPAGE_FAQS} />
       <Hero />
       <Marquee />
       <ServicesOverview />
@@ -25,6 +29,11 @@ export default function HomePage() {
       <WhyChooseUs />
       <AreasSection />
       <BlogPreview />
+      <FAQ
+        items={HOMEPAGE_FAQS}
+        label="Common Questions"
+        heading="Questions landlords ask us"
+      />
       <FinalCTA />
     </>
   )
