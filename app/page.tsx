@@ -6,6 +6,7 @@ import { StatsStrip } from '@/components/sections/StatsStrip'
 import { TajCribsStandard } from '@/components/sections/TajCribsStandard'
 import { Portfolio } from '@/components/sections/Portfolio'
 import { Testimonials } from '@/components/sections/Testimonials'
+import { CaseStudyFeature } from '@/components/sections/CaseStudyFeature'
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 import { AreasSection } from '@/components/sections/AreasSection'
 import { BlogPreview } from '@/components/sections/BlogPreview'
@@ -26,6 +27,7 @@ export default function HomePage() {
       <TajCribsStandard />
       <Portfolio />
       <Testimonials />
+      <CaseStudyFeature />
       <WhyChooseUs />
       <AreasSection />
       <BlogPreview />

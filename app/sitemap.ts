@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { SITE } from '@/lib/config'
 import { getAllAreaSlugs } from '@/lib/data/areas'
 import { BLOG_POSTS } from '@/lib/data/blog'
+import { getAllCaseStudySlugs } from '@/lib/data/case-studies'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.domain
@@ -15,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/areas`, lastModified: now, priority: 0.85, changeFrequency: 'monthly' },
     { url: `${base}/blog`, lastModified: now, priority: 0.85, changeFrequency: 'weekly' },
     { url: `${base}/faqs`, lastModified: now, priority: 0.7, changeFrequency: 'monthly' },
+    { url: `${base}/case-studies`, lastModified: now, priority: 0.8, changeFrequency: 'monthly' },
     { url: `${base}/contact`, lastModified: now, priority: 0.7, changeFrequency: 'monthly' },
   ]
 
@@ -32,5 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
   }))
 
-  return [...staticRoutes, ...areaRoutes, ...blogRoutes]
+  const caseStudyRoutes: MetadataRoute.Sitemap = getAllCaseStudySlugs().map((slug) => ({
+    url: `${base}/case-studies/${slug}`,
+    lastModified: now,
+    priority: 0.75,
+    changeFrequency: 'monthly',
+  }))
+
+  return [...staticRoutes, ...areaRoutes, ...blogRoutes, ...caseStudyRoutes]
 }
