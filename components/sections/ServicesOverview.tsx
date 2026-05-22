@@ -41,7 +41,7 @@ export function ServicesOverview() {
     <section className="bg-cream section-pad">
       <div className="container-edge">
         <FadeIn>
-          <SectionLabel>Our Services</SectionLabel>
+          <SectionLabel onLight>Our Services</SectionLabel>
           <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight max-w-2xl">
             Two ways to let. <span className="text-gold-600">Both stress-free.</span>
           </h2>
@@ -78,7 +78,7 @@ export function ServicesOverview() {
                     />
                   </div>
 
-                  <p className={`mt-8 eyebrow ${service.accent ? '!text-navy-950/70' : ''}`}>
+                  <p className={`mt-8 eyebrow ${service.accent ? '!text-navy-950/70' : '!text-gold-700'}`}>
                     {service.eyebrow}
                   </p>
                   <h3 className="mt-3 text-fluid-3xl font-extrabold tracking-tighter leading-tight">

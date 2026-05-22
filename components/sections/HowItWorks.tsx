@@ -37,7 +37,7 @@ export function HowItWorks() {
       <div className="container-edge">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           <FadeIn className="lg:col-span-7">
-            <SectionLabel>How It Works</SectionLabel>
+            <SectionLabel onLight>How It Works</SectionLabel>
             <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
               Four steps. From handover to income.
             </h2>
@@ -84,7 +84,7 @@ export function HowItWorks() {
           >
             {activeTab.steps.map((step) => (
               <div key={step.n} className="bg-white p-8 lg:p-10">
-                <span className="font-extrabold text-fluid-3xl text-gold-500 tabular-nums">
+                <span className="font-extrabold text-fluid-3xl text-gold-700 tabular-nums">
                   {step.n}
                 </span>
                 <h3 className="mt-5 text-fluid-xl font-bold tracking-tight">

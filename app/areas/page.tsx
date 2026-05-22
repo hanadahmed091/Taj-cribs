@@ -35,7 +35,7 @@ export default function AreasIndexPage() {
         <div className="container-edge">
           <div className="max-w-3xl">
             <FadeIn>
-              <SectionLabel>Who stays in our properties</SectionLabel>
+              <SectionLabel onLight>Who stays in our properties</SectionLabel>
               <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
                 A mix of guests, <span className="text-gold-600">not just weekenders.</span>
               </h2>

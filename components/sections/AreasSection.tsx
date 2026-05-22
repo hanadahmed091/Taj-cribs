@@ -9,7 +9,7 @@ export function AreasSection() {
       <div className="container-edge">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           <FadeIn className="lg:col-span-7">
-            <SectionLabel>Where We Operate</SectionLabel>
+            <SectionLabel onLight>Where We Operate</SectionLabel>
             <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
               We cover all of <span className="text-gold-600">Zone 1.</span>
             </h2>

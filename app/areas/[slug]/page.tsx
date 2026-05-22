@@ -110,7 +110,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
       <section className="bg-white section-pad !pb-0">
         <div className="container-edge max-w-4xl">
           <FadeIn>
-            <SectionLabel>Local Demand</SectionLabel>
+            <SectionLabel onLight>Local Demand</SectionLabel>
             <h2 className="mt-5 text-fluid-3xl font-extrabold tracking-tighter leading-tight">
               {area.demand}
             </h2>
@@ -130,7 +130,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
           <section className="bg-white section-pad !pb-0">
             <div className="container-edge">
               <FadeIn>
-                <SectionLabel>Inside the property</SectionLabel>
+                <SectionLabel onLight>Inside the property</SectionLabel>
                 <h2 className="mt-5 text-fluid-3xl font-extrabold tracking-tighter leading-tight">
                   A look at {gallerySources[0].name}.
                 </h2>
@@ -161,7 +161,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
         <section className="bg-white section-pad">
           <div className="container-edge">
             <FadeIn>
-              <SectionLabel>What We Manage Here</SectionLabel>
+              <SectionLabel onLight>What We Manage Here</SectionLabel>
               <h2 className="mt-5 text-fluid-3xl font-extrabold tracking-tighter leading-tight">
                 Current portfolio in {area.name}.
               </h2>
@@ -186,7 +186,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
                     <div className="p-6">
                       <h3 className="font-bold text-fluid-xl tracking-tight">{p.name}</h3>
                       <p className="mt-2 text-sm text-navy-900/60">{p.bedrooms}</p>
-                      <p className="mt-4 text-gold-600 font-bold tabular-nums">{p.monthlyIncome}</p>
+                      <p className="mt-4 text-gold-700 font-bold tabular-nums">{p.monthlyIncome}</p>
                       <p className="text-xs text-navy-900/55 mt-1">{p.highlight}</p>
                     </div>
                   </article>
@@ -220,7 +220,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-5">
               <FadeIn>
-                <SectionLabel>Free Valuation</SectionLabel>
+                <SectionLabel onLight>Free Valuation</SectionLabel>
                 <h2 className="mt-5 text-fluid-3xl font-extrabold tracking-tighter leading-tight">
                   Own property in {area.name}?
                 </h2>

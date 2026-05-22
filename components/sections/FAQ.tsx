@@ -15,7 +15,7 @@ export function FAQ({ items, label = 'Common Questions', heading }: { items: FAQ
     <section className="bg-white section-pad">
       <div className="container-edge max-w-4xl">
         <FadeIn>
-          <SectionLabel>{label}</SectionLabel>
+          <SectionLabel onLight>{label}</SectionLabel>
           <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
             {heading}
           </h2>

@@ -8,6 +8,7 @@
   --navy-800: #0A1E38;
   --navy-700: #0F2847;
   --navy-600: #1A3A5C;
+  --gold-700: #856A29;
   --gold-600: #A8873E;
   --gold-500: #C9A96E;
   --gold-400: #D9BE8A;
@@ -53,6 +54,15 @@ body {
 ::selection {
   background: var(--gold-500);
   color: var(--navy-950);
+}
+
+/* Visible keyboard focus indicator. gold-600 meets the WCAG 3:1
+   non-text contrast minimum against both the light (cream/white) and
+   the dark (navy) backgrounds used across the site. Mouse clicks do
+   not trigger :focus-visible, so this only shows for keyboard users. */
+:focus-visible {
+  outline: 2px solid var(--gold-600);
+  outline-offset: 2px;
 }
 
 /* Editorial label */

@@ -37,7 +37,7 @@ export function TajCribsStandard({ variant = 'home' }: { variant?: 'home' | 'inl
       <div className="container-edge">
         <div className="max-w-3xl">
           <FadeIn>
-            <SectionLabel>The Taj Cribs Standard</SectionLabel>
+            <SectionLabel onLight>The Taj Cribs Standard</SectionLabel>
             <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
               Every checkout. Every time. <span className="text-gold-600">No exceptions.</span>
             </h2>
@@ -67,7 +67,7 @@ export function TajCribsStandard({ variant = 'home' }: { variant?: 'home' | 'inl
                   className="relative flex flex-col items-start"
                 >
                   {/* Step number */}
-                  <span className="font-extrabold text-[11px] uppercase tracking-widest text-gold-600">
+                  <span className="font-extrabold text-[11px] uppercase tracking-widest text-gold-700">
                     Step 0{idx + 1}
                   </span>
 

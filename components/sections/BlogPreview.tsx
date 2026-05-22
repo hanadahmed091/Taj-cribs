@@ -13,7 +13,7 @@ export function BlogPreview() {
       <div className="container-edge">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           <FadeIn className="lg:col-span-7">
-            <SectionLabel>Insights</SectionLabel>
+            <SectionLabel onLight>Insights</SectionLabel>
             <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
               Field notes from <span className="text-gold-600">Central London.</span>
             </h2>

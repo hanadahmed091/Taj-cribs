@@ -90,7 +90,7 @@ export function LandingPageLayout({
       {/* PHONE CTA */}
       <section className="bg-cream py-14 lg:py-20">
         <div className="container-edge text-center max-w-2xl">
-          <span className="eyebrow">Prefer to talk?</span>
+          <span className="eyebrow !text-gold-700">Prefer to talk?</span>
           <p className="mt-3 text-navy-900/70 text-fluid-lg">
             Call our Central London team directly. Average answer in under 30 seconds.
           </p>

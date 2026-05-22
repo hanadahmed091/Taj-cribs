@@ -197,7 +197,7 @@ export default function PricingPage() {
                     </span>
                   )}
 
-                  <span className="eyebrow">{tier.label}</span>
+                  <span className="eyebrow !text-gold-700">{tier.label}</span>
 
                   <div className="mt-6 flex items-baseline gap-2">
                     <span className="font-extrabold text-7xl text-navy-900 tabular-nums tracking-tighter">
@@ -237,7 +237,7 @@ export default function PricingPage() {
         <div className="container-edge">
           <div className="max-w-3xl">
             <FadeIn>
-              <SectionLabel>What you get</SectionLabel>
+              <SectionLabel onLight>What you get</SectionLabel>
               <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
                 Everything included, at <span className="text-gold-600">every tier.</span>
               </h2>
@@ -252,7 +252,7 @@ export default function PricingPage() {
           {/* Listing management */}
           <div className="mt-16">
             <FadeIn>
-              <h3 className="text-[11px] uppercase tracking-widest font-semibold text-gold-600">
+              <h3 className="text-[11px] uppercase tracking-widest font-semibold text-gold-700">
                 Listing management
               </h3>
               <p className="mt-3 text-fluid-2xl font-extrabold tracking-tighter leading-tight text-navy-900">
@@ -272,7 +272,7 @@ export default function PricingPage() {
           {/* Guest management */}
           <div className="mt-20">
             <FadeIn>
-              <h3 className="text-[11px] uppercase tracking-widest font-semibold text-gold-600">
+              <h3 className="text-[11px] uppercase tracking-widest font-semibold text-gold-700">
                 Guest management
               </h3>
               <p className="mt-3 text-fluid-2xl font-extrabold tracking-tighter leading-tight text-navy-900">

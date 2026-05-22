@@ -15,7 +15,7 @@ export function Testimonials() {
       <div className="container-edge">
         <div className="max-w-3xl">
           <FadeIn>
-            <SectionLabel>Client Results</SectionLabel>
+            <SectionLabel onLight>Client Results</SectionLabel>
             <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
               Landlords who switched. <span className="text-gold-600">And never looked back.</span>
             </h2>

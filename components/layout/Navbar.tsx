@@ -48,8 +48,7 @@ export function Navbar() {
           className="text-white font-extrabold tracking-tighter text-xl flex items-center gap-2"
           aria-label={SITE.name}
         >
-          <span className="text-gold-500">T</span>
-          <span>{SITE.shortName}</span>
+          <span><span className="text-gold-500">{SITE.shortName.charAt(0)}</span>{SITE.shortName.slice(1)}</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9">

@@ -83,7 +83,7 @@ export default function PropertyManagementPage() {
           <div className="lg:col-span-5">
             <div className="bg-cream rounded-md p-2">
               <div className="bg-white rounded-md border border-light-line p-6 lg:p-10">
-                <SectionLabel>Free Valuation</SectionLabel>
+                <SectionLabel onLight>Free Valuation</SectionLabel>
                 <h3 className="mt-4 font-extrabold text-fluid-2xl tracking-tighter leading-tight text-navy-900">
                   Want a real number for your property?
                 </h3>
@@ -120,7 +120,7 @@ export default function PropertyManagementPage() {
         <div className="container-edge">
           <div className="max-w-3xl">
             <FadeIn>
-              <SectionLabel>Everything Included</SectionLabel>
+              <SectionLabel onLight>Everything Included</SectionLabel>
               <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
                 One flat fee. Everything covered.
               </h2>
@@ -205,7 +205,7 @@ export default function PropertyManagementPage() {
         <div className="container-edge">
           <div className="max-w-3xl">
             <FadeIn>
-              <SectionLabel>Medium-Term Rentals</SectionLabel>
+              <SectionLabel onLight>Medium-Term Rentals</SectionLabel>
               <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
                 One of central London&apos;s <span className="text-gold-600">strongest segments right now.</span>
               </h2>
@@ -310,7 +310,7 @@ export default function PropertyManagementPage() {
         <div className="container-edge">
           <div className="max-w-3xl">
             <FadeIn>
-              <SectionLabel>Case Studies</SectionLabel>
+              <SectionLabel onLight>Case Studies</SectionLabel>
               <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
                 What our managed properties actually deliver.
               </h2>
@@ -334,7 +334,7 @@ export default function PropertyManagementPage() {
                     </span>
                   </div>
                   <div className="p-8">
-                    <p className="eyebrow">{p.area}</p>
+                    <p className="eyebrow !text-gold-700">{p.area}</p>
                     <h3 className="mt-3 font-extrabold text-fluid-2xl tracking-tighter">{p.name}</h3>
                     <p className="mt-4 text-navy-900/70 leading-relaxed">{p.description}</p>
                     <div className="mt-6 pt-6 border-t border-light-line grid grid-cols-2 gap-6">
@@ -344,7 +344,7 @@ export default function PropertyManagementPage() {
                       </div>
                       <div>
                         <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/50">Outcome</p>
-                        <p className="mt-1 font-bold text-fluid-lg text-gold-600 leading-snug">{p.highlight}</p>
+                        <p className="mt-1 font-bold text-fluid-lg text-gold-700 leading-snug">{p.highlight}</p>
                       </div>
                     </div>
                   </div>
@@ -386,7 +386,7 @@ export default function PropertyManagementPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-5">
               <FadeIn>
-                <SectionLabel>Start Earning</SectionLabel>
+                <SectionLabel onLight>Start Earning</SectionLabel>
                 <h2 className="mt-5 text-fluid-3xl font-extrabold tracking-tighter leading-tight">
                   See your property&apos;s actual short-let income.
                 </h2>

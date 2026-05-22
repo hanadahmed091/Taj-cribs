@@ -103,7 +103,7 @@ function ContactRow({
     <div>
       <div className="flex items-center gap-3">
         <span className="w-9 h-9 flex items-center justify-center bg-navy-950 rounded-sm">{icon}</span>
-        <span className="eyebrow">{label}</span>
+        <span className="eyebrow !text-gold-700">{label}</span>
       </div>
       <div className="mt-3 text-navy-900">{value}</div>
     </div>

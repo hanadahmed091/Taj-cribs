@@ -105,7 +105,7 @@ export default function GuaranteedRentPage() {
         <div className="container-edge">
           <div className="max-w-3xl">
             <FadeIn>
-              <SectionLabel>How It Works</SectionLabel>
+              <SectionLabel onLight>How It Works</SectionLabel>
               <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
                 Four steps. <span className="text-gold-600">No paperwork lost in translation.</span>
               </h2>
@@ -114,7 +114,7 @@ export default function GuaranteedRentPage() {
           <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-light-line border border-light-line">
             {STEPS.map((s) => (
               <div key={s.n} className="bg-white p-8 lg:p-10">
-                <span className="font-extrabold text-fluid-3xl text-gold-500 tabular-nums">{s.n}</span>
+                <span className="font-extrabold text-fluid-3xl text-gold-700 tabular-nums">{s.n}</span>
                 <h3 className="mt-5 font-bold text-fluid-xl tracking-tight">{s.title}</h3>
                 <p className="mt-3 text-sm text-navy-900/70 leading-relaxed">{s.body}</p>
               </div>
@@ -127,7 +127,7 @@ export default function GuaranteedRentPage() {
       <section className="bg-cream section-pad">
         <div className="container-edge max-w-4xl">
           <div className="bg-white rounded-md border border-light-line p-8 lg:p-12">
-            <SectionLabel>Free Valuation</SectionLabel>
+            <SectionLabel onLight>Free Valuation</SectionLabel>
             <h2 className="mt-5 text-fluid-3xl font-extrabold tracking-tighter leading-tight text-navy-900">
               Want a real number for your property?
             </h2>
@@ -161,7 +161,7 @@ export default function GuaranteedRentPage() {
         <div className="container-edge">
           <div className="max-w-3xl">
             <FadeIn>
-              <SectionLabel>How It Compares</SectionLabel>
+              <SectionLabel onLight>How It Compares</SectionLabel>
               <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
                 Guaranteed Rent vs. Standard AST vs. DIY Short-Let.
               </h2>
@@ -292,7 +292,7 @@ export default function GuaranteedRentPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-5">
               <FadeIn>
-                <SectionLabel>Get Started</SectionLabel>
+                <SectionLabel onLight>Get Started</SectionLabel>
                 <h2 className="mt-5 text-fluid-3xl font-extrabold tracking-tighter leading-tight">
                   Get your guaranteed monthly figure in 24 hours.
                 </h2>
