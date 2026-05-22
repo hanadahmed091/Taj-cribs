@@ -8,23 +8,27 @@ import { ArrowRight } from 'lucide-react'
 import { PROPERTIES } from '@/lib/data/properties'
 import { SITE } from '@/lib/config'
 import { Stars } from '@/components/ui/Stars'
-import { pushDataLayer } from '@/lib/utils'
+import { cn, pushDataLayer } from '@/lib/utils'
 
 const headlineWords = ['WE', 'MANAGE.', 'YOU', 'PROFIT.']
 
 export function Hero() {
   const reduce = useReducedMotion()
-  const [activeIdx, setActiveIdx] = useState(0)
+  // Rotate through a small, curated set of portfolio properties.
+  const featuredList = PROPERTIES.slice(0, 4)
+  const [active, setActive] = useState(0)
+  const [paused, setPaused] = useState(false)
 
+  // Gentle auto-rotation with a crossfade. Pauses on hover and focus,
+  // and is disabled entirely when the user prefers reduced motion
+  // (in which case we just show the first property).
   useEffect(() => {
-    if (PROPERTIES.length <= 1) return
-    const interval = setInterval(() => {
-      setActiveIdx((i) => (i + 1) % PROPERTIES.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
-
-  const featured = PROPERTIES[activeIdx]
+    if (reduce || paused || featuredList.length <= 1) return
+    const id = setInterval(() => {
+      setActive((i) => (i + 1) % featuredList.length)
+    }, 5500)
+    return () => clearInterval(id)
+  }, [reduce, paused, featuredList.length])
 
   return (
     <section className="relative overflow-hidden hero-bg text-white pt-[120px] pb-20 lg:pt-[160px] lg:pb-32">
@@ -126,29 +130,69 @@ export function Hero() {
               transition={{ duration: 0.9, delay: 0.5 }}
               className="relative w-full max-w-md mx-auto lg:ml-auto"
             >
-              <div className="glass-card rounded-md p-5 lg:p-6 animate-float">
-                <span className="eyebrow !text-gold-400">Featured Property</span>
-                <div className="mt-4 relative aspect-[4/3] rounded-sm overflow-hidden">
-                  <Image
-                    key={featured.id}
-                    src={featured.imageUrl}
-                    alt={`${featured.name}, ${featured.area}`}
-                    fill
-                    sizes="(max-width: 1024px) 90vw, 480px"
-                    className="object-cover"
-                    priority
-                  />
-                  <div className="absolute top-3 left-3 bg-navy-950/85 backdrop-blur px-2.5 py-1 text-[10px] uppercase tracking-widest font-semibold rounded-sm">
-                    {featured.badge ?? featured.type}
-                  </div>
+              <div
+                className="glass-card rounded-md p-5 lg:p-6 animate-float"
+                onMouseEnter={() => setPaused(true)}
+                onMouseLeave={() => setPaused(false)}
+                onFocusCapture={() => setPaused(true)}
+                onBlurCapture={() => setPaused(false)}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="eyebrow !text-gold-400">Featured Property</span>
+                  {!reduce && featuredList.length > 1 && (
+                    <div className="flex gap-1.5" aria-hidden="true">
+                      {featuredList.map((p, i) => (
+                        <span
+                          key={p.id}
+                          className={cn(
+                            'h-1.5 w-1.5 rounded-full transition-colors duration-500',
+                            i === active ? 'bg-gold-400' : 'bg-white/25',
+                          )}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
-                <div className="mt-5">
-                  <p className="font-bold text-lg leading-tight">{featured.name}</p>
-                  <p className="text-sm text-white/60 mt-1">{featured.area}</p>
-                  <p className="mt-4 text-gold-500 font-bold text-fluid-xl tabular-nums">
-                    {featured.monthlyIncome}
-                  </p>
-                  <p className="text-xs text-white/55 mt-1">{featured.highlight}</p>
+
+                {/* Slides share one grid cell, so the card sizes to the
+                    tallest property and the crossfade causes no layout
+                    shift. Inactive slides fade to transparent. */}
+                <div className="mt-4 grid">
+                  {featuredList.map((p, i) => {
+                    const isActive = i === active
+                    return (
+                      <div
+                        key={p.id}
+                        aria-hidden={!isActive}
+                        className={cn(
+                          'col-start-1 row-start-1 transition-opacity duration-700 ease-smooth',
+                          isActive ? 'opacity-100' : 'opacity-0 pointer-events-none',
+                        )}
+                      >
+                        <div className="relative aspect-[4/3] rounded-sm overflow-hidden">
+                          <Image
+                            src={p.imageUrl}
+                            alt={`${p.name}, ${p.area}`}
+                            fill
+                            sizes="(max-width: 1024px) 90vw, 480px"
+                            className="object-cover"
+                            priority={i === 0}
+                          />
+                          <div className="absolute top-3 left-3 bg-navy-950/85 backdrop-blur px-2.5 py-1 text-[10px] uppercase tracking-widest font-semibold rounded-sm">
+                            {p.badge ?? p.type}
+                          </div>
+                        </div>
+                        <div className="mt-5">
+                          <p className="font-bold text-lg leading-tight">{p.name}</p>
+                          <p className="text-sm text-white/60 mt-1">{p.area}</p>
+                          <p className="mt-4 text-gold-500 font-bold text-fluid-xl tabular-nums">
+                            {p.monthlyIncome}
+                          </p>
+                          <p className="text-xs text-white/55 mt-1">{p.highlight}</p>
+                        </div>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             </motion.div>
