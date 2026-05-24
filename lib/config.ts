@@ -2,8 +2,15 @@ export const SITE = {
   name: 'Taj Cribs Property',
   shortName: 'Taj Cribs',
   domain: 'https://www.tajcribs.co.uk',
-  phone: '+44 20 7946 0000',
-  phoneDisplay: 'PHONE_NUMBER_HERE',
+  // Real business phone number. The tel: href uses SITE.phone with
+  // whitespace stripped (`SITE.phone.replace(/\s/g, '')`); phoneDisplay is
+  // what users see. Keep these in lockstep with each other and with the
+  // E.164 form embedded in SITE.whatsapp below.
+  phone: '+44 7457 417844',
+  phoneDisplay: '+44 7457 417844',
+  // wa.me URL — number with +, spaces and all symbols removed.
+  // Single source of truth for every WhatsApp link on the site.
+  whatsapp: 'https://wa.me/447457417844',
   email: 'support@tajcribs.co.uk',
   // Placeholder values. The real office address is not yet on the site.
   // Footer, contact page, and structured data treat 'ADDRESS_HERE' as

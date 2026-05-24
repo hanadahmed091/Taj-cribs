@@ -16,6 +16,7 @@ import { SHORT_LET_FAQS } from '@/lib/data/faqs'
 import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
 import { PROPERTIES } from '@/lib/data/properties'
 import { SITE } from '@/lib/config'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export const metadata: Metadata = {
   title: 'Short-Let & Airbnb Management London',
@@ -108,6 +109,9 @@ export default function PropertyManagementPage() {
                     {SITE.phoneDisplay}
                   </a>
                 </p>
+                <div className="mt-3 flex justify-center">
+                  <WhatsAppButton variant="link" location="property_management_hero" className="text-sm text-navy-900/85" />
+                </div>
               </div>
             </div>
           </div>

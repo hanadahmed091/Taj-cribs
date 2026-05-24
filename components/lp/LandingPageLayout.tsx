@@ -2,6 +2,7 @@ import { Phone, ShieldCheck, Clock, Star, Building2 } from 'lucide-react'
 import { SITE } from '@/lib/config'
 import { LandingForm } from './LandingForm'
 import { Stars } from '@/components/ui/Stars'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export type LandingPageProps = {
   areaLabel: string
@@ -108,6 +109,9 @@ export function LandingPageLayout({
           <p className="mt-3 text-xs uppercase tracking-widest font-semibold text-navy-900/50">
             Mon–Fri 9am–7pm · Sat 10am–4pm
           </p>
+          <div className="mt-6 flex justify-center">
+            <WhatsAppButton variant="full" location="lp_call_block" />
+          </div>
         </div>
       </section>
 

@@ -27,6 +27,25 @@ export function OrganizationJsonLd() {
       'Notting Hill',
       'Canary Wharf',
     ],
+    // Both phone and WhatsApp registered as customer-service contact
+    // points so Google knows there are two channels for the same
+    // business. Keep the legacy top-level `telephone` field above too
+    // for older crawlers that don't read contactPoint.
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: SITE.phone,
+        contactType: 'customer service',
+        availableLanguage: ['English'],
+      },
+      {
+        '@type': 'ContactPoint',
+        url: SITE.whatsapp,
+        contactType: 'customer service',
+        name: 'WhatsApp',
+        availableLanguage: ['English'],
+      },
+    ],
     // NOTE: AggregateRating intentionally omitted. Our guest rating is
     // sourced from Airbnb (a third party), and Google rich-result rules
     // expect aggregateRating to come from self-collected reviews on the

@@ -5,6 +5,7 @@ import { ArrowRight, Phone } from 'lucide-react'
 import { SITE } from '@/lib/config'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { pushDataLayer } from '@/lib/utils'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export function FinalCTA() {
   return (
@@ -46,6 +47,7 @@ export function FinalCTA() {
                 <Phone size={16} />
                 {SITE.phoneDisplay}
               </a>
+              <WhatsAppButton variant="link" location="home_final" className="text-white/85 hover:text-white" />
             </div>
           </FadeIn>
         </div>

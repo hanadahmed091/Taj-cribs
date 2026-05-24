@@ -6,6 +6,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Phone, Mail } from 'lucide-react'
 import { SITE } from '@/lib/config'
 import { pushDataLayer } from '@/lib/utils'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export function ThankYouContent() {
   const reduce = useReducedMotion()
@@ -109,6 +110,7 @@ export function ThankYouContent() {
               <Phone size={22} />
               {SITE.phoneDisplay}
             </a>
+            <WhatsAppButton variant="full" location="thank_you" />
             <a
               href={`mailto:${SITE.email}`}
               className="inline-flex items-center gap-2 text-white/70 text-sm hover:text-gold-400 transition-colors"

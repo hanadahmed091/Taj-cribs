@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Phone } from 'lucide-react'
 import { SITE } from '@/lib/config'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 // Landing pages: minimal chrome. SiteFrame in the root layout strips the
 // site Navbar/Footer for any /lp/* route. We add a tiny landing header here.
@@ -15,13 +16,16 @@ export default function LpLayout({ children }: { children: React.ReactNode }) {
           >
             <span><span className="text-gold-500">{SITE.shortName.charAt(0)}</span>{SITE.shortName.slice(1)}</span>
           </Link>
-          <a
-            href={`tel:${SITE.phone.replace(/\s/g, '')}`}
-            className="text-white text-sm font-semibold flex items-center gap-2 hover:text-gold-400 transition-colors"
-          >
-            <Phone size={14} />
-            {SITE.phoneDisplay}
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href={`tel:${SITE.phone.replace(/\s/g, '')}`}
+              className="text-white text-sm font-semibold flex items-center gap-2 hover:text-gold-400 transition-colors"
+            >
+              <Phone size={14} />
+              {SITE.phoneDisplay}
+            </a>
+            <WhatsAppButton variant="icon" location="lp_header" className="!w-9 !h-9" />
+          </div>
         </div>
       </header>
       <div className="flex-1">{children}</div>

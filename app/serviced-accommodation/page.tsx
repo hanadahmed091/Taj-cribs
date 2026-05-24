@@ -19,6 +19,7 @@ import { FinalCTA } from '@/components/sections/FinalCTA'
 import { SERVICED_ACCOMMODATION_FAQS } from '@/lib/data/faqs'
 import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
 import { SITE } from '@/lib/config'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export const metadata: Metadata = {
   title: 'Serviced Accommodation Management London',
@@ -455,13 +456,16 @@ export default function ServicedAccommodationPage() {
                   serviced-accommodation income and a guaranteed-rent figure
                   within one business day. Free, no obligation.
                 </p>
-                <Link
-                  href={`tel:${SITE.phone.replace(/\s/g, '')}`}
-                  className="mt-7 inline-flex items-center gap-2 text-navy-900 font-semibold border-b border-navy-900 pb-1 hover:text-gold-600 transition-colors"
-                >
-                  Or call us directly
-                  <ArrowRight size={16} />
-                </Link>
+                <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
+                  <Link
+                    href={`tel:${SITE.phone.replace(/\s/g, '')}`}
+                    className="inline-flex items-center gap-2 text-navy-900 font-semibold border-b border-navy-900 pb-1 hover:text-gold-600 transition-colors"
+                  >
+                    Or call us directly
+                    <ArrowRight size={16} />
+                  </Link>
+                  <WhatsAppButton variant="link" location="serviced_accommodation_footer" />
+                </div>
               </FadeIn>
             </div>
             <div className="lg:col-span-7">

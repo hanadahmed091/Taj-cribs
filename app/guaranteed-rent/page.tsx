@@ -11,6 +11,7 @@ import { GUARANTEED_RENT_FAQS } from '@/lib/data/faqs'
 import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
 import { PROPERTIES } from '@/lib/data/properties'
 import { SITE } from '@/lib/config'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export const metadata: Metadata = {
   title: 'Guaranteed Rent London | Fixed Monthly, No Voids',
@@ -134,6 +135,7 @@ export default function GuaranteedRentPage() {
                   {SITE.phoneDisplay}
                 </a>
               </p>
+              <WhatsAppButton variant="link" location="guaranteed_rent_hero" className="text-sm text-navy-900/85" />
             </div>
           </div>
         </div>
@@ -261,10 +263,16 @@ export default function GuaranteedRentPage() {
                   Tell us about your property. We&apos;ll review and come back with
                   a firm guaranteed monthly figure within one business day.
                 </p>
-                <Link href="tel:+442079460000" className="mt-7 inline-flex items-center gap-2 text-navy-900 font-semibold border-b border-navy-900 pb-1 hover:text-gold-600 transition-colors">
-                  Or call us directly
-                  <ArrowRight size={16} />
-                </Link>
+                <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
+                  <Link
+                    href={`tel:${SITE.phone.replace(/\s/g, '')}`}
+                    className="inline-flex items-center gap-2 text-navy-900 font-semibold border-b border-navy-900 pb-1 hover:text-gold-600 transition-colors"
+                  >
+                    Or call us directly
+                    <ArrowRight size={16} />
+                  </Link>
+                  <WhatsAppButton variant="link" location="guaranteed_rent_footer" />
+                </div>
               </FadeIn>
             </div>
             <div className="lg:col-span-7">

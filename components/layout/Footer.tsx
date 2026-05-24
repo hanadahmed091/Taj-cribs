@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Mail, MapPin, Phone, Instagram, Linkedin } from 'lucide-react'
 import { SITE } from '@/lib/config'
 import { deriveAreas } from '@/lib/data/areas'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export function Footer() {
   const areas = deriveAreas()
@@ -92,6 +93,9 @@ export function Footer() {
                   <Phone size={16} className="mt-0.5 shrink-0 text-gold-500" />
                   {SITE.phoneDisplay}
                 </a>
+              </li>
+              <li>
+                <WhatsAppButton variant="full" location="footer" />
               </li>
               <li>
                 <a href={`mailto:${SITE.email}`} className="flex items-start gap-3 hover:text-gold-400 transition-colors">

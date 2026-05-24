@@ -23,6 +23,7 @@ import {
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { SITE } from '@/lib/config'
 import { pushDataLayer } from '@/lib/utils'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 // Heavy / animation-driven components rendered client-only to keep the
 // static generator from timing out on framer-motion server work.
@@ -321,6 +322,7 @@ export default function PricingPage() {
                 <Phone size={16} />
                 {SITE.phoneDisplay}
               </a>
+              <WhatsAppButton variant="link" location="pricing_bottom_cta" className="text-navy-900/85" />
             </div>
           </FadeIn>
         </div>

@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import { Menu, X, Phone } from 'lucide-react'
 import { NAV_LINKS, SITE } from '@/lib/config'
 import { cn, pushDataLayer } from '@/lib/utils'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -63,7 +64,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-3">
           <a
             href={`tel:${SITE.phone.replace(/\s/g, '')}`}
             onClick={() => pushDataLayer('phone_click', { location: 'navbar' })}
@@ -72,6 +73,7 @@ export function Navbar() {
             <Phone size={14} />
             {SITE.phoneDisplay}
           </a>
+          <WhatsAppButton variant="icon" location="navbar" className="!w-9 !h-9" />
           <Link
             href="/contact"
             onClick={() => pushDataLayer('cta_valuation_request', { location: 'navbar' })}
@@ -162,6 +164,11 @@ export function Navbar() {
               <Phone size={16} />
               {SITE.phoneDisplay}
             </a>
+            <WhatsAppButton
+              variant="full"
+              location="mobile_menu"
+              className="!justify-center w-full"
+            />
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
