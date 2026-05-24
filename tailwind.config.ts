@@ -62,9 +62,17 @@ const config: Config = {
           '0%, 100%': { transform: 'translateY(-4px)' },
           '50%': { transform: 'translateY(4px)' },
         },
+        // Use translate3d (not translateX) so mobile browsers
+        // — especially Safari iOS and lower-end Android Chrome —
+        // promote the marquee track to its own GPU compositor layer
+        // from the first frame. translateX alone is technically
+        // 2D-transformable but mobile engines often keep it on the
+        // main thread, which makes the 92 duplicated spans repaint
+        // every frame and stutters on scroll. translate3d guarantees
+        // hardware-accelerated compositing.
         marquee: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
+          '0%': { transform: 'translate3d(0, 0, 0)' },
+          '100%': { transform: 'translate3d(-50%, 0, 0)' },
         },
         'radial-pan': {
           '0%, 100%': { backgroundPosition: '0% 50%' },

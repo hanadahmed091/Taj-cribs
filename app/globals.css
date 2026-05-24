@@ -84,6 +84,31 @@ body {
   animation: radial-pan 18s ease-in-out infinite;
 }
 
+/* Suspend the most expensive page-wide animations on mobile.
+   - `.hero-bg` animates `background-position`, which is NOT a
+     compositor property — each frame re-rasterises three layered
+     radial gradients at 200% size. That's the single biggest paint
+     cost on the page on mobile, and it runs whether the hero is
+     on-screen or not (iOS Safari is unreliable about pausing
+     off-screen animations).
+   - `.animate-float` animates transform on a `.glass-card`, which
+     has `backdrop-filter: blur(18px)`. Animating transform on a
+     backdrop-blurred element forces re-reading the underlying
+     composite and re-applying the blur kernel every frame —
+     extremely expensive on mobile GPUs.
+   Both look identical at any single point in time, so disabling
+   the animation on mobile costs nothing visually. The gradient is
+   still beautiful, the card still has its glass effect — they just
+   stop moving. */
+@media (max-width: 767px) {
+  .hero-bg {
+    animation: none;
+  }
+  .animate-float {
+    animation: none;
+  }
+}
+
 .hero-grid {
   background-image:
     linear-gradient(rgba(201, 169, 110, 0.04) 1px, transparent 1px),
@@ -190,6 +215,32 @@ body {
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+  /* Marquee-specific override: the global rule above would snap the
+     track to its end keyframe (translate3d(-50%, 0, 0)), leaving the
+     marquee frozen mid-cycle. For reduced-motion we'd rather hold
+     the track at its starting position with the animation paused. */
+  .marquee-track {
+    animation: none !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+}
+
+/* Marquee track — promotes the animated container to its own GPU
+   compositor layer so the duplicated spans inside it composite as a
+   single bitmap each frame instead of layout-thrashing on the main
+   thread. Critical for smoothness on mobile Safari / lower-end
+   Android. Pair with the translate3d keyframes in tailwind.config.ts.
+   `contain: paint` hardens the paint boundary so anything inside the
+   track can't invalidate paint outside the track's bounds — which
+   matters when the layer is being tiled by a mobile GPU. The mobile
+   track also renders a shorter items list (see Marquee.tsx) to keep
+   the layer width under common mobile GPU single-tile limits. */
+.marquee-track {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  contain: layout style paint;
 }
 
 /* Hide scrollbar utility */
