@@ -129,6 +129,28 @@ export const PROPERTIES: Property[] = [
     badge: null,
     location: { lat: 51.4912, lng: -0.1947 },
   },
+  {
+    id: 'liverpool-street-apartments',
+    name: 'Liverpool Street Apartments',
+    type: 'Serviced Apartments',
+    area: 'Liverpool Street, EC2',
+    areaSlug: 'liverpool-street',
+    description:
+      'Two apartments near Liverpool Street station in the City of London, operated under our guaranteed rent scheme. The landlord receives a fixed monthly payment on a four-year term and has no involvement in day-to-day operations.',
+    bedrooms: '2-bed, 2-bath apartments',
+    service: 'guaranteed-rent',
+    monthlyIncome: '£3,000/month guaranteed',
+    highlight: '4 years fixed',
+    imageQuery: 'liverpool street london apartment interior',
+    imageUrl:
+      'https://bookingenginecdn.hostaway.com/listing/67835-400511-sR0IbsUNfCwYAShH6sjhJuxIjhjEAuNtX4kMTekssaI-68475279d0e82?width=1920&quality=70&format=webp&v=2',
+    gallery: [
+      'https://bookingenginecdn.hostaway.com/listing/67835-400511-FwDNYXkJe54lH1McFFdW9iz2VWDD--XlzGaAQnwYiRFk-68476a18240c8?width=1920&quality=70&format=webp&v=2',
+      'https://bookingenginecdn.hostaway.com/listing/67835-400511-QC-v1-6-WpVGT63-qmmffOm5IZsjIHMlZrGavhHFzJI-6847527517d81?width=1920&quality=70&format=webp&v=2',
+    ],
+    badge: null,
+    location: { lat: 51.5180, lng: -0.0815 },
+  },
 ]
 
 export const SERVICE_LABELS: Record<ServiceType, string> = {

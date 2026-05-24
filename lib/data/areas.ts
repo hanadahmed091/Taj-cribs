@@ -555,6 +555,20 @@ export const AREA_META: Record<string, AreaMeta> = {
       },
     },
   },
+  // Minimal AREA_META stub for liverpool-street. Exists so the Liverpool
+  // Street property card on the homepage portfolio grid links to a real
+  // page instead of 404'ing. No `content` block yet — page renders the
+  // legacy hero + demand banner + property card + FAQ layout. Upgrade
+  // to a full content block when there's local detail to write.
+  'liverpool-street': {
+    slug: 'liverpool-street',
+    name: 'Liverpool Street',
+    postcode: 'EC2',
+    tagline: 'Guaranteed Rent specialists',
+    intro:
+      'Liverpool Street EC2 sits in the heart of the City of London, served by Liverpool Street station (Central, Circle, Hammersmith & City, Metropolitan, mainline and Elizabeth lines). The area combines high-density financial-services office stock with the residential pockets around Spitalfields, Bishopsgate and Broadgate. We operate a Liverpool Street building under our guaranteed-rent programme — request a free valuation for your EC2 property.',
+    demand: 'Corporate weekday demand from the City and Canary Wharf-bound commuters.',
+  },
 }
 
 export type DerivedArea = AreaMeta & {
