@@ -65,6 +65,19 @@ export function Portfolio() {
                 <span className="absolute top-4 right-4 bg-navy-950/85 backdrop-blur text-white px-3 py-1 rounded-sm text-[10px] uppercase tracking-widest font-bold">
                   {SERVICE_LABELS_SHORT[property.service]}
                 </span>
+                {/* "Recently onboarded" status pill — stacks under the
+                    gold area tag at top-left, same shape/typography as
+                    the other two badges. White pill + navy text inverts
+                    the area-tag colour relationship; gold dot prefix
+                    reads as a status indicator rather than a third
+                    category. Conditional on the optional
+                    `recentlyOnboarded` flag from PROPERTIES. */}
+                {property.recentlyOnboarded && (
+                  <span className="absolute top-14 left-4 bg-white/95 backdrop-blur text-navy-950 px-3 py-1 rounded-sm text-[10px] uppercase tracking-widest font-bold inline-flex items-center gap-1.5">
+                    <span aria-hidden="true" className="w-1.5 h-1.5 rounded-full bg-gold-500" />
+                    Recently onboarded
+                  </span>
+                )}
 
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <div className="flex items-start justify-between gap-4">

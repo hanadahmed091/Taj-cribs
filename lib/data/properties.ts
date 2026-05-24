@@ -20,6 +20,12 @@ export type Property = {
   gallery?: string[]
   badge: string | null
   location: { lat: number; lng: number }
+  /**
+   * Mark a property as newly onboarded. When true, the homepage portfolio
+   * card renders a small "Recently onboarded" pill beneath the area tag.
+   * Leave undefined or false for established properties.
+   */
+  recentlyOnboarded?: boolean
 }
 
 export const PROPERTIES: Property[] = [
