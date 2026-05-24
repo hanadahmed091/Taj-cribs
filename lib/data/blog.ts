@@ -289,7 +289,7 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'ul',
         items: [
           'Voids are harder to control. A tenant can give notice on day one. Re-letting in prime Central London takes 3 to 6 weeks even in a strong market.',
-          'Yields tighten. Annual rent increases are capped and challengeable. The 7-12% uplifts seen in W1 and SW3 between 2022 and 2024 will not be repeatable.',
+          'Yields tighten. Annual rent increases are capped and challengeable. The multi-year uplifts owners saw in W1 and SW3 through the post-pandemic recovery will not be repeatable.',
           'Compliance costs rise. The Decent Homes Standard for older period buildings will trigger meaningful capital expenditure for some owners.',
           'Section 21 alternatives are untested at scale. Section 8 routes will, in practice, take longer than the legislation suggests.',
         ],
@@ -376,13 +376,13 @@ export const BLOG_POSTS: BlogPost[] = [
 
       { type: 'h2', text: 'How it works in practice' },
       { type: 'p', text: 'Our process is straightforward. We assess your property, agree a [guaranteed monthly figure](/pricing), and sign a corporate lease for between 1 and 5 years.' },
-      { type: 'p', text: 'From the day the lease starts, you receive the same payment on the same date every month. We take responsibility for utilities, council tax, internet, cleaning, maintenance under £250 per incident, and consumables. You retain ownership, the mortgage, and building insurance.' },
+      { type: 'p', text: 'From the day the lease starts, you receive the same payment on the same date every month. We take responsibility for utilities, council tax, internet, cleaning, routine maintenance and consumables. You retain ownership, the mortgage, and building insurance.' },
       {
         type: 'ul',
         items: [
           'Lease term: typically 1, 3 or 5 years (you choose)',
           'Payment: full market rental value, paid on the same date monthly',
-          'Maintenance: we cover everything under £250; you cover capital items',
+          'Maintenance: we cover routine items; you cover capital items',
           'Property condition: returned to you at lease end in agreed condition',
           'Notice: structured so neither side can exit on a whim',
         ],
@@ -510,7 +510,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
       { type: 'h2', text: 'The Quality Officer standard. What makes us different' },
       { type: 'p', text: "Here's what we do that most operators don't. After every guest checks out, one of our dedicated Quality Officers inspects the property in person before the next arrival. Not a checklist sent to a cleaner. A trained member of our team, on-site, every single time." },
-      { type: 'p', text: "It catches the small things before they become guest complaints. A stained sheet, a broken kettle, a low towel count, a dusty skirting. It's the operational reason our Central London portfolio averages 4.9 stars and 80% occupancy." },
+      { type: 'p', text: "It catches the small things before they become guest complaints. A stained sheet, a broken kettle, a low towel count, a dusty skirting. It's the operational reason our Central London portfolio is rated 4.8 on Airbnb and averages 80% occupancy." },
       { type: 'p', text: "We mention it because it's the single biggest thing landlords should ask any manager about. Not whether they 'have a quality process' but who specifically is on-site between guests, and how often." },
 
       { type: 'h2', text: 'What to expect financially' },
@@ -572,19 +572,8 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: "In our experience managing properties across Central London, the right answer depends on the property, the area, the landlord, and what you want from your investment. Here's the honest version of the comparison." },
 
       { type: 'h2', text: 'The financial picture in 2026' },
-      { type: 'p', text: "Let's start with the headline numbers. Across our managed portfolio in Marylebone, Kensington, Pimlico, Mayfair and Chelsea, short-let net income runs between 1.7x and 2.6x the equivalent long-let figure. The exact multiple depends heavily on the area and bedroom count." },
-      {
-        type: 'table',
-        headers: ['Property', 'Long-Let / month', 'Short-Let Net / month', 'Multiple'],
-        rows: [
-          ['1-bed Marylebone W1', '£2,200', '£4,200', '1.9x'],
-          ['1-bed Kensington W8', '£2,400', '£5,400', '2.3x'],
-          ['2-bed Chelsea SW3', '£3,800', '£6,800', '1.8x'],
-          ['2-bed Mayfair W1', '£5,000', '£11,000', '2.2x'],
-          ['1-bed Pimlico SW1', '£1,900', '£3,200', '1.7x'],
-        ],
-      },
-      { type: 'p', text: 'These are conservative net figures. After our 18% management fee, 10% conservative ADR cushion, platform commissions and 80% average occupancy. Most owners exceed them.' },
+      { type: 'p', text: "Let's start with the headline numbers. Across our managed Central London portfolio, short-let net income consistently runs materially above the equivalent long-let figure. The exact multiple depends heavily on the area, the bedroom count and how actively the listing is operated." },
+      { type: 'p', text: 'Generic per-bedroom / per-postcode ranges rarely apply to a specific property. Nightly rates, off-peak fall-off and net monthly income vary heavily by street, finish, building type and how actively the listing is operated. [Request a free valuation](/contact) and we will come back within one business day with a tailored figure for your property.' },
 
       { type: 'h2', text: 'When long-let still wins' },
       { type: 'p', text: 'Long-let beats short-let in a few specific situations that landlords often underweight.' },
@@ -594,7 +583,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
       { type: 'h2', text: 'When short-let wins' },
       { type: 'p', text: 'Short-let is the clear winner for properties in high-demand Central London postcodes. W1, W8, SW1, SW3, W11 and the prime parts of SW7 all consistently produce strong short-let multiples.' },
-      { type: 'p', text: 'If you can absorb monthly variance. Typically 15-25% from peak to trough. Short-let delivers materially more income over a year. Most landlords adapt to the variance once they see the annual total.' },
+      { type: 'p', text: 'If you can absorb monthly variance between peak and quieter months. Short-let delivers materially more income over a year. Most landlords adapt to the variance once they see the annual total.' },
       { type: 'p', text: 'Short-let also wins if you want to use the property yourself occasionally. You retain calendar control and can block dates instantly through the owner dashboard.' },
 
       {
@@ -615,7 +604,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'ol',
         items: [
-          'How much does monthly variance bother you? If £2,000 month-to-month swings would stress you, [guaranteed rent](/guaranteed-rent) gives you the income certainty of an AST without the void risk.',
+          'How much does monthly variance bother you? If month-to-month income swings would stress you, [guaranteed rent](/guaranteed-rent) gives you the income certainty of an AST without the void risk.',
           'Do you ever want to use the property yourself? If yes, short-let is the only model that keeps that option open.',
           'Is this one property or part of a portfolio? Single premium properties almost always do better on short-let. Multi-unit blocks often work better on guaranteed rent.',
         ],
@@ -712,7 +701,7 @@ export const BLOG_POSTS: BlogPost[] = [
           'Q3-Q4: Cap nearly used; switch to 3-month mid-term lets to fill the rest of the year',
         ],
       },
-      { type: 'p', text: 'We run this exact model across our [High Street Kensington portfolio](/areas/high-street-kensington), where average occupancy sits at 94% across the calendar year.' },
+      { type: 'p', text: 'We operate this model across our Central London portfolio — mixing short stays with longer corporate lets to keep the calendar full inside the 90-day cap. The same approach works in any prime postcode with strong year-round demand, including [Kensington W8](/areas/high-street-kensington).' },
 
       { type: 'h2', text: 'When planning permission is worth pursuing' },
       { type: 'p', text: 'Some properties. Typically in less residential areas like Soho or parts of Westminster. Can secure planning permission for short-let use beyond 90 days. The process is borough-specific, expensive, and far from guaranteed.' },
@@ -772,11 +761,11 @@ export const BLOG_POSTS: BlogPost[] = [
 
       { type: 'h2', text: 'How guaranteed rent works' },
       { type: 'p', text: 'We sign a corporate lease with you for between 1 and 5 years. We pay you the full market rental value of your property as a fixed monthly amount, on the same date every month, for the full term.' },
-      { type: 'p', text: 'We take responsibility for utilities, council tax, internet, cleaning, maintenance under £250 per incident, and consumables. You retain ownership, the mortgage, and building insurance. Some months we earn more than the guaranteed figure on short-let; some months less. That variance is our problem, not yours.' },
+      { type: 'p', text: 'We take responsibility for utilities, council tax, internet, cleaning, routine maintenance and consumables. You retain ownership, the mortgage, and building insurance. Some months we earn more than the guaranteed figure on short-let; some months less. That variance is our problem, not yours.' },
 
       { type: 'h2', text: 'How Airbnb management works' },
       { type: 'p', text: 'We list your property across Airbnb, Booking.com, Vrbo, Expedia and direct channels. We operate dynamic pricing daily, manage all guest communication, organise housekeeping with [a Quality Officer on-site between every booking](/blog/airbnb-management-london-guide), and coordinate maintenance. You receive net rental income. Gross bookings minus platform fees, our 18% management fee, and uncovered cleaning. Paid monthly with a full reconciliation.' },
-      { type: 'p', text: 'Income varies by month, typically 15-25% from peak to trough across the calendar year. Most landlords adapt to the variance once they see the annual total.' },
+      { type: 'p', text: 'Income varies month to month across the calendar year — quieter winter months earn less than peak summer. Most landlords adapt to the variance once they see the annual total.' },
 
       { type: 'h2', text: 'Side by side' },
       {
@@ -790,7 +779,7 @@ export const BLOG_POSTS: BlogPost[] = [
           ['Fees', 'None to you', '18% + VAT'],
           ['Contract length', '1-5 years', 'Rolling, no lock-in'],
           ['Personal use of property', 'Restricted', 'Free to block dates'],
-          ['Maintenance under £250', 'Covered by us', 'Coordinated, charged to you'],
+          ['Routine maintenance', 'Covered by us', 'Coordinated, charged to you'],
         ],
       },
 
@@ -806,14 +795,14 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Three questions to ask yourself' },
 
       { type: 'h3', text: '1. How much does monthly variance bother you?' },
-      { type: 'p', text: 'If a £2,000 swing in monthly income from May to November would affect how you sleep at night, guaranteed rent is genuinely the better product for you. Even though the headline number is lower. Income certainty has real value and is worth paying for.' },
+      { type: 'p', text: 'If meaningful swings in monthly income from May to November would affect how you sleep at night, guaranteed rent is genuinely the better product for you — even though the headline annual number is lower. Income certainty has real value and is worth paying for.' },
 
       { type: 'h3', text: '2. Do you ever want to use the property yourself?' },
       { type: 'p', text: "Guaranteed rent is a full corporate lease. We use the property. If you want to spend three weeks a year in your [Mayfair apartment](/areas/mayfair), or block off the Christmas week for family, Airbnb management is the only model that keeps that open. You block dates in the owner dashboard; we don't book over them." },
 
       { type: 'h3', text: '3. Is this one property or part of a portfolio?' },
       { type: 'p', text: 'For single premium properties, short-let management nearly always produces a better outcome. For multi-unit blocks or portfolios where the operational overhead of coordinating across units would be a problem, guaranteed rent is the structurally right answer.' },
-      { type: 'p', text: 'Our 14-unit [Beaumont Court block in Marylebone](/areas/marylebone) is a textbook guaranteed rent setup. Single luxury units in Mayfair almost always go on short-let management.' },
+      { type: 'p', text: 'Our [Marylebone block](/areas/marylebone) is a textbook guaranteed rent setup. Single luxury units in Mayfair almost always go on short-let management.' },
 
       { type: 'h2', text: 'When we recommend each' },
       { type: 'p', text: 'Guaranteed rent is the right answer if you tick any of these boxes:' },
@@ -884,9 +873,9 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: "If you own property in London, or you're considering buying, this is what you actually need to know about the current market, and how to position your strategy for the next 12-18 months." },
 
       { type: 'h2', text: 'Where rents sit in mid-2026' },
-      { type: 'p', text: 'Average private rents in London hit £2,252 per month in July 2025 (ONS) and have continued rising into 2026. Kensington & Chelsea remains the most expensive borough at around £3,616/month on average. Westminster, Camden and Islington all sit above £2,800.' },
-      { type: 'p', text: "The growth pattern is unusual. Mid-tier rents (£2,000-£3,500) are climbing fastest because that's where the structural shortage is biting. Ultra-prime (£8,000+) is moving more slowly because that market was already at premium pricing." },
-      { type: 'p', text: 'For landlords with property in the £2,000-£5,000/month bracket. Which covers most of our portfolio across [Marylebone](/areas/marylebone), [Pimlico](/areas/pimlico) and [Chelsea](/areas/chelsea). Pricing power is the strongest it has been in five years.' },
+      { type: 'p', text: 'London rents have continued rising into 2026, with prime central boroughs the most expensive in the city. Kensington & Chelsea, Westminster and Camden sit at the top of the table.' },
+      { type: 'p', text: 'The growth pattern is uneven. Mid-tier residential is climbing fastest because that is where the structural shortage is biting hardest. Ultra-prime is moving more slowly because that market was already at premium pricing before the current cycle began.' },
+      { type: 'p', text: 'For landlords with property in the mid-tier bracket — which covers most of our portfolio across [Marylebone](/areas/marylebone), [Pimlico](/areas/pimlico) and [Chelsea](/areas/chelsea) — pricing power is notably stronger now than it has been at any point in the post-pandemic recovery.' },
 
       { type: 'h2', text: 'Why supply has tightened so much' },
       { type: 'p', text: 'The shortage is not accidental. Three things have driven it.' },
@@ -924,8 +913,8 @@ export const BLOG_POSTS: BlogPost[] = [
 
       { type: 'h2', text: 'Where opportunity sits now' },
       { type: 'p', text: 'For landlords willing to actively manage their position, opportunities are stronger than the gloomy headlines suggest.' },
-      { type: 'p', text: "[Short-let yields](/blog/short-let-vs-long-let-london) in W1, W8 and SW3 remain 2-3x long-let equivalents. Mid-term lets have grown roughly 40% as a category in the last 18 months and command premium rates. Block-level guaranteed rent contracts are at the highest take-up we've seen. Large property owners want certainty above all else." },
-      { type: 'p', text: 'Even within ASTs, the rental ceiling is rising. The post-1-May freeze on landlords adjusting rents annually has slowed growth at the lease-renewal point, but new lets are still pricing 8-12% above 2024 levels.' },
+      { type: 'p', text: "[Short-let yields](/blog/short-let-vs-long-let-london) in W1, W8 and SW3 remain materially above long-let equivalents. Mid-term lets have grown as a category over the last 18 months and command premium rates. Block-level guaranteed rent contracts are at the highest take-up we've seen. Large property owners want certainty above all else." },
+      { type: 'p', text: 'Even within ASTs, the rental ceiling is rising. The post-1-May freeze on landlords adjusting rents annually has slowed growth at the lease-renewal point, but new lets continue to price above 2024 levels.' },
 
       { type: 'h2', text: 'Three strategies for the next 12 months' },
 
@@ -1124,7 +1113,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: "Our [Quality Officer attends every changeover](/property-management). Every single one. The job isn't to clean. That's housekeeping. The job is to inspect: linen quality, towel count, consumables, fault checks, defect log. It's how five-star reviews are protected at scale." },
 
       { type: 'h3', text: '3. Strong base of existing managed properties in your area' },
-      { type: 'p', text: 'Managers operating across [Marylebone](/areas/marylebone), [Kensington](/areas/high-street-kensington) and [Pimlico](/areas/pimlico) understand local demand patterns. Managers with a single property in your area are still learning.' },
+      { type: 'p', text: 'Managers with active stock across [Marylebone](/areas/marylebone), [Pimlico](/areas/pimlico) and the wider Central London market understand local demand patterns. Managers with a single property in your area are still learning.' },
 
       { type: 'h3', text: '4. Monthly reporting via owner dashboard' },
       { type: 'p', text: 'Real-time visibility into bookings, revenue, occupancy and payouts. Mobile-accessible. Not a spreadsheet on demand.' },
@@ -1306,7 +1295,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'marylebone-property-investment',
     title: "Why Marylebone Is One of London's Best Areas for Short-Let Property Investment",
     excerpt:
-      "Steady demand. Premium guests. Year-round occupancy. Why we manage more property in Marylebone than anywhere else. And what makes a Marylebone short-let perform.",
+      "Steady demand. Premium guests. Year-round occupancy. Marylebone is one of our core operating areas — and what makes a Marylebone short-let perform.",
     category: 'Area Guides',
     date: '2026-06-18',
     readTime: '6 min read',
@@ -1322,7 +1311,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'marylebone landlord',
     ],
     body: [
-      { type: 'p', text: "We manage more property in Marylebone than anywhere else. There's a reason for that. And it's not just that our head office is in the area. Marylebone is consistently one of the strongest-performing short-let postcodes in London, year after year." },
+      { type: 'p', text: "Marylebone is one of our core operating areas, and there's a reason for that — it's not just that our head office is in the area. Marylebone is consistently one of the strongest-performing short-let postcodes in London, year after year." },
       { type: 'p', text: "If you own property in W1U, W1G or W1H, or you're considering it, here's what makes the area work and what to think about when setting up a Marylebone short-let." },
 
       { type: 'h2', text: 'What makes Marylebone work' },
@@ -1333,26 +1322,26 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'This is a uniquely Marylebone driver. No other London neighbourhood has equivalent year-round medical-led demand.' },
 
       { type: 'h3', text: '2. Corporate guests around Baker Street and Wigmore Street' },
-      { type: 'p', text: 'The area between Baker Street and Bond Street is dense with corporate offices. Marks & Spencer head office, the BBC, multiple law firms, and a strong financial services presence. Weekday business travel is high; mid-week occupancy on our [Marylebone portfolio](/areas/marylebone) averages 88%.' },
+      { type: 'p', text: 'The area between Baker Street and Bond Street is dense with corporate offices. Marks & Spencer head office, the BBC, multiple law firms, and a strong financial services presence. Weekday business travel is high, which keeps mid-week demand strong across our [Marylebone portfolio](/areas/marylebone) year-round.' },
 
       { type: 'h3', text: '3. Marylebone High Street and Chiltern Street tourism' },
       { type: 'p', text: "Marylebone High Street has become one of the prettiest, most curated retail streets in London. Daunt Books, the Sunday farmers' market, La Fromagerie, Conran Shop. It's a destination in its own right. Tourist demand peaks in spring, summer and the Christmas markets." },
 
       { type: 'h2', text: 'The guest profile' },
-      { type: 'p', text: "Marylebone's guest mix is heavily skewed toward longer, premium stays. Average booking length across our portfolio is 7-9 nights. Significantly longer than the London average of 3-4." },
+      { type: 'p', text: "Marylebone's guest mix is heavily skewed toward longer, premium stays — meaningfully longer than the typical Central London short-let booking." },
       {
         type: 'ul',
         items: [
-          '35% medical and family-of-medical guests (international, 14-90 night stays)',
-          '30% corporate business travellers (mid-week, 3-5 night stays)',
-          '25% leisure and cultural tourists (weekend, 3-4 night stays)',
-          '10% mid-term corporate let (3-6 month assignments)',
+          'International medical and family-of-medical guests on multi-week stays for Harley Street treatment',
+          'Corporate business travellers, mid-week heavy, around the Baker Street and Bond Street office cluster',
+          'Leisure and cultural tourists drawn by Marylebone High Street, Wigmore Hall and the Royal Academy of Music',
+          'Mid-term corporate lets — three- to six-month assignments for relocations and project teams',
         ],
       },
       { type: 'p', text: 'Compared to areas like Notting Hill or Shoreditch where bookings are dominated by short weekend leisure stays, Marylebone is a mid-stay market. And that materially affects how a property should be set up.' },
 
       { type: 'h2', text: 'What types of property perform best' },
-      { type: 'p', text: 'In our experience managing 30+ Marylebone units, performance varies dramatically by property type.' },
+      { type: 'p', text: 'In our experience managing Marylebone units, performance varies dramatically by property type.' },
 
       { type: 'h3', text: 'Strongest performers' },
       {
@@ -1361,7 +1350,7 @@ export const BLOG_POSTS: BlogPost[] = [
           '1-bed apartments in mansion blocks (Chiltern Street, Devonshire Street, Wimpole Street). Consistent corporate and medical demand',
           '2-bed apartments above ground-floor retail on Marylebone High Street. Family and longer-stay leisure',
           '1-bed apartments near Harley Street. Single medical patients and short-stay business',
-          'Full residential blocks. We operate a 14-unit block ([Beaumont Court](/areas/marylebone)) under [guaranteed rent](/guaranteed-rent), and the model works exceptionally well for block-level ownership',
+          'Full residential blocks. We operate Marylebone block stock under [guaranteed rent](/guaranteed-rent), and the model works exceptionally well for block-level ownership',
         ],
       },
 
@@ -1402,7 +1391,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
       { type: 'h2', text: 'Why we work in Marylebone specifically' },
       { type: 'p', text: 'Our team is based two minutes from Marylebone High Street. We know the porters, the cleaners, the building managers, the local maintenance team, the medical-stay agents. That density of local knowledge translates into faster issue resolution, better guest experience, and ultimately higher returns.' },
-      { type: 'p', text: 'We manage [Beaumont Court](/areas/marylebone) under guaranteed rent and a further 15 individual units in W1U and W1G under short-let management. The portfolio averages 4.9 stars and 88% occupancy.' },
+      { type: 'p', text: 'We operate a [Marylebone block](/areas/marylebone) under guaranteed rent on a fixed-term lease, with the landlord receiving the same monthly payment regardless of occupancy.' },
 
       CLOSING_PARA,
 
@@ -1425,7 +1414,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'kensington-short-let-guide',
     title: "Short-Let Management in Kensington: A Landlord's Complete Guide",
     excerpt:
-      "Why Kensington consistently outperforms. 94% occupancy across our W8 portfolio, premium guest profile, year-round demand. Plus the streets and unit types that perform best.",
+      'Why Kensington consistently outperforms: premium guest profile, year-round demand, and the streets and unit types that perform best for short-let.',
     category: 'Area Guides',
     date: '2026-06-21',
     readTime: '6 min read',
@@ -1441,7 +1430,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'kensington property manager',
     ],
     body: [
-      { type: 'p', text: 'Kensington W8 is one of the strongest short-let postcodes in London. We manage a 12-unit portfolio across two buildings on Kensington High Street. Branded [Kensington Gate](/areas/high-street-kensington). And average occupancy across the portfolio is 94% across the calendar year.' },
+      { type: 'p', text: 'Kensington W8 is one of the strongest short-let postcodes in London — premium guest profile, year-round demand and a regulatory regime landlords need to operate carefully within. We currently operate a Kensington portfolio under short-let management and also offer guaranteed rent in W8 for landlords who prefer a fixed monthly figure.' },
       { type: 'p', text: "If you own property in W8, or you're considering buying, here's the complete guide to what makes Kensington work for short-let and what to expect from professional management." },
 
       { type: 'h2', text: 'Why Kensington works for short-let' },
@@ -1451,20 +1440,19 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'Kensington Palace, Hyde Park, the V&A, the Natural History Museum and Royal Albert Hall are all within a 15-minute walk of Kensington High Street. Tourist demand is consistent year-round, with peaks during Wimbledon, the Chelsea Flower Show and the summer holidays.' },
 
       { type: 'h3', text: 'Corporate demand from Earls Court and Olympia' },
-      { type: 'p', text: 'Kensington Olympia hosts ~120 exhibitions per year, drawing 1.5m+ visitors annually. Corporate exhibitors and attendees fill short-let inventory across W8 and SW5 for 4-7 night stays.' },
+      { type: 'p', text: 'Olympia and the Earls Court regeneration site sit a short walk to the west of W8. Exhibition, conference and corporate-visitor demand spills into short-let inventory across the borough year-round.' },
 
       { type: 'h3', text: 'International family stays' },
-      { type: 'p', text: 'Kensington is a primary destination for affluent international families visiting London for 2-4 week stays. Typically renting 2 and 3-bed apartments. Average daily rate for these stays is significantly higher than tourist demand.' },
+      { type: 'p', text: 'Kensington is a primary destination for international families visiting London on longer stays, particularly across half-term, school holidays and the summer. Larger 2- and 3-bed apartments perform best for this segment.' },
 
-      { type: 'h2', text: 'The 94% occupancy story' },
-      { type: 'p', text: "Our Kensington Gate portfolio averages 94% across 12 months. That's substantially higher than the London average (~70%) and our overall portfolio average (~80%)." },
-      { type: 'p', text: 'Three things drive it:' },
+      { type: 'h2', text: 'What drives occupancy in Kensington' },
+      { type: 'p', text: 'Three things move the occupancy needle in W8:' },
       {
         type: 'ol',
         items: [
-          'Mix of short-stay and mid-term. We operate strictly to [the 90-day rule](/blog/90-day-rule-airbnb-london) and then switch to 90+ night mid-term lets, which fill the calendar without compliance risk',
-          'Active corporate channel. We have direct booking relationships with three London exhibition organisers and a private medical concierge service, both of which deliver consistent mid-week occupancy',
-          'Premium guest experience. [our Quality Officer attends every changeover](/property-management), which protects our 4.9 average rating and keeps us at the top of platform search results',
+          'Mixing short-stay and mid-term. Operating strictly to [the 90-day rule](/blog/90-day-rule-airbnb-london) and switching to 90+ night mid-term lets fills the calendar without compliance risk',
+          'Active corporate channel. Direct booking relationships with London exhibition organisers and private medical concierge services deliver consistent mid-week demand that nightly-only operators miss',
+          'Premium guest experience. [A Quality Officer attending every changeover](/property-management) keeps standards consistent and supports repeat bookings and platform visibility',
         ],
       },
 
@@ -1507,28 +1495,18 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'cta',
         headline: 'Own property in Kensington? Get a free estimate',
         body:
-          "We'll model a realistic monthly short-let income for your Kensington property, conservatively against our existing W8 portfolio. Free, 24-hour turnaround.",
+          "Tell us about your W8 property and we'll come back within one business day with a realistic monthly short-let income and a guaranteed-rent figure to compare against. Free, no obligation.",
         href: '/lp/kensington',
-        label: 'Get my Kensington estimate',
+        label: 'Request a free valuation',
       },
 
       { type: 'h2', text: 'Pricing in Kensington' },
-      { type: 'p', text: 'Conservative net short-let income estimates for Kensington properties, net of our 18% management fee:' },
-      {
-        type: 'table',
-        headers: ['Property type', 'Avg nightly (peak)', 'Avg nightly (off-peak)', 'Net monthly'],
-        rows: [
-          ['1-bed', '£350', '£260', '£5,000-£7,000'],
-          ['2-bed', '£550', '£400', '£8,200-£11,500'],
-          ['3-bed', '£800', '£580', '£12,000-£16,000'],
-        ],
-      },
-      { type: 'p', text: 'These are conservative figures based on properties we manage today. Most owners beat them in year one.' },
+      { type: 'p', text: 'Generic per-bedroom ranges rarely apply to a specific W8 property. Nightly rates, off-peak fall-off and net monthly income vary heavily by street, finish, building type and how actively the listing is operated.' },
+      { type: 'p', text: '[Request a free valuation](/contact) and we will come back within one business day with a guaranteed monthly figure and a projected short-let income for your specific Kensington property.' },
 
       { type: 'h2', text: 'Compliance in Kensington' },
       { type: 'p', text: 'Kensington & Chelsea is one of the two most enforcement-active boroughs in London (Westminster is the other). The borough actively monitors platforms and responds quickly to neighbour complaints.' },
-      { type: 'p', text: 'Our approach: strict adherence to [the 90-day rule](/blog/90-day-rule-airbnb-london), full HMRC declaration of all income (see our [tax guide](/blog/airbnb-tax-guide-london-2026)), and proactive noise management. Every property in our W8 portfolio has noise-monitoring devices installed and our no-parties policy is enforced.' },
-      { type: 'p', text: 'We have not had a single enforcement notice across our Kensington portfolio in three years of operation.' },
+      { type: 'p', text: 'Our approach in W8: strict adherence to [the 90-day rule](/blog/90-day-rule-airbnb-london), full HMRC declaration of all income (see our [tax guide](/blog/airbnb-tax-guide-london-2026)), proactive noise management and a clear no-parties policy. The same operational discipline applies to every Kensington unit we manage.' },
 
       { type: 'h2', text: 'What good Kensington management looks like' },
       { type: 'p', text: 'Demanding guest profile means demanding standards. Kensington guests pay premium rates and expect hotel-equivalent service. The properties that consistently get 5-star reviews share three characteristics:' },
@@ -1540,7 +1518,7 @@ export const BLOG_POSTS: BlogPost[] = [
           'Concierge-level guest experience. Restaurant bookings, local recommendations, late check-outs accommodated',
         ],
       },
-      { type: 'p', text: "This is what our W8 portfolio delivers as standard. It's the operational reason occupancy stays at 94%. Guests rebook and refer." },
+      { type: 'p', text: 'These are the standards we operate to across our Central London portfolio, including the Kensington units we manage. Guests rebook and refer, which is the operational reason occupancy stays strong year-round.' },
 
       CLOSING_PARA,
 
@@ -1548,7 +1526,7 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'cta',
         headline: 'Specialist Kensington short-let management',
         body:
-          'Free income estimate in 24 hours for your Kensington property. We currently manage 12 units across W8 and have capacity for a small number of additional properties this year.',
+          'Free income estimate in 24 hours for your Kensington property. We cover W8 and have capacity for a small number of new Kensington properties this year.',
         href: '/lp/kensington',
         label: 'Get my free estimate',
       },

@@ -17,10 +17,10 @@ export default function MayfairLandingPage() {
       subheadline="Ultra-premium short-let management for Mayfair properties. We attract high-net-worth guests and corporate clients commanding London’s highest nightly rates."
       formTitle="Get a free estimate for your Mayfair property"
       defaultService="short-let-management"
-      testimonialQuote="My Mayfair apartment had been difficult to let on a long-term basis. Short-let management was the obvious answer and the team delivered immediately. Guest quality is exceptional."
-      testimonialName="Amir K."
-      testimonialRole="Luxury Property Owner"
-      testimonialProperty="Mayfair Apartment, W1"
+      // Testimonial intentionally omitted — the previous attribution
+      // (Amir K. / Mayfair Apartment, W1) was invented and we have no
+      // verified Mayfair landlord quote to substitute. Re-add when
+      // a consented Mayfair client is available.
     />
   )
 }

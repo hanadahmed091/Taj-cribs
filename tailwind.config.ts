@@ -54,7 +54,7 @@ const config: Config = {
       },
       animation: {
         'float': 'float 4s ease-in-out infinite',
-        'marquee': 'marquee 40s linear infinite',
+        'marquee': 'marquee 20s linear infinite',
         'radial-pan': 'radial-pan 18s ease-in-out infinite',
       },
       keyframes: {

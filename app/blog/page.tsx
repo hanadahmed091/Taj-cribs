@@ -6,7 +6,7 @@ import { VISIBLE_BLOG_POSTS, getAllCategories } from '@/lib/data/blog'
 import { BlogFilter } from '@/components/blog/BlogFilter'
 
 export const metadata: Metadata = {
-  title: 'Insights & Landlord Guides | Taj Cribs Property London',
+  title: 'Landlord Insights & London Market Guides',
   description:
     'Field notes, market analysis and regulatory guides for Central London landlords. Written by the team that manages the properties.',
   alternates: { canonical: '/blog' },
@@ -22,8 +22,8 @@ export default function BlogIndexPage() {
         <div className="container-edge relative max-w-3xl">
           <SectionLabel className="!justify-start">Insights</SectionLabel>
           <h1 className="mt-6 text-hero font-extrabold tracking-tightest leading-[0.95]">
-            Field notes from <br />
-            <span className="text-gold-500">Central London.</span>
+            Landlord insights & <br />
+            <span className="text-gold-500">London market guides.</span>
           </h1>
           <p className="mt-8 text-fluid-lg text-white/75 leading-relaxed max-w-2xl">
             Regulations, tax, market data, and real lessons from the properties we

@@ -18,11 +18,11 @@ export const HOMEPAGE_FAQS: FAQ[] = [
   },
   {
     q: 'What happens if my property is empty?',
-    a: 'On guaranteed rent, an empty property changes nothing for you. You are paid the same agreed amount on the same date regardless of occupancy, because the void risk sits with us. On management, your income reflects actual bookings, and our Central London portfolio averages around 80% occupancy across the year. Quieter winter months earn less than peak summer ones, which is the trade-off for the higher earning ceiling.',
+    a: 'On guaranteed rent, an empty property changes nothing for you. You are paid the same agreed amount on the same date regardless of occupancy, because the void risk sits with us. On management, your income reflects actual bookings, so quieter winter months earn less than peak summer ones — the trade-off for the higher earning ceiling.',
   },
   {
     q: 'Who pays for repairs and maintenance?',
-    a: 'We coordinate all maintenance and handle the minor day-to-day repairs. On guaranteed rent we cover repairs under £250, plus cleaning, consumables and the running costs of letting. On management we arrange repairs on your behalf and bill them at cost, never marked up. Larger and structural works stay with you as the owner, as do your mortgage and building insurance, and we always get your approval before any significant spend.',
+    a: 'We coordinate all maintenance and handle the minor day-to-day repairs. On guaranteed rent we cover routine maintenance, cleaning, consumables and the running costs of letting. On management we arrange repairs on your behalf and bill them at cost, never marked up. Larger and structural works stay with you as the owner, as do your mortgage and building insurance, and we always get your approval before any significant spend.',
   },
   {
     q: 'How and when do I get paid?',
@@ -63,7 +63,7 @@ export const GUARANTEED_RENT_FAQS: FAQ[] = [
   },
   {
     q: 'Do I still pay the mortgage and bills?',
-    a: 'You continue to pay the mortgage and building insurance. We cover all utility bills, council tax, internet, cleaning, maintenance under £250, and consumables.',
+    a: 'You continue to pay the mortgage and building insurance. We cover all utility bills, council tax, internet, cleaning, routine maintenance and consumables.',
   },
   {
     q: 'What if a guest damages the property?',
@@ -119,5 +119,36 @@ export const SHORT_LET_FAQS: FAQ[] = [
   {
     q: 'What if occupancy is low one month?',
     a: 'Short-let income is variable by nature. Our average across the portfolio is 80% occupancy with month-to-month variation typically under 12%. Income also rises and falls with the season. Summer and Christmas tend to be the strongest months, while January and February are quieter. We aim to maximise both occupancy and rate, but a fully booked low-season month will still earn less than a busy peak-season month. If predictability matters more than maximising returns, our guaranteed rent product may suit better.',
+  },
+]
+
+// Serviced-accommodation FAQs — framed for landlords choosing our SA
+// management service. No invented figures: every answer is qualitative
+// or references operational policy (the 90-day rule, contract terms,
+// bill-handling) that's stated elsewhere on the site.
+export const SERVICED_ACCOMMODATION_FAQS: FAQ[] = [
+  {
+    q: 'How is serviced accommodation different from Airbnb?',
+    a: 'Both run on the same regulatory footing, but the guest profile and operating model differ. Airbnb-style short-let is nightly-priced, leisure-heavy and typically 2-7 night stays. Serviced accommodation targets longer stays — one week to three months — and the bookings come predominantly from corporate housing budgets, relocation agents, insurance placements and overseas family visitors. Service is hotel-grade: defined check-in and check-out, weekly or bi-weekly housekeeping, billing on a weekly or monthly cycle rather than per night. For landlords the practical result is a longer average stay, lower turnover and less wear on the property.',
+  },
+  {
+    q: 'Does the London 90-day rule apply to serviced accommodation?',
+    a: 'The 90-day cap applies to stays under 90 nights on entire properties. Serviced-accommodation bookings of 90 nights or more sit outside the rule entirely, which is one reason the longer-stay segment works so well in compliance-sensitive boroughs like Westminster and RBKC. For shorter SA stays we count nights against the cap the same as any short-let, and we structure each property’s calendar to stay compliant year-round.',
+  },
+  {
+    q: 'Who pays the bills and council tax?',
+    a: 'On our serviced-accommodation product we take responsibility for utilities, council tax, internet, cleaning and consumables, so the guest sees an all-in monthly figure and you see a single net payout. You retain ownership, the mortgage and building insurance, the same as any short-let-management arrangement.',
+  },
+  {
+    q: 'Can I block out personal use of my property?',
+    a: 'Yes. You retain full calendar control through your owner dashboard. Block dates for your own stays or family use; we work around them. The longer typical stay length on SA means we plan calendars a few months in advance, so personal-use dates land best when flagged early.',
+  },
+  {
+    q: 'What is the contract term with Taj Cribs?',
+    a: 'Serviced-accommodation management runs on the same rolling management agreement as our short-let product, with no long lock-in. If guaranteed-rent certainty suits you better than the management model, we also offer 1–5 year corporate leases — request a free valuation and we will model both for your property.',
+  },
+  {
+    q: 'How do payouts work?',
+    a: 'A single net payment lands in your account once a month, with a clear statement showing the gross bookings, our management fee, any uncovered costs and your balance. No chasing, no surprises, and the same dashboard view as our short-let-management owners.',
   },
 ]

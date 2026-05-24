@@ -8,10 +8,15 @@ type Stat = {
   sublabel?: string
 }
 
+// NOTE: every figure here must be defensible. Do not reintroduce an
+// "average occupancy" tile (or any other modelled %) without a verified
+// source — those numbers were stripped because they weren't operator-
+// confirmed. Add a real, owner-confirmed number or keep the slot
+// qualitative.
 const STATS: Stat[] = [
   { num: `${SITE.managedPortfolioCount}`, label: 'Properties under management' },
   { num: '£1.4m', label: 'Annual rent paid to landlords' },
-  { num: '80%', label: 'Average occupancy', sublabel: 'vs 70% London average' },
+  { num: 'Zone 1', label: 'Central London coverage', sublabel: 'Marylebone to Canary Wharf' },
   { num: '7 days', label: 'From sign-off to first booking' },
 ]
 

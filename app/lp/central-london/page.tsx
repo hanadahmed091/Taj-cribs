@@ -14,12 +14,12 @@ export default function CentralLondonLandingPage() {
     <LandingPageLayout
       areaLabel="Central London Property Specialists"
       headline="Central London property management. Done properly."
-      subheadline="Guaranteed rent at market rate or full short-let management across Central London. Operating in Marylebone, Kensington, Pimlico, Mayfair, Chelsea, Westminster and beyond."
+      subheadline="Guaranteed rent at market rate or full short-let management across Central London. Covering Marylebone, Kensington, Pimlico, Mayfair, Chelsea, Westminster and beyond."
       formTitle="Get your free property valuation"
       testimonialQuote="We handed over the full Marylebone block and have not thought about it since. Guaranteed rent hits our account on the same day every month without fail."
-      testimonialName="Richard & Caroline H."
+      testimonialName="Javed"
       testimonialRole="Property Investors"
-      testimonialProperty="Beaumont Court, Marylebone W1"
+      testimonialProperty="Marylebone block, W1"
     />
   )
 }

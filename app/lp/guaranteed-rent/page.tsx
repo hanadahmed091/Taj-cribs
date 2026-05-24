@@ -18,7 +18,7 @@ export default function GuaranteedRentLandingPage() {
       formTitle="Get your free guaranteed rent offer"
       defaultService="guaranteed-rent"
       testimonialQuote="We handed over our Marylebone apartments and have not thought about them since. Guaranteed rent hits our account on the same day every month without fail."
-      testimonialName="Richard & Caroline H."
+      testimonialName="Javed"
       testimonialRole="Property Investors"
       testimonialProperty="Marylebone Apartments, W1"
     />

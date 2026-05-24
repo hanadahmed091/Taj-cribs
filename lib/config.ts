@@ -22,13 +22,17 @@ export const SITE = {
   // Single source of truth for the headline "X+ properties" figure.
   // Update here and it propagates everywhere.
   managedPortfolioCount: 30,
-  ratingValue: 4.9,
-  reviewCount: 47,
+  // Guest rating shown on the site is sourced from Airbnb (currently 4.8).
+  // It is intentionally NOT emitted as schema.org AggregateRating, because
+  // Airbnb is a third-party platform and Google rich-result rules expect
+  // self-collected reviews. Reference as plain descriptive text only.
+  airbnbRatingDisplay: '4.8 on Airbnb',
 } as const
 
 export const NAV_LINKS = [
   { label: 'Guaranteed Rent', href: '/guaranteed-rent' },
   { label: 'Property Management', href: '/property-management' },
+  { label: 'Serviced Accommodation', href: '/serviced-accommodation' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Areas', href: '/areas' },
   { label: 'Blog', href: '/blog' },

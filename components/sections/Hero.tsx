@@ -10,7 +10,7 @@ import { SITE } from '@/lib/config'
 import { Stars } from '@/components/ui/Stars'
 import { cn, pushDataLayer } from '@/lib/utils'
 
-const headlineWords = ['WE', 'MANAGE.', 'YOU', 'PROFIT.']
+const headlineWords = ['GUARANTEED', 'RENT.', 'SHORT-LET.', 'LONDON.']
 
 export function Hero() {
   const reduce = useReducedMotion()
@@ -114,7 +114,7 @@ export function Hero() {
             >
               <Stars />
               <span className="font-semibold text-white">
-                {SITE.ratingValue.toFixed(1)}/5
+                {SITE.airbnbRatingDisplay}
               </span>
               <span className="hidden sm:inline">·</span>
               <span className="hidden sm:inline">
@@ -205,7 +205,7 @@ export function Hero() {
           {[
             { num: `${SITE.managedPortfolioCount}`, label: 'Properties managed' },
             { num: '7 days', label: 'Average onboarding' },
-            { num: `${SITE.ratingValue}/5`, label: 'Landlord rating' },
+            { num: '4.8', label: 'Airbnb guest rating' },
             { num: '£1.4m', label: 'Annual rent paid' },
           ].map((stat, i) => (
             <div

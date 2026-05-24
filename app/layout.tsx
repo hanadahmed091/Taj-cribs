@@ -21,11 +21,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
   title: {
-    default: 'Taj Cribs | Short-Let Management & Guaranteed Rent | Central London',
-    template: '%s | Taj Cribs Property',
+    default: 'Guaranteed Rent & Short-Let Management London | Taj Cribs',
+    template: '%s | Taj Cribs',
   },
   description:
-    'Central London short-let management and guaranteed rent specialists. Free valuation.',
+    'Guaranteed rent and short-let management for Central London landlords. Fixed monthly income, no voids, in-house housekeeping. Free 24-hour valuation.',
   keywords: [
     'guaranteed rent london',
     'guaranteed rent marylebone',

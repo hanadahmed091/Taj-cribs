@@ -20,7 +20,7 @@ import { SITE } from '@/lib/config'
 export const metadata: Metadata = {
   title: 'Short-Let & Airbnb Management London',
   description:
-    'Full-service short-let and Airbnb property management in Central London. Multi-platform listings, dynamic pricing, in-house housekeeping. Significantly more than a standard AST.',
+    'Full-service short-let and Airbnb management for Central London landlords. Multi-platform listings, dynamic pricing, in-house housekeeping.',
   alternates: { canonical: '/property-management' },
 }
 
@@ -70,14 +70,13 @@ export default function PropertyManagementPage() {
           <div className="lg:col-span-7">
             <SectionLabel className="!justify-start">Short-Let Property Management</SectionLabel>
             <h1 className="mt-6 text-hero font-extrabold tracking-tightest leading-[0.95]">
-              Your London property. <br />
-              <span className="text-gold-500">Fully managed.</span> <br />
-              Maximum returns.
+              Short-Let & Airbnb <br />
+              <span className="text-gold-500">Management in London.</span>
             </h1>
             <p className="mt-8 max-w-xl text-fluid-lg text-white/75 leading-relaxed">
               We handle everything: listings, bookings, guests, housekeeping, maintenance.
-              You see one number on the 5th of every month: your net. We model conservatively,
-              around 10% below market rates. Most landlords exceed our estimate.
+              You see one number on the 5th of every month: your net. We model
+              conservatively, and most landlords exceed our estimate.
             </p>
           </div>
           <div className="lg:col-span-5">
@@ -224,14 +223,16 @@ export default function PropertyManagementPage() {
             <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-px bg-light-line border border-light-line">
               <div className="bg-white p-8 lg:p-10">
                 <p className="font-extrabold text-fluid-3xl text-gold-500 tabular-nums tracking-tighter">
-                  30 to 50%
+                  Above long-let
                 </p>
                 <p className="mt-3 text-xs uppercase tracking-widest font-semibold text-navy-900/55">
-                  Uplift on long-let
+                  Yield positioning
                 </p>
                 <p className="mt-3 text-sm text-navy-900/70 leading-relaxed">
-                  What you typically earn from a well-managed mix of short and
-                  medium-term stays vs. a traditional long-term tenancy.
+                  A well-managed mix of short and medium-term stays typically
+                  earns meaningfully more than a traditional long-term
+                  tenancy. Request a free valuation for your property to see
+                  what we project.
                 </p>
               </div>
               <div className="bg-white p-8 lg:p-10">

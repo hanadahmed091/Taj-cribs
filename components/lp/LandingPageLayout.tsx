@@ -8,10 +8,14 @@ export type LandingPageProps = {
   headline: string
   subheadline: string
   formTitle: string
-  testimonialQuote: string
-  testimonialName: string
-  testimonialRole: string
-  testimonialProperty: string
+  // Testimonial fields are all-or-nothing. Leave them off entirely for
+  // landing pages targeting areas where we don't have a verified
+  // landlord quote yet — the testimonial block is suppressed instead of
+  // rendering an attributed-to-no-one placeholder.
+  testimonialQuote?: string
+  testimonialName?: string
+  testimonialRole?: string
+  testimonialProperty?: string
   // Tag this form's submission so analytics know which page it came from.
   // Defaults to a slug derived from areaLabel.
   formSource?: string
@@ -22,7 +26,7 @@ const TRUST_BADGES = [
   { icon: Building2,   label: `${SITE.managedPortfolioCount}+ Properties Managed` },
   { icon: ShieldCheck, label: 'Quality Officer Every Checkout' },
   { icon: Clock,       label: '7-day onboarding' },
-  { icon: Star,        label: `${SITE.ratingValue}/5 Rating` },
+  { icon: Star,        label: SITE.airbnbRatingDisplay },
 ]
 
 export function LandingPageLayout({
@@ -107,23 +111,32 @@ export function LandingPageLayout({
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
-      <section className="bg-white section-pad !py-20">
-        <div className="container-edge max-w-3xl text-center">
-          <Stars />
-          <blockquote className="mt-6 text-fluid-2xl font-extrabold tracking-tighter leading-[1.25] text-navy-900">
-            <span className="text-gold-500" aria-hidden="true">“</span>
-            {testimonialQuote}
-            <span className="text-gold-500" aria-hidden="true">”</span>
-          </blockquote>
-          <div className="mt-8 inline-flex flex-col items-center gap-1">
-            <p className="font-bold text-navy-900">{testimonialName}</p>
-            <p className="text-sm text-navy-900/60">
-              {testimonialRole} · {testimonialProperty}
-            </p>
+      {/* TESTIMONIAL — only rendered when a verified quote is supplied.
+          Don't pass placeholder text here just to fill the slot. */}
+      {testimonialQuote && (
+        <section className="bg-white section-pad !py-20">
+          <div className="container-edge max-w-3xl text-center">
+            <Stars />
+            <blockquote className="mt-6 text-fluid-2xl font-extrabold tracking-tighter leading-[1.25] text-navy-900">
+              <span className="text-gold-500" aria-hidden="true">“</span>
+              {testimonialQuote}
+              <span className="text-gold-500" aria-hidden="true">”</span>
+            </blockquote>
+            {(testimonialName || testimonialProperty) && (
+              <div className="mt-8 inline-flex flex-col items-center gap-1">
+                {testimonialName && (
+                  <p className="font-bold text-navy-900">{testimonialName}</p>
+                )}
+                {(testimonialRole || testimonialProperty) && (
+                  <p className="text-sm text-navy-900/60">
+                    {[testimonialRole, testimonialProperty].filter(Boolean).join(' · ')}
+                  </p>
+                )}
+              </div>
+            )}
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </>
   )
 }

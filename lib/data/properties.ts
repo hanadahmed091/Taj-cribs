@@ -40,23 +40,12 @@ export const PROPERTIES: Property[] = [
     badge: null,
     location: { lat: 51.5194, lng: -0.1548 },
   },
-  {
-    id: 'kensington-hsk',
-    name: 'Kensington Gate',
-    type: 'Mixed Portfolio',
-    area: 'High Street Kensington, W8',
-    areaSlug: 'high-street-kensington',
-    description:
-      'A collection of premium apartments across two buildings on Kensington High Street, fully managed on short-let platforms. Walking distance from Holland Park and Kensington Palace.',
-    bedrooms: '1-bed & 2-bed apartments',
-    service: 'short-let-management',
-    monthlyIncome: '£8,200–£14,500/month per unit',
-    highlight: '94% occupancy rate achieved',
-    imageQuery: 'london kensington white stucco townhouse',
-    imageUrl: 'https://images.unsplash.com/photo-1526654196244-3bdc251b0965?w=800&q=80',
-    badge: 'Top Performer',
-    location: { lat: 51.5008, lng: -0.1919 },
-  },
+  // Kensington Gate (kensington-hsk) was removed because we do not
+  // currently operate a portfolio in W8. The Kensington area page is
+  // still served from AREA_META as a coverage area (we are happy to
+  // take on a W8 unit), but we do not surface a property card here.
+  // Do not re-add a Kensington property entry unless we genuinely
+  // operate one — propertyCount on the derived area record will be 0.
   {
     id: 'pimlico-block',
     name: 'Vauxhall Bridge House',

@@ -5,7 +5,7 @@ import { SectionLabel } from '@/components/ui/SectionLabel'
 import { SITE } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Contact Taj Cribs | Free Valuation in 24 Hours',
+  title: 'Contact | Free Valuation in 24 Hours',
   description:
     'Speak to Taj Cribs Property about guaranteed rent or short-let management for your Central London property. Free valuation, no obligation.',
   alternates: { canonical: '/contact' },
@@ -19,8 +19,8 @@ export default function ContactPage() {
         <div className="container-edge relative max-w-3xl">
           <SectionLabel className="!justify-start">Get In Touch</SectionLabel>
           <h1 className="mt-6 text-hero font-extrabold tracking-tightest leading-[0.95]">
-            Let&apos;s talk about <br />
-            <span className="text-gold-500">your property.</span>
+            Free valuation for <br />
+            <span className="text-gold-500">your Central London property.</span>
           </h1>
           <p className="mt-8 text-fluid-lg text-white/75 leading-relaxed">
             Free valuation. Guaranteed monthly figure within one business day. No obligation.

@@ -17,7 +17,7 @@ export default function MaryleboneLandingPage() {
       subheadline="From guaranteed rent on full residential blocks to premium short-let management. We are Marylebone’s most experienced property management partner."
       formTitle="Get a free valuation for your Marylebone property"
       testimonialQuote="We handed over our Marylebone apartments and have not thought about them since. Guaranteed rent hits our account on the same day every month without fail."
-      testimonialName="Richard & Caroline H."
+      testimonialName="Javed"
       testimonialRole="Property Investors"
       testimonialProperty="Marylebone Apartments, W1"
     />

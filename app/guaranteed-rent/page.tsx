@@ -14,7 +14,7 @@ import { PROPERTIES } from '@/lib/data/properties'
 import { SITE } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Guaranteed Rent London | Fixed Monthly Income | No Void Periods',
+  title: 'Guaranteed Rent London | Fixed Monthly, No Voids',
   description:
     'Guaranteed rent for Central London landlords. Fixed monthly income for 1–5 years. No voids, no agency fees, no hassle. Free valuation in 24 hours.',
   alternates: { canonical: '/guaranteed-rent' },

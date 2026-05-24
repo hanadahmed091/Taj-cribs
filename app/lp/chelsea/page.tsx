@@ -18,7 +18,7 @@ export default function ChelseaLandingPage() {
       formTitle="Get a free estimate for your Chelsea property"
       defaultService="short-let-management"
       testimonialQuote="The onboarding took less than a week. Professional photographer came, listing went live, first booking confirmed the same week."
-      testimonialName="Priya M."
+      testimonialName="Tasneem"
       testimonialRole="Buy-to-Let Investor"
       testimonialProperty="Chelsea Reach, SW3"
     />

@@ -17,10 +17,10 @@ export default function AirbnbManagementLandingPage() {
       subheadline="We handle listings, bookings, guests, housekeeping and maintenance. You receive one monthly payment. Nothing else required from you."
       formTitle="Get your free income estimate"
       defaultService="short-let-management"
-      testimonialQuote="After switching from a standard letting agent to short-let management with Taj Cribs, we saw over a 50% increase in revenue within the first three months."
-      testimonialName="James T."
-      testimonialRole="Private Landlord"
-      testimonialProperty="Kensington Gate, High Street Kensington W8"
+      // Testimonial intentionally omitted — the previous attribution
+      // (James T. / Kensington Gate W8) was tied to an invented
+      // portfolio. Re-add a verified landlord quote here when one
+      // becomes available.
     />
   )
 }

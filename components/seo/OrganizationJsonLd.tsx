@@ -27,11 +27,11 @@ export function OrganizationJsonLd() {
       'Notting Hill',
       'Canary Wharf',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: SITE.ratingValue,
-      reviewCount: SITE.reviewCount,
-    },
+    // NOTE: AggregateRating intentionally omitted. Our guest rating is
+    // sourced from Airbnb (a third party), and Google rich-result rules
+    // expect aggregateRating to come from self-collected reviews on the
+    // same domain. Surfacing Airbnb-sourced ratings in schema risks a
+    // manual penalty. Mention the rating as plain descriptive text only.
   }
 
   if (hasRealAddress) {

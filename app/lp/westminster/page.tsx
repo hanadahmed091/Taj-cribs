@@ -18,7 +18,7 @@ export default function WestminsterLandingPage() {
       formTitle="Get a free valuation for your Westminster property"
       defaultService="guaranteed-rent"
       testimonialQuote="We moved abroad and needed certainty. The guaranteed rent means we do not look at property prices or booking calendars. We just receive the payment. Absolute peace of mind."
-      testimonialName="Sarah & Tom W."
+      testimonialName="Devonteh"
       testimonialRole="Overseas Investors"
       testimonialProperty="Westminster SW1"
     />

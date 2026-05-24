@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/`, lastModified: now, priority: 1.0, changeFrequency: 'weekly' },
     { url: `${base}/guaranteed-rent`, lastModified: now, priority: 0.95, changeFrequency: 'weekly' },
     { url: `${base}/property-management`, lastModified: now, priority: 0.95, changeFrequency: 'weekly' },
+    { url: `${base}/serviced-accommodation`, lastModified: now, priority: 0.9, changeFrequency: 'monthly' },
     { url: `${base}/pricing`, lastModified: now, priority: 0.9, changeFrequency: 'monthly' },
     { url: `${base}/areas`, lastModified: now, priority: 0.85, changeFrequency: 'monthly' },
     { url: `${base}/blog`, lastModified: now, priority: 0.85, changeFrequency: 'weekly' },

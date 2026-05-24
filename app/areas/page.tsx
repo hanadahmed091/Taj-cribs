@@ -20,8 +20,8 @@ export default function AreasIndexPage() {
         <div className="container-edge relative max-w-3xl">
           <SectionLabel className="!justify-start">Coverage</SectionLabel>
           <h1 className="mt-6 text-hero font-extrabold tracking-tightest leading-[0.95]">
-            We cover all of <br />
-            <span className="text-gold-500">Zone 1.</span>
+            Guaranteed Rent & Short-Let <br />
+            <span className="text-gold-500">Across Central London.</span>
           </h1>
           <p className="mt-8 text-fluid-lg text-white/75 leading-relaxed">
             Short-let, medium-term and guaranteed rent across central London. Tap any

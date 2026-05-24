@@ -17,7 +17,7 @@ export default function PimlicoLandingPage() {
       subheadline="Guaranteed rent at market rate or full short-let management across Pimlico, Victoria and Waterloo. We already manage a full block in SW1."
       formTitle="Get a free valuation for your Pimlico property"
       testimonialQuote="We moved abroad and needed certainty. The guaranteed rent on our Pimlico block means we do not look at property prices or booking calendars. We just receive the payment."
-      testimonialName="Sarah & Tom W."
+      testimonialName="Devonteh"
       testimonialRole="Overseas Investors"
       testimonialProperty="Vauxhall Bridge House, Pimlico SW1"
     />

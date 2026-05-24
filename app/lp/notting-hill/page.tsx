@@ -17,10 +17,9 @@ export default function NottingHillLandingPage() {
       subheadline="Boutique short-let management across Notting Hill, W11 and W2. Strong year-round demand from international guests and corporate travellers."
       formTitle="Get a free estimate for your Notting Hill property"
       defaultService="short-let-management"
-      testimonialQuote="After switching from a standard letting agent to short-let management with Taj Cribs, we saw over a 50% increase in revenue within the first three months."
-      testimonialName="James T."
-      testimonialRole="Private Landlord"
-      testimonialProperty="Notting Hill W11"
+      // Testimonial intentionally omitted — the previous attribution
+      // (James T.) was tied to an invented Kensington portfolio. Re-add
+      // a verified landlord quote here when one becomes available.
     />
   )
 }

@@ -18,7 +18,7 @@ export default function CanaryWharfLandingPage() {
       formTitle="Get a free estimate for your Canary Wharf property"
       defaultService="short-let-management"
       testimonialQuote="The onboarding took less than a week. Professional photographer came, listing went live, first booking confirmed the same week. The management dashboard gives me full visibility."
-      testimonialName="Priya M."
+      testimonialName="Tasneem"
       testimonialRole="Buy-to-Let Investor"
       testimonialProperty="Canary Wharf E14"
     />
