@@ -11,7 +11,7 @@ export const SITE = {
   // wa.me URL — number with +, spaces and all symbols removed.
   // Single source of truth for every WhatsApp link on the site.
   whatsapp: 'https://wa.me/447457417844',
-  email: 'support@tajcribs.co.uk',
+  email: 'Hanad@tajcribs.co.uk',
   // Placeholder values. The real office address is not yet on the site.
   // Footer, contact page, and structured data treat 'ADDRESS_HERE' as
   // a sentinel and render / emit it accordingly. Drop the real address

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/terms' },
 }
 
-const CONTACT_EMAIL = 'support@tajcribs.co.uk'
+const CONTACT_EMAIL = 'Hanad@tajcribs.co.uk'
 const LAST_UPDATED = '22 May 2026'
 
 export default function TermsPage() {
