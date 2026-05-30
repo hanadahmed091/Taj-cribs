@@ -64,11 +64,11 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-4 shrink-0">
           <a
             href={`tel:${SITE.phone.replace(/\s/g, '')}`}
             onClick={() => pushDataLayer('phone_click', { location: 'navbar' })}
-            className="text-white/85 hover:text-gold-400 text-sm font-medium flex items-center gap-2 transition-colors"
+            className="text-white/85 hover:text-gold-400 text-sm font-medium flex items-center gap-2 whitespace-nowrap transition-colors"
           >
             <Phone size={14} />
             {SITE.phoneDisplay}
