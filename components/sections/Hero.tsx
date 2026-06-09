@@ -206,7 +206,7 @@ export function Hero() {
             { num: `${SITE.managedPortfolioCount}`, label: 'Properties managed' },
             { num: '7 days', label: 'Average onboarding' },
             { num: '4.8', label: 'Airbnb guest rating' },
-            { num: '£1.4m', label: 'Annual rent paid' },
+            { num: '£700k', label: 'Rent paid' },
           ].map((stat, i) => (
             <div
               key={stat.label}

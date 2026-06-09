@@ -15,7 +15,7 @@ type Stat = {
 // qualitative.
 const STATS: Stat[] = [
   { num: `${SITE.managedPortfolioCount}`, label: 'Properties under management' },
-  { num: '£1.4m', label: 'Annual rent paid to landlords' },
+  { num: '£700k', label: 'Rent paid to landlords' },
   { num: 'Zone 1', label: 'Central London coverage', sublabel: 'Marylebone to Canary Wharf' },
   { num: '7 days', label: 'From sign-off to first booking' },
 ]
