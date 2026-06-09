@@ -27,7 +27,7 @@ export async function POST(req: Request) {
 
     // Send via Resend if configured, otherwise log only.
     const apiKey = process.env.RESEND_API_KEY
-    const to = process.env.LEAD_RECIPIENT || 'Hanad@tajcribs.co.uk'
+    const to = process.env.LEAD_RECIPIENT || 'Nimra@tajcribs.co.uk'
 
     if (apiKey) {
       const { Resend } = await import('resend')
@@ -67,7 +67,7 @@ export async function POST(req: Request) {
       ].join('\n')
 
       await resend.emails.send({
-        from: 'Taj Cribs Leads <Hanad@tajcribs.co.uk>',
+        from: 'Taj Cribs Leads <Nimra@tajcribs.co.uk>',
         to,
         ...(hasValidReplyTo ? { reply_to: replyTo } : {}),
         subject: `New lead: ${payload.name}, ${postcodeArea || 'area n/a'}, ${
