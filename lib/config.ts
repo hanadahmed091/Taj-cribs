@@ -28,7 +28,7 @@ export const SITE = {
   },
   // Single source of truth for the headline "X+ properties" figure.
   // Update here and it propagates everywhere.
-  managedPortfolioCount: 30,
+  managedPortfolioCount: 20,
   // Guest rating shown on the site is sourced from Airbnb (currently 4.8).
   // It is intentionally NOT emitted as schema.org AggregateRating, because
   // Airbnb is a third-party platform and Google rich-result rules expect
