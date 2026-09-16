@@ -47,17 +47,17 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'A Chelsea two-bed, fully managed and let to a corporate tenant',
     metaTitle: 'Chelsea Two-Bed Case Study | Taj Cribs',
     metaDescription:
-      'How we took a two-bed Chelsea apartment under management, sourced a corporate tenant within weeks and secured a 10 month let at £6,500 a month, hands-off for the owner.',
+      'How we took a two-bed Chelsea apartment under management, sourced a corporate tenant within weeks and secured a 3 year let at £4,000 a month, hands-off for the owner.',
     summary:
-      'A buy-to-let investor put a two-bed Chelsea apartment under our management. We sourced a corporate tenant within weeks and secured a 10 month let at £6,500 a month, with the day-to-day handled end to end.',
+      'A buy-to-let investor put a two-bed Chelsea apartment under our management. We sourced a corporate tenant within weeks and secured a 3 year let at £4,000 a month, with the day-to-day handled end to end.',
     area: 'Chelsea, SW3',
     propertyType: 'Two-bedroom apartment',
     service: 'Property Management',
     date: '2026-05-22',
     heroImage: 'https://images.unsplash.com/photo-1584412181991-bf85c8e01f58?w=1600&q=80',
     metrics: [
-      { label: 'Monthly income', value: '£6,500' },
-      { label: 'Let length', value: '10 months' },
+      { label: 'Monthly income', value: '£4,000' },
+      { label: 'Let length', value: '3 years' },
       { label: 'Tenant', value: 'Corporate' },
       { label: 'Time to let', value: 'Within weeks' },
     ],
@@ -80,14 +80,14 @@ export const CASE_STUDIES: CaseStudy[] = [
         heading: 'What we did',
         body: [
           'We took the apartment on under our property management service and prepared it for the corporate market, where demand in Chelsea is steady and tenants tend to stay longer.',
-          'Rather than run a cycle of short stays, we positioned the flat for a single, well-vetted corporate let. We sourced a suitable corporate tenant within weeks and agreed a 10 month contract.',
+          'Rather than run a cycle of short stays, we positioned the flat for a single, well-vetted corporate let. We sourced a suitable corporate tenant within weeks and agreed a 3 year contract.',
           'From there we took over the full day-to-day running of the property, from the tenancy paperwork through to ongoing management for the length of the let.',
         ],
       },
       {
         heading: 'The result',
         body: [
-          'The apartment is let to a corporate tenant on a 10 month contract at £6,500 a month. For the owner that means a steady income across the full term and a property that is looked after without their involvement.',
+          'The apartment is let to a corporate tenant on a 3 year contract at £4,000 a month. For the owner that means a steady income across the full term and a property that is looked after without their involvement.',
           'As they put it, they see the income come through and do not have to think about anything else. Because this is a single corporate let rather than a short-let cycle, the income is stable and predictable for the term, not something that rises and falls month to month.',
         ],
       },
@@ -96,7 +96,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       beforeLabel: 'Previous long-let rent',
       before: BEFORE_FIGURE_PLACEHOLDER,
       afterLabel: 'Under our management',
-      after: '£6,500/month',
+      after: '£4,000/month',
     },
     pullQuoteTestimonialId: 4,
   },
