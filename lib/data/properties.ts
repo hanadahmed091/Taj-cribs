@@ -81,7 +81,7 @@ export const PROPERTIES: Property[] = [
     area: 'Chelsea, SW3',
     areaSlug: 'chelsea',
     description:
-      'A riverside apartment in Chelsea leased to us under our guaranteed rent scheme, with a fixed monthly payment to the landlord for 3 years.',
+      'A riverside apartment in Chelsea. The landlord came to us after struggling to find a tenant, and we took it on a 3 year guaranteed rent contract with a fixed monthly payment.',
     bedrooms: '2-bed apartment',
     service: 'guaranteed-rent',
     monthlyIncome: '£4,000/month guaranteed',

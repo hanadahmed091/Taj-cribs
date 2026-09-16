@@ -42,7 +42,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 4,
     quote:
-      "We leased our Chelsea two-bed to Taj Cribs on their guaranteed rent scheme. £4,000 a month, fixed for 3 years. The team handles the day to day completely. We see the rent come through and don't have to think about anything else.",
+      "We were struggling to find a tenant for our Chelsea two-bed, so we reached out to Taj Cribs. They offered us a 3 year guaranteed rent contract at £4,000 a month. The team handles the day to day completely. We see the rent come through and don't have to think about anything else.",
     name: 'Tasneem',
     role: 'Buy-to-Let Investor',
     area: 'Chelsea',

@@ -17,7 +17,7 @@ export default function ChelseaLandingPage() {
       subheadline="Premium short-let management across Chelsea and SW3. Consistently achieving high occupancy rates with the Taj Cribs quality standard."
       formTitle="Get a free estimate for your Chelsea property"
       defaultService="short-let-management"
-      testimonialQuote="The onboarding took less than a week. Professional photographer came, listing went live, first booking confirmed the same week."
+      testimonialQuote="We were struggling to find a tenant for our Chelsea two-bed, so we reached out to Taj Cribs. They offered us a 3 year guaranteed rent contract at £4,000 a month, and we don't have to think about anything else."
       testimonialName="Tasneem"
       testimonialRole="Buy-to-Let Investor"
       testimonialProperty="Chelsea Reach, SW3"

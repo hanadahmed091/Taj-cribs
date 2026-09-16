@@ -47,9 +47,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'A Chelsea two-bed on guaranteed rent, fixed for 3 years',
     metaTitle: 'Chelsea Two-Bed Guaranteed Rent Case Study | Taj Cribs',
     metaDescription:
-      'How a Chelsea landlord leased their two-bed apartment to Taj Cribs for a guaranteed £4,000 a month, fixed for 3 years, with no voids and no day-to-day involvement.',
+      'A Chelsea landlord was struggling to find a tenant for their two-bed apartment. We offered a 3 year guaranteed rent contract at £4,000 a month, with no voids and no day-to-day involvement.',
     summary:
-      'A buy-to-let investor leased a two-bed Chelsea apartment to us under our guaranteed rent scheme. They receive a fixed £4,000 a month for 3 years, with the day-to-day handled end to end.',
+      'A Chelsea landlord came to us after struggling to find a tenant for their two-bed apartment. We offered a 3 year guaranteed rent contract at a fixed £4,000 a month, with the day-to-day handled end to end.',
     area: 'Chelsea, SW3',
     propertyType: 'Two-bedroom apartment',
     service: 'Guaranteed Rent',
@@ -65,38 +65,32 @@ export const CASE_STUDIES: CaseStudy[] = [
         heading: 'The property',
         body: [
           'The property is a two-bedroom apartment in Chelsea, SW3, a short walk from the river. The owner is a buy-to-let investor who holds more than one apartment in the area.',
-          'The flat was in good order, but it was sitting empty while the owner decided how best to run it. They wanted it earning without taking on the day-to-day work themselves.',
+          'The flat was in good order and on the market to let, but it was sitting empty and not earning anything.',
         ],
       },
       {
         heading: 'The challenge',
         body: [
-          'The owner wanted three things: reliable monthly income, a property kept to a high standard, and as little involvement as possible.',
-          'Letting a Chelsea flat directly means finding tenants, handling viewings, vetting, contracts, maintenance and the gaps between lets. For a busy investor with other commitments, that is time and risk they did not want to take on. They wanted a fixed income they could count on.',
+          'The landlord was struggling to find a tenant. Viewings were not turning into lets, and every month the flat stood empty was a month of costs with no rent coming in.',
+          'They wanted three things: reliable monthly income, a property kept to a high standard, and an end to the uncertainty of searching for tenants. So they reached out to us.',
         ],
       },
       {
         heading: 'What we did',
         body: [
-          'The owner leased the apartment directly to Taj Cribs under our guaranteed rent scheme, on a 3 year term at £4,000 a month.',
-          'We pay that rent every month whether the property is occupied or not. There is no tenant for the owner to find or deal with, and no void periods to cover.',
-          'We take on the full day-to-day running of the property for the length of the lease, including maintenance and keeping it to a high standard.',
+          'We came in and offered the landlord a 3 year guaranteed rent contract at £4,000 a month. The landlord leased the apartment directly to Taj Cribs, so there was no longer any need for them to find a tenant.',
+          'We pay that rent every month whether the property is occupied or not. There are no void periods for the landlord to cover and no tenants for them to deal with.',
+          'We take on the full day-to-day running of the property for the length of the contract, including maintenance and keeping it to a high standard.',
         ],
       },
       {
         heading: 'The result',
         body: [
-          'The owner receives a guaranteed £4,000 a month, fixed for 3 years. That means a steady, predictable income across the full term and a property that is looked after without their involvement.',
-          'As they put it, they see the rent come through and do not have to think about anything else. Because the rent is guaranteed by us rather than dependent on occupancy, it does not rise and fall month to month.',
+          'A flat that had been sitting empty now pays the landlord a guaranteed £4,000 a month, fixed for 3 years. That means a steady, predictable income across the full term and a property that is looked after without their involvement.',
+          'As they put it, they see the rent come through and do not have to think about anything else. Because the rent is guaranteed by us rather than dependent on finding and keeping a tenant, it does not rise and fall month to month.',
         ],
       },
     ],
-    beforeAfter: {
-      beforeLabel: 'Previous long-let rent',
-      before: BEFORE_FIGURE_PLACEHOLDER,
-      afterLabel: 'Guaranteed rent',
-      after: '£4,000/month',
-    },
     pullQuoteTestimonialId: 4,
   },
 ]
