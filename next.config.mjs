@@ -23,6 +23,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/case-studies/chelsea-two-bed-corporate-let',
+        destination: '/case-studies/chelsea-two-bed-guaranteed-rent',
+        permanent: true,
+      },
+    ]
+  },
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },

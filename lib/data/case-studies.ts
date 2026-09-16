@@ -43,59 +43,58 @@ export type CaseStudy = {
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
-    slug: 'chelsea-two-bed-corporate-let',
-    title: 'A Chelsea two-bed, fully managed and let to a corporate tenant',
-    metaTitle: 'Chelsea Two-Bed Case Study | Taj Cribs',
+    slug: 'chelsea-two-bed-guaranteed-rent',
+    title: 'A Chelsea two-bed on guaranteed rent, fixed for 3 years',
+    metaTitle: 'Chelsea Two-Bed Guaranteed Rent Case Study | Taj Cribs',
     metaDescription:
-      'How we took a two-bed Chelsea apartment under management, sourced a corporate tenant within weeks and secured a 3 year let at £4,000 a month, hands-off for the owner.',
+      'How a Chelsea landlord leased their two-bed apartment to Taj Cribs for a guaranteed £4,000 a month, fixed for 3 years, with no voids and no day-to-day involvement.',
     summary:
-      'A buy-to-let investor put a two-bed Chelsea apartment under our management. We sourced a corporate tenant within weeks and secured a 3 year let at £4,000 a month, with the day-to-day handled end to end.',
+      'A buy-to-let investor leased a two-bed Chelsea apartment to us under our guaranteed rent scheme. They receive a fixed £4,000 a month for 3 years, with the day-to-day handled end to end.',
     area: 'Chelsea, SW3',
     propertyType: 'Two-bedroom apartment',
-    service: 'Property Management',
+    service: 'Guaranteed Rent',
     date: '2026-05-22',
     heroImage: 'https://images.unsplash.com/photo-1584412181991-bf85c8e01f58?w=1600&q=80',
     metrics: [
-      { label: 'Monthly income', value: '£4,000' },
-      { label: 'Let length', value: '3 years' },
-      { label: 'Tenant', value: 'Corporate' },
-      { label: 'Time to let', value: 'Within weeks' },
+      { label: 'Guaranteed rent', value: '£4,000' },
+      { label: 'Lease term', value: '3 years' },
+      { label: 'Void periods', value: 'None' },
     ],
     sections: [
       {
         heading: 'The property',
         body: [
           'The property is a two-bedroom apartment in Chelsea, SW3, a short walk from the river. The owner is a buy-to-let investor who holds more than one apartment in the area.',
-          'The flat was in good order and ready to let, but it was sitting empty while the owner decided how best to run it. They wanted it earning without taking on the day-to-day work themselves.',
+          'The flat was in good order, but it was sitting empty while the owner decided how best to run it. They wanted it earning without taking on the day-to-day work themselves.',
         ],
       },
       {
         heading: 'The challenge',
         body: [
           'The owner wanted three things: reliable monthly income, a property kept to a high standard, and as little involvement as possible.',
-          'Running a Chelsea flat directly means handling viewings, tenant vetting, contracts, maintenance and the gaps between lets. For a busy investor with other commitments, that is time they did not want to spend. They needed an operator they could hand the keys to and trust to run it properly.',
+          'Letting a Chelsea flat directly means finding tenants, handling viewings, vetting, contracts, maintenance and the gaps between lets. For a busy investor with other commitments, that is time and risk they did not want to take on. They wanted a fixed income they could count on.',
         ],
       },
       {
         heading: 'What we did',
         body: [
-          'We took the apartment on under our property management service and prepared it for the corporate market, where demand in Chelsea is steady and tenants tend to stay longer.',
-          'Rather than run a cycle of short stays, we positioned the flat for a single, well-vetted corporate let. We sourced a suitable corporate tenant within weeks and agreed a 3 year contract.',
-          'From there we took over the full day-to-day running of the property, from the tenancy paperwork through to ongoing management for the length of the let.',
+          'The owner leased the apartment directly to Taj Cribs under our guaranteed rent scheme, on a 3 year term at £4,000 a month.',
+          'We pay that rent every month whether the property is occupied or not. There is no tenant for the owner to find or deal with, and no void periods to cover.',
+          'We take on the full day-to-day running of the property for the length of the lease, including maintenance and keeping it to a high standard.',
         ],
       },
       {
         heading: 'The result',
         body: [
-          'The apartment is let to a corporate tenant on a 3 year contract at £4,000 a month. For the owner that means a steady income across the full term and a property that is looked after without their involvement.',
-          'As they put it, they see the income come through and do not have to think about anything else. Because this is a single corporate let rather than a short-let cycle, the income is stable and predictable for the term, not something that rises and falls month to month.',
+          'The owner receives a guaranteed £4,000 a month, fixed for 3 years. That means a steady, predictable income across the full term and a property that is looked after without their involvement.',
+          'As they put it, they see the rent come through and do not have to think about anything else. Because the rent is guaranteed by us rather than dependent on occupancy, it does not rise and fall month to month.',
         ],
       },
     ],
     beforeAfter: {
       beforeLabel: 'Previous long-let rent',
       before: BEFORE_FIGURE_PLACEHOLDER,
-      afterLabel: 'Under our management',
+      afterLabel: 'Guaranteed rent',
       after: '£4,000/month',
     },
     pullQuoteTestimonialId: 4,

@@ -272,7 +272,7 @@ export const AREA_META: Record<string, AreaMeta> = {
       overview: [
         'Chelsea SW3 is Royal Borough of Kensington and Chelsea territory — riverside south, Brompton Cross north, Sloane Square east, World’s End and Chelsea Harbour west. The King’s Road runs through the middle. The combination of design appeal, brand and walkability supports strong year-round leisure demand, with a long-stay segment driven by the Royal Hospital Chelsea, Chelsea & Westminster Hospital and the residential streets around Cheyne Walk.',
         'For landlords, SW3 supports active short-let management strongly on the smaller flats near the King’s Road. The corporate-let / guaranteed-rent model works on larger flats and townhouses, where the operator profile matters more than the nightly rate.',
-        'We currently operate a Chelsea flat under our short-let management programme on a corporate let — request a free valuation for your SW3 property.',
+        'We currently lease a Chelsea flat under our guaranteed rent scheme — request a free valuation for your SW3 property.',
       ],
       propertyCharacter: {
         heading: 'Chelsea housing stock.',
