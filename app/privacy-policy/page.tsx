@@ -4,12 +4,12 @@ import { SectionLabel } from '@/components/ui/SectionLabel'
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How Taj Cribs collects, uses and protects personal data under UK GDPR. Last updated 22 May 2026.',
+    'How Taj Cribs collects, uses and protects personal data under UK GDPR. Last updated 21 September 2026.',
   alternates: { canonical: '/privacy-policy' },
 }
 
 const CONTACT_EMAIL = 'Nimra@tajcribs.co.uk'
-const LAST_UPDATED = '22 May 2026'
+const LAST_UPDATED = '21 September 2026'
 
 export default function PrivacyPolicyPage() {
   return (
@@ -70,7 +70,32 @@ export default function PrivacyPolicyPage() {
               <li>Pages visited and time spent</li>
               <li>The site that referred you, if any</li>
             </ul>
-            <p>This is collected through standard web analytics tools and cookies.</p>
+            <p>
+              This is collected through the analytics tools described below.
+            </p>
+
+            <h2 className="mt-12 mb-4 text-fluid-2xl font-bold tracking-tight">
+              Analytics
+            </h2>
+            <p>We use two kinds of analytics on this website:</p>
+            <ul>
+              <li>
+                <strong>Vercel Web Analytics.</strong> Our hosting provider,
+                Vercel, counts page views and visits to help us see which
+                pages are useful. It does not use cookies and does not
+                identify you personally. It records the page visited, the
+                referring site, your browser, operating system and device
+                type, and your approximate country. It runs for every visitor.
+              </li>
+              <li>
+                <strong>Google Tag Manager and Google Analytics.</strong> We
+                use Google Tag Manager to load Google Analytics, which sets
+                cookies to measure how visitors use the site, for example which
+                pages they view and how long they stay. These only load if
+                you accept analytics cookies in our cookie banner. If you
+                choose essential cookies only, they are not loaded.
+              </li>
+            </ul>
 
             <h2 className="mt-12 mb-4 text-fluid-2xl font-bold tracking-tight">
               How we collect it
@@ -117,15 +142,17 @@ export default function PrivacyPolicyPage() {
             <ul>
               <li>
                 <strong>Consent.</strong> Where you opt in to receive
-                marketing communications.
+                marketing communications, and for Google Analytics cookies,
+                which only load if you accept analytics cookies.
               </li>
               <li>
                 <strong>Contract.</strong> To deliver services to you once
                 you become a client.
               </li>
               <li>
-                <strong>Legitimate interests.</strong> For analytics, site
-                improvement, and contacting you about your existing enquiry.
+                <strong>Legitimate interests.</strong> For cookie-free
+                analytics through Vercel Web Analytics, site improvement, and
+                contacting you about your existing enquiry.
               </li>
               <li>
                 <strong>Legal obligation.</strong> For tax records and
@@ -141,12 +168,18 @@ export default function PrivacyPolicyPage() {
               us run the business:
             </p>
             <ul>
-              <li>Vercel, who hosts our website.</li>
+              <li>
+                Vercel, who hosts our website and provides Vercel Web
+                Analytics.
+              </li>
               <li>
                 Our email and CRM tools, which store communication history
                 with you.
               </li>
-              <li>Analytics providers, if we use Google Analytics or similar.</li>
+              <li>
+                Google, through Google Tag Manager and Google Analytics, if
+                you accept analytics cookies.
+              </li>
               <li>HMRC and other UK authorities, where the law requires it.</li>
             </ul>
             <p>
@@ -208,8 +241,17 @@ export default function PrivacyPolicyPage() {
               analytical, helping us understand which pages visitors use most.
             </p>
             <p>
-              You can disable cookies in your browser settings, but parts of
-              the site may not work properly without them.
+              When you first visit, our cookie banner asks whether you accept
+              analytics cookies. Google Analytics cookies are only set if you
+              accept. Vercel Web Analytics does not use cookies, so it is not
+              affected by this choice.
+            </p>
+            <p>
+              We save your choice in your browser. To change it, clear this
+              site&apos;s data in your browser settings and the banner will
+              appear again on your next visit. You can also disable cookies in
+              your browser settings, but parts of the site may not work
+              properly without them.
             </p>
 
             <h2 className="mt-12 mb-4 text-fluid-2xl font-bold tracking-tight">
@@ -217,8 +259,8 @@ export default function PrivacyPolicyPage() {
             </h2>
             <p>
               Most of our data is processed in the UK and the EU. Some of our
-              service providers, including our hosting provider Vercel,
-              operate from the United States. Where data is transferred
+              service providers, including our hosting provider Vercel and
+              Google, operate from the United States. Where data is transferred
               outside the UK, we rely on appropriate safeguards (the UK
               addendum to the EU Standard Contractual Clauses) to keep your
               data protected.

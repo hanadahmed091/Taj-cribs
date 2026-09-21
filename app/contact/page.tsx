@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import { LeadForm } from '@/components/forms/LeadForm'
 import { SectionLabel } from '@/components/ui/SectionLabel'
-import { SITE } from '@/lib/config'
+import { SITE, HAS_REAL_ADDRESS } from '@/lib/config'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export const metadata: Metadata = {
@@ -75,15 +75,17 @@ export default function ContactPage() {
                 }
               />
 
-              <ContactRow
-                icon={<MapPin size={18} className="text-gold-500" />}
-                label="Office"
-                value={
-                  <p className="font-medium leading-relaxed">
-                    {SITE.address.line1}
-                  </p>
-                }
-              />
+              {HAS_REAL_ADDRESS && (
+                <ContactRow
+                  icon={<MapPin size={18} className="text-gold-500" />}
+                  label="Office"
+                  value={
+                    <p className="font-medium leading-relaxed">
+                      {SITE.address.line1}
+                    </p>
+                  }
+                />
+              )}
 
               <ContactRow
                 icon={<Clock size={18} className="text-gold-500" />}

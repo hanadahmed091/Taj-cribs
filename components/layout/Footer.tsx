@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Mail, MapPin, Phone, Instagram, Linkedin } from 'lucide-react'
-import { SITE } from '@/lib/config'
+import { SITE, HAS_REAL_ADDRESS } from '@/lib/config'
 import { deriveAreas } from '@/lib/data/areas'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
@@ -103,10 +103,12 @@ export function Footer() {
                   {SITE.email}
                 </a>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin size={16} className="mt-0.5 shrink-0 text-gold-500" />
-                <span>{SITE.address.line1}</span>
-              </li>
+              {HAS_REAL_ADDRESS && (
+                <li className="flex items-start gap-3">
+                  <MapPin size={16} className="mt-0.5 shrink-0 text-gold-500" />
+                  <span>{SITE.address.line1}</span>
+                </li>
+              )}
             </ul>
           </div>
         </div>

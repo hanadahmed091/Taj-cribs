@@ -13,9 +13,10 @@ export const SITE = {
   whatsapp: 'https://wa.me/447457417844',
   email: 'Nimra@tajcribs.co.uk',
   // Placeholder values. The real office address is not yet on the site.
-  // Footer, contact page, and structured data treat 'ADDRESS_HERE' as
-  // a sentinel and render / emit it accordingly. Drop the real address
-  // into line1 (and fill locality/postcode/country) to switch over.
+  // While line1 is 'ADDRESS_HERE' (see HAS_REAL_ADDRESS below), the footer
+  // and contact page hide the address and structured data omits it. Drop
+  // the real address into line1 (and fill locality/postcode/country) and
+  // it appears in all three automatically.
   address: {
     line1: 'ADDRESS_HERE',
     locality: 'ADDRESS_HERE',
@@ -35,6 +36,10 @@ export const SITE = {
   // self-collected reviews. Reference as plain descriptive text only.
   airbnbRatingDisplay: '4.8 on Airbnb',
 } as const
+
+// True once a real address replaces the 'ADDRESS_HERE' placeholder. The
+// footer, contact page and LocalBusiness schema all check this.
+export const HAS_REAL_ADDRESS = SITE.address.line1 !== 'ADDRESS_HERE'
 
 export const NAV_LINKS = [
   { label: 'Guaranteed Rent', href: '/guaranteed-rent' },

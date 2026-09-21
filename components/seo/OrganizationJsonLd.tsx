@@ -1,11 +1,10 @@
-import { SITE } from '@/lib/config'
+import { SITE, HAS_REAL_ADDRESS } from '@/lib/config'
 
 export function OrganizationJsonLd() {
   // Only emit the postal address when a real one is configured. While
   // SITE.address.line1 is set to the 'ADDRESS_HERE' placeholder, the
   // address block is omitted from structured data so we don't tell
   // Google our address is "ADDRESS_HERE".
-  const hasRealAddress = SITE.address.line1 !== 'ADDRESS_HERE'
 
   const data: Record<string, unknown> = {
     '@context': 'https://schema.org',
@@ -53,7 +52,7 @@ export function OrganizationJsonLd() {
     // manual penalty. Mention the rating as plain descriptive text only.
   }
 
-  if (hasRealAddress) {
+  if (HAS_REAL_ADDRESS) {
     data.address = {
       '@type': 'PostalAddress',
       streetAddress: SITE.address.line1,
