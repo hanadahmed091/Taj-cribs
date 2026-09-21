@@ -1704,12 +1704,22 @@ export const BLOG_POSTS: BlogPost[] = [
 ]
 
 /**
- * Posts that should appear on the /blog index list and the homepage preview.
- * Direct article URLs, the sitemap, and slug lookups continue to use the
- * full BLOG_POSTS array. So posts hidden from the index remain reachable
- * by direct link and can be restored by flipping their hiddenFromIndex flag.
+ * All posts, newest first by original published date (`date`, not
+ * `updated`). Every listing of posts uses this order. Posts sharing a
+ * date keep their order from BLOG_POSTS.
  */
-export const VISIBLE_BLOG_POSTS: BlogPost[] = BLOG_POSTS.filter(
+const POSTS_NEWEST_FIRST: BlogPost[] = [...BLOG_POSTS].sort((a, b) =>
+  b.date.localeCompare(a.date),
+)
+
+/**
+ * Posts that should appear on the /blog index list and the homepage preview,
+ * newest first. Direct article URLs, the sitemap, and slug lookups continue
+ * to use the full BLOG_POSTS array. So posts hidden from the index remain
+ * reachable by direct link and can be restored by flipping their
+ * hiddenFromIndex flag.
+ */
+export const VISIBLE_BLOG_POSTS: BlogPost[] = POSTS_NEWEST_FIRST.filter(
   (p) => !p.hiddenFromIndex,
 )
 
@@ -1717,13 +1727,17 @@ export function getBlogPostBySlug(slug: string): BlogPost | null {
   return BLOG_POSTS.find((p) => p.slug === slug) ?? null
 }
 
+// "More from our team" on article pages: newest visible posts, so posts
+// hidden from the index don't resurface here.
 export function getRelatedPosts(currentSlug: string, n = 3): BlogPost[] {
-  return BLOG_POSTS.filter((p) => p.slug !== currentSlug).slice(0, n)
+  return VISIBLE_BLOG_POSTS.filter((p) => p.slug !== currentSlug).slice(0, n)
 }
 
+// Category filter buttons keep the order categories first appear in
+// BLOG_POSTS, so re-sorting posts doesn't shuffle the filter bar.
 export function getAllCategories(): BlogCategory[] {
   const set = new Set<BlogCategory>()
-  for (const p of VISIBLE_BLOG_POSTS) set.add(p.category)
+  for (const p of BLOG_POSTS) if (!p.hiddenFromIndex) set.add(p.category)
   return Array.from(set)
 }
 

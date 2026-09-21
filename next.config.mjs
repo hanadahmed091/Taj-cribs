@@ -25,6 +25,15 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // The default Vercel domain serves the same site. Send it (every
+      // path) permanently to the main domain so Google only indexes
+      // www.tajcribs.co.uk. Preview deployment URLs are unaffected.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'taj-cribs.vercel.app' }],
+        destination: 'https://www.tajcribs.co.uk/:path*',
+        permanent: true,
+      },
       {
         source: '/case-studies/chelsea-two-bed-corporate-let',
         destination: '/case-studies/chelsea-two-bed-guaranteed-rent',
