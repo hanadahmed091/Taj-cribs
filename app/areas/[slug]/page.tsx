@@ -12,6 +12,7 @@ import { FinalCTA } from '@/components/sections/FinalCTA'
 import { SERVICE_LABELS } from '@/lib/data/properties'
 import type { FAQ as FAQType } from '@/lib/data/faqs'
 import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
+import { renderInline } from '@/components/blog/PostBody'
 
 export async function generateStaticParams() {
   return getAllAreaSlugs().map((slug) => ({ slug }))
@@ -165,6 +166,11 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
               <h2 className="mt-5 text-fluid-3xl font-extrabold tracking-tighter leading-tight">
                 {area.demand}
               </h2>
+              {area.relatedReading && (
+                <p className="mt-6 text-fluid-lg text-navy-900/80 leading-relaxed">
+                  {renderInline(area.relatedReading)}
+                </p>
+              )}
             </FadeIn>
           </div>
         </section>
@@ -185,6 +191,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
                     {area.content.overview.slice(1).map((para, i) => (
                       <p key={i}>{para}</p>
                     ))}
+                    {area.relatedReading && <p>{renderInline(area.relatedReading)}</p>}
                   </div>
                 </FadeIn>
               </div>

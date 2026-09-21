@@ -1,3 +1,5 @@
+import type { FAQ } from './faqs'
+
 export type BlogCategory =
   | 'Regulations'
   | 'Tax & Finance'
@@ -44,11 +46,37 @@ export type BlogPost = {
   date: string         // ISO
   readTime: string
   author: string
+  /**
+   * Optional job title for a named author. When set, the author is emitted
+   * in BlogPosting JSON-LD as a Person (with jobTitle) instead of an Organization.
+   */
+  authorRole?: string
+  /** Optional ISO date the post was last updated. Defaults to `date`. */
+  updated?: string
+  /**
+   * Optional italic byline shown under the headline, above the hero image.
+   * Supports the same inline link and bold syntax as body text.
+   */
+  byline?: string
   heroImage: string
+  /** Alt text for the hero image. Defaults to the post title. */
+  heroImageAlt?: string
+  /**
+   * Intrinsic size of the hero image. When set, the hero renders at its
+   * natural aspect ratio (no 16:9 crop) and the size is used for Open Graph.
+   */
+  heroImageSize?: { width: number; height: number }
   metaTitle: string
+  /**
+   * When true, metaTitle is used as the full <title> without the sitewide
+   * "| Taj Cribs" suffix.
+   */
+  metaTitleAbsolute?: boolean
   metaDescription: string
   keywords: string[]
   body: BlogBlock[]
+  /** Optional FAQs emitted as FAQPage JSON-LD on the article page. */
+  faqs?: FAQ[]
   /**
    * When true, the post is excluded from the /blog index list and the
    * homepage "Insights" preview. The article page itself (/blog/[slug])
@@ -66,6 +94,35 @@ const CLOSING_PARA: BlogBlock = {
   type: 'p',
   text: 'Have a question about your property? Speak to the [Taj Cribs team](/contact). We manage properties across the whole of Central London and offer free valuations with no obligation.',
 }
+
+// FAQs for /blog/airbnb-fees-uk. Rendered in the article body and emitted
+// as FAQPage JSON-LD from the same source so the two never drift.
+const AIRBNB_FEES_FAQS: FAQ[] = [
+  {
+    q: 'What percentage does Airbnb take from UK hosts in 2026?',
+    a: "Most hosts pay 15.5% of the booking subtotal. On a £1,000 booking, that's £155.",
+  },
+  {
+    q: 'Can I still use the old 3% split fee?',
+    a: 'No. Airbnb moved all remaining UK hosts to the single fee in September 2026. You might still see the old fee on bookings made before your account switched.',
+  },
+  {
+    q: 'Does Airbnb take a cut of my cleaning fee?',
+    a: "Yes. The fee is worked out on the full subtotal, so it includes cleaning, extra guest and pet fees. Moving part of your price into the cleaning fee won't reduce what Airbnb takes.",
+  },
+  {
+    q: 'How much should I put my prices up to cover the new fee?',
+    a: 'Around 15%. That keeps what your guest pays about the same as before, since they no longer pay a separate Airbnb fee, and your payout ends up roughly where it was. On a £1,000 booking, that means charging about £1,150.',
+  },
+  {
+    q: 'Do guests pay more under the new fee?',
+    a: 'Not if you price it right. Guests used to pay your price plus Airbnb\'s guest fee. Now they just pay your price, so raising it by around 15% keeps their total about the same.',
+  },
+  {
+    q: 'Is Airbnb or Booking.com cheaper for UK hosts?',
+    a: "They're almost the same now, at around 15%. On a £1,000 booking the difference is about £5, so focus on which one brings you more bookings.",
+  },
+]
 
 export const BLOG_POSTS: BlogPost[] = [
   // ─────────────────────────────────────────────────────────────────────
@@ -391,6 +448,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'Who guaranteed rent suits' },
       { type: 'p', text: 'In our experience managing properties across [Central London](/areas), guaranteed rent works best for a specific kind of owner.' },
       { type: 'p', text: "If you want certainty above all else. Same payment, same date, no surprises. Guaranteed rent is built for you. If you live abroad or simply can't make property your second job, it's the cleanest option on the market." },
+      { type: 'p', text: "If you're weighing this against running a short let yourself, remember platform costs too. Airbnb now takes 15.5% of every booking, as we explain in our guide to [Airbnb fees in the UK](/blog/airbnb-fees-uk)." },
       { type: 'p', text: 'Block and portfolio owners benefit most. We already manage a full 14-unit block in [Marylebone](/areas/marylebone) under our scheme; the maths gets stronger the more units you have.' },
 
       {
@@ -1530,6 +1588,117 @@ export const BLOG_POSTS: BlogPost[] = [
         href: '/lp/kensington',
         label: 'Get my free estimate',
       },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────────────
+  // POST 13 — Mon 21 Sep 2026 — Short-Let Management
+  // Airbnb's move to the single 15.5% host-only fee for UK hosts.
+  // Named author (not TEAM) and FAQPage schema via `faqs`.
+  // ─────────────────────────────────────────────────────────────────────
+  {
+    slug: 'airbnb-fees-uk',
+    title: 'Airbnb Fees UK 2026: What Airbnb Actually Takes from London Hosts',
+    excerpt:
+      "If you host on Airbnb in the UK, you've probably noticed your payouts look a bit smaller lately. You're not imagining it.",
+    category: 'Short-Let Management',
+    date: '2026-09-21',
+    updated: '2026-09-21',
+    readTime: '6 min read',
+    author: 'Hanad',
+    authorRole: 'Listings and Revenue Manager',
+    byline:
+      'By Hanad, Listings and Revenue Manager at Taj Cribs. We run 25 short and medium term let units across Central London, including [Mayfair](/areas/mayfair), [Marylebone](/areas/marylebone), [Westminster](/areas/westminster) and [Canary Wharf](/areas/canary-wharf). Last updated 21 September 2026.',
+    heroImage: '/blog/airbnb-fees-uk-2026.png',
+    heroImageAlt:
+      'Airbnb fees UK 2026 comparison of split fee and single fee payouts on a £1,000 booking',
+    heroImageSize: { width: 1200, height: 630 },
+    metaTitle: 'Airbnb Fees UK 2026: How Much Does Airbnb Take? (15.5%)',
+    metaTitleAbsolute: true,
+    metaDescription:
+      "Airbnb now takes 15.5% from most UK hosts. See how the fee works, what it's charged on, a £1,000 payout example and how much to raise your prices.",
+    keywords: [
+      'airbnb fees uk',
+      'airbnb host fee 15.5%',
+      'how much does airbnb take uk',
+      'airbnb service fee uk 2026',
+      'airbnb single fee hosts',
+    ],
+    faqs: AIRBNB_FEES_FAQS,
+    body: [
+      { type: 'p', text: "**Here's the short version:** UK hosts now pay Airbnb 15.5% of every booking, taken straight out of the payout. It used to be 3%, with guests covering the rest at checkout. That setup has now ended for UK hosts." },
+      { type: 'p', text: "So what does that actually mean for your income? Let's put some real pounds on it." },
+
+      { type: 'h2', text: "How Airbnb's service fee works now" },
+      { type: 'p', text: "Airbnb used to split its fee between you and your guest. You'd pay around 3%, and the guest would pay their own service fee on top when they booked." },
+      { type: 'p', text: "Now Airbnb charges one fee, and it all comes out of your side. The upside is that guests see the price you set, with no extra Airbnb charge added at checkout. The downside is that you're now covering the whole thing." },
+      {
+        type: 'table',
+        headers: ['', 'Old split fee', 'New single fee'],
+        rows: [
+          ['You pay', 'About 3%', 'Usually 15.5%'],
+          ['Your guest pays', 'Their own fee at checkout, typically 14% to 16.5%', 'Nothing extra from Airbnb'],
+          ['Charged on', 'Booking subtotal', 'Booking subtotal, cleaning fee included'],
+        ],
+      },
+      { type: 'p', text: "According to [Airbnb's Help Centre](https://www.airbnb.com/help/article/1857), most hosts on the single fee pay 15.5%, and the rest usually pay somewhere between 14% and 16%. Hosts using property management software were moved over first, back in October 2025." },
+
+      { type: 'h2', text: 'What this looks like on a £1,000 booking' },
+      { type: 'p', text: "Let's take a simple four night stay at the same price under both models:" },
+      {
+        type: 'table',
+        headers: ['', 'Old split fee', 'New single fee'],
+        rows: [
+          ['4 nights at £225', '£900.00', '£900.00'],
+          ['Cleaning fee', '£100.00', '£100.00'],
+          ['**Booking subtotal**', '**£1,000.00**', '**£1,000.00**'],
+          ['Airbnb host fee', 'minus £30.00 (3%)', 'minus £155.00 (15.5%)'],
+          ['**What you get paid**', '**£970.00**', '**£845.00**'],
+        ],
+      },
+      { type: 'p', text: 'Keep your price the same and your Airbnb host fee jumps from £30 to £155, so you take home **£125 less** on every £1,000 booked.' },
+      { type: 'p', text: "This example leaves out VAT and other adjustments, because how those apply depends on your own circumstances. It also shows why shifting part of your price into the cleaning fee doesn't get you around Airbnb's fee. The 15.5% is charged on the cleaning fee too, so that £100 only puts £84.50 in your pocket." },
+
+      { type: 'h2', text: 'How much would you need to raise your prices?' },
+      { type: 'p', text: "Here's the part a lot of hosts miss. Under the old model, your guest paid their own Airbnb fee on top of your price. So when you listed a stay at £1,000, your guest actually paid around **£1,150** at checkout." },
+      { type: 'p', text: "Now there's no separate guest fee. Whatever you charge is what the guest pays. So if you raise your price to £1,150, **your guest pays about the same as before**." },
+      { type: 'p', text: "And here's what happens to your payout:" },
+      {
+        type: 'table',
+        headers: ['', 'Old split fee', 'New single fee'],
+        rows: [
+          ['Your listed price', '£1,000.00', '£1,150.00'],
+          ['**What the guest pays**', '**About £1,150.00**', '**£1,150.00**'],
+          ['Airbnb fee', 'minus £30.00 (3%)', 'minus £178.25 (15.5%)'],
+          ['**What you get paid**', '**£970.00**', '**£971.75**'],
+        ],
+      },
+      { type: 'p', text: 'Roughly the same price for the guest, and you end up with almost exactly what you earned before. In other words, a rise of around 15% simply moves the guest fee into your price.' },
+      { type: 'p', text: "If you want to match your old £970 exactly, you'd need to charge £1,147.93, a rise of about 14.8%. If you want the full £1,000 to land in your account, you'd need to charge £1,183.43, a rise of about 18.3%." },
+
+      { type: 'h2', text: 'So should you just put your prices up by 15%?' },
+      { type: 'p', text: 'Not necessarily across the board.' },
+      { type: 'p', text: "Airbnb itself tells hosts to review their pricing after the switch, so payouts don't quietly drop. But your price also affects where you show up in search and how many people who look at your listing actually book. And since guests now see one clean price, it's easier for them to compare you side by side with other listings. Get it wrong and you could lose more in empty nights than you ever saved on fees." },
+      { type: 'p', text: 'The smarter move is to look at a few things together: the total price guests see, how busy you expect to be, your average nightly rate and what actually lands in your account.' },
+      { type: 'p', text: "This is where dynamic pricing really earns its keep. Instead of sticking with one fixed nightly rate, a dynamic pricing tool adjusts your price every day based on demand, local events, the time of year and what similar places nearby are charging. That means you can claw back the higher fee on your busiest dates, like weekends, school holidays and big London events, while staying competitive on quieter nights so you don't miss out on bookings. Dynamic pricing software plugs into Airbnb or your channel manager and updates your rates automatically. It's a core part of how we run our [property management service](/property-management)." },
+
+      { type: 'h2', text: 'Is Booking.com any cheaper?' },
+      { type: 'p', text: "Not by much these days. Booking.com's commission for UK hosts is usually around 15%, and more if you sign up for extras like their Preferred Partner programme." },
+      { type: 'p', text: "On the same £1,000 booking at 15%, Booking.com would take £150 and pay you £850. That's just £5 more than Airbnb. So honestly, the fee shouldn't decide which platform you use. What matters is which one keeps your calendar full." },
+      { type: 'p', text: "That's why we'd always suggest listing on both through a channel manager, so you're not relying on one platform. And it's why direct bookings are worth building up over time. They don't come with a platform fee at all." },
+
+      { type: 'h2', text: "How to check what you're actually paying" },
+      { type: 'p', text: 'It only takes a minute. In your Airbnb account, go to **Earnings**, open a recent booking and look at the price breakdown. The service fee sits on its own line.' },
+      { type: 'p', text: "It's worth checking a few bookings made after your account switched over. Older reservations keep whatever fee they were booked under, so they won't show the new rate." },
+
+      { type: 'h2', text: 'Frequently asked questions' },
+      ...AIRBNB_FEES_FAQS.flatMap((f): BlogBlock[] => [
+        { type: 'h3', text: f.q },
+        { type: 'p', text: f.a },
+      ]),
+
+      { type: 'h2', text: 'Want to know what your property could really earn?' },
+      { type: 'p', text: "We'll run your place through the same numbers using real booking data from our own units in your area. It's free, there's no obligation and we'll come back to you within one business day. [Get your free valuation](/contact)" },
     ],
   },
 ]

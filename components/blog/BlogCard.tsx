@@ -12,14 +12,18 @@ export function BlogCard({ post, priority = false }: { post: BlogPost; priority?
 
   return (
     <Link href={`/blog/${post.slug}`} className="group block h-full">
-      <div className="relative aspect-[4/3] overflow-hidden rounded-md">
+      <div
+        className={`relative aspect-[4/3] overflow-hidden rounded-md ${post.heroImageSize ? 'bg-navy-800' : ''}`}
+      >
+        {/* Posts with a sized hero are designed graphics (text in the
+            image), so show them whole rather than cropping to 4:3. */}
         <Image
           src={post.heroImage}
-          alt={post.title}
+          alt={post.heroImageAlt ?? post.title}
           fill
           priority={priority}
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-transform duration-700 ease-smooth group-hover:scale-105"
+          className={`${post.heroImageSize ? 'object-contain' : 'object-cover'} transition-transform duration-700 ease-smooth group-hover:scale-105`}
         />
         <span className="absolute top-4 left-4 bg-gold-500 text-navy-950 px-3 py-1 rounded-sm text-[10px] uppercase tracking-widest font-bold">
           {post.category}

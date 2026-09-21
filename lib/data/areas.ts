@@ -44,6 +44,12 @@ export type AreaMeta = {
   intro: string        // legacy hero paragraph — used when `content` absent
   demand: string       // legacy one-line demand banner — used when `content` absent
   content?: AreaContent
+  /**
+   * Optional one-line pointer to a relevant blog post, written per area.
+   * Supports inline `[label](/href)` link syntax. Rendered under the
+   * demand line (legacy pages) or the overview (pages with `content`).
+   */
+  relatedReading?: string
 }
 
 export const AREA_META: Record<string, AreaMeta> = {
@@ -55,6 +61,8 @@ export const AREA_META: Record<string, AreaMeta> = {
     intro:
       "Marylebone runs from Marble Arch in the west to Great Portland Street in the east, with Regent's Park to the north and Oxford Street to the south. It's a Westminster postcode that holds two distinct rental markets in the same square mile: long-term residents in the mansion blocks off Marylebone High Street, and a constant rotation of short-stay guests drawn by Harley Street consultations, Wigmore Hall concerts and the Marylebone Village retail scene.",
     demand: 'Year-round corporate, medical and leisure demand.',
+    relatedReading:
+      "Before you price your Marylebone flat, read our breakdown of [Airbnb's 15.5% host fee](/blog/airbnb-fees-uk).",
     content: {
       overview: [
         "Marylebone runs from Marble Arch in the west to Great Portland Street in the east, with Regent's Park to the north and Oxford Street to the south. It's a Westminster postcode that holds two distinct rental markets in the same square mile: long-term residents in the mansion blocks off Marylebone High Street, and a constant rotation of short-stay guests drawn by Harley Street consultations, Wigmore Hall concerts and the Marylebone Village retail scene.",
@@ -259,6 +267,8 @@ export const AREA_META: Record<string, AreaMeta> = {
     intro:
       'Mayfair commands the top of the Central London nightly market. Demand is led by high-net-worth leisure, family offices, embassy-related travel and executives staying near the Bond Street and Berkeley Square professional services cluster. White-glove housekeeping, concierge handovers and discretion-led guest vetting are standard.',
     demand: 'Ultra-premium leisure and executive demand year-round.',
+    relatedReading:
+      'Thinking of letting on Airbnb in Mayfair? See [how much Airbnb takes from UK hosts](/blog/airbnb-fees-uk).',
   },
   chelsea: {
     slug: 'chelsea',
@@ -338,6 +348,8 @@ export const AREA_META: Record<string, AreaMeta> = {
     intro:
       'Westminster SW1 has an unusual demand mix: government, parliamentary, embassy and tourist short-let all in the same square mile. We cover Westminster under both our guaranteed-rent and short-let management products — request a free valuation for your unit.',
     demand: 'Government, corporate weekday and tourist weekend demand.',
+    relatedReading:
+      "Here's what [Airbnb's service fee means for Westminster hosts](/blog/airbnb-fees-uk).",
   },
   'notting-hill': {
     slug: 'notting-hill',
@@ -356,6 +368,8 @@ export const AREA_META: Record<string, AreaMeta> = {
     intro:
       'Canary Wharf E14 is one of the most consistent corporate-let markets in London: weekday demand driven by the financial services cluster, a deep mid-stay segment for project teams and relocations, and softer weekend pricing. We cover the wharf under short-let management for executives and project teams.',
     demand: 'Mid-stay corporate demand, weekday-led.',
+    relatedReading:
+      'Planning short lets in Canary Wharf? Start with [what Airbnb charges hosts in 2026](/blog/airbnb-fees-uk).',
   },
   'kings-cross': {
     slug: 'kings-cross',

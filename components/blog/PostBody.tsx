@@ -4,28 +4,43 @@ import { ArrowRight } from 'lucide-react'
 import type { BlogBlock } from '@/lib/data/blog'
 import { SITE } from '@/lib/config'
 
-// Parses inline `[label](/href)` link syntax and renders the labels as
-// next/link components with the brand underline style. Anything outside a
-// link is emitted as a plain string. Used by p/ul/ol/quote blocks so post
-// authors can sprinkle internal links naturally in prose.
-function renderInline(text: string): React.ReactNode[] {
+const LINK_CLASS =
+  'text-navy-900 font-medium underline decoration-gold-500 decoration-2 underline-offset-4 hover:text-gold-600 transition-colors'
+
+// Parses inline `[label](/href)` link syntax and `**bold**` text. Internal
+// links render as next/link with the brand underline style; absolute
+// http(s) links render as a plain <a> that opens in a new tab. Anything
+// else is emitted as a plain string. Used by p/ul/ol/quote/table blocks so
+// post authors can sprinkle links and emphasis naturally in prose.
+export function renderInline(text: string): React.ReactNode[] {
   const parts: React.ReactNode[] = []
-  const linkRe = /\[([^\]]+)\]\(([^)]+)\)/g
+  const inlineRe = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*/g
   let lastIndex = 0
   let match: RegExpExecArray | null
-  while ((match = linkRe.exec(text)) !== null) {
+  while ((match = inlineRe.exec(text)) !== null) {
     if (match.index > lastIndex) {
       parts.push(text.slice(lastIndex, match.index))
     }
-    parts.push(
-      <Link
-        key={`${match.index}-${parts.length}`}
-        href={match[2]}
-        className="text-navy-900 font-medium underline decoration-gold-500 decoration-2 underline-offset-4 hover:text-gold-600 transition-colors"
-      >
-        {match[1]}
-      </Link>,
-    )
+    const key = `${match.index}-${parts.length}`
+    if (match[3] !== undefined) {
+      parts.push(
+        <strong key={key} className="font-bold text-navy-900">
+          {match[3]}
+        </strong>,
+      )
+    } else if (/^https?:\/\//.test(match[2])) {
+      parts.push(
+        <a key={key} href={match[2]} target="_blank" rel="noopener" className={LINK_CLASS}>
+          {match[1]}
+        </a>,
+      )
+    } else {
+      parts.push(
+        <Link key={key} href={match[2]} className={LINK_CLASS}>
+          {match[1]}
+        </Link>,
+      )
+    }
     lastIndex = match.index + match[0].length
   }
   if (lastIndex < text.length) parts.push(text.slice(lastIndex))
@@ -127,7 +142,7 @@ export function PostBody({ blocks }: { blocks: BlogBlock[] }) {
                             key={ci}
                             className={`py-3 px-4 align-top ${ci === 0 ? 'font-semibold text-navy-900' : 'text-navy-900/80'}`}
                           >
-                            {cell}
+                            {renderInline(cell)}
                           </td>
                         ))}
                       </tr>

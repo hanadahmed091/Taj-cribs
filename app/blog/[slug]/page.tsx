@@ -9,7 +9,8 @@ import {
   getRelatedPosts,
 } from '@/lib/data/blog'
 import { BlogPostingJsonLd } from '@/components/seo/BlogPostingJsonLd'
-import { PostBody } from '@/components/blog/PostBody'
+import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
+import { PostBody, renderInline } from '@/components/blog/PostBody'
 import { BlogCard } from '@/components/blog/BlogCard'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { FinalCTA } from '@/components/sections/FinalCTA'
@@ -25,18 +26,32 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const post = getBlogPostBySlug(params.slug)
   if (!post) return {}
+  const image = {
+    url: post.heroImage,
+    width: post.heroImageSize?.width ?? 1600,
+    height: post.heroImageSize?.height ?? 900,
+    alt: post.heroImageAlt ?? post.title,
+  }
   return {
-    title: post.metaTitle,
+    title: post.metaTitleAbsolute ? { absolute: post.metaTitle } : post.metaTitle,
     description: post.metaDescription,
     keywords: post.keywords,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       type: 'article',
+      url: `/blog/${post.slug}`,
       title: post.metaTitle,
       description: post.metaDescription,
       publishedTime: post.date,
+      modifiedTime: post.updated ?? post.date,
       authors: [post.author],
-      images: [{ url: post.heroImage, width: 1600, height: 900 }],
+      images: [image],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.metaTitle,
+      description: post.metaDescription,
+      images: [image],
     },
   }
 }
@@ -55,6 +70,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   return (
     <>
       <BlogPostingJsonLd post={post} />
+      {post.faqs && post.faqs.length > 0 && <FaqJsonLd faqs={post.faqs} />}
 
       <article className="pt-[120px] lg:pt-[140px] pb-20 bg-white">
         <div className="container-edge max-w-[760px]">
@@ -93,17 +109,39 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             <span>{post.readTime}</span>
           </div>
 
-          {/* Hero image */}
-          <div className="mt-10 relative aspect-[16/9] rounded-md overflow-hidden">
-            <Image
-              src={post.heroImage}
-              alt={post.title}
-              fill
-              priority
-              sizes="(max-width: 800px) 100vw, 760px"
-              className="object-cover"
-            />
-          </div>
+          {/* Byline */}
+          {post.byline && (
+            <p className="mt-6 text-sm italic leading-[1.8] text-navy-900/70">
+              {renderInline(post.byline)}
+            </p>
+          )}
+
+          {/* Hero image. Posts with a known intrinsic size render uncropped
+              at their natural aspect ratio; others keep the 16:9 crop. */}
+          {post.heroImageSize ? (
+            <div className="mt-10 rounded-md overflow-hidden">
+              <Image
+                src={post.heroImage}
+                alt={post.heroImageAlt ?? post.title}
+                width={post.heroImageSize.width}
+                height={post.heroImageSize.height}
+                priority
+                sizes="(max-width: 800px) 100vw, 760px"
+                className="w-full h-auto"
+              />
+            </div>
+          ) : (
+            <div className="mt-10 relative aspect-[16/9] rounded-md overflow-hidden">
+              <Image
+                src={post.heroImage}
+                alt={post.heroImageAlt ?? post.title}
+                fill
+                priority
+                sizes="(max-width: 800px) 100vw, 760px"
+                className="object-cover"
+              />
+            </div>
+          )}
 
           {/* Excerpt as lede */}
           <p className="mt-10 text-fluid-lg leading-[1.7] text-navy-900/85 font-medium">
