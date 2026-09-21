@@ -12,6 +12,7 @@
     "@hookform/resolvers": "^3.9.0",
     "@studio-freight/lenis": "^1.0.42",
     "@types/mapbox-gl": "^3.4.1",
+    "@vercel/analytics": "^2.0.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.21",
     "gsap": "^3.12.5",

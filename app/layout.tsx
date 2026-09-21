@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { SITE } from '@/lib/config'
 import { Navbar } from '@/components/layout/Navbar'
@@ -69,6 +70,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </SiteFrame>
         </LenisProvider>
         <CookieConsent />
+        {/* Vercel Web Analytics is cookieless, so unlike GTM it isn't
+            gated on the consent banner. */}
+        <Analytics />
       </body>
     </html>
   )
