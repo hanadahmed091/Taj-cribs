@@ -6,6 +6,7 @@ import { Menu, X, Phone } from 'lucide-react'
 import { NAV_LINKS, SITE } from '@/lib/config'
 import { cn, pushDataLayer } from '@/lib/utils'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { Logo } from '@/components/ui/Logo'
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -44,13 +45,7 @@ export function Navbar() {
       )}
     >
       <div className="container-edge flex items-center justify-between">
-        <Link
-          href="/"
-          className="text-white font-extrabold tracking-tighter text-xl flex items-center gap-2"
-          aria-label={SITE.name}
-        >
-          <span><span className="text-gold-500">{SITE.shortName.charAt(0)}</span>{SITE.shortName.slice(1)}</span>
-        </Link>
+        <Logo tone="light" priority />
 
         <nav className="hidden lg:flex items-center gap-9">
           {NAV_LINKS.map((link) => (

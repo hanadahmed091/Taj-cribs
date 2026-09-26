@@ -3,6 +3,7 @@ import { Mail, MapPin, Phone, Instagram, Linkedin } from 'lucide-react'
 import { SITE, HAS_REAL_ADDRESS } from '@/lib/config'
 import { deriveAreas } from '@/lib/data/areas'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { Logo } from '@/components/ui/Logo'
 
 export function Footer() {
   const areas = deriveAreas()
@@ -13,9 +14,7 @@ export function Footer() {
       <div className="container-edge pt-20 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
-            <Link href="/" className="text-white font-extrabold tracking-tighter text-2xl flex items-center gap-2">
-              <span><span className="text-gold-500">{SITE.shortName.charAt(0)}</span>{SITE.shortName.slice(1)}</span>
-            </Link>
+            <Logo tone="light" className="w-fit" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/65">
               Central London short-let management and guaranteed rent specialists.
               We manage blocks and portfolios across Central London, and pay
