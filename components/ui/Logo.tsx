@@ -11,8 +11,12 @@ export function Logo({
   tone = 'dark',
   className,
   priority = false,
+  taglineFrom = 'sm',
 }: {
   tone?: 'dark' | 'light'
+  // Breakpoint the tagline appears at. The site header uses 'xl' because
+  // it only has room for the tagline beside the full nav at that width.
+  taglineFrom?: 'sm' | 'xl'
   className?: string
   priority?: boolean
 }) {
@@ -41,7 +45,8 @@ export function Logo({
         </span>
         <span
           className={cn(
-            'hidden sm:block mt-1 text-[10px] uppercase tracking-[0.2em] font-medium',
+            'hidden mt-1 text-[10px] uppercase tracking-[0.2em] font-medium',
+            taglineFrom === 'xl' ? 'xl:block' : 'sm:block',
             tone === 'dark' ? 'text-[#8A6A38]' : 'text-[#C9A46A]',
           )}
         >

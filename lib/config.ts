@@ -41,12 +41,19 @@ export const SITE = {
 // footer, contact page and LocalBusiness schema all check this.
 export const HAS_REAL_ADDRESS = SITE.address.line1 !== 'ADDRESS_HERE'
 
-export const NAV_LINKS = [
+// Desktop nav groups these under a "Services" dropdown; the mobile menu
+// lists NAV_LINKS flat. Guaranteed Rent stays first as the main offer.
+export const SERVICE_LINKS = [
   { label: 'Guaranteed Rent', href: '/guaranteed-rent' },
   { label: 'Property Management', href: '/property-management' },
   { label: 'Serviced Accommodation', href: '/serviced-accommodation' },
+] as const
+
+export const MAIN_LINKS = [
   { label: 'Pricing', href: '/pricing' },
   { label: 'Areas', href: '/areas' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ] as const
+
+export const NAV_LINKS = [...SERVICE_LINKS, ...MAIN_LINKS] as const
