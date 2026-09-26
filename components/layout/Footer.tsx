@@ -12,8 +12,8 @@ export function Footer() {
   return (
     <footer className="bg-navy-950 text-white/80">
       <div className="container-edge pt-20 pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-          <div className="md:col-span-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-4">
             <Logo tone="light" className="w-fit" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/65">
               Central London short-let management and guaranteed rent specialists.
@@ -42,7 +42,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-2">
+          <div className="lg:col-span-2">
             <h4 className="eyebrow !text-white/40 mb-5">Services</h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/guaranteed-rent" className="hover:text-gold-400 transition-colors">Guaranteed Rent</Link></li>
@@ -61,7 +61,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
+          <div className="lg:col-span-3">
             <h4 className="eyebrow !text-white/40 mb-5">Areas We Cover</h4>
             {/* Pure 2-column grid with explicit gap-y. Footer-local
                 short-name override for High Street Kensington keeps
@@ -84,7 +84,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
+          <div className="lg:col-span-3">
             <h4 className="eyebrow !text-white/40 mb-5">Contact</h4>
             <ul className="space-y-4 text-sm">
               <li>
