@@ -37,7 +37,9 @@ export function Hero() {
 
       <div className="container-edge relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          <div className="lg:col-span-7">
+          {/* Inline-size container so the headline can size itself to this
+              column (cqi) and never run into the featured property card. */}
+          <div className="lg:col-span-7 [container-type:inline-size]">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -48,7 +50,9 @@ export function Hero() {
               <span className="eyebrow">Central London Property Specialists</span>
             </motion.div>
 
-            <h1 className="text-hero font-extrabold tracking-tightest leading-[0.95]">
+            {/* Same size as text-hero, capped at 15% of the column: GUARANTEED,
+                the widest word, is ~6.54em wide, so it always fits on one line. */}
+            <h1 className="text-[length:min(clamp(56px,9vw,130px),15cqi)] font-extrabold tracking-tightest leading-[0.95]">
               {headlineWords.map((word, i) => {
                 const isGold = i === 1 || i === 3
                 const lineBreak = i === 1
@@ -63,7 +67,10 @@ export function Hero() {
                         delay: 0.15 + i * 0.08,
                         ease: [0.22, 1, 0.36, 1],
                       }}
-                      className="inline-block"
+                      // nowrap stops "SHORT-LET." splitting at its hyphen. A
+                      // non-breaking hyphen (U+2011) isn't in Poppins, so it
+                      // would render in a fallback font.
+                      className="inline-block whitespace-nowrap"
                     >
                       {isGold ? <span className="text-gold-500">{word}</span> : word}
                     </motion.span>
