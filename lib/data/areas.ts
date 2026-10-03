@@ -268,7 +268,61 @@ export const AREA_META: Record<string, AreaMeta> = {
       'Mayfair commands the top of the Central London nightly market. Demand is led by high-net-worth leisure, family offices, embassy-related travel and executives staying near the Bond Street and Berkeley Square professional services cluster. White-glove housekeeping, concierge handovers and discretion-led guest vetting are standard.',
     demand: 'Ultra-premium leisure and executive demand year-round.',
     relatedReading:
-      'Thinking of letting on Airbnb in Mayfair? See [how much Airbnb takes from UK hosts](/blog/airbnb-fees-uk).',
+      'Thinking of letting on Airbnb in Mayfair? See [how much Airbnb takes from UK hosts](/blog/airbnb-fees-uk) and [how the 90-day rule works](/blog/90-day-rule-airbnb-london).',
+    content: {
+      overview: [
+        'Guaranteed rent and short-let management for Mayfair W1 landlords. Take a fixed monthly payment on a 1 to 5 year corporate lease, or have us run the property as a fully managed short-let with hotel-standard housekeeping and vetted guests. Free valuation within 24 hours.',
+        'Mayfair sits at the top of the Central London nightly market. Demand comes from high-net-worth leisure visitors, the hedge funds and family offices around Berkeley Square and Curzon Street, embassy-related travel, and families who take a London base for several weeks at a time over the summer.',
+        'Guests at this level expect the service of a five-star hotel with the privacy of a home. That means in-person handovers, housekeeping to a hotel standard, and careful guest vetting, because the neighbours and the building management are watching just as closely as the guest is.',
+      ],
+      propertyCharacter: {
+        heading: 'Mayfair W1 housing stock.',
+        body: [
+          'Georgian townhouses on and around Grosvenor Square, Berkeley Square and the streets between them, many now divided into lateral apartments. Red-brick Victorian and Edwardian mansion blocks around Mount Street and South Audley Street. Mews houses tucked behind the main streets.',
+          'Alongside the period stock sit portered apartment buildings and a small number of new super-prime developments with hotel-style services.',
+          'Much of Mayfair is held under estate head leases, most notably the Grosvenor Estate, so the lease chain is usually longer and stricter than elsewhere in W1.',
+        ],
+      },
+      guestProfile: {
+        heading: 'The Mayfair guest mix.',
+        profiles: [
+          {
+            label: 'High-net-worth leisure visitors',
+            body: 'Couples and families who would otherwise book a suite at a Mayfair hotel and want more space and privacy for a week or longer.',
+          },
+          {
+            label: 'Finance and family office executives',
+            body: 'Visitors to the funds, private banks and family offices clustered around Berkeley Square, Curzon Street and St James’s.',
+          },
+          {
+            label: 'Extended summer family stays',
+            body: 'International families who base themselves in Mayfair for several weeks over the summer, often with staff, and book well in advance.',
+          },
+          {
+            label: 'Embassy and diplomatic visitors',
+            body: 'Mayfair and the streets around it hold a large number of embassies and high commissions, which generates steady official travel.',
+          },
+          {
+            label: 'Art, auction and retail visitors',
+            body: 'Bond Street, Mount Street, the auction houses and the Cork Street galleries bring buyers in around sale weeks and major fairs.',
+          },
+        ],
+      },
+      locationTransport: {
+        heading: 'Connections.',
+        body: [
+          'Bond Street (Central, Jubilee and Elizabeth lines) and Green Park (Jubilee, Piccadilly and Victoria lines) are the two main stations, with Marble Arch (Central) and Hyde Park Corner (Piccadilly) on the western and southern edges. The Elizabeth line from Bond Street runs direct to Heathrow.',
+          'Hyde Park borders Mayfair to the west and Green Park to the south. Oxford Street, Regent Street and Piccadilly form the other three sides.',
+        ],
+      },
+      regulation: {
+        heading: 'What Mayfair landlords should know.',
+        body: [
+          'Mayfair is in the City of Westminster. Westminster City Council enforces the London 90-night short-let limit strictly, so we keep every short-let unit inside it or move the property to stays of 90 nights or more, or to guaranteed rent.',
+          'Almost all of Mayfair falls inside the Mayfair Conservation Area and a large share of buildings are listed, which affects any works to the property. Head leases, estate regulations and mansion block rules frequently restrict short lets. We read the full lease chain before agreeing any arrangement.',
+        ],
+      },
+    },
   },
   chelsea: {
     slug: 'chelsea',
@@ -349,7 +403,61 @@ export const AREA_META: Record<string, AreaMeta> = {
       'Westminster SW1 has an unusual demand mix: government, parliamentary, embassy and tourist short-let all in the same square mile. We cover Westminster under both our guaranteed-rent and short-let management products — request a free valuation for your unit.',
     demand: 'Government, corporate weekday and tourist weekend demand.',
     relatedReading:
-      "Here's what [Airbnb's service fee means for Westminster hosts](/blog/airbnb-fees-uk).",
+      'Weighing up the options for a Westminster flat? Read [guaranteed rent vs Airbnb management](/blog/guaranteed-rent-vs-airbnb-management) and [what Airbnb’s service fee means for hosts](/blog/airbnb-fees-uk).',
+    content: {
+      overview: [
+        'Guaranteed rent and short-let management for Westminster SW1 landlords. Take a fixed monthly payment on a 1 to 5 year corporate lease, or have us manage the property for government, corporate and visitor stays. Free valuation within 24 hours.',
+        'Westminster has an unusual mix of demand in a small area. Parliament and the government departments along Whitehall and Victoria Street generate weekday stays. The Abbey, Buckingham Palace and St James’s Park bring visitors at weekends and through the school holidays. Between them the calendar fills on different days for different reasons.',
+        'Because Westminster City Council polices short lets closely, many SW1 landlords prefer guaranteed rent or stays of 90 nights or more. We offer both alongside conventional short-let management.',
+      ],
+      propertyCharacter: {
+        heading: 'Westminster SW1 housing stock.',
+        body: [
+          'Victorian and Edwardian mansion blocks dominate the streets around Victoria Street, Artillery Row and Ashley Gardens. Early Georgian townhouses survive around Smith Square, Lord North Street and Queen Anne’s Gate.',
+          'Newer apartment buildings sit around Victoria station and along Horseferry Road and Marsham Street, mostly with concierge and residents’ facilities.',
+          'One-beds and two-beds are the most common units, which suits the single professionals and couples who make up most of the weekday demand.',
+        ],
+      },
+      guestProfile: {
+        heading: 'The Westminster guest mix.',
+        profiles: [
+          {
+            label: 'Parliamentary and government visitors',
+            body: 'People working with Parliament and the departments around Whitehall who need to be within walking distance during the working week.',
+          },
+          {
+            label: 'Consultants and contractors',
+            body: 'Advisers on government and corporate projects in the Victoria Street office corridor, typically staying for weeks instead of nights.',
+          },
+          {
+            label: 'Conference delegates',
+            body: 'The QEII Centre on Broad Sanctuary hosts large conferences, which lifts demand on the dates they run.',
+          },
+          {
+            label: 'Legal visitors',
+            body: 'The Supreme Court sits on Parliament Square and brings in legal teams for the duration of hearings.',
+          },
+          {
+            label: 'Leisure visitors',
+            body: 'Families and couples who want Westminster Abbey, Buckingham Palace, St James’s Park and the river on the doorstep.',
+          },
+        ],
+      },
+      locationTransport: {
+        heading: 'Connections.',
+        body: [
+          'Westminster (Jubilee, District and Circle lines), St James’s Park (District and Circle) and Victoria (Victoria, District and Circle lines, plus mainline services and the Gatwick Express) serve the postcode. Pimlico (Victoria line) sits just to the south.',
+          'St James’s Park and Green Park are both a short walk. The Thames path runs along Millbank, with Tate Britain at the southern end.',
+        ],
+      },
+      regulation: {
+        heading: 'What Westminster landlords should know.',
+        body: [
+          'Westminster City Council enforces the London 90-night short-let limit strictly. We keep every short-let unit inside the limit, or move the property to stays of 90 nights or more, or to guaranteed rent.',
+          'Much of the postcode falls inside conservation areas, including those around Westminster Abbey and Parliament Square and around Smith Square, and listed buildings are common. Mansion block leases very often prohibit short lets outright. We check head-lease terms before agreeing any arrangement.',
+        ],
+      },
+    },
   },
   'notting-hill': {
     slug: 'notting-hill',
@@ -359,6 +467,62 @@ export const AREA_META: Record<string, AreaMeta> = {
     intro:
       'Notting Hill W11 is one of London’s most photographed neighbourhoods, and that translates directly to short-let demand. The Westbourne Grove, Portobello and Holland Park corridor pulls steady leisure bookings — shorter average stays than other Central London postcodes, with strong long-weekend pricing in the spring and summer.',
     demand: 'Leisure-led demand with strong long-weekend bookings.',
+    relatedReading:
+      'Deciding how to let a Notting Hill property? Read [short let vs long let in London](/blog/short-let-vs-long-let-london) and [how the 90-day rule works](/blog/90-day-rule-airbnb-london).',
+    content: {
+      overview: [
+        'Guaranteed rent and short-let management for Notting Hill W11 landlords. Take a fixed monthly payment on a 1 to 5 year corporate lease, or have us run the property as a fully managed short-let. Free valuation within 24 hours.',
+        'Notting Hill is one of the most photographed neighbourhoods in London, and that shows up directly in bookings. Demand is leisure-led: shorter stays than the corporate postcodes, strong long weekends in spring and summer, and a sharp peak around the Notting Hill Carnival over the August bank holiday.',
+        'Leisure demand is seasonal, so the months outside spring and summer need a plan. We use longer stays to cover the quieter part of the year, and for landlords who would prefer not to carry that seasonality at all, guaranteed rent pays the same amount every month.',
+      ],
+      propertyCharacter: {
+        heading: 'Notting Hill W11 housing stock.',
+        body: [
+          'White stucco terraces and villas laid out around private communal gardens on the Ladbroke Estate. The painted terraces around Portobello Road and Lancaster Road that appear in every photograph of the area. Mews houses behind the main streets.',
+          'Most of the large houses have been divided into leasehold flats, so the typical unit is a one or two-bed conversion with period features and no lift. Towards Ladbroke Grove and Westbourne Park the stock becomes more mixed, with later purpose-built blocks.',
+          'Character is the selling point here. Guests book Notting Hill for the building and the street as much as for the location.',
+        ],
+      },
+      guestProfile: {
+        heading: 'The Notting Hill guest mix.',
+        profiles: [
+          {
+            label: 'Leisure couples and friends',
+            body: 'Long-weekend visitors who want Portobello Road, Westbourne Grove and the restaurants within walking distance.',
+          },
+          {
+            label: 'Families on holiday',
+            body: 'Families who want a house or a larger flat near Holland Park and Kensington Gardens for a week or two.',
+          },
+          {
+            label: 'Visiting relatives',
+            body: 'People staying near family who live locally, often for two to four weeks and often repeat bookers.',
+          },
+          {
+            label: 'Carnival and summer visitors',
+            body: 'The August bank holiday weekend is the single busiest point of the year, with strong demand through June and July around it.',
+          },
+          {
+            label: 'Relocations and renovations',
+            body: 'Locals who need a furnished home nearby for a few months while their own property is being renovated.',
+          },
+        ],
+      },
+      locationTransport: {
+        heading: 'Connections.',
+        body: [
+          'Notting Hill Gate (Central, District and Circle lines) is the main station. Ladbroke Grove and Westbourne Park (Hammersmith & City and Circle lines) serve the northern end, and Holland Park (Central line) the west. Paddington, with the Elizabeth line and the Heathrow Express, is a short bus or taxi ride away.',
+          'Holland Park is on the western edge and Kensington Gardens on the eastern. Portobello Road Market runs through the middle, with the main antiques market on Saturdays.',
+        ],
+      },
+      regulation: {
+        heading: 'What Notting Hill landlords should know.',
+        body: [
+          'Most of W11 is in the Royal Borough of Kensington and Chelsea, which enforces the London 90-night short-let limit actively. We keep every short-let unit inside the limit and cover the rest of the year with stays of 90 nights or more.',
+          'Large parts of Notting Hill fall inside conservation areas, including Ladbroke, Pembridge and Colville, and many buildings are listed. Because most flats are conversions within a shared freehold or under a head lease, covenants against short lets are common and neighbours notice quickly. We check the lease before agreeing any arrangement.',
+        ],
+      },
+    },
   },
   'canary-wharf': {
     slug: 'canary-wharf',
@@ -434,6 +598,62 @@ export const AREA_META: Record<string, AreaMeta> = {
     intro:
       "King's Cross has transformed into one of London's most dynamic neighbourhoods. Home to Google, Central Saint Martins and outstanding transport links across the city and internationally via St Pancras. Strong year-round demand from corporate travellers, students and tourists makes it an excellent short-let and guaranteed rent location.",
     demand: 'Year-round corporate, student and international traveller demand.',
+    relatedReading:
+      'Comparing the options for a King’s Cross flat? Read [guaranteed rent vs Airbnb management](/blog/guaranteed-rent-vs-airbnb-management) and [our guide to guaranteed rent in London](/blog/guaranteed-rent-london-guide).',
+    content: {
+      overview: [
+        'Guaranteed rent and short-let management for King’s Cross N1 landlords. Take a fixed monthly payment on a 1 to 5 year corporate lease, or have us run the property as a fully managed short-let. Free valuation within 24 hours.',
+        'King’s Cross has changed more than almost any part of Central London over the past fifteen years. The old railway lands behind the station are now home to Google, Meta, Universal Music, Central Saint Martins and the Francis Crick Institute, with Coal Drops Yard and Granary Square at the centre.',
+        'The result is demand from several directions at once: corporate and tech visitors during the week, academics and researchers on longer stays, and travellers using St Pancras International for the Eurostar. That spread keeps occupancy steadier across the year than in a purely leisure postcode.',
+      ],
+      propertyCharacter: {
+        heading: 'King’s Cross N1 housing stock.',
+        body: [
+          'New-build apartments on the King’s Cross estate itself, including the Gasholders, the Plimsoll Building, Tapestry and ArtHouse, with concierge and shared amenities. Warehouse and industrial conversions in the Regent Quarter and along the canal.',
+          'East of York Way and up the Caledonian Road towards Barnsbury the stock turns to Victorian terraces, many divided into flats. To the west, Somers Town is largely mansion blocks and former local authority buildings.',
+          'The new-build units command the highest rates, while the period conversions tend to carry fewer lease restrictions.',
+        ],
+      },
+      guestProfile: {
+        heading: 'The King’s Cross guest mix.',
+        profiles: [
+          {
+            label: 'Tech and corporate visitors',
+            body: 'Staff and contractors visiting the technology and media offices on the estate, usually Monday to Friday or for a few weeks at a time.',
+          },
+          {
+            label: 'Academics and researchers',
+            body: 'Visitors to the Francis Crick Institute, the British Library and the universities nearby, often on stays of one to three months.',
+          },
+          {
+            label: 'Eurostar travellers',
+            body: 'People arriving from or leaving for Paris, Brussels and Amsterdam who want to be next to St Pancras International.',
+          },
+          {
+            label: 'Students and their families',
+            body: 'Parents visiting students at Central Saint Martins and the Bloomsbury universities, with peaks at the start of term and at graduation.',
+          },
+          {
+            label: 'Rail-based leisure visitors',
+            body: 'Visitors from the North and Scotland arriving on the East Coast Main Line who want to stay close to the station.',
+          },
+        ],
+      },
+      locationTransport: {
+        heading: 'Connections.',
+        body: [
+          'King’s Cross St Pancras is served by six Underground lines: Northern, Piccadilly, Victoria, Circle, Hammersmith & City and Metropolitan. King’s Cross mainline runs to Cambridge, Leeds, York and Edinburgh. St Pancras International carries the Eurostar, Thameslink, and services to the East Midlands and Kent. Euston is a ten minute walk.',
+          'The Piccadilly line runs direct to Heathrow and Thameslink direct to Gatwick and Luton. The Regent’s Canal towpath, Granary Square and Coal Drops Yard are the main public spaces.',
+        ],
+      },
+      regulation: {
+        heading: 'What King’s Cross landlords should know.',
+        body: [
+          'King’s Cross straddles two boroughs. The station and the estate are in Camden, while the streets east of York Way are in Islington. The London 90-night short-let limit applies in both, so we keep every short-let unit inside it and cover the rest of the year with stays of 90 nights or more.',
+          'The area around the two stations and the canal falls inside conservation areas, and the station buildings and gasholder frames are listed. On the estate, the building leases are the main constraint: several developments restrict short lets or require the management company’s consent. We check head-lease terms before agreeing any arrangement, and offer guaranteed rent where short stays are not permitted.',
+        ],
+      },
+    },
   },
   'earls-court': {
     slug: 'earls-court',
@@ -637,6 +857,62 @@ export const AREA_META: Record<string, AreaMeta> = {
     intro:
       'Liverpool Street EC2 sits in the heart of the City of London, served by Liverpool Street station (Central, Circle, Hammersmith & City, Metropolitan, mainline and Elizabeth lines). The area combines high-density financial-services office stock with the residential pockets around Spitalfields, Bishopsgate and Broadgate. We operate a Liverpool Street building under our guaranteed-rent programme — request a free valuation for your EC2 property.',
     demand: 'Corporate weekday demand from the City and Canary Wharf-bound commuters.',
+    relatedReading:
+      'New to guaranteed rent? Start with [our guide to guaranteed rent in London](/blog/guaranteed-rent-london-guide), then compare it with [Airbnb management](/blog/guaranteed-rent-vs-airbnb-management).',
+    content: {
+      overview: [
+        'Guaranteed rent and short-let management for Liverpool Street EC2 landlords. We operate a Liverpool Street building under our guaranteed rent programme. Take a fixed monthly payment on a 1 to 5 year corporate lease, or ask us about fully managed short-let. Free valuation within 24 hours.',
+        'Liverpool Street sits at the eastern edge of the City of London, where the financial district meets Spitalfields and Shoreditch. Weekday demand comes from the banks, law firms and insurers of the Square Mile. Weekend demand comes from the restaurants, markets and nightlife a few minutes to the east.',
+        'The City has a small resident population and limited residential stock, which is part of why guaranteed rent works well here: there is steady corporate demand for the apartments that do exist.',
+      ],
+      propertyCharacter: {
+        heading: 'Liverpool Street EC2 housing stock.',
+        body: [
+          'Residential property inside the City itself is scarce. The Barbican Estate is the largest concentration, joined by a small number of modern towers such as The Heron on Moor Lane.',
+          'Most of the supply is on the fringe: new-build towers around Shoreditch and Bishopsgate, Georgian houses in the streets of Spitalfields, and warehouse conversions towards Shoreditch High Street.',
+          'One-beds and two-beds make up most of what is available, which matches what corporate guests and sharers book.',
+        ],
+      },
+      guestProfile: {
+        heading: 'The Liverpool Street guest mix.',
+        profiles: [
+          {
+            label: 'City finance and legal staff',
+            body: 'Secondees, new joiners and visiting colleagues at the banks and law firms around Broadgate and Bishopsgate who want to walk to work.',
+          },
+          {
+            label: 'Project teams and contractors',
+            body: 'Stays of several weeks tied to a deal, an audit or a systems project, usually booked by the employer.',
+          },
+          {
+            label: 'Relocations',
+            body: 'People moving to London for a City role who need a furnished base while they find a long-term home.',
+          },
+          {
+            label: 'Stansted and Elizabeth line travellers',
+            body: 'The Stansted Express and the Elizabeth line both run from Liverpool Street, so short stays around flights and onward travel are common.',
+          },
+          {
+            label: 'Weekend leisure visitors',
+            body: 'Visitors who come for Spitalfields Market, Brick Lane and Shoreditch and fill the nights the City leaves empty.',
+          },
+        ],
+      },
+      locationTransport: {
+        heading: 'Connections.',
+        body: [
+          'Liverpool Street station is served by the Central, Circle, Hammersmith & City, Metropolitan and Elizabeth lines, the London Overground, mainline services into East Anglia and the Stansted Express. The Elizabeth line runs direct to Canary Wharf in one direction and to Paddington and Heathrow in the other.',
+          'Moorgate (Northern line) and Shoreditch High Street (London Overground) are both within walking distance. Broadgate, Spitalfields Market and Finsbury Circus are the nearest public spaces.',
+        ],
+      },
+      regulation: {
+        heading: 'What Liverpool Street landlords should know.',
+        body: [
+          'The EC2 postcode is mostly within the City of London, with the streets to the east in Tower Hamlets and to the north in Hackney. The London 90-night short-let limit applies in all three, so short-let units are kept inside it and the rest of the year is covered by stays of 90 nights or more.',
+          'In the towers and on the Barbican Estate, lease terms are the main constraint, and many restrict short lets or require consent. The Barbican is also listed, which affects any works. We check head-lease terms before agreeing any arrangement, and where a building does not permit short stays we offer guaranteed rent on a longer corporate let.',
+        ],
+      },
+    },
   },
 }
 
