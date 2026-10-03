@@ -11,6 +11,7 @@ import { FadeIn } from '@/components/ui/FadeIn'
 import { LeadForm } from '@/components/forms/LeadForm'
 import { FAQ } from '@/components/sections/FAQ'
 import { FinalCTA } from '@/components/sections/FinalCTA'
+import { AreaLinks } from '@/components/sections/AreaLinks'
 import { TajCribsStandard } from '@/components/sections/TajCribsStandard'
 import { SHORT_LET_FAQS } from '@/lib/data/faqs'
 import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
@@ -19,9 +20,9 @@ import { SITE } from '@/lib/config'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export const metadata: Metadata = {
-  title: 'Short-Let & Airbnb Management London',
+  title: 'Airbnb & Short-Let Management London | 18% Flat Fee',
   description:
-    'Full-service short-let and Airbnb management for Central London landlords. Multi-platform listings, dynamic pricing, in-house housekeeping.',
+    'Airbnb and short-let management for Central London landlords at a flat 18% of booking revenue. No setup fees. Listings, pricing, housekeeping and guests handled.',
   alternates: { canonical: '/property-management' },
 }
 
@@ -410,6 +411,8 @@ export default function PropertyManagementPage() {
           </div>
         </div>
       </section>
+
+      <AreaLinks heading="Short-let management by area." />
 
       <FinalCTA />
     </>

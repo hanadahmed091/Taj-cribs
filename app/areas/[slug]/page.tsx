@@ -13,6 +13,7 @@ import { SERVICE_LABELS } from '@/lib/data/properties'
 import type { FAQ as FAQType } from '@/lib/data/faqs'
 import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
 import { renderInline } from '@/components/blog/PostBody'
+import { AreaLinks } from '@/components/sections/AreaLinks'
 
 export async function generateStaticParams() {
   return getAllAreaSlugs().map((slug) => ({ slug }))
@@ -25,8 +26,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const area = getAreaBySlug(params.slug)
   if (!area) return {}
-  const title = `Guaranteed Rent & Short-Let in ${area.name}`
-  const description = `Guaranteed rent and short-let management for landlords in ${area.name} ${area.postcode}. Free valuation in 24 hours, fixed monthly income, no voids.`
+  // Title leads with the two phrases landlords actually search per area
+  // ("guaranteed rent <area>", "airbnb management <area>") plus postcode.
+  const title = `Guaranteed Rent & Airbnb Management ${area.name} ${area.postcode}`
+  const description = `Fixed monthly rent on a 1 to 5 year lease, or full Airbnb and short-let management at a flat 18% fee, for ${area.name} ${area.postcode} landlords. No voids. Free valuation in 24 hours.`
   return {
     title,
     description,
@@ -427,6 +430,8 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </section>
+
+      <AreaLinks excludeSlug={area.slug} heading={`Near ${area.name}? We cover these areas too.`} showServices />
 
       <FinalCTA />
     </>
