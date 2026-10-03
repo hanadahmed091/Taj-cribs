@@ -14,10 +14,32 @@ export function UtmCapture() {
         const value = params.get(key)
         if (value) captured[key] = value
       }
-      if (Object.keys(captured).length > 0) {
+      // Record where the visit started (first page + referring site) once
+      // per session, so every enquiry email can say how the lead found us
+      // even when there are no UTM tags. Never overwrite an earlier
+      // capture: the first page of the visit is the one that matters.
+      const existing = sessionStorage.getItem('taj_cribs_utm')
+      const hasAdParams = Object.keys(captured).length > 0
+      if (!existing || hasAdParams) {
+        let referrer = ''
+        try {
+          if (document.referrer) {
+            const host = new URL(document.referrer).hostname
+            if (host !== window.location.hostname) referrer = host
+          }
+        } catch {
+          // Malformed referrer: leave blank.
+        }
+        const previous = existing ? JSON.parse(existing) : {}
         sessionStorage.setItem(
           'taj_cribs_utm',
-          JSON.stringify({ ...captured, landed_at: new Date().toISOString() }),
+          JSON.stringify({
+            landing_page: window.location.pathname,
+            ...(referrer ? { referrer } : {}),
+            landed_at: new Date().toISOString(),
+            ...previous,
+            ...captured,
+          }),
         )
       }
     } catch {
