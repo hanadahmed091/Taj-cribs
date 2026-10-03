@@ -17,6 +17,30 @@ const schema = z.object({
   utm: z.record(z.string()).optional(),
 })
 
+/**
+ * Turns the form's `source` and captured visit data into readable lines
+ * for the lead email. Without this the email says who enquired but not
+ * how they arrived, which makes it impossible to tell ad leads from
+ * organic ones or to see which search term brought them.
+ */
+function attributionLines(source?: string, utm?: Record<string, string>): string[] {
+  const u = utm ?? {}
+  const clean = (v?: string) => (v ? v.replace(/[\r\n]+/g, ' ').slice(0, 200) : '')
+  const channel = u.gclid
+    ? 'Google Ads (paid click)'
+    : u.utm_source
+      ? `${clean(u.utm_source)}${u.utm_medium ? ` / ${clean(u.utm_medium)}` : ''}`
+      : u.referrer
+        ? `Link or search on ${clean(u.referrer)}`
+        : 'Direct (typed the address, or tapped a link in an app or message)'
+  const lines = [`Channel: ${channel}`]
+  if (u.utm_term) lines.push(`Search keyword: ${clean(u.utm_term)}`)
+  if (u.utm_campaign) lines.push(`Campaign: ${clean(u.utm_campaign)}`)
+  if (u.landing_page) lines.push(`First page they saw: ${clean(u.landing_page)}`)
+  if (source) lines.push(`Form used: ${clean(source)}`)
+  return lines
+}
+
 export async function POST(req: Request) {
   try {
     const json = await req.json()
@@ -64,6 +88,9 @@ export async function POST(req: Request) {
         `Type: ${field(payload.propertyType)}`,
         `Service: ${field(payload.service)}`,
         `Message: ${field(payload.message)}`,
+        '',
+        'How they found you',
+        ...attributionLines(payload.source, payload.utm),
       ].join('\n')
 
       await resend.emails.send({
