@@ -6,6 +6,7 @@ import { FAQ } from '@/components/sections/FAQ'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { FinalCTA } from '@/components/sections/FinalCTA'
+import { AreaLinks } from '@/components/sections/AreaLinks'
 import { PortfolioCardImages } from '@/components/sections/PortfolioCardImages'
 import { GUARANTEED_RENT_FAQS } from '@/lib/data/faqs'
 import { FaqJsonLd } from '@/components/seo/FaqJsonLd'
@@ -281,6 +282,8 @@ export default function GuaranteedRentPage() {
           </div>
         </div>
       </section>
+
+      <AreaLinks heading="Guaranteed rent by area." />
 
       <FinalCTA />
     </>

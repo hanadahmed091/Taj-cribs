@@ -364,12 +364,67 @@ export const AREA_META: Record<string, AreaMeta> = {
     slug: 'canary-wharf',
     name: 'Canary Wharf',
     postcode: 'E14',
-    tagline: 'Corporate let specialists',
+    tagline: 'Guaranteed rent & short-let management',
     intro:
-      'Canary Wharf E14 is one of the most consistent corporate-let markets in London: weekday demand driven by the financial services cluster, a deep mid-stay segment for project teams and relocations, and softer weekend pricing. We cover the wharf under short-let management for executives and project teams.',
+      'Guaranteed rent and short-let management for Canary Wharf E14 landlords. Take a fixed monthly payment on a 1 to 5 year corporate lease, or have us run the apartment for corporate and mid-stay guests. Free valuation within 24 hours.',
     demand: 'Mid-stay corporate demand, weekday-led.',
     relatedReading:
-      'Planning short lets in Canary Wharf? Start with [what Airbnb charges hosts in 2026](/blog/airbnb-fees-uk).',
+      'Weighing up the two routes for a Canary Wharf apartment? Read [guaranteed rent vs Airbnb management](/blog/guaranteed-rent-vs-airbnb-management), [how the 90-day rule works in London](/blog/90-day-rule-airbnb-london) and [what Airbnb charges hosts in 2026](/blog/airbnb-fees-uk).',
+    content: {
+      overview: [
+        'Guaranteed rent and short-let management for Canary Wharf E14 landlords. Take a fixed monthly payment on a 1 to 5 year corporate lease, or have us run the apartment for corporate and mid-stay guests. Free valuation within 24 hours.',
+        'Canary Wharf is a weekday market. Demand comes from the banks and professional services firms on the estate, from project teams on assignment, and from people relocating to London who need somewhere for one to three months while they find a home. Weekends are quieter and priced lower, which is why stays of several weeks suit E14 better than back-to-back two-night bookings.',
+        'That pattern is also why guaranteed rent is popular with Canary Wharf landlords. A tower apartment that sits empty between tenancies still carries its service charge and ground rent. On guaranteed rent we take the lease, pay you the same amount on the same date every month, and carry the void risk ourselves.',
+      ],
+      propertyCharacter: {
+        heading: 'Canary Wharf E14 housing stock.',
+        body: [
+          'Almost everything is purpose-built and leasehold. The dominant type is the residential tower with concierge, gym and residents’ lounge: Pan Peninsula, the Landmark buildings, South Quay Plaza, Wardian, Baltimore Tower, Dollar Bay, and One Park Drive and 10 Park Drive in Wood Wharf, the residential extension of the estate itself.',
+          'Around the towers sits older Docklands stock: 1980s and 1990s low-rise dockside developments across the Isle of Dogs, plus warehouse conversions around West India Quay and Limehouse.',
+          'Studios, one-beds and two-beds make up most of the supply, which matches what corporate guests book. Service charges in the amenity towers are significant, so we account for them in every valuation we send.',
+        ],
+      },
+      guestProfile: {
+        heading: 'The Canary Wharf guest mix.',
+        profiles: [
+          {
+            label: 'Finance and professional services staff',
+            body: 'Secondees, new joiners and visiting colleagues working on the estate who want to walk to the office. Sunday or Monday arrival, Friday departure is the typical shape.',
+          },
+          {
+            label: 'Project teams and contractors',
+            body: 'Stays of four to twelve weeks tied to a contract or a project phase. These are the bookings that fill a calendar without a turnaround every few days.',
+          },
+          {
+            label: 'Relocations',
+            body: 'Individuals and families moving to London who need a furnished base while they look for a long-term home. Often booked by an employer or a relocation agent.',
+          },
+          {
+            label: 'ExCeL exhibition and conference visitors',
+            body: 'ExCeL London is one stop east on the Elizabeth line at Custom House, so large trade shows lift E14 demand on the dates they run.',
+          },
+          {
+            label: 'Weekend leisure and O2 visitors',
+            body: 'The O2 is one stop on the Jubilee line at North Greenwich. Concert and event nights bring leisure bookings into what is otherwise the quiet part of the week.',
+          },
+        ],
+      },
+      locationTransport: {
+        heading: 'Connections.',
+        body: [
+          'Canary Wharf has three rail options within a few minutes’ walk of each other. The Jubilee line runs west to London Bridge, Waterloo, Westminster and Bond Street. The Elizabeth line runs direct to Liverpool Street, Tottenham Court Road, Paddington and Heathrow. The DLR serves Canary Wharf, Heron Quays, West India Quay, South Quay and Crossharbour, and connects to Bank and to London City Airport.',
+          'Uber Boat by Thames Clippers river services call at Canary Wharf Pier. Jubilee Park, Crossrail Place Roof Garden and the dockside walks provide the open space, with the shopping malls and the restaurants of Wood Wharf underneath and alongside the towers.',
+        ],
+      },
+      regulation: {
+        heading: 'What Canary Wharf landlords should know.',
+        body: [
+          'Canary Wharf sits in the London Borough of Tower Hamlets. The London 90-night limit on short lets applies here as it does everywhere in Greater London, so a whole home cannot be let on stays of under 90 nights for more than 90 nights in a calendar year without planning permission. We keep short-let units inside that limit and fill the rest of the year with stays of 90 nights or more, which fits the corporate and relocation demand in E14.',
+          'In practice the building matters more than the borough. Most tower leases restrict short lets or require the management company’s consent, and concierge teams enforce it. We read the head lease before we agree anything, and where a building does not permit short stays we offer guaranteed rent on a longer corporate let instead.',
+          'Tower Hamlets also runs property licensing schemes for some rented homes, depending on the ward and how the property is occupied. We check whether a licence applies as part of the valuation.',
+        ],
+      },
+    },
   },
   'kings-cross': {
     slug: 'kings-cross',
