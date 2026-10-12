@@ -104,6 +104,13 @@ export const COVERAGE_AREAS: CoverageArea[] = [
     oneLiner: 'Short-let and guaranteed rent across SE1.',
     centre: [-0.1132, 51.5031],
   },
+  {
+    slug: 'liverpool-street',
+    name: 'Liverpool Street',
+    postcode: 'EC2',
+    oneLiner: 'Short-let and guaranteed rent across EC2.',
+    centre: [-0.0823, 51.5178],
+  },
 ]
 
 /**

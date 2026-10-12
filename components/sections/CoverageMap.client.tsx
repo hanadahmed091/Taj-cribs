@@ -5,7 +5,6 @@ import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import {
   COVERAGE_AREAS,
-  zone1GeoJson,
   ZONE1_CENTRE,
   ZONE1_DEFAULT_ZOOM,
 } from '@/lib/data/coverage-areas'
@@ -13,11 +12,9 @@ import {
 /**
  * Interactive coverage map.
  *
- * Renders a single soft-filled Zone 1 polygon on a light Mapbox
- * base map. The polygon is decorative, not per-area clickable.
- * Tapping anywhere on the Zone 1 fill opens a generic "we cover
- * all of Zone 1" popup; tapping an area name in the list below the
- * map flies the map to that area centre and opens a per-area popup.
+ * Renders a gold pin for every area we operate in on a light Mapbox
+ * base map. Tapping a pin, or an area name in the list below the
+ * map, flies the map to that area and opens a per-area popup.
  *
  * Consumers should import the sibling CoverageMap.tsx wrapper,
  * which dynamically loads this file with ssr: false because
@@ -70,44 +67,25 @@ export function CoverageMapClient() {
     map.on('load', () => {
       map.resize()
 
-      map.addSource('zone1', {
-        type: 'geojson',
-        data: zone1GeoJson,
-      })
-
-      // Soft navy fill so it reads on the light base map without
-      // overpowering the streets underneath.
-      map.addLayer({
-        id: 'zone1-fill',
-        type: 'fill',
-        source: 'zone1',
-        paint: {
-          'fill-color': '#061325',
-          'fill-opacity': 0.12,
-        },
-      })
-
-      // Gold stroke around the boundary.
-      map.addLayer({
-        id: 'zone1-line',
-        type: 'line',
-        source: 'zone1',
-        paint: {
-          'line-color': '#C9A96E',
-          'line-width': 2,
-        },
-      })
+      // One gold pin per area. The map is framed to fit every pin.
+      const bounds = new mapboxgl.LngLatBounds()
+      for (const area of COVERAGE_AREAS) {
+        const el = document.createElement('button')
+        el.type = 'button'
+        el.setAttribute('aria-label', `${area.name} ${area.postcode}`)
+        el.style.cssText =
+          'width:18px;height:18px;border-radius:9999px;background:#C9A96E;border:3px solid #061325;box-shadow:0 2px 6px rgba(0,0,0,0.25);cursor:pointer;padding:0'
+        el.addEventListener('click', (e) => {
+          e.stopPropagation()
+          focusArea(area.slug)
+        })
+        new mapboxgl.Marker({ element: el }).setLngLat(area.centre).addTo(map)
+        bounds.extend(area.centre)
+      }
+      map.fitBounds(bounds, { padding: 60, duration: 0, maxZoom: 13 })
 
       setReady(true)
     })
-
-    // The Zone 1 polygon is intentionally a passive visual indicator.
-    // Earlier we attached a click handler that opened a "We cover all
-    // of Zone 1" popup, but it ended up hijacking the map (clicks
-    // anywhere on the polygon area opened the popup and obstructed
-    // zoom / pan). The headline above the map already explains the
-    // coverage, so the popup was redundant. Polygon stays visual-only.
-    // Per-area popups still open via the area list below the map.
 
     return () => {
       resizeObserver.disconnect()
@@ -116,6 +94,8 @@ export function CoverageMapClient() {
       map.remove()
       mapRef.current = null
     }
+    // focusArea only reads refs, so it is safe to leave out.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // External focus from the area list: fly to the centre and open the
