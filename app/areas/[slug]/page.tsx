@@ -60,7 +60,7 @@ function buildAreaFaqs(
       },
       {
         q: `What is the typical short-let income for a ${areaName} property?`,
-        a: `It depends heavily on bedrooms, finish quality and calendar timing. Request a free valuation and we will come back within one business day with a guaranteed monthly figure and a projected short-let income for your specific property.`,
+        a: `It depends heavily on bedrooms, finish quality and calendar timing. Request a free valuation and we will come back within 24 hours with a guaranteed monthly figure and a projected short-let income for your specific property.`,
       },
       {
         q: `Can I get guaranteed rent on a property in ${areaName}?`,
@@ -78,7 +78,7 @@ function buildAreaFaqs(
   return [
     {
       q: `Do you cover ${areaName} ${postcode}?`,
-      a: `Yes. ${areaName} is one of the London postcodes we cover under both short-let management and guaranteed rent. Request a free valuation for your ${areaName} property and we will come back within one business day.`,
+      a: `Yes. ${areaName} is one of the London postcodes we cover under both short-let management and guaranteed rent. Request a free valuation for your ${areaName} property and we will come back within 24 hours.`,
     },
     {
       q: `What is the typical short-let income for a ${areaName} property?`,
@@ -413,7 +413,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
                 </h2>
                 <p className="mt-5 text-navy-900/70 leading-relaxed">
                   Tell us about it. We&apos;ll send a guaranteed monthly figure and projected
-                  short-let income within one business day.
+                  short-let income within 24 hours.
                 </p>
                 <Link href="/areas" className="mt-7 inline-flex items-center gap-2 text-navy-900 font-semibold border-b border-navy-900 pb-1 hover:text-gold-600 transition-colors">
                   Browse other areas

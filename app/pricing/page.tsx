@@ -301,7 +301,7 @@ export default function PricingPage() {
             </h2>
             <p className="mt-6 text-fluid-lg text-navy-900/70 leading-relaxed">
               We come back with a clear income projection and the right tier
-              for your portfolio within one business day.
+              for your portfolio within 24 hours.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link

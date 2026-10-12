@@ -44,8 +44,8 @@ export function HowItWorks() {
           </FadeIn>
           <FadeIn className="lg:col-span-5" delay={0.1}>
             <p className="text-navy-900/75 text-fluid-lg leading-relaxed">
-              Choose your route below. Both are operated entirely by our team
-              and deliver fully managed income within a fortnight.
+              Choose your route. Both are operated entirely by our team
+              and get your property earning as soon as you are ready.
             </p>
           </FadeIn>
         </div>

@@ -33,7 +33,7 @@ const LANDLORD_CASE = [
     icon: TrendingUp,
     title: 'Higher yield than long-let',
     body:
-      'Multi-week stays priced as a serviced product earn meaningfully more per month than an equivalent AST, particularly in prime London postcodes. We model your specific property and come back with a tailored figure within one business day.',
+      'Multi-week stays priced as a serviced product earn meaningfully more per month than an equivalent AST, particularly in prime London postcodes. We model your specific property and come back with a tailored figure within 24 hours.',
   },
   {
     icon: LineChart,
@@ -454,7 +454,7 @@ export default function ServicedAccommodationPage() {
                 <p className="mt-5 text-navy-900/70 leading-relaxed">
                   Tell us about your property and we will model both a
                   serviced-accommodation income and a guaranteed-rent figure
-                  within one business day. Free, no obligation.
+                  within 24 hours. Free, no obligation.
                 </p>
                 <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
                   <Link

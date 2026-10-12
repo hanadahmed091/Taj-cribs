@@ -455,7 +455,7 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'cta',
         headline: 'Get a guaranteed monthly figure for your property',
         body:
-          "Tell us about your property and we'll come back with a guaranteed rent offer within one business day. No fee, no obligation, no pressure. Just an honest figure.",
+          "Tell us about your property and we'll come back with a guaranteed rent offer within 24 hours. No fee, no obligation, no pressure. Just an honest figure.",
         href: '/lp/guaranteed-rent',
         label: 'Get your guaranteed offer',
       },
@@ -574,7 +574,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'What to expect financially' },
       { type: 'p', text: 'Realistic expectations matter. Short-let in London typically delivers significantly more than a standard AST yield gross, before our 18% management fee.' },
       { type: 'p', text: "The numbers vary considerably with property, area, finish and how well a listing is marketed. Rather than quote ranges that might not apply to your situation, we give every landlord a tailored figure based on their actual property." },
-      { type: 'p', text: 'For a specific estimate, [request a free valuation](/contact). We come back with a guaranteed monthly figure and a projected short-let income within one business day.' },
+      { type: 'p', text: 'For a specific estimate, [request a free valuation](/contact). We come back with a guaranteed monthly figure and a projected short-let income within 24 hours.' },
 
       { type: 'h2', text: 'How to choose the right manager' },
       { type: 'p', text: 'Five questions worth asking every operator you speak to.' },
@@ -631,7 +631,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
       { type: 'h2', text: 'The financial picture in 2026' },
       { type: 'p', text: "Let's start with the headline numbers. Across our managed London portfolio, short-let net income consistently runs materially above the equivalent long-let figure. The exact multiple depends heavily on the area, the bedroom count and how actively the listing is operated." },
-      { type: 'p', text: 'Generic per-bedroom / per-postcode ranges rarely apply to a specific property. Nightly rates, off-peak fall-off and net monthly income vary heavily by street, finish, building type and how actively the listing is operated. [Request a free valuation](/contact) and we will come back within one business day with a tailored figure for your property.' },
+      { type: 'p', text: 'Generic per-bedroom / per-postcode ranges rarely apply to a specific property. Nightly rates, off-peak fall-off and net monthly income vary heavily by street, finish, building type and how actively the listing is operated. [Request a free valuation](/contact) and we will come back within 24 hours with a tailored figure for your property.' },
 
       { type: 'h2', text: 'When long-let still wins' },
       { type: 'p', text: 'Long-let beats short-let in a few specific situations that landlords often underweight.' },
@@ -1427,14 +1427,14 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'cta',
         headline: 'Own property in Marylebone? Get a free valuation',
         body:
-          "We'll send a guaranteed monthly figure and a projected short-let income within one business day. No fee, no obligation, no pressure.",
+          "We'll send a guaranteed monthly figure and a projected short-let income within 24 hours. No fee, no obligation, no pressure.",
         href: '/lp/marylebone',
         label: 'Get my Marylebone valuation',
       },
 
       { type: 'h2', text: 'Realistic returns in Marylebone' },
       { type: 'p', text: 'Marylebone short-let returns vary with bedroom count, finish, building, street and how well the listing is operated. Generic ranges rarely apply to a specific property, so we give every landlord a tailored figure rather than a number you have to discount in your head.' },
-      { type: 'p', text: '[Request a free valuation](/contact) and we will come back within one business day with a guaranteed monthly figure and a projected short-let income for your specific property.' },
+      { type: 'p', text: '[Request a free valuation](/contact) and we will come back within 24 hours with a guaranteed monthly figure and a projected short-let income for your specific property.' },
 
       { type: 'h2', text: 'Risks specific to Marylebone' },
       { type: 'p', text: 'Three things to be aware of:' },
@@ -1553,14 +1553,14 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'cta',
         headline: 'Own property in Kensington? Get a free estimate',
         body:
-          "Tell us about your W8 property and we'll come back within one business day with a realistic monthly short-let income and a guaranteed-rent figure to compare against. Free, no obligation.",
+          "Tell us about your W8 property and we'll come back within 24 hours with a realistic monthly short-let income and a guaranteed-rent figure to compare against. Free, no obligation.",
         href: '/lp/kensington',
         label: 'Request a free valuation',
       },
 
       { type: 'h2', text: 'Pricing in Kensington' },
       { type: 'p', text: 'Generic per-bedroom ranges rarely apply to a specific W8 property. Nightly rates, off-peak fall-off and net monthly income vary heavily by street, finish, building type and how actively the listing is operated.' },
-      { type: 'p', text: '[Request a free valuation](/contact) and we will come back within one business day with a guaranteed monthly figure and a projected short-let income for your specific Kensington property.' },
+      { type: 'p', text: '[Request a free valuation](/contact) and we will come back within 24 hours with a guaranteed monthly figure and a projected short-let income for your specific Kensington property.' },
 
       { type: 'h2', text: 'Compliance in Kensington' },
       { type: 'p', text: 'Kensington & Chelsea is one of the two most enforcement-active boroughs in London (Westminster is the other). The borough actively monitors platforms and responds quickly to neighbour complaints.' },
@@ -1698,7 +1698,7 @@ export const BLOG_POSTS: BlogPost[] = [
       ]),
 
       { type: 'h2', text: 'Want to know what your property could really earn?' },
-      { type: 'p', text: "We'll run your place through the same numbers using real booking data from our own units in your area. It's free, there's no obligation and we'll come back to you within one business day. [Get your free valuation](/contact)" },
+      { type: 'p', text: "We'll run your place through the same numbers using real booking data from our own units in your area. It's free, there's no obligation and we'll come back to you within 24 hours. [Get your free valuation](/contact)" },
     ],
   },
 ]
