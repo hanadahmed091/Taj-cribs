@@ -139,7 +139,7 @@ export default function AreasIndexPage() {
 
           <FadeIn delay={0.15}>
             <p className="mt-14 text-fluid-lg text-navy-900/80 text-center leading-relaxed">
-              Properties outside these areas considered.{' '}
+              Don&apos;t see your area? We cover all of London.{' '}
               <Link
                 href="/contact"
                 className="font-semibold text-navy-900 underline decoration-gold-500 decoration-2 underline-offset-4 hover:text-gold-600 transition-colors"

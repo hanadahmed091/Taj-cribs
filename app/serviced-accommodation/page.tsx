@@ -294,7 +294,7 @@ export default function ServicedAccommodationPage() {
               <p className="mt-6 text-fluid-lg text-navy-900/70 leading-relaxed">
                 Demand is strongest where corporate, medical and embassy
                 visitors cluster. We run the serviced-accommodation model
-                across the four prime London postcodes below.
+                across London, including the areas below.
               </p>
             </FadeIn>
           </div>
