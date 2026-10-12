@@ -14,7 +14,7 @@ export default function KensingtonLandingPage() {
     <LandingPageLayout
       areaLabel="Kensington & W8 Property Specialists"
       headline="Short-let management in Kensington. W8 specialists."
-      subheadline="We manage short-let and guaranteed rent properties in High Street Kensington and W8. Request a free valuation for your Kensington property and we’ll come back within one business day."
+      subheadline="We manage short-let and guaranteed rent properties in High Street Kensington and W8. Request a free valuation for your Kensington property and we’ll come back within 24 hours."
       formTitle="Get a free estimate for your Kensington property"
       defaultService="short-let-management"
       // No testimonial here intentionally — the previously-shown

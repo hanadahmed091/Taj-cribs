@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const STEPS = [
   { n: '01', title: 'Free valuation', body: 'Tell us about your property. We confirm a guaranteed monthly figure within 24 hours.' },
   { n: '02', title: 'Sign corporate lease', body: 'A simple 1–5 year corporate lease. Fixed monthly payment, on the same date.' },
-  { n: '03', title: 'We onboard', body: 'Photography, listing, compliance, insurance, furnishing. Two weeks, hands-off.' },
+  { n: '03', title: 'We onboard', body: 'Photography, listing, compliance, insurance, furnishing. Fast and hands off.' },
   { n: '04', title: 'You get paid', body: 'Fixed payment lands in your account. Same day, every month, for the full term.' },
 ]
 
@@ -119,7 +119,7 @@ export default function GuaranteedRentPage() {
               Calculators don&apos;t know your finish, your street, or what your
               property actually looks like. We do. Tell us about your property
               and we&apos;ll send back a guaranteed monthly figure and a projected
-              short-let income within one business day.
+              short-let income within 24 hours.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
               <Link href="/contact" className="btn-gold">
@@ -261,7 +261,7 @@ export default function GuaranteedRentPage() {
                 </h2>
                 <p className="mt-5 text-navy-900/70 leading-relaxed">
                   Tell us about your property. We&apos;ll review and come back with
-                  a firm guaranteed monthly figure within one business day.
+                  a firm guaranteed monthly figure within 24 hours.
                 </p>
                 <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
                   <Link

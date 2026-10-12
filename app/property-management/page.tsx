@@ -91,7 +91,7 @@ export default function PropertyManagementPage() {
                   Calculators don&apos;t know your finish, your street, or what your
                   property actually looks like. We do. Tell us about your property
                   and we&apos;ll send back a guaranteed monthly figure and a projected
-                  short-let income within one business day.
+                  short-let income within 24 hours.
                 </p>
                 <Link
                   href="/contact"

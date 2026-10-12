@@ -102,7 +102,7 @@ export const SHORT_LET_FAQS: FAQ[] = [
   },
   {
     q: 'What is the average income I can expect?',
-    a: 'It depends on your property, location, finish and the model you choose. Rather than quote ranges that may not apply to your situation, we give every landlord a tailored figure within one business day. Get a free valuation to see what your property would earn under guaranteed rent and under short-let management.',
+    a: 'It depends on your property, location, finish and the model you choose. Rather than quote ranges that may not apply to your situation, we give every landlord a tailored figure within 24 hours. Get a free valuation to see what your property would earn under guaranteed rent and under short-let management.',
   },
   {
     q: 'How is the property cleaned between guests?',
