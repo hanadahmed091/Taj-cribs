@@ -39,7 +39,7 @@ export const HOMEPAGE_FAQS: FAQ[] = [
   },
   {
     q: 'Do you take on whole blocks and portfolios?',
-    a: 'Yes. We are structured for whole blocks and multi-property portfolios, which most short-let operators are not. We already manage full residential blocks and landlords with several units across Central London, with one point of contact and one consolidated statement. If you own a block or a portfolio, this is exactly the kind of work we are built for.',
+    a: 'Yes. We are structured for whole blocks and multi-property portfolios, which most short-let operators are not. We already manage full residential blocks and landlords with several units across London, with one point of contact and one consolidated statement. If you own a block or a portfolio, this is exactly the kind of work we are built for.',
   },
   {
     q: 'How quickly can you onboard my property?',
@@ -47,7 +47,7 @@ export const HOMEPAGE_FAQS: FAQ[] = [
   },
   {
     q: 'What areas do you cover?',
-    a: 'We focus on Central London, broadly Zone 1, including Marylebone, Mayfair, Kensington, Chelsea, Pimlico, Westminster, Notting Hill and Canary Wharf. Concentrating on these postcodes is how we keep occupancy and standards high. We do consider strong properties just outside these areas, so it is always worth asking.',
+    a: 'We focus on London, including Marylebone, Mayfair, Kensington, Chelsea, Pimlico, Westminster, Notting Hill and Canary Wharf. Concentrating on these postcodes is how we keep occupancy and standards high. We do consider strong properties just outside these areas, so it is always worth asking.',
     cta: { label: 'See the areas we cover', href: '/areas' },
   },
 ]

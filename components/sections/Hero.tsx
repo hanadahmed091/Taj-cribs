@@ -47,7 +47,7 @@ export function Hero() {
               className="flex items-center gap-3 mb-8"
             >
               <span className="gold-divider" />
-              <span className="eyebrow">Central London Property Specialists</span>
+              <span className="eyebrow">London Property Specialists</span>
             </motion.div>
 
             {/* Same size as text-hero, capped at 15% of the column: GUARANTEED,
@@ -125,7 +125,7 @@ export function Hero() {
               </span>
               <span className="hidden sm:inline">·</span>
               <span className="hidden sm:inline">
-                Trusted by Central London landlords.
+                Trusted by London landlords.
               </span>
             </motion.div>
           </div>

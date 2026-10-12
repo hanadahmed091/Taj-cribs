@@ -37,7 +37,7 @@ export default function TermsPage() {
             </h2>
             <p>
               We are Taj Cribs, a property management company based in
-              central London. These terms govern your use of our website at
+              London. These terms govern your use of our website at
               https://www.tajcribs.co.uk.
             </p>
             <p>

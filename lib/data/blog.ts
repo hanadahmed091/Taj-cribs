@@ -92,7 +92,7 @@ const TEAM = 'Taj Cribs Team'
 // keep tone identical across the publishing schedule.
 const CLOSING_PARA: BlogBlock = {
   type: 'p',
-  text: 'Have a question about your property? Speak to the [Taj Cribs team](/contact). We manage properties across the whole of Central London and offer free valuations with no obligation.',
+  text: 'Have a question about your property? Speak to the [Taj Cribs team](/contact). We manage properties across the whole of London and offer free valuations with no obligation.',
 }
 
 // FAQs for /blog/airbnb-fees-uk. Rendered in the article body and emitted
@@ -135,7 +135,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title:
       "Section 21 Has Been Abolished. Here's What Every London Landlord Actually Needs to Do Now",
     excerpt:
-      "Section 21 is gone. Fixed-term ASTs are gone. Here's the honest playbook for Central London landlords from people operating under the new rules every day.",
+      "Section 21 is gone. Fixed-term ASTs are gone. Here's the honest playbook for London landlords from people operating under the new rules every day.",
     category: 'Regulations',
     date: '2026-05-21',
     readTime: '8 min read',
@@ -145,7 +145,7 @@ export const BLOG_POSTS: BlogPost[] = [
     metaTitle:
       'Section 21 Has Been Abolished. The London Landlord Playbook for 2026',
     metaDescription:
-      "Section 21 is gone. Fixed-term ASTs are gone. Here's the honest playbook for Central London landlords from people operating under the new rules every day.",
+      "Section 21 is gone. Fixed-term ASTs are gone. Here's the honest playbook for London landlords from people operating under the new rules every day.",
     keywords: [
       'section 21 abolished',
       'london landlord renters rights act',
@@ -156,7 +156,7 @@ export const BLOG_POSTS: BlogPost[] = [
     body: [
       {
         type: 'p',
-        text: "If you're a landlord in London and you've just realised Section 21 is gone, take a breath. There's a lot of panic online and a fair bit of misinformation. This is the straightforward version, written by people who manage property in Central London every day and have been operating under the new rules since they came in.",
+        text: "If you're a landlord in London and you've just realised Section 21 is gone, take a breath. There's a lot of panic online and a fair bit of misinformation. This is the straightforward version, written by people who manage property in London every day and have been operating under the new rules since they came in.",
       },
       {
         type: 'p',
@@ -254,7 +254,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'img',
         src: 'https://images.unsplash.com/photo-1718579019220-98697dc2fd72?w=1600&q=80',
-        alt: 'Pastel-coloured terraced houses on a Notting Hill street in Central London',
+        alt: 'Pastel-coloured terraced houses on a Notting Hill street in London',
       },
 
       {
@@ -263,7 +263,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "The second is [short-let management](/property-management). Your property goes on Airbnb, Booking.com, Vrbo and similar platforms, managed by an operator who handles the listings, pricing, cleaning, guest vetting and turnaround. There are no tenants in the legal sense. They are paying guests, and short-let stays under 90 nights aren't subject to the new tenancy rules at all. This works well in Central London where short-let demand is consistent year-round, and it can deliver up to two times the income of a standard AST.",
+        text: "The second is [short-let management](/property-management). Your property goes on Airbnb, Booking.com, Vrbo and similar platforms, managed by an operator who handles the listings, pricing, cleaning, guest vetting and turnaround. There are no tenants in the legal sense. They are paying guests, and short-let stays under 90 nights aren't subject to the new tenancy rules at all. This works well in London where short-let demand is consistent year-round, and it can deliver up to two times the income of a standard AST.",
       },
       {
         type: 'p',
@@ -273,7 +273,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'The honest take from where we sit' },
       {
         type: 'p',
-        text: "We operate properties across Central London, on both guaranteed rent and short-let models. Since May we've seen a sharp uptick in enquiries from landlords who were doing standard AST lettings and have realised, often after one difficult tenant experience, that they don't want to do it any more under the new rules.",
+        text: "We operate properties across London, on both guaranteed rent and short-let models. Since May we've seen a sharp uptick in enquiries from landlords who were doing standard AST lettings and have realised, often after one difficult tenant experience, that they don't want to do it any more under the new rules.",
       },
       {
         type: 'p',
@@ -281,7 +281,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'p',
-        text: "If you're sitting on a Central London property right now and you're not sure what to do, the worst answer is to do nothing and find out the hard way.",
+        text: "If you're sitting on a London property right now and you're not sure what to do, the worst answer is to do nothing and find out the hard way.",
       },
 
       {
@@ -345,7 +345,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: 'ul',
         items: [
-          'Voids are harder to control. A tenant can give notice on day one. Re-letting in prime Central London takes 3 to 6 weeks even in a strong market.',
+          'Voids are harder to control. A tenant can give notice on day one. Re-letting in prime London takes 3 to 6 weeks even in a strong market.',
           'Yields tighten. Annual rent increases are capped and challengeable. The multi-year uplifts owners saw in W1 and SW3 through the post-pandemic recovery will not be repeatable.',
           'Compliance costs rise. The Decent Homes Standard for older period buildings will trigger meaningful capital expenditure for some owners.',
           'Section 21 alternatives are untested at scale. Section 8 routes will, in practice, take longer than the legislation suggests.',
@@ -363,7 +363,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
       { type: 'h2', text: 'Why short-let and guaranteed rent sit outside the new rules' },
       { type: 'p', text: "Here's the part most landlords miss. The Act regulates [assured shorthold tenancies](/blog/ast-tenancy-agreement-guide-landlords). It doesn't regulate every type of letting." },
-      { type: 'p', text: 'Two models that already exist sit outside the AST framework, and both give Central London landlords more flexibility under the new rules.' },
+      { type: 'p', text: 'Two models that already exist sit outside the AST framework, and both give London landlords more flexibility under the new rules.' },
 
       { type: 'h3', text: 'Corporate lets (guaranteed rent)' },
       { type: 'p', text: 'When a company takes the lease (not an individual), different legislation applies. This is the legal basis of our [guaranteed rent product](/guaranteed-rent). You sign a corporate lease for 1 to 5 years; we pay you the full market rental value every month, regardless of occupancy.' },
@@ -407,7 +407,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'guaranteed-rent-london-guide',
     title: 'Guaranteed Rent in London: The Complete Landlord Guide for 2026',
     excerpt:
-      'What guaranteed rent actually is, how it works, who it suits and the questions to ask before signing. The 2026 guide for Central London landlords.',
+      'What guaranteed rent actually is, how it works, who it suits and the questions to ask before signing. The 2026 guide for London landlords.',
     category: 'Guaranteed Rent',
     date: '2026-05-28',
     readTime: '7 min read',
@@ -415,7 +415,7 @@ export const BLOG_POSTS: BlogPost[] = [
     heroImage: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1600&q=80',
     metaTitle: 'Guaranteed Rent London. The Complete Landlord Guide for 2026',
     metaDescription:
-      'What guaranteed rent is, how it works, who it suits and what to look for in a Central London provider. Full guide for landlords with free valuation.',
+      'What guaranteed rent is, how it works, who it suits and what to look for in a London provider. Full guide for landlords with free valuation.',
     keywords: [
       'guaranteed rent london landlord',
       'guaranteed rent scheme',
@@ -446,7 +446,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
 
       { type: 'h2', text: 'Who guaranteed rent suits' },
-      { type: 'p', text: 'In our experience managing properties across [Central London](/areas), guaranteed rent works best for a specific kind of owner.' },
+      { type: 'p', text: 'In our experience managing properties across [London](/areas), guaranteed rent works best for a specific kind of owner.' },
       { type: 'p', text: "If you want certainty above all else. Same payment, same date, no surprises. Guaranteed rent is built for you. If you live abroad or simply can't make property your second job, it's the cleanest option on the market." },
       { type: 'p', text: "If you're weighing this against running a short let yourself, remember platform costs too. Airbnb now takes 15.5% of every booking, as we explain in our guide to [Airbnb fees in the UK](/blog/airbnb-fees-uk)." },
       { type: 'p', text: 'Block and portfolio owners benefit most. We already manage a full 14-unit block in [Marylebone](/areas/marylebone) under our scheme; the maths gets stronger the more units you have.' },
@@ -498,7 +498,7 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'cta',
         headline: 'Ready to lock in a guaranteed monthly figure?',
         body:
-          "Free valuation. 24-hour turnaround. No obligation. We'll tell you exactly what we can guarantee on your Central London property and walk you through the lease line by line.",
+          "Free valuation. 24-hour turnaround. No obligation. We'll tell you exactly what we can guarantee on your London property and walk you through the lease line by line.",
         href: '/lp/guaranteed-rent',
         label: 'Start your free valuation',
       },
@@ -551,7 +551,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'How dynamic pricing actually works' },
       { type: 'p', text: 'Dynamic pricing is the single most important technical capability separating a good manager from a bad one. In short, it means setting your nightly rate based on real-time data. Not a fixed monthly figure.' },
       { type: 'p', text: 'A Mayfair 2-bed in mid-August commands a different rate than the same flat in early February. Wimbledon week, the Chelsea Flower Show, party-conference season. All push rates higher. Empty Tuesdays in November push them lower. A well-tuned engine adjusts every day.' },
-      { type: 'p', text: "We use a combination of platform-supplied data, our own occupancy data across 30+ Central London properties, and event calendars from the London tourism board. Most owners we onboard see [a meaningful uplift in revenue](/blog/short-let-vs-long-let-london) within the first three months. Not because we've changed the property, but because we're pricing it more intelligently." },
+      { type: 'p', text: "We use a combination of platform-supplied data, our own occupancy data across 30+ London properties, and event calendars from the London tourism board. Most owners we onboard see [a meaningful uplift in revenue](/blog/short-let-vs-long-let-london) within the first three months. Not because we've changed the property, but because we're pricing it more intelligently." },
 
       { type: 'h2', text: 'Why quality of management matters more than ever' },
       { type: 'p', text: "Airbnb's algorithm rewards properties that get consistent 5-star reviews. The best-reviewed listings appear higher in search, get more enquiries, and earn premium rates. That virtuous cycle compounds over time." },
@@ -568,11 +568,11 @@ export const BLOG_POSTS: BlogPost[] = [
 
       { type: 'h2', text: 'The Quality Officer standard. What makes us different' },
       { type: 'p', text: "Here's what we do that most operators don't. After every guest checks out, one of our dedicated Quality Officers inspects the property in person before the next arrival. Not a checklist sent to a cleaner. A trained member of our team, on-site, every single time." },
-      { type: 'p', text: "It catches the small things before they become guest complaints. A stained sheet, a broken kettle, a low towel count, a dusty skirting. It's the operational reason our Central London portfolio is rated 4.8 on Airbnb and averages 80% occupancy." },
+      { type: 'p', text: "It catches the small things before they become guest complaints. A stained sheet, a broken kettle, a low towel count, a dusty skirting. It's the operational reason our London portfolio is rated 4.8 on Airbnb and averages 80% occupancy." },
       { type: 'p', text: "We mention it because it's the single biggest thing landlords should ask any manager about. Not whether they 'have a quality process' but who specifically is on-site between guests, and how often." },
 
       { type: 'h2', text: 'What to expect financially' },
-      { type: 'p', text: 'Realistic expectations matter. Short-let in Central London typically delivers significantly more than a standard AST yield gross, before our 18% management fee.' },
+      { type: 'p', text: 'Realistic expectations matter. Short-let in London typically delivers significantly more than a standard AST yield gross, before our 18% management fee.' },
       { type: 'p', text: "The numbers vary considerably with property, area, finish and how well a listing is marketed. Rather than quote ranges that might not apply to your situation, we give every landlord a tailored figure based on their actual property." },
       { type: 'p', text: 'For a specific estimate, [request a free valuation](/contact). We come back with a guaranteed monthly figure and a projected short-let income within one business day.' },
 
@@ -627,10 +627,10 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     body: [
       { type: 'p', text: "Short-let is more profitable than long-let. That's the marketing line, and it isn't wrong. But it isn't the whole truth either." },
-      { type: 'p', text: "In our experience managing properties across Central London, the right answer depends on the property, the area, the landlord, and what you want from your investment. Here's the honest version of the comparison." },
+      { type: 'p', text: "In our experience managing properties across London, the right answer depends on the property, the area, the landlord, and what you want from your investment. Here's the honest version of the comparison." },
 
       { type: 'h2', text: 'The financial picture in 2026' },
-      { type: 'p', text: "Let's start with the headline numbers. Across our managed Central London portfolio, short-let net income consistently runs materially above the equivalent long-let figure. The exact multiple depends heavily on the area, the bedroom count and how actively the listing is operated." },
+      { type: 'p', text: "Let's start with the headline numbers. Across our managed London portfolio, short-let net income consistently runs materially above the equivalent long-let figure. The exact multiple depends heavily on the area, the bedroom count and how actively the listing is operated." },
       { type: 'p', text: 'Generic per-bedroom / per-postcode ranges rarely apply to a specific property. Nightly rates, off-peak fall-off and net monthly income vary heavily by street, finish, building type and how actively the listing is operated. [Request a free valuation](/contact) and we will come back within one business day with a tailored figure for your property.' },
 
       { type: 'h2', text: 'When long-let still wins' },
@@ -640,7 +640,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: 'If your mortgage explicitly prohibits short-letting (some BTLs do), the conversation ends before it begins. Always check your mortgage terms first; the alternative is [guaranteed rent](/guaranteed-rent), which most lenders are comfortable with.' },
 
       { type: 'h2', text: 'When short-let wins' },
-      { type: 'p', text: 'Short-let is the clear winner for properties in high-demand Central London postcodes. W1, W8, SW1, SW3, W11 and the prime parts of SW7 all consistently produce strong short-let multiples.' },
+      { type: 'p', text: 'Short-let is the clear winner for properties in high-demand London postcodes. W1, W8, SW1, SW3, W11 and the prime parts of SW7 all consistently produce strong short-let multiples.' },
       { type: 'p', text: 'If you can absorb monthly variance between peak and quieter months. Short-let delivers materially more income over a year. Most landlords adapt to the variance once they see the annual total.' },
       { type: 'p', text: 'Short-let also wins if you want to use the property yourself occasionally. You retain calendar control and can block dates instantly through the owner dashboard.' },
 
@@ -676,7 +676,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
       {
         type: 'cta',
-        headline: 'Speak to a Central London property specialist',
+        headline: 'Speak to a London property specialist',
         body:
           "We manage all three models (AST, short-let and guaranteed rent) and have no preference. A free 20-minute call gets you a recommendation specific to your property.",
         href: '/contact',
@@ -759,7 +759,7 @@ export const BLOG_POSTS: BlogPost[] = [
           'Q3-Q4: Cap nearly used; switch to 3-month mid-term lets to fill the rest of the year',
         ],
       },
-      { type: 'p', text: 'We operate this model across our Central London portfolio — mixing short stays with longer corporate lets to keep the calendar full inside the 90-day cap. The same approach works in any prime postcode with strong year-round demand, including [Kensington W8](/areas/high-street-kensington).' },
+      { type: 'p', text: 'We operate this model across our London portfolio — mixing short stays with longer corporate lets to keep the calendar full inside the 90-day cap. The same approach works in any prime postcode with strong year-round demand, including [Kensington W8](/areas/high-street-kensington).' },
 
       { type: 'h2', text: 'When planning permission is worth pursuing' },
       { type: 'p', text: 'Some properties. Typically in less residential areas like Soho or parts of Westminster. Can secure planning permission for short-let use beyond 90 days. The process is borough-specific, expensive, and far from guaranteed.' },
@@ -945,7 +945,7 @@ export const BLOG_POSTS: BlogPost[] = [
           'Higher mortgage rates have stalled new BTL purchases. Net new private rental supply in London has been negative for three consecutive years',
         ],
       },
-      { type: 'p', text: "The result: 12 to 15 prospective tenants per available property across most of Central London. Letting agents in Marylebone tell us they're back to running closed viewings to manage the volume." },
+      { type: 'p', text: "The result: 12 to 15 prospective tenants per available property across most of London. Letting agents in Marylebone tell us they're back to running closed viewings to manage the volume." },
 
       { type: 'h2', text: 'Regulatory pressure has changed behaviour' },
       { type: 'p', text: 'The [Renters Rights Act](/blog/renters-rights-act-2026-london-landlords) came into force on 1 May 2026. The headline change. Section 21 abolition. Has had a measurable behavioural effect on landlords.' },
@@ -994,7 +994,7 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'cta',
         headline: 'Make sure your property is set up for 2026',
         body:
-          "Free 20-minute call with a Central London property specialist. We'll review your situation, model your options and give you an honest market read.",
+          "Free 20-minute call with a London property specialist. We'll review your situation, model your options and give you an honest market read.",
         href: '/contact',
         label: 'Book my free consultation',
       },
@@ -1120,7 +1120,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     hiddenFromIndex: true,
     slug: 'property-management-central-london',
-    title: 'Property Management in Central London: What to Look For and What to Avoid',
+    title: 'Property Management in London: What to Look For and What to Avoid',
     excerpt:
       'Choosing the wrong property manager is one of the most expensive mistakes a London landlord can make. Red flags, green flags and questions to ask before you sign.',
     category: 'Landlord Guides',
@@ -1128,9 +1128,9 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '7 min read',
     author: TEAM,
     heroImage: 'https://images.unsplash.com/photo-1526654196244-3bdc251b0965?w=1600&q=80',
-    metaTitle: 'Property Management Central London. What to Look For and Avoid',
+    metaTitle: 'Property Management London. What to Look For and Avoid',
     metaDescription:
-      'How to choose a property manager in Central London: red flags, green flags, questions to ask, and what good management actually looks like.',
+      'How to choose a property manager in London: red flags, green flags, questions to ask, and what good management actually looks like.',
     keywords: [
       'property management central london',
       'london property manager',
@@ -1171,7 +1171,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: "Our [Quality Officer attends every changeover](/property-management). Every single one. The job isn't to clean. That's housekeeping. The job is to inspect: linen quality, towel count, consumables, fault checks, defect log. It's how five-star reviews are protected at scale." },
 
       { type: 'h3', text: '3. Strong base of existing managed properties in your area' },
-      { type: 'p', text: 'Managers with active stock across [Marylebone](/areas/marylebone), [Pimlico](/areas/pimlico) and the wider Central London market understand local demand patterns. Managers with a single property in your area are still learning.' },
+      { type: 'p', text: 'Managers with active stock across [Marylebone](/areas/marylebone), [Pimlico](/areas/pimlico) and the wider London market understand local demand patterns. Managers with a single property in your area are still learning.' },
 
       { type: 'h3', text: '4. Monthly reporting via owner dashboard' },
       { type: 'p', text: 'Real-time visibility into bookings, revenue, occupancy and payouts. Mobile-accessible. Not a spreadsheet on demand.' },
@@ -1264,7 +1264,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
       { type: 'h2', text: 'How short-let income is taxed' },
       { type: 'p', text: 'Income from short-letting a property is treated as rental income. Property Income on the SA105 Self Assessment supplementary page. It is taxed at your marginal rate: 20%, 40% or 45%.' },
-      { type: 'p', text: 'Allowable expenses are deducted from gross income to arrive at taxable profit. The main deductions for a Central London short-let:' },
+      { type: 'p', text: 'Allowable expenses are deducted from gross income to arrive at taxable profit. The main deductions for a London short-let:' },
       {
         type: 'ul',
         items: [
@@ -1282,7 +1282,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'h2', text: 'The 2025 FHL abolition, and what it means now' },
       { type: 'p', text: 'Until 5 April 2025, properties meeting Furnished Holiday Let (FHL) criteria enjoyed three meaningful advantages: full mortgage interest deductibility, capital allowances on furniture, and Business Asset Disposal Relief on sale.' },
       { type: 'p', text: 'As of 6 April 2025, the FHL regime no longer exists. Short-let properties are now taxed like any other rental. Meaning the residential mortgage interest restriction applies, and FHL-specific reliefs are gone.' },
-      { type: 'p', text: 'Practically: if you bought a Central London short-let on a high-leverage residential mortgage and were relying on full interest deductibility, your effective tax rate is materially worse than it was in 2024. Many of our clients have moved financing into corporate structures (limited company ownership) since the announcement.' },
+      { type: 'p', text: 'Practically: if you bought a London short-let on a high-leverage residential mortgage and were relying on full interest deductibility, your effective tax rate is materially worse than it was in 2024. Many of our clients have moved financing into corporate structures (limited company ownership) since the announcement.' },
 
       { type: 'h2', text: 'The £90,000 VAT threshold. London-specific risk' },
       { type: 'p', text: "Short-let income is not exempt from VAT. It's a taxable supply. Once gross short-let income exceeds £90,000 in any rolling 12-month period, the landlord (or their limited company) must register for VAT and charge 20% on every booking." },
@@ -1386,7 +1386,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { type: 'p', text: "Marylebone High Street has become one of the prettiest, most curated retail streets in London. Daunt Books, the Sunday farmers' market, La Fromagerie, Conran Shop. It's a destination in its own right. Tourist demand peaks in spring, summer and the Christmas markets." },
 
       { type: 'h2', text: 'The guest profile' },
-      { type: 'p', text: "Marylebone's guest mix is heavily skewed toward longer, premium stays — meaningfully longer than the typical Central London short-let booking." },
+      { type: 'p', text: "Marylebone's guest mix is heavily skewed toward longer, premium stays — meaningfully longer than the typical London short-let booking." },
       {
         type: 'ul',
         items: [
@@ -1576,7 +1576,7 @@ export const BLOG_POSTS: BlogPost[] = [
           'Concierge-level guest experience. Restaurant bookings, local recommendations, late check-outs accommodated',
         ],
       },
-      { type: 'p', text: 'These are the standards we operate to across our Central London portfolio, including the Kensington units we manage. Guests rebook and refer, which is the operational reason occupancy stays strong year-round.' },
+      { type: 'p', text: 'These are the standards we operate to across our London portfolio, including the Kensington units we manage. Guests rebook and refer, which is the operational reason occupancy stays strong year-round.' },
 
       CLOSING_PARA,
 
@@ -1608,7 +1608,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: 'Hanad',
     authorRole: 'Listings and Revenue Manager',
     byline:
-      'By Hanad, Listings and Revenue Manager at Taj Cribs. We run 25 short and medium term let units across Central London, including [Mayfair](/areas/mayfair), [Marylebone](/areas/marylebone), [Westminster](/areas/westminster) and [Canary Wharf](/areas/canary-wharf). Last updated 21 September 2026.',
+      'By Hanad, Listings and Revenue Manager at Taj Cribs. We run 25 short and medium term let units across London, including [Mayfair](/areas/mayfair), [Marylebone](/areas/marylebone), [Westminster](/areas/westminster) and [Canary Wharf](/areas/canary-wharf). Last updated 21 September 2026.',
     heroImage: '/blog/airbnb-fees-uk-2026.png',
     heroImageAlt:
       'Airbnb fees UK 2026 comparison of split fee and single fee payouts on a £1,000 booking',

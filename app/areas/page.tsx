@@ -6,7 +6,7 @@ import { FinalCTA } from '@/components/sections/FinalCTA'
 import { CoverageMap } from '@/components/sections/CoverageMap'
 
 export const metadata: Metadata = {
-  title: 'Areas We Cover Across Central London',
+  title: 'Areas We Cover Across London',
   description:
     'Short-let management and guaranteed rent across Marylebone, Mayfair, Kensington, Pimlico, Chelsea, Westminster, Notting Hill and Canary Wharf.',
   alternates: { canonical: '/areas' },
@@ -21,10 +21,10 @@ export default function AreasIndexPage() {
           <SectionLabel className="!justify-start">Coverage</SectionLabel>
           <h1 className="mt-6 text-hero font-extrabold tracking-tightest leading-[0.95]">
             Guaranteed Rent & Short-Let <br />
-            <span className="text-gold-500">Across Central London.</span>
+            <span className="text-gold-500">Across London.</span>
           </h1>
           <p className="mt-8 text-fluid-lg text-white/75 leading-relaxed">
-            Short-let, medium-term and guaranteed rent across central London. Tap any
+            Short-let, medium-term and guaranteed rent across London. Tap any
             area below to fly the map and see what we operate there.
           </p>
         </div>
@@ -105,7 +105,7 @@ export default function AreasIndexPage() {
                 <p className="mt-3 text-sm text-navy-900/70 leading-relaxed">
                   Extended leisure stays for international families. Parents
                   visiting for medical treatment at Harley Street, Great Ormond
-                  Street and other central London hospitals, often staying weeks
+                  Street and other London hospitals, often staying weeks
                   to months. Parents visiting students during term transitions.
                   They want a safe, properly cleaned, well-located home for a
                   stay that&apos;s too long for a hotel.

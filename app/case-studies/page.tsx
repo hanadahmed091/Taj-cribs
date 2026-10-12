@@ -10,7 +10,7 @@ import { CASE_STUDIES } from '@/lib/data/case-studies'
 export const metadata: Metadata = {
   title: 'Case Studies',
   description:
-    'Real, anonymised stories from the Central London properties we manage. How landlords turned to Taj Cribs for reliable income and hands-off management.',
+    'Real, anonymised stories from the London properties we manage. How landlords turned to Taj Cribs for reliable income and hands-off management.',
   alternates: { canonical: '/case-studies' },
 }
 

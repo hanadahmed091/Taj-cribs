@@ -8,7 +8,7 @@ import { ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react'
 import { cn, getStoredUtm, pushDataLayer } from '@/lib/utils'
 
 // The dropdown value that reveals the free-text postcode input.
-const OTHER_CENTRAL_LONDON = 'Other Zone 1 or 2 area'
+const OTHER_CENTRAL_LONDON = 'Other London area'
 
 // The property-type value that reveals the portfolio details textarea.
 const PORTFOLIO_MULTIPLE = 'Portfolio (multiple)'
@@ -36,7 +36,7 @@ const schema = z
     hearAbout: z.string().optional(),
   })
   .superRefine((data, ctx) => {
-    // When "Other Central London" is chosen, the free-text postcode
+    // When "Other London area" is chosen, the free-text postcode
     // becomes required and must roughly look like a UK postcode.
     if (data.postcode === OTHER_CENTRAL_LONDON) {
       const value = data.customPostcode?.trim() ?? ''

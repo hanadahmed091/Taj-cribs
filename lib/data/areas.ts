@@ -72,7 +72,7 @@ export const AREA_META: Record<string, AreaMeta> = {
       propertyCharacter: {
         heading: 'Marylebone housing stock.',
         body: [
-          "Marylebone's stock is unusually consistent for Zone 1. The dominant typology is the late-Victorian and Edwardian mansion block — red brick or Portland stone, porter at the door, 1- to 3-bedroom flats with original cornicing and reception rooms facing inward to garden squares. Bryanston Square, Montagu Square, Dorset Square and the streets off Hyde Park sit on this template.",
+          "Marylebone's stock is unusually consistent for this part of London. The dominant typology is the late-Victorian and Edwardian mansion block — red brick or Portland stone, porter at the door, 1- to 3-bedroom flats with original cornicing and reception rooms facing inward to garden squares. Bryanston Square, Montagu Square, Dorset Square and the streets off Hyde Park sit on this template.",
           'Between the blocks you get Georgian and early-Victorian terraces, most converted to flats decades ago, many with rear mews access. The newer-build stock is concentrated around Chiltern Street and Marylebone Lane — typically boutique conversions above retail, smaller floorplates, designed for short stays.',
           'Listed-building consent and conservation-area constraints are an everyday consideration north of Wigmore Street; we factor that in at onboarding.',
         ],
@@ -133,11 +133,11 @@ export const AREA_META: Record<string, AreaMeta> = {
     postcode: 'W8',
     tagline: 'Short-let specialists',
     intro:
-      'High Street Kensington W8 is one of the most consistent short-let postcodes in Central London. Demand is anchored by Kensington Palace and the Kensington Gardens approach, the High Street retail corridor, and the South Kensington museum quarter — the V&A, Natural History Museum and Science Museum — a short walk south.',
+      'High Street Kensington W8 is one of the most consistent short-let postcodes in London. Demand is anchored by Kensington Palace and the Kensington Gardens approach, the High Street retail corridor, and the South Kensington museum quarter — the V&A, Natural History Museum and Science Museum — a short walk south.',
     demand: 'Strong year-round tourist and corporate demand.',
     content: {
       overview: [
-        'High Street Kensington W8 is one of the most consistent short-let postcodes in Central London. Demand is anchored by Kensington Palace and the Kensington Gardens approach, the High Street retail corridor, and the South Kensington museum quarter — the V&A, Natural History Museum and Science Museum — a short walk south.',
+        'High Street Kensington W8 is one of the most consistent short-let postcodes in London. Demand is anchored by Kensington Palace and the Kensington Gardens approach, the High Street retail corridor, and the South Kensington museum quarter — the V&A, Natural History Museum and Science Museum — a short walk south.',
         'The borough is Royal Borough of Kensington and Chelsea (RBKC), which gives the area a different regulatory texture from neighbouring Westminster. Most of W8 sits inside the Kensington Conservation Area and the Holland Park Conservation Area, with a high concentration of grade-listed terraces. That shapes everything from window replacements to short-let suitability.',
         'We currently operate a Kensington portfolio under short-let management — request a free valuation for your W8 property.',
       ],
@@ -191,7 +191,7 @@ export const AREA_META: Record<string, AreaMeta> = {
       servicedAccommodation: {
         heading: 'Serviced accommodation in Kensington.',
         body: [
-          'Kensington is one of the strongest serviced-accommodation markets in Central London — the combination of museum-quarter family stays, Imperial / Royal Brompton visiting academics, and a steady international tourist baseline supports the longer-stay product reliably.',
+          'Kensington is one of the strongest serviced-accommodation markets in London — the combination of museum-quarter family stays, Imperial / Royal Brompton visiting academics, and a steady international tourist baseline supports the longer-stay product reliably.',
           'For landlords with a W8 1- or 2-bed flat suited to this market, we would operate it under our serviced-accommodation programme — request a free valuation. [OPTIONAL: typical monthly net for a serviced 1-bed in Kensington — fill in once verified]',
         ],
       },
@@ -265,7 +265,7 @@ export const AREA_META: Record<string, AreaMeta> = {
     postcode: 'W1',
     tagline: 'Ultra-premium short-let',
     intro:
-      'Mayfair commands the top of the Central London nightly market. Demand is led by high-net-worth leisure, family offices, embassy-related travel and executives staying near the Bond Street and Berkeley Square professional services cluster. White-glove housekeeping, concierge handovers and discretion-led guest vetting are standard.',
+      'Mayfair commands the top of the London nightly market. Demand is led by high-net-worth leisure, family offices, embassy-related travel and executives staying near the Bond Street and Berkeley Square professional services cluster. White-glove housekeeping, concierge handovers and discretion-led guest vetting are standard.',
     demand: 'Ultra-premium leisure and executive demand year-round.',
     relatedReading:
       'Thinking of letting on Airbnb in Mayfair? See [how much Airbnb takes from UK hosts](/blog/airbnb-fees-uk).',
@@ -357,7 +357,7 @@ export const AREA_META: Record<string, AreaMeta> = {
     postcode: 'W11',
     tagline: 'Boutique short-let',
     intro:
-      'Notting Hill W11 is one of London’s most photographed neighbourhoods, and that translates directly to short-let demand. The Westbourne Grove, Portobello and Holland Park corridor pulls steady leisure bookings — shorter average stays than other Central London postcodes, with strong long-weekend pricing in the spring and summer.',
+      'Notting Hill W11 is one of London’s most photographed neighbourhoods, and that translates directly to short-let demand. The Westbourne Grove, Portobello and Holland Park corridor pulls steady leisure bookings — shorter average stays than other London postcodes, with strong long-weekend pricing in the spring and summer.',
     demand: 'Leisure-led demand with strong long-weekend bookings.',
   },
   'canary-wharf': {
@@ -449,11 +449,11 @@ export const AREA_META: Record<string, AreaMeta> = {
     postcode: 'SW8',
     tagline: 'Short-let & guaranteed rent coverage',
     intro:
-      'Nine Elms is one of the largest regeneration zones in Central London — a post-2010 redevelopment of former industrial land between Battersea and Vauxhall. The area straddles Lambeth Borough Council (most of it) and Wandsworth Borough Council (the Battersea Power Station western edge). The US Embassy, Battersea Power Station, and the New Covent Garden Market all sit inside the postcode, with the new Linear Park running the spine.',
+      'Nine Elms is one of the largest regeneration zones in London — a post-2010 redevelopment of former industrial land between Battersea and Vauxhall. The area straddles Lambeth Borough Council (most of it) and Wandsworth Borough Council (the Battersea Power Station western edge). The US Embassy, Battersea Power Station, and the New Covent Garden Market all sit inside the postcode, with the new Linear Park running the spine.',
     demand: 'Growing corporate short-let demand as the area matures.',
     content: {
       overview: [
-        'Nine Elms is one of the largest regeneration zones in Central London — a post-2010 redevelopment of former industrial land between Battersea and Vauxhall. The area straddles Lambeth Borough Council (most of it) and Wandsworth Borough Council (the Battersea Power Station western edge). The US Embassy, Battersea Power Station, and the New Covent Garden Market all sit inside the postcode, with the new Linear Park running the spine.',
+        'Nine Elms is one of the largest regeneration zones in London — a post-2010 redevelopment of former industrial land between Battersea and Vauxhall. The area straddles Lambeth Borough Council (most of it) and Wandsworth Borough Council (the Battersea Power Station western edge). The US Embassy, Battersea Power Station, and the New Covent Garden Market all sit inside the postcode, with the new Linear Park running the spine.',
         'The housing stock is almost entirely modern — purpose-built apartment towers and mid-rise mixed-use blocks delivered between 2014 and the present. Demand is led by corporate relocations into the redevelopment’s commercial space, embassy-related visitors, and a growing leisure segment as Battersea Power Station establishes itself as a destination.',
         'We cover Nine Elms under both short-let management and guaranteed rent — request a free valuation for your SW8 unit.',
       ],
@@ -633,7 +633,7 @@ export function getAllAreaSlugs(): string[] {
  * Pulls from the tagline string to detect which products we offer in an
  * area. Falls back to "Guaranteed Rent & Short-Let Management" when the
  * tagline doesn't mention either product explicitly, since Taj Cribs
- * operates both products across Central London by default.
+ * operates both products across London by default.
  */
 export function getAreaProductLabel(area: Pick<AreaMeta, 'tagline'>): string {
   const tag = area.tagline.toLowerCase()

@@ -15,7 +15,7 @@ export function BlogPreview() {
           <FadeIn className="lg:col-span-7">
             <SectionLabel onLight>Insights</SectionLabel>
             <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
-              Field notes from <span className="text-gold-600">Central London.</span>
+              Field notes from <span className="text-gold-600">London.</span>
             </h2>
           </FadeIn>
           <FadeIn className="lg:col-span-5" delay={0.1}>

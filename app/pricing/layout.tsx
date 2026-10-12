@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Pricing | Short-Let Management London',
   description:
-    'Clear, transparent pricing for short-let management and guaranteed rent in Central London. No hidden fees. No setup costs. We only earn when you earn.',
+    'Clear, transparent pricing for short-let management and guaranteed rent in London. No hidden fees. No setup costs. We only earn when you earn.',
   alternates: { canonical: '/pricing' },
 }
 

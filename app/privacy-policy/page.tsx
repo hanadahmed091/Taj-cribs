@@ -37,7 +37,7 @@ export default function PrivacyPolicyPage() {
             </h2>
             <p>
               We are Taj Cribs, a property management company operating across
-              central London. This policy explains how we collect, use and
+              London. This policy explains how we collect, use and
               protect personal information when you visit our website at
               https://www.tajcribs.co.uk or get in touch with us.
             </p>

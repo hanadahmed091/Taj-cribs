@@ -8,7 +8,7 @@ import { BlogFilter } from '@/components/blog/BlogFilter'
 export const metadata: Metadata = {
   title: 'Landlord Insights & London Market Guides',
   description:
-    'Field notes, market analysis and regulatory guides for Central London landlords. Written by the team that manages the properties.',
+    'Field notes, market analysis and regulatory guides for London landlords. Written by the team that manages the properties.',
   alternates: { canonical: '/blog' },
 }
 
