@@ -24,7 +24,7 @@ type FormValues = z.infer<typeof schema>
 const BEDROOM_OPTIONS = ['1 Bed', '2 Bed', '3 Bed', '4 Bed+']
 const SERVICE_OPTIONS = [
   { value: 'guaranteed-rent', label: 'Guaranteed Rent' },
-  { value: 'short-let-management', label: 'Short-Let Management' },
+  { value: 'short-let-management', label: 'Airbnb Management' },
   { value: 'not-sure', label: 'Not Sure Yet' },
 ]
 const HEAR_OPTIONS = ['Google', 'Google Ads', 'Referral', 'Social Media', 'Other']
@@ -106,7 +106,7 @@ export function LandingForm({
           {title}
         </h3>
         <p className="mt-1 text-sm text-navy-900/60">
-          We aim to respond as soon as possible.
+          We&apos;ll get back to you within 24 hours.
         </p>
       </div>
 

@@ -8,7 +8,7 @@ import { ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react'
 import { cn, getStoredUtm, pushDataLayer } from '@/lib/utils'
 
 // The dropdown value that reveals the free-text postcode input.
-const OTHER_CENTRAL_LONDON = 'Other Central London'
+const OTHER_CENTRAL_LONDON = 'Other Zone 1 or 2 area'
 
 // The property-type value that reveals the portfolio details textarea.
 const PORTFOLIO_MULTIPLE = 'Portfolio (multiple)'
@@ -31,7 +31,7 @@ const schema = z
       .string()
       .max(1000, 'Please keep this under 1000 characters')
       .optional(),
-    service: z.string().optional(),
+    service: z.string().min(1, 'Please choose a service'),
     message: z.string().optional(),
     hearAbout: z.string().optional(),
   })
@@ -74,13 +74,27 @@ type FormValues = z.infer<typeof schema>
 
 const POSTCODE_OPTIONS = [
   'W1 (Marylebone / Mayfair)',
-  'W8 (Kensington)',
-  'SW1 (Pimlico / Westminster)',
+  'SW1 (Westminster / Pimlico)',
   'SW3 (Chelsea)',
+  "SW5 (Earl's Court)",
+  'W8 (Kensington)',
   'W11 (Notting Hill)',
+  'SE1 (Waterloo)',
+  'SW8 (Nine Elms / Vauxhall)',
+  'EC2 (Liverpool Street)',
+  "N1 / WC1 (King's Cross)",
   'E14 (Canary Wharf)',
   OTHER_CENTRAL_LONDON,
 ]
+
+const SERVICE_OPTIONS = [
+  { value: 'guaranteed-rent', label: 'Guaranteed Rent', hint: 'A fixed rent every month, no voids' },
+  { value: 'short-let-management', label: 'Airbnb Management', hint: 'We run it on Airbnb, you earn more' },
+  { value: 'not-sure', label: 'Not sure yet', hint: "We'll tell you which pays more" },
+] as const
+
+const RESPONSE_PROMISE = "We'll get back to you within 24 hours."
+
 
 const PROPERTY_TYPES = ['1 Bedroom', '2 Bedroom', '3 Bedroom', '4+ Bedroom', 'Full Block', 'Portfolio (multiple)']
 
@@ -112,6 +126,13 @@ export function LeadForm({
 
   const showCustomPostcode = watch('postcode') === OTHER_CENTRAL_LONDON
   const showPortfolio = watch('propertyType') === PORTFOLIO_MULTIPLE
+  const selectedService = watch('service')
+  const submitLabel =
+    selectedService === 'guaranteed-rent'
+      ? 'Get my guaranteed rent figure'
+      : selectedService === 'short-let-management'
+        ? 'Get my free income estimate'
+        : 'Get my free valuation'
 
   async function onSubmit(values: FormValues) {
     setStatus('submitting')
@@ -153,7 +174,7 @@ export function LeadForm({
         <CheckCircle2 className="mx-auto text-gold-600" size={42} />
         <h3 className="mt-5 font-bold text-fluid-2xl tracking-tight">Thank you.</h3>
         <p className="mt-3 text-navy-900/70 text-fluid-lg leading-relaxed">
-          We&apos;ve received your enquiry. We aim to respond as soon as possible.
+          We&apos;ve received your enquiry. {RESPONSE_PROMISE}
         </p>
       </div>
     )
@@ -165,8 +186,37 @@ export function LeadForm({
       className={cn('bg-white rounded-md p-6 lg:p-8 border border-light-line space-y-5', className)}
       noValidate
     >
+      <fieldset>
+        <legend className="block text-[10px] uppercase tracking-widest font-semibold text-navy-900/60 mb-2">
+          What are you looking for? <span className="text-gold-600">*</span>
+        </legend>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {SERVICE_OPTIONS.map((opt) => {
+            const active = selectedService === opt.value
+            return (
+              <label
+                key={opt.value}
+                className={cn(
+                  'flex cursor-pointer flex-col gap-1 rounded-sm border px-4 py-3 transition-colors focus-within:ring-1 focus-within:ring-navy-900',
+                  active
+                    ? 'border-navy-900 bg-navy-950 text-white'
+                    : 'border-light-line bg-white text-navy-900 hover:border-navy-900/50',
+                )}
+              >
+                <input type="radio" value={opt.value} {...register('service')} className="sr-only" />
+                <span className="text-sm font-bold">{opt.label}</span>
+                <span className={cn('text-xs', active ? 'text-white/70' : 'text-navy-900/55')}>{opt.hint}</span>
+              </label>
+            )
+          })}
+        </div>
+        {errors.service?.message && (
+          <span className="mt-1 block text-xs text-red-600">{errors.service.message}</span>
+        )}
+      </fieldset>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <Field label="Your name" error={errors.name?.message}>
+        <Field label="Your name" required error={errors.name?.message}>
           <input
             type="text"
             autoComplete="name"
@@ -175,7 +225,7 @@ export function LeadForm({
             placeholder="Full name"
           />
         </Field>
-        <Field label="Phone" error={errors.phone?.message}>
+        <Field label="Phone" required error={errors.phone?.message}>
           <input
             type="tel"
             autoComplete="tel"
@@ -186,7 +236,7 @@ export function LeadForm({
         </Field>
       </div>
 
-      <Field label="Email" error={errors.email?.message}>
+      <Field label="Email" required error={errors.email?.message}>
         <input
           type="email"
           autoComplete="email"
@@ -208,7 +258,7 @@ export function LeadForm({
             />
           </Field>
         )}
-        <Field label="Postcode area" error={errors.postcode?.message}>
+        <Field label="Postcode area" required error={errors.postcode?.message}>
           <select
             {...register('postcode', {
               onChange: (e) => {
@@ -231,7 +281,7 @@ export function LeadForm({
       </div>
 
       {showCustomPostcode && (
-        <Field label="Your postcode" error={errors.customPostcode?.message}>
+        <Field label="Your postcode" required error={errors.customPostcode?.message}>
           <input
             type="text"
             autoComplete="postal-code"
@@ -242,8 +292,7 @@ export function LeadForm({
         </Field>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <Field label="Property type">
+      <Field label="Property type">
           <select
             {...register('propertyType', {
               onChange: (e) => {
@@ -263,18 +312,9 @@ export function LeadForm({
             ))}
           </select>
         </Field>
-        <Field label="Service interested in">
-          <select {...register('service')} className={inputCls} defaultValue={defaultService ?? ''}>
-            <option value="" disabled>Select service</option>
-            <option value="guaranteed-rent">Guaranteed Rent</option>
-            <option value="short-let-management">Short-Let Management</option>
-            <option value="not-sure">Not sure, advise me</option>
-          </select>
-        </Field>
-      </div>
 
       {showPortfolio && (
-        <Field label="Tell us about your properties" error={errors.portfolioDetails?.message}>
+        <Field label="Tell us about your properties" required error={errors.portfolioDetails?.message}>
           <textarea
             {...register('portfolioDetails')}
             rows={4}
@@ -311,7 +351,7 @@ export function LeadForm({
         disabled={status === 'submitting'}
         className="btn-gold w-full justify-center disabled:opacity-60"
       >
-        {status === 'submitting' ? 'Sending…' : 'Get my free valuation'}
+        {status === 'submitting' ? 'Sending…' : submitLabel}
         <ArrowRight size={18} />
       </button>
 
@@ -323,7 +363,7 @@ export function LeadForm({
       )}
 
       <p className="text-xs text-navy-900/55">
-        We aim to respond as soon as possible. No spam. Your details are private.
+        {RESPONSE_PROMISE} No spam. Your details are private.
       </p>
     </form>
   )
@@ -335,16 +375,19 @@ const inputCls =
 function Field({
   label,
   error,
+  required,
   children,
 }: {
   label: string
   error?: string
+  required?: boolean
   children: React.ReactNode
 }) {
   return (
     <label className="block">
       <span className="block text-[10px] uppercase tracking-widest font-semibold text-navy-900/60 mb-2">
         {label}
+        {required && <span className="text-gold-600"> *</span>}
       </span>
       {children}
       {error && <span className="mt-1 block text-xs text-red-600">{error}</span>}
