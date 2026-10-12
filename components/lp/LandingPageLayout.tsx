@@ -21,12 +21,14 @@ export type LandingPageProps = {
   // Defaults to a slug derived from areaLabel.
   formSource?: string
   defaultService?: 'guaranteed-rent' | 'short-let-management'
+  /** Extra sections shown between the hero and the phone block. */
+  children?: React.ReactNode
 }
 
 const TRUST_BADGES = [
   { icon: Building2,   label: `${SITE.managedPortfolioCount}+ Properties Managed` },
   { icon: ShieldCheck, label: 'Quality Officer Every Checkout' },
-  { icon: Clock,       label: '7-day onboarding' },
+  { icon: Clock,       label: 'Free estimate in 24 hours' },
   { icon: Star,        label: SITE.airbnbRatingDisplay },
 ]
 
@@ -41,6 +43,7 @@ export function LandingPageLayout({
   testimonialProperty,
   formSource,
   defaultService,
+  children,
 }: LandingPageProps) {
   const source = formSource ?? `lp_${areaLabel.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '')}`
   const telHref = `tel:${SITE.phone.replace(/\s/g, '')}`
@@ -48,7 +51,7 @@ export function LandingPageLayout({
   return (
     <>
       {/* HERO + FORM SPLIT */}
-      <section className="relative hero-bg text-white pt-[110px] pb-10 lg:pt-[140px] lg:pb-14 overflow-hidden">
+      <section id="top" className="relative hero-bg text-white pt-[110px] pb-10 lg:pt-[140px] lg:pb-14 overflow-hidden">
         <div className="absolute inset-0 hero-grid opacity-60 pointer-events-none" />
         <div className="container-edge relative grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* LEFT — HEADLINE */}
@@ -91,6 +94,8 @@ export function LandingPageLayout({
           </div>
         </div>
       </section>
+
+      {children}
 
       {/* PHONE CTA */}
       <section className="bg-cream py-14 lg:py-20">

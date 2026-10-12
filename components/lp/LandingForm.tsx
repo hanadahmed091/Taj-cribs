@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { ArrowRight, AlertCircle } from 'lucide-react'
-import { cn, getStoredUtm, pushDataLayer } from '@/lib/utils'
+import { cn, getStoredUtm, pushDataLayer, trackMetaLead } from '@/lib/utils'
 
 const schema = z.object({
   name: z.string().min(2, 'Please enter your full name'),
@@ -85,6 +85,8 @@ export function LandingForm({
         service: values.service,
         ...utmParams,
       })
+
+      trackMetaLead({ content_name: source })
 
       router.push('/thank-you')
     } catch {

@@ -64,13 +64,28 @@ export async function POST(req: Request) {
         `Type: ${field(payload.propertyType)}`,
         `Service: ${field(payload.service)}`,
         `Message: ${field(payload.message)}`,
+        '',
+        'Where this lead came from',
+        `Page: ${field(payload.source)}`,
+        `Source: ${field(payload.utm?.utm_source)}`,
+        `Campaign: ${field(payload.utm?.utm_campaign)}`,
+        `Ad: ${field(payload.utm?.utm_content)}`,
+        `Medium: ${field(payload.utm?.utm_medium)}`,
+        `First landed: ${field(payload.utm?.landed_at)}`,
       ].join('\n')
+
+      // e.g. "[facebook ad2] " so the inbox shows which ad won the lead.
+      const origin = [payload.utm?.utm_source, payload.utm?.utm_content]
+        .map((v) => v?.trim())
+        .filter(Boolean)
+        .join(' ')
+      const originTag = origin ? `[${origin}] ` : ''
 
       await resend.emails.send({
         from: 'Taj Cribs Leads <Nimra@tajcribs.co.uk>',
         to,
         ...(hasValidReplyTo ? { reply_to: replyTo } : {}),
-        subject: `New lead: ${payload.name}, ${postcodeArea || 'area n/a'}, ${
+        subject: `${originTag}New lead: ${payload.name}, ${postcodeArea || 'area n/a'}, ${
           payload.service?.trim() || 'service unspecified'
         }`,
         text,
