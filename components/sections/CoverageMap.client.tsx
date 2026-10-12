@@ -82,7 +82,7 @@ export function CoverageMapClient() {
         new mapboxgl.Marker({ element: el }).setLngLat(area.centre).addTo(map)
         bounds.extend(area.centre)
       }
-      map.fitBounds(bounds, { padding: 60, duration: 0, maxZoom: 13 })
+      map.fitBounds(bounds, { padding: 70, duration: 0, maxZoom: 12 })
 
       setReady(true)
     })
@@ -130,7 +130,7 @@ export function CoverageMapClient() {
       </div>
 
       <p className="mt-8 text-[10px] uppercase tracking-widest font-semibold text-navy-900/45">
-        Popular areas we operate in include
+        Areas we cover include
       </p>
 
       <ul className="mt-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-3 text-sm">
