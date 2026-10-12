@@ -47,7 +47,7 @@ export const HOMEPAGE_FAQS: FAQ[] = [
   },
   {
     q: 'What areas do you cover?',
-    a: 'We focus on London, including Marylebone, Mayfair, Kensington, Chelsea, Pimlico, Westminster, Notting Hill and Canary Wharf. Concentrating on these postcodes is how we keep occupancy and standards high. We do consider strong properties just outside these areas, so it is always worth asking.',
+    a: 'We cover London. Our busiest areas include Marylebone, Mayfair, Kensington, Chelsea, Pimlico, Westminster, Notting Hill and Canary Wharf, but wherever your property is in London, ask for a free valuation and we will tell you what it could earn.',
     cta: { label: 'See the areas we cover', href: '/areas' },
   },
 ]
