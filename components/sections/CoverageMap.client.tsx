@@ -82,7 +82,7 @@ export function CoverageMapClient() {
         new mapboxgl.Marker({ element: el }).setLngLat(area.centre).addTo(map)
         bounds.extend(area.centre)
       }
-      map.fitBounds(bounds, { padding: 70, duration: 0, maxZoom: 12 })
+      map.fitBounds(bounds, { padding: 80, duration: 0, maxZoom: 10.5 })
 
       setReady(true)
     })
