@@ -22,7 +22,7 @@ export function Portfolio() {
           <FadeIn className="lg:col-span-7">
             <SectionLabel>Our Portfolio</SectionLabel>
             <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
-              Properties we manage across <span className="text-gold-500">Central London.</span>
+              Properties we manage across <span className="text-gold-500">London.</span>
             </h2>
           </FadeIn>
           <FadeIn className="lg:col-span-5" delay={0.1}>

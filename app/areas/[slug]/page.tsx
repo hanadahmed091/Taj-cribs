@@ -78,7 +78,7 @@ function buildAreaFaqs(
   return [
     {
       q: `Do you cover ${areaName} ${postcode}?`,
-      a: `Yes. ${areaName} is one of the Central London postcodes we cover under both short-let management and guaranteed rent. Request a free valuation for your ${areaName} property and we will come back within one business day.`,
+      a: `Yes. ${areaName} is one of the London postcodes we cover under both short-let management and guaranteed rent. Request a free valuation for your ${areaName} property and we will come back within one business day.`,
     },
     {
       q: `What is the typical short-let income for a ${areaName} property?`,

@@ -16,7 +16,7 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 export const metadata: Metadata = {
   title: 'Guaranteed Rent London | Fixed Monthly, No Voids',
   description:
-    'Guaranteed rent for Central London landlords. Fixed monthly income for 1–5 years. No voids, no agency fees, no hassle. Free valuation in 24 hours.',
+    'Guaranteed rent for London landlords. Fixed monthly income for 1–5 years. No voids, no agency fees, no hassle. Free valuation in 24 hours.',
   alternates: { canonical: '/guaranteed-rent' },
 }
 

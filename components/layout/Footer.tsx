@@ -16,8 +16,8 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo tone="light" className="w-fit" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/65">
-              Central London short-let management and guaranteed rent specialists.
-              We manage blocks and portfolios across Central London, and pay
+              London short-let management and guaranteed rent specialists.
+              We manage blocks and portfolios across London, and pay
               landlords on time, every time.
             </p>
             <div className="mt-7 flex items-center gap-4">

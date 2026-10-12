@@ -16,7 +16,7 @@ type Stat = {
 const STATS: Stat[] = [
   { num: `${SITE.managedPortfolioCount}`, label: 'Properties under management' },
   { num: '£700k', label: 'Rent paid to landlords' },
-  { num: 'Zone 1', label: 'Central London coverage', sublabel: 'Marylebone to Canary Wharf' },
+  { num: 'London', label: 'Coverage', sublabel: 'Marylebone to Canary Wharf' },
   { num: '7 days', label: 'From sign-off to first booking' },
 ]
 

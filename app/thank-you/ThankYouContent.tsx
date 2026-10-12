@@ -93,7 +93,7 @@ export function ThankYouContent() {
             transition={{ duration: 0.6, delay: reduce ? 0 : 0.95 }}
             className="mt-7 text-fluid-lg text-white/75 leading-relaxed max-w-xl mx-auto"
           >
-            One of our Central London property specialists will call you shortly
+            One of our London property specialists will call you shortly
             to discuss your property and give you a free valuation.
           </motion.p>
 
@@ -138,7 +138,7 @@ export function ThankYouContent() {
       </main>
 
       <footer className="bg-navy-950 text-white/55 py-8 text-center text-xs px-4">
-        {SITE.shortName} · Central London Property Specialists · {SITE.email}
+        {SITE.shortName} · London Property Specialists · {SITE.email}
       </footer>
     </div>
   )

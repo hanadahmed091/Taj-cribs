@@ -97,7 +97,7 @@ export function LandingPageLayout({
         <div className="container-edge text-center max-w-2xl">
           <span className="eyebrow !text-gold-700">Prefer to talk?</span>
           <p className="mt-3 text-navy-900/70 text-fluid-lg">
-            Call our Central London team directly. Average answer in under 30 seconds.
+            Call our London team directly. Average answer in under 30 seconds.
           </p>
           <a
             href={telHref}

@@ -24,7 +24,7 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 export const metadata: Metadata = {
   title: 'Serviced Accommodation Management London',
   description:
-    'Serviced-accommodation management for Central London landlords. Multi-platform listings, in-house housekeeping, monthly net payout. Free valuation.',
+    'Serviced-accommodation management for London landlords. Multi-platform listings, in-house housekeeping, monthly net payout. Free valuation.',
   alternates: { canonical: '/serviced-accommodation' },
 }
 
@@ -33,7 +33,7 @@ const LANDLORD_CASE = [
     icon: TrendingUp,
     title: 'Higher yield than long-let',
     body:
-      'Multi-week stays priced as a serviced product earn meaningfully more per month than an equivalent AST, particularly in prime Central London postcodes. We model your specific property and come back with a tailored figure within one business day.',
+      'Multi-week stays priced as a serviced product earn meaningfully more per month than an equivalent AST, particularly in prime London postcodes. We model your specific property and come back with a tailored figure within one business day.',
   },
   {
     icon: LineChart,
@@ -169,7 +169,7 @@ const GUEST_PROFILES = [
   {
     label: 'International medical visitors',
     body:
-      'Patients and family travelling to Central London for treatment at Harley Street, Great Ormond Street and other private and NHS clinics.',
+      'Patients and family travelling to London for treatment at Harley Street, Great Ormond Street and other private and NHS clinics.',
   },
   {
     label: 'Family stays during student term transitions',
@@ -191,10 +191,10 @@ export default function ServicedAccommodationPage() {
             <SectionLabel className="!justify-start">Serviced Accommodation</SectionLabel>
             <h1 className="mt-6 text-hero font-extrabold tracking-tightest leading-[0.95]">
               Serviced Accommodation <br />
-              <span className="text-gold-500">Management in Central London.</span>
+              <span className="text-gold-500">Management in London.</span>
             </h1>
             <p className="mt-8 max-w-xl text-fluid-lg text-white/75 leading-relaxed">
-              We operate Central London apartments on the serviced-accommodation
+              We operate London apartments on the serviced-accommodation
               model. Furnishing brief, multi-platform distribution, in-house
               housekeeping on a hotel turnaround cadence, and 24/7 guest support.
               You see one monthly net payment.
@@ -294,7 +294,7 @@ export default function ServicedAccommodationPage() {
               <p className="mt-6 text-fluid-lg text-navy-900/70 leading-relaxed">
                 Demand is strongest where corporate, medical and embassy
                 visitors cluster. We run the serviced-accommodation model
-                across the four prime Central London postcodes below.
+                across the four prime London postcodes below.
               </p>
             </FadeIn>
           </div>

@@ -21,7 +21,7 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 export const metadata: Metadata = {
   title: 'Short-Let & Airbnb Management London',
   description:
-    'Full-service short-let and Airbnb management for Central London landlords. Multi-platform listings, dynamic pricing, in-house housekeeping.',
+    'Full-service short-let and Airbnb management for London landlords. Multi-platform listings, dynamic pricing, in-house housekeeping.',
   alternates: { canonical: '/property-management' },
 }
 
@@ -210,14 +210,14 @@ export default function PropertyManagementPage() {
             <FadeIn>
               <SectionLabel onLight>Medium-Term Rentals</SectionLabel>
               <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
-                One of central London&apos;s <span className="text-gold-600">strongest segments right now.</span>
+                One of London&apos;s <span className="text-gold-600">strongest segments right now.</span>
               </h2>
             </FadeIn>
             <FadeIn delay={0.1}>
               <p className="mt-7 text-fluid-lg text-navy-900/75 leading-relaxed">
                 Corporate relocations, contractors, insurance housing, professionals
                 between homes. They all need furnished one to six month stays.
-                Demand consistently outstrips supply in Zone 1, and there aren&apos;t
+                Demand consistently outstrips supply in London, and there aren&apos;t
                 enough quality operators serving them.
               </p>
             </FadeIn>
