@@ -111,6 +111,41 @@ export const COVERAGE_AREAS: CoverageArea[] = [
     oneLiner: 'Short-let and guaranteed rent across EC2.',
     centre: [-0.0823, 51.5178],
   },
+  {
+    slug: 'hampstead',
+    name: 'Hampstead',
+    postcode: 'NW3',
+    oneLiner: 'Short-let and guaranteed rent across NW3.',
+    centre: [-0.178, 51.556],
+  },
+  {
+    slug: 'stratford',
+    name: 'Stratford',
+    postcode: 'E15',
+    oneLiner: 'Short-let and guaranteed rent across E15.',
+    centre: [-0.0035, 51.5413],
+  },
+  {
+    slug: 'greenwich',
+    name: 'Greenwich',
+    postcode: 'SE10',
+    oneLiner: 'Short-let and guaranteed rent across SE10.',
+    centre: [-0.0098, 51.4826],
+  },
+  {
+    slug: 'wimbledon',
+    name: 'Wimbledon',
+    postcode: 'SW19',
+    oneLiner: 'Short-let and guaranteed rent across SW19.',
+    centre: [-0.2064, 51.4214],
+  },
+  {
+    slug: 'richmond',
+    name: 'Richmond',
+    postcode: 'TW9',
+    oneLiner: 'Short-let and guaranteed rent across TW9.',
+    centre: [-0.3037, 51.4613],
+  },
 ]
 
 /**
