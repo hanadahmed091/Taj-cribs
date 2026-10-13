@@ -74,7 +74,7 @@ export function CoverageMapClient() {
         el.type = 'button'
         el.setAttribute('aria-label', `${area.name} ${area.postcode}`)
         el.style.cssText =
-          'width:18px;height:18px;border-radius:9999px;background:#C9A96E;border:3px solid #061325;box-shadow:0 2px 6px rgba(0,0,0,0.25);cursor:pointer;padding:0'
+          'width:18px;height:18px;border-radius:9999px;background:#C9A96E;border:3px solid #10291F;box-shadow:0 2px 6px rgba(0,0,0,0.25);cursor:pointer;padding:0'
         el.addEventListener('click', (e) => {
           e.stopPropagation()
           focusArea(area.slug)
