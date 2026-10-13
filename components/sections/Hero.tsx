@@ -185,7 +185,7 @@ export function Hero() {
                             className="object-cover"
                             priority={i === 0}
                           />
-                          <div className="absolute top-3 left-3 bg-navy-950/85 backdrop-blur px-2.5 py-1 text-[10px] uppercase tracking-widest font-semibold rounded-sm">
+                          <div className="absolute top-3 left-3 bg-navy-950/85 backdrop-blur px-2.5 py-1 text-xs uppercase tracking-widest font-semibold rounded-sm">
                             {p.badge ?? p.type}
                           </div>
                         </div>

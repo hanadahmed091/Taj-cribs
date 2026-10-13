@@ -512,7 +512,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'airbnb-management-london-guide',
     title: 'Airbnb Management in London: Everything Landlords Need to Know in 2026',
     excerpt:
-      'What full-service Airbnb management actually includes, how dynamic pricing works, and how to tell a quality manager from a cheap one. Without the marketing fluff.',
+      'What full-service Airbnb management actually includes, how dynamic pricing works, and how to tell a quality manager from a cheap one.',
     category: 'Short-Let Management',
     date: '2026-05-31',
     readTime: '7 min read',

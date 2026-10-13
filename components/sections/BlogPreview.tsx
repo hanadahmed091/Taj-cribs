@@ -21,7 +21,7 @@ export function BlogPreview() {
           <FadeIn className="lg:col-span-5" delay={0.1}>
             <p className="text-fluid-lg text-navy-900/70 leading-relaxed">
               Regulations, tax, market data, and real lessons from the
-              properties we operate. No fluff.
+              properties we operate.
             </p>
           </FadeIn>
         </div>

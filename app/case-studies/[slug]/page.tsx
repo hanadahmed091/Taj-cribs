@@ -90,7 +90,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           <dl className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
             {study.metrics.map((m) => (
               <div key={m.label} className="bg-navy-950 px-6 py-8 text-center">
-                <dt className="text-[10px] uppercase tracking-widest font-semibold text-white/50">
+                <dt className="text-xs uppercase tracking-widest font-semibold text-white/50">
                   {m.label}
                 </dt>
                 <dd className="mt-2 text-fluid-2xl font-extrabold tracking-tight text-gold-400">
@@ -143,7 +143,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
             <FadeIn>
               <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 gap-px bg-light-line border border-light-line rounded-md overflow-hidden">
                 <div className="bg-cream p-8 text-center">
-                  <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/55">
+                  <p className="text-xs uppercase tracking-widest font-semibold text-navy-900/55">
                     {study.beforeAfter.beforeLabel}
                   </p>
                   <p className="mt-2 text-fluid-2xl font-extrabold tracking-tight text-navy-900">
@@ -151,7 +151,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                   </p>
                 </div>
                 <div className="bg-white p-8 text-center">
-                  <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/55">
+                  <p className="text-xs uppercase tracking-widest font-semibold text-navy-900/55">
                     {study.beforeAfter.afterLabel}
                   </p>
                   <p className="mt-2 text-fluid-2xl font-extrabold tracking-tight text-gold-700">

@@ -25,7 +25,7 @@ export function BlogCard({ post, priority = false }: { post: BlogPost; priority?
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className={`${post.heroImageSize ? 'object-contain' : 'object-cover'} transition-transform duration-700 ease-smooth group-hover:scale-105`}
         />
-        <span className="absolute top-4 left-4 bg-gold-500 text-navy-950 px-3 py-1 rounded-sm text-[10px] uppercase tracking-widest font-bold">
+        <span className="absolute top-4 left-4 bg-gold-500 text-navy-950 px-3 py-1 rounded-sm text-xs uppercase tracking-widest font-bold">
           {post.category}
         </span>
       </div>

@@ -127,7 +127,7 @@ export function PostBody({ blocks }: { blocks: BlogBlock[] }) {
                       {b.headers.map((h, hi) => (
                         <th
                           key={hi}
-                          className="text-left py-3 px-4 text-[10px] uppercase tracking-widest font-semibold text-navy-900/55 border-b border-light-line"
+                          className="text-left py-3 px-4 text-xs uppercase tracking-widest font-semibold text-navy-900/55 border-b border-light-line"
                         >
                           {h}
                         </th>

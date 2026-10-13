@@ -35,7 +35,7 @@ export function StatsStrip() {
                   {s.label}
                 </span>
                 {s.sublabel && (
-                  <span className="text-[11px] tracking-wide text-white/45">
+                  <span className="text-xs tracking-wide text-white/45">
                     {s.sublabel}
                   </span>
                 )}

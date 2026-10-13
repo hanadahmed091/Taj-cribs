@@ -67,7 +67,7 @@ export function TajCribsStandard({ variant = 'home' }: { variant?: 'home' | 'inl
                   className="relative flex flex-col items-start"
                 >
                   {/* Step number */}
-                  <span className="font-extrabold text-[11px] uppercase tracking-widest text-gold-700">
+                  <span className="font-extrabold text-xs uppercase tracking-widest text-gold-700">
                     Step 0{idx + 1}
                   </span>
 

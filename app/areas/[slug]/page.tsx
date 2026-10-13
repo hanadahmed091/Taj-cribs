@@ -140,15 +140,15 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
 
           <div className="mt-12 grid grid-cols-3 gap-6 pt-8 border-t border-navy-line">
             <div>
-              <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Postcode</p>
+              <p className="text-xs uppercase tracking-widest font-semibold text-gold-400">Postcode</p>
               <p className="mt-1 font-bold text-fluid-xl">{area.postcode}</p>
             </div>
             <div>
-              <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Product</p>
+              <p className="text-xs uppercase tracking-widest font-semibold text-gold-400">Product</p>
               <p className="mt-1 font-bold text-fluid-lg leading-snug">{getAreaProductLabel(area)}</p>
             </div>
             <div>
-              <p className="text-[10px] uppercase tracking-widest font-semibold text-gold-400">Valuation</p>
+              <p className="text-xs uppercase tracking-widest font-semibold text-gold-400">Valuation</p>
               <p className="mt-1 font-bold text-fluid-lg leading-snug">Free, within 24 hours</p>
             </div>
           </div>
@@ -366,7 +366,7 @@ export default function AreaPage({ params }: { params: { slug: string } }) {
                         sizes="(max-width: 768px) 100vw, 33vw"
                         className="object-cover"
                       />
-                      <span className="absolute top-3 left-3 bg-gold-500 text-navy-950 px-2.5 py-1 rounded-sm text-[10px] uppercase tracking-widest font-bold">
+                      <span className="absolute top-3 left-3 bg-gold-500 text-navy-950 px-2.5 py-1 rounded-sm text-xs uppercase tracking-widest font-bold">
                         {SERVICE_LABELS[p.service]}
                       </span>
                     </div>

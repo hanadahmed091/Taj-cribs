@@ -26,7 +26,7 @@ export default function LpLayout({ children }: { children: React.ReactNode }) {
       <div className="flex-1">{children}</div>
       <footer className="bg-navy-950 text-white/55 py-8 text-center text-xs px-4">
         {SITE.shortName} · London Property Specialists · {SITE.email}
-        <p className="mt-2 text-[11px] text-white/40">
+        <p className="mt-2 text-xs text-white/60">
           {COMPANIES.management.name}, company number {COMPANIES.management.number}, registered office{' '}
           {COMPANIES.management.registeredOffice}. {COMPANIES.main.name}, company number {COMPANIES.main.number}.
           Registered in England and Wales.
