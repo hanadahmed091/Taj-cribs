@@ -21,6 +21,8 @@ export type LandingPageProps = {
   // Defaults to a slug derived from areaLabel.
   formSource?: string
   defaultService?: 'guaranteed-rent' | 'short-let-management'
+  /** Extra sections shown between the hero and the phone block. */
+  children?: React.ReactNode
 }
 
 const TRUST_BADGES = [
@@ -41,6 +43,7 @@ export function LandingPageLayout({
   testimonialProperty,
   formSource,
   defaultService,
+  children,
 }: LandingPageProps) {
   const source = formSource ?? `lp_${areaLabel.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '')}`
   const telHref = `tel:${SITE.phone.replace(/\s/g, '')}`
@@ -91,6 +94,8 @@ export function LandingPageLayout({
           </div>
         </div>
       </section>
+
+      {children}
 
       {/* PHONE CTA */}
       <section className="bg-cream py-14 lg:py-20">
