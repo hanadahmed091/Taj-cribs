@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --navy-950: #020B18;
-  --navy-900: #061325;
-  --navy-800: #0A1E38;
-  --navy-700: #0F2847;
-  --navy-600: #1A3A5C;
+  --navy-950: #0B1F17;
+  --navy-900: #10291F;
+  --navy-800: #173A2E;
+  --navy-700: #1F4A3B;
+  --navy-600: #2C5E4C;
   --gold-700: #856A29;
   --gold-600: #A8873E;
   --gold-500: #C9A96E;
   --gold-400: #D9BE8A;
   --gold-300: #E8D5B0;
-  --cream: #F8F5EF;
+  --cream: #F6F9F7;
   --white: #FFFFFF;
-  --text-muted: #8899AA;
+  --text-muted: #879A91;
 }
 
 * {
@@ -77,8 +77,8 @@ body {
 /* Hero animated background */
 .hero-bg {
   background:
-    radial-gradient(ellipse at 20% 30%, rgba(26, 58, 92, 0.55) 0%, transparent 55%),
-    radial-gradient(ellipse at 80% 70%, rgba(15, 40, 71, 0.65) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 30%, rgba(44, 94, 76, 0.55) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 70%, rgba(31, 74, 59, 0.65) 0%, transparent 60%),
     linear-gradient(180deg, var(--navy-900) 0%, var(--navy-950) 100%);
   background-size: 200% 200%, 200% 200%, 100% 100%;
   animation: radial-pan 18s ease-in-out infinite;
@@ -168,7 +168,7 @@ body {
 
 /* Glass card for hero */
 .glass-card {
-  background: rgba(15, 40, 71, 0.65);
+  background: rgba(31, 74, 59, 0.65);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(201, 169, 110, 0.18);

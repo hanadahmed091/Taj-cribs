@@ -10,11 +10,11 @@ const config: Config = {
     extend: {
       colors: {
         navy: {
-          950: '#020B18',
-          900: '#061325',
-          800: '#0A1E38',
-          700: '#0F2847',
-          600: '#1A3A5C',
+          950: '#0B1F17',
+          900: '#10291F',
+          800: '#173A2E',
+          700: '#1F4A3B',
+          600: '#2C5E4C',
         },
         gold: {
           700: '#856A29',
@@ -23,8 +23,8 @@ const config: Config = {
           400: '#D9BE8A',
           300: '#E8D5B0',
         },
-        cream: '#F8F5EF',
-        muted: '#8899AA',
+        cream: '#F6F9F7',
+        muted: '#879A91',
       },
       fontFamily: {
         sans: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
@@ -46,7 +46,7 @@ const config: Config = {
         content: '1280px',
       },
       borderColor: {
-        'navy-line': 'rgba(26, 58, 92, 0.4)',
+        'navy-line': 'rgba(44, 94, 76, 0.4)',
         'light-line': '#E5E5E5',
       },
       transitionTimingFunction: {
