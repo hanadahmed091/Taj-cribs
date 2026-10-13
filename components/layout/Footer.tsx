@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Mail, MapPin, Phone, Instagram, Linkedin } from 'lucide-react'
-import { SITE, HAS_REAL_ADDRESS } from '@/lib/config'
+import { SITE, HAS_REAL_ADDRESS, COMPANIES } from '@/lib/config'
 import { deriveAreas } from '@/lib/data/areas'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 import { Logo } from '@/components/ui/Logo'
@@ -118,6 +118,17 @@ export function Footer() {
             <span>Registered in England & Wales</span>
             <span>Licensed property management</span>
           </div>
+        </div>
+
+        <div className="mt-6 space-y-1 text-[11px] leading-relaxed text-white/40">
+          <p>
+            Airbnb and short let management is provided by {COMPANIES.management.name}, company number{' '}
+            {COMPANIES.management.number}, registered office {COMPANIES.management.registeredOffice}.
+          </p>
+          <p>
+            Guaranteed rent is provided by {COMPANIES.main.name}, company number {COMPANIES.main.number}.
+            Both companies are registered in England and Wales.
+          </p>
         </div>
       </div>
     </footer>
