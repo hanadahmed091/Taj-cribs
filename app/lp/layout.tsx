@@ -1,5 +1,5 @@
 import { Phone } from 'lucide-react'
-import { SITE } from '@/lib/config'
+import { SITE, COMPANIES } from '@/lib/config'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 import { Logo } from '@/components/ui/Logo'
 
@@ -26,6 +26,11 @@ export default function LpLayout({ children }: { children: React.ReactNode }) {
       <div className="flex-1">{children}</div>
       <footer className="bg-navy-950 text-white/55 py-8 text-center text-xs px-4">
         {SITE.shortName} · London Property Specialists · {SITE.email}
+        <p className="mt-2 text-[11px] text-white/40">
+          {COMPANIES.management.name}, company number {COMPANIES.management.number}, registered office{' '}
+          {COMPANIES.management.registeredOffice}. {COMPANIES.main.name}, company number {COMPANIES.main.number}.
+          Registered in England and Wales.
+        </p>
       </footer>
     </div>
   )

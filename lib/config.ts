@@ -39,6 +39,21 @@ export const SITE = {
 
 // True once a real address replaces the 'ADDRESS_HERE' placeholder. The
 // footer, contact page and LocalBusiness schema all check this.
+// Legal entities, shown in the footers. Airbnb and short let management
+// for landlords is run by Taj Cribs Management Ltd; guaranteed rent by
+// Taj Cribs Limited.
+export const COMPANIES = {
+  management: {
+    name: 'Taj Cribs Management Ltd',
+    number: '17516044',
+    registeredOffice: '71-75 Shelton Street, Covent Garden, London, WC2H 9JQ',
+  },
+  main: {
+    name: 'Taj Cribs Limited',
+    number: '16337861',
+  },
+} as const
+
 export const HAS_REAL_ADDRESS = SITE.address.line1 !== 'ADDRESS_HERE'
 
 // Desktop nav groups these under a "Services" dropdown; the mobile menu
