@@ -91,7 +91,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </nav>
 
           {/* Category pill */}
-          <span className="mt-8 inline-block bg-gold-500 text-navy-950 px-3 py-1 rounded-sm text-[10px] uppercase tracking-widest font-bold">
+          <span className="mt-8 inline-block bg-gold-500 text-navy-950 px-3 py-1 rounded-sm text-xs uppercase tracking-widest font-bold">
             {post.category}
           </span>
 

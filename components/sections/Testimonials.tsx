@@ -51,7 +51,7 @@ export function Testimonials() {
                       sizes="(max-width: 1024px) 100vw, 720px"
                       className="object-cover"
                     />
-                    <span className="absolute bottom-4 left-4 bg-navy-900 text-white px-3 py-1.5 text-[10px] uppercase tracking-widest font-bold rounded-sm">
+                    <span className="absolute bottom-4 left-4 bg-navy-900 text-white px-3 py-1.5 text-xs uppercase tracking-widest font-bold rounded-sm">
                       {t.service}
                     </span>
                   </div>

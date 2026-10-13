@@ -120,7 +120,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 space-y-1 text-[11px] leading-relaxed text-white/40">
+        <div className="mt-6 space-y-1 text-xs leading-relaxed text-white/60">
           <p>
             Airbnb and short let management is provided by {COMPANIES.management.name}, company number{' '}
             {COMPANIES.management.number}, registered office {COMPANIES.management.registeredOffice}.

@@ -59,10 +59,10 @@ export function Portfolio() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/30 to-transparent pointer-events-none" />
 
-                <span className="absolute top-4 left-4 bg-gold-500 text-navy-950 px-3 py-1 rounded-sm text-[10px] uppercase tracking-widest font-bold">
+                <span className="absolute top-4 left-4 bg-gold-500 text-navy-950 px-3 py-1 rounded-sm text-xs uppercase tracking-widest font-bold">
                   {property.area.split(',')[0]} {property.area.split(',')[1]?.trim()}
                 </span>
-                <span className="absolute top-4 right-4 bg-navy-950/85 backdrop-blur text-white px-3 py-1 rounded-sm text-[10px] uppercase tracking-widest font-bold">
+                <span className="absolute top-4 right-4 bg-navy-950/85 backdrop-blur text-white px-3 py-1 rounded-sm text-xs uppercase tracking-widest font-bold">
                   {SERVICE_LABELS_SHORT[property.service]}
                 </span>
                 {/* "Recently onboarded" status pill — stacks under the
@@ -73,7 +73,7 @@ export function Portfolio() {
                     category. Conditional on the optional
                     `recentlyOnboarded` flag from PROPERTIES. */}
                 {property.recentlyOnboarded && (
-                  <span className="absolute top-14 left-4 bg-white/95 backdrop-blur text-navy-950 px-3 py-1 rounded-sm text-[10px] uppercase tracking-widest font-bold inline-flex items-center gap-1.5">
+                  <span className="absolute top-14 left-4 bg-white/95 backdrop-blur text-navy-950 px-3 py-1 rounded-sm text-xs uppercase tracking-widest font-bold inline-flex items-center gap-1.5">
                     <span aria-hidden="true" className="w-1.5 h-1.5 rounded-full bg-gold-500" />
                     Recently onboarded
                   </span>

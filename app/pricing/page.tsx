@@ -193,7 +193,7 @@ export default function PricingPage() {
                   }`}
                 >
                   {tier.featured && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold-500 text-navy-950 px-3 py-1 rounded-sm text-[10px] uppercase tracking-widest font-bold">
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold-500 text-navy-950 px-3 py-1 rounded-sm text-xs uppercase tracking-widest font-bold">
                       Most Popular
                     </span>
                   )}
@@ -253,7 +253,7 @@ export default function PricingPage() {
           {/* Listing management */}
           <div className="mt-16">
             <FadeIn>
-              <h3 className="text-[11px] uppercase tracking-widest font-semibold text-gold-700">
+              <h3 className="text-xs uppercase tracking-widest font-semibold text-gold-700">
                 Listing management
               </h3>
               <p className="mt-3 text-fluid-2xl font-extrabold tracking-tighter leading-tight text-navy-900">
@@ -273,7 +273,7 @@ export default function PricingPage() {
           {/* Guest management */}
           <div className="mt-20">
             <FadeIn>
-              <h3 className="text-[11px] uppercase tracking-widest font-semibold text-gold-700">
+              <h3 className="text-xs uppercase tracking-widest font-semibold text-gold-700">
                 Guest management
               </h3>
               <p className="mt-3 text-fluid-2xl font-extrabold tracking-tighter leading-tight text-navy-900">

@@ -30,6 +30,7 @@ const config: Config = {
         sans: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
+        xs: ['13px', { lineHeight: '1.25rem' }],
         hero: 'clamp(56px, 9vw, 130px)',
         'fluid-4xl': 'clamp(40px, 5.5vw, 72px)',
         'fluid-3xl': 'clamp(28px, 4vw, 48px)',

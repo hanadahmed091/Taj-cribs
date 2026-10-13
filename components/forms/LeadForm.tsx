@@ -188,7 +188,7 @@ export function LeadForm({
       noValidate
     >
       <fieldset>
-        <legend className="block text-[10px] uppercase tracking-widest font-semibold text-navy-900/60 mb-2">
+        <legend className="block text-xs uppercase tracking-widest font-semibold text-navy-900/60 mb-2">
           What are you looking for? <span className="text-gold-600">*</span>
         </legend>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -386,7 +386,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="block text-[10px] uppercase tracking-widest font-semibold text-navy-900/60 mb-2">
+      <span className="block text-xs uppercase tracking-widest font-semibold text-navy-900/60 mb-2">
         {label}
         {required && <span className="text-gold-600"> *</span>}
       </span>

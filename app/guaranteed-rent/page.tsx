@@ -158,16 +158,16 @@ export default function GuaranteedRentPage() {
               <table className="w-full min-w-[640px] border-collapse">
                 <thead>
                   <tr>
-                    <th className="text-left py-5 pr-6 text-[10px] uppercase tracking-widest font-semibold text-navy-900/50">
+                    <th className="text-left py-5 pr-6 text-xs uppercase tracking-widest font-semibold text-navy-900/50">
                       Feature
                     </th>
-                    <th className="py-5 px-4 text-left bg-gold-500 text-navy-950 text-[11px] uppercase tracking-widest font-bold rounded-t-sm">
+                    <th className="py-5 px-4 text-left bg-gold-500 text-navy-950 text-xs uppercase tracking-widest font-bold rounded-t-sm">
                       Guaranteed Rent
                     </th>
-                    <th className="py-5 px-4 text-left text-[10px] uppercase tracking-widest font-semibold text-navy-900/50">
+                    <th className="py-5 px-4 text-left text-xs uppercase tracking-widest font-semibold text-navy-900/50">
                       Standard AST
                     </th>
-                    <th className="py-5 px-4 text-left text-[10px] uppercase tracking-widest font-semibold text-navy-900/50">
+                    <th className="py-5 px-4 text-left text-xs uppercase tracking-widest font-semibold text-navy-900/50">
                       DIY Short-Let
                     </th>
                   </tr>

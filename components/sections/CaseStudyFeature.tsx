@@ -50,7 +50,7 @@ export function CaseStudyFeature() {
                     <p className="text-fluid-xl font-extrabold tracking-tight text-gold-700">
                       {m.value}
                     </p>
-                    <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/55">
+                    <p className="text-xs uppercase tracking-widest font-semibold text-navy-900/55">
                       {m.label}
                     </p>
                   </div>

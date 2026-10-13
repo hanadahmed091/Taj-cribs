@@ -156,7 +156,7 @@ export default function PropertyManagementPage() {
       <section className="bg-cream section-pad !py-20">
         <div className="container-edge">
           <FadeIn>
-            <p className="text-center text-[10px] uppercase tracking-widest font-semibold text-navy-900/45">
+            <p className="text-center text-xs uppercase tracking-widest font-semibold text-navy-900/45">
               We list and optimise your property across leading platforms
             </p>
             {/* Single navy colour drives every logo. SVGs are rendered as
@@ -191,7 +191,7 @@ export default function PropertyManagementPage() {
                       {p.name}
                     </span>
                     {p.subtitle && (
-                      <span className="mt-1 text-[10px] uppercase tracking-widest text-navy-900/40">
+                      <span className="mt-1 text-xs uppercase tracking-widest text-navy-900/40">
                         {p.subtitle}
                       </span>
                     )}
@@ -334,7 +334,7 @@ export default function PropertyManagementPage() {
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
-                    <span className="absolute top-4 left-4 bg-navy-950 text-white px-3 py-1.5 rounded-sm text-[10px] uppercase tracking-widest font-bold">
+                    <span className="absolute top-4 left-4 bg-navy-950 text-white px-3 py-1.5 rounded-sm text-xs uppercase tracking-widest font-bold">
                       {p.badge ?? p.type}
                     </span>
                   </div>
@@ -344,11 +344,11 @@ export default function PropertyManagementPage() {
                     <p className="mt-4 text-navy-900/70 leading-relaxed">{p.description}</p>
                     <div className="mt-6 pt-6 border-t border-light-line grid grid-cols-2 gap-6">
                       <div>
-                        <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/50">Monthly income</p>
+                        <p className="text-xs uppercase tracking-widest font-semibold text-navy-900/50">Monthly income</p>
                         <p className="mt-1 font-bold text-fluid-xl tabular-nums text-navy-900">{p.monthlyIncome}</p>
                       </div>
                       <div>
-                        <p className="text-[10px] uppercase tracking-widest font-semibold text-navy-900/50">Outcome</p>
+                        <p className="text-xs uppercase tracking-widest font-semibold text-navy-900/50">Outcome</p>
                         <p className="mt-1 font-bold text-fluid-lg text-gold-700 leading-snug">{p.highlight}</p>
                       </div>
                     </div>

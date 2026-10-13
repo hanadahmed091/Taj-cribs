@@ -129,7 +129,7 @@ export function CoverageMapClient() {
         )}
       </div>
 
-      <p className="mt-8 text-[10px] uppercase tracking-widest font-semibold text-navy-900/45">
+      <p className="mt-8 text-xs uppercase tracking-widest font-semibold text-navy-900/45">
         Areas we cover include
       </p>
 
