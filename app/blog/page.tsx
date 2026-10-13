@@ -27,7 +27,7 @@ export default function BlogIndexPage() {
           </h1>
           <p className="mt-8 text-fluid-lg text-white/75 leading-relaxed max-w-2xl">
             Regulations, tax, market data, and real lessons from the properties we
-            operate. Written by the team. No fluff, no SEO bloat.
+            operate. Written by the team.
           </p>
         </div>
       </section>
