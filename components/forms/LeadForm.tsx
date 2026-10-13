@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react'
-import { cn, getStoredUtm, pushDataLayer } from '@/lib/utils'
+import { cn, getStoredUtm, pushDataLayer, trackMetaLead } from '@/lib/utils'
 
 // The dropdown value that reveals the free-text postcode input.
 const OTHER_CENTRAL_LONDON = 'Other London area'
@@ -161,6 +161,7 @@ export function LeadForm({
       if (!res.ok) throw new Error('Submission failed')
       pushDataLayer('form_submission_valuation', { source, service: values.service })
       pushDataLayer('form_submission_contact', { source, service: values.service })
+      trackMetaLead({ content_name: source })
       setStatus('success')
       reset()
     } catch {
