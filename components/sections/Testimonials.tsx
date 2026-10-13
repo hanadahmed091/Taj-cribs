@@ -64,7 +64,7 @@ export function Testimonials() {
                     photoLeft ? 'lg:order-2' : 'lg:order-1'
                   }`}
                 >
-                  <div className="bg-white rounded-md p-8 lg:p-10 shadow-[0_30px_60px_-30px_rgba(6,19,37,0.18)]">
+                  <div className="bg-white rounded-md p-8 lg:p-10 shadow-[0_30px_60px_-30px_rgba(16, 41, 31,0.18)]">
                     <span
                       className="font-extrabold text-gold-500 leading-none block"
                       style={{ fontSize: 80 }}

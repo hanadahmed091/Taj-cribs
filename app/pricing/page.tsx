@@ -188,7 +188,7 @@ export default function PricingPage() {
                 <div
                   className={`relative bg-white rounded-md p-8 lg:p-12 h-full flex flex-col transition-all ${
                     tier.featured
-                      ? 'border-2 border-navy-900 lg:-translate-y-2 shadow-[0_30px_60px_-30px_rgba(6,19,37,0.25)]'
+                      ? 'border-2 border-navy-900 lg:-translate-y-2 shadow-[0_30px_60px_-30px_rgba(16, 41, 31,0.25)]'
                       : 'border border-light-line'
                   }`}
                 >

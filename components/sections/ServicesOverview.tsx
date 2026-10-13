@@ -57,7 +57,7 @@ export function ServicesOverview() {
                   className={`group block h-full rounded-md p-8 lg:p-12 transition-all duration-500 border ${
                     service.accent
                       ? 'bg-gold-500 border-gold-500 text-navy-950 hover:bg-gold-400'
-                      : 'bg-white border-light-line text-navy-900 hover:border-navy-600 hover:shadow-[0_30px_60px_-30px_rgba(6,19,37,0.25)]'
+                      : 'bg-white border-light-line text-navy-900 hover:border-navy-600 hover:shadow-[0_30px_60px_-30px_rgba(16, 41, 31,0.25)]'
                   } hover:-translate-y-1`}
                 >
                   <div className="flex justify-between items-start">
