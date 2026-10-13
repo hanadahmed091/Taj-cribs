@@ -49,7 +49,7 @@ export default function LondonLandlordsLandingPage() {
     <LandingPageLayout
       areaLabel="Airbnb Management · London"
       headline="Earn more from your London flat with Airbnb."
-      subheadline="Still managing it yourself, or stuck on a long let? Hand it over to Taj Cribs. We run your flat on Airbnb and other platforms, handle every guest, and you get one payment a month."
+      subheadline="Still managing it yourself, or stuck on a long let? Hand it over to Taj Cribs. We run your flat on Airbnb and other platforms and handle every guest for one flat 18% management fee. You get one payment a month."
       formTitle="Get your free income estimate"
       formSource="facebook_ads_lp"
       defaultService="short-let-management"

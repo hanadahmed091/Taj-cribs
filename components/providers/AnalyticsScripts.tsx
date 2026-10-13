@@ -10,7 +10,8 @@ import {
 } from '@/lib/consent'
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || ''
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || ''
+// Taj Cribs website dataset. Not a secret; Vercel env can override it.
+const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1433627122058648'
 
 export function AnalyticsScripts() {
   const [consent, setConsent] = useState<ConsentValue | null>(null)
@@ -50,7 +51,7 @@ export function AnalyticsScripts() {
       )}
 
       {/* Meta Pixel for Facebook and Instagram ads. Same consent rule as
-          GTM. Set NEXT_PUBLIC_META_PIXEL_ID in Vercel to switch it on. */}
+          GTM, so it only loads once the visitor accepts analytics cookies. */}
       {loadMetaPixel && (
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
