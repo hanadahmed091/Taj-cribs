@@ -47,7 +47,7 @@ export function Hero() {
               className="flex items-center gap-3 mb-8"
             >
               <span className="gold-divider" />
-              <span className="eyebrow">London Property Specialists</span>
+              <span className="eyebrow">UK Property Specialists</span>
             </motion.div>
 
             {/* Same size as text-hero, capped at 15% of the column: GUARANTEED,
@@ -87,7 +87,7 @@ export function Hero() {
               className="mt-9 max-w-xl text-fluid-lg text-white/75 leading-relaxed"
             >
               Guaranteed rent paid monthly. Full short-let management.
-              Quality-checked after every checkout. Zero hassle for London landlords.
+              Quality-checked after every checkout. Zero hassle for landlords across the UK.
             </motion.p>
 
             <motion.div
@@ -125,7 +125,7 @@ export function Hero() {
               </span>
               <span className="hidden sm:inline">·</span>
               <span className="hidden sm:inline">
-                Trusted by London landlords.
+                Trusted by landlords across the UK.
               </span>
             </motion.div>
           </div>

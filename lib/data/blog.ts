@@ -92,7 +92,7 @@ const TEAM = 'Taj Cribs Team'
 // keep tone identical across the publishing schedule.
 const CLOSING_PARA: BlogBlock = {
   type: 'p',
-  text: 'Have a question about your property? Speak to the [Taj Cribs team](/contact). We manage properties across the whole of London and offer free valuations with no obligation.',
+  text: 'Have a question about your property? Speak to the [Taj Cribs team](/contact). We manage properties across the UK and offer free valuations with no obligation.',
 }
 
 // FAQs for /blog/airbnb-fees-uk. Rendered in the article body and emitted

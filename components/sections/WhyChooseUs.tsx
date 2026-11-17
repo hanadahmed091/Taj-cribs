@@ -31,7 +31,7 @@ const REASONS = [
   {
     icon: Building2,
     title: 'Block & portfolio specialists',
-    body: 'We are one of the only operators in London structured to take on full buildings.',
+    body: 'We are one of the few operators structured to take on full buildings.',
   },
 ]
 
@@ -43,7 +43,7 @@ export function WhyChooseUs() {
           <FadeIn>
             <SectionLabel onLight>Why Taj Cribs</SectionLabel>
             <h2 className="mt-5 text-fluid-4xl font-extrabold tracking-tighter leading-tight">
-              The operator London landlords actually <span className="text-gold-600">trust.</span>
+              The operator UK landlords actually <span className="text-gold-600">trust.</span>
             </h2>
           </FadeIn>
         </div>

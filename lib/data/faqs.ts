@@ -47,7 +47,7 @@ export const HOMEPAGE_FAQS: FAQ[] = [
   },
   {
     q: 'What areas do you cover?',
-    a: 'We cover London. Our busiest areas include Marylebone, Mayfair, Kensington, Chelsea, Pimlico, Westminster, Notting Hill and Canary Wharf, but wherever your property is in London, ask for a free valuation and we will tell you what it could earn.',
+    a: 'We cover the whole of the UK. Our busiest areas are in London, including Marylebone, Mayfair, Kensington, Chelsea, Pimlico, Westminster, Notting Hill and Canary Wharf, but wherever your property is in the UK, ask for a free valuation and we will tell you what it could earn.',
     cta: { label: 'See the areas we cover', href: '/areas' },
   },
 ]

@@ -19,9 +19,9 @@ import { SITE } from '@/lib/config'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export const metadata: Metadata = {
-  title: 'Short-Let & Airbnb Management London',
+  title: 'Short-Let & Airbnb Management UK',
   description:
-    'Full-service short-let and Airbnb management for London landlords. Multi-platform listings, dynamic pricing, in-house housekeeping.',
+    'Full-service short-let and Airbnb management for landlords across the UK. Multi-platform listings, dynamic pricing, in-house housekeeping.',
   alternates: { canonical: '/property-management' },
 }
 
@@ -72,7 +72,7 @@ export default function PropertyManagementPage() {
             <SectionLabel className="!justify-start">Short-Let Property Management</SectionLabel>
             <h1 className="mt-6 text-hero font-extrabold tracking-tightest leading-[0.95]">
               Short-Let & Airbnb <br />
-              <span className="text-gold-500">Management in London.</span>
+              <span className="text-gold-500">Management across the UK.</span>
             </h1>
             <p className="mt-8 max-w-xl text-fluid-lg text-white/75 leading-relaxed">
               We handle everything: listings, bookings, guests, housekeeping, maintenance.
