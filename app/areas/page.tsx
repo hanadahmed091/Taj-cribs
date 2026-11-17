@@ -6,7 +6,7 @@ import { FinalCTA } from '@/components/sections/FinalCTA'
 import { CoverageMap } from '@/components/sections/CoverageMap'
 
 export const metadata: Metadata = {
-  title: 'Areas We Cover Across London',
+  title: 'Areas We Cover Across the UK',
   description:
     'Short-let management and guaranteed rent across Marylebone, Mayfair, Kensington, Pimlico, Chelsea, Westminster, Notting Hill and Canary Wharf.',
   alternates: { canonical: '/areas' },
@@ -21,10 +21,10 @@ export default function AreasIndexPage() {
           <SectionLabel className="!justify-start">Coverage</SectionLabel>
           <h1 className="mt-6 text-hero font-extrabold tracking-tightest leading-[0.95]">
             Guaranteed Rent & Short-Let <br />
-            <span className="text-gold-500">Across London.</span>
+            <span className="text-gold-500">Across the UK.</span>
           </h1>
           <p className="mt-8 text-fluid-lg text-white/75 leading-relaxed">
-            Short-let, medium-term and guaranteed rent across London. Tap any
+            Short-let, medium-term and guaranteed rent across the UK. Our busiest London areas are below. Tap any
             area below to fly the map and see what we operate there.
           </p>
         </div>
@@ -139,7 +139,7 @@ export default function AreasIndexPage() {
 
           <FadeIn delay={0.15}>
             <p className="mt-14 text-fluid-lg text-navy-900/80 text-center leading-relaxed">
-              Don&apos;t see your area? We cover all of London.{' '}
+              Don&apos;t see your area? We cover the whole of the UK.{' '}
               <Link
                 href="/contact"
                 className="font-semibold text-navy-900 underline decoration-gold-500 decoration-2 underline-offset-4 hover:text-gold-600 transition-colors"

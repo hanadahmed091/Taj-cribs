@@ -12,11 +12,13 @@ export function OrganizationJsonLd() {
     '@id': `${SITE.domain}#organization`,
     name: SITE.name,
     description:
-      'Short-term rental management and guaranteed rent specialists in London.',
+      'Short-term rental management and guaranteed rent specialists across the UK.',
     url: SITE.domain,
     telephone: SITE.phone,
     email: SITE.email,
     areaServed: [
+      'United Kingdom',
+      'London',
       'Marylebone',
       'Kensington',
       'Pimlico',

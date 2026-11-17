@@ -169,10 +169,10 @@ export default function PricingPage() {
           <SectionLabel className="!justify-start">Pricing</SectionLabel>
           <h1 className="mt-6 text-hero font-extrabold tracking-tightest leading-[0.95]">
             Flexible Airbnb management <br />
-            in London. <span className="text-gold-500">From 15%.</span>
+            across the UK. <span className="text-gold-500">From 15%.</span>
           </h1>
           <p className="mt-8 text-fluid-lg text-white/75 leading-relaxed max-w-2xl">
-            Hands-on short-let management across London. Human pricing
+            Hands-on short-let management across the UK. Human pricing
             decisions, in-house housekeeping, and a real person on call for
             every guest.
           </p>

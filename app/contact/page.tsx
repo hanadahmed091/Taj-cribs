@@ -8,7 +8,7 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 export const metadata: Metadata = {
   title: 'Contact | Free Valuation in 24 Hours',
   description:
-    'Speak to Taj Cribs Property about guaranteed rent or Airbnb management for your London property. Free valuation, no obligation.',
+    'Speak to Taj Cribs Property about guaranteed rent or Airbnb management for your property anywhere in the UK. Free valuation, no obligation.',
   alternates: { canonical: '/contact' },
 }
 
@@ -21,7 +21,7 @@ export default function ContactPage() {
           <SectionLabel className="!justify-start">Get In Touch</SectionLabel>
           <h1 className="mt-6 text-hero font-extrabold tracking-tightest leading-[0.95]">
             Free valuation for <br />
-            <span className="text-gold-500">your London property.</span>
+            <span className="text-gold-500">your UK property.</span>
           </h1>
           <p className="mt-8 text-fluid-lg text-white/75 leading-relaxed">
             Tell us about your property and we&apos;ll come back within 24 hours with a guaranteed rent figure or a projected Airbnb income. No obligation.

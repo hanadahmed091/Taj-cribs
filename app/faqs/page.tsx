@@ -8,7 +8,7 @@ import { HOMEPAGE_FAQS } from '@/lib/data/faqs'
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions',
   description:
-    'Answers for London landlords on guaranteed rent and short-let management: fees, payments, the 90-day rule, contract terms, blocks and portfolios, onboarding and coverage.',
+    'Answers for UK landlords on guaranteed rent and short-let management: fees, payments, the 90-day rule, contract terms, blocks and portfolios, onboarding and coverage.',
   alternates: { canonical: '/faqs' },
 }
 

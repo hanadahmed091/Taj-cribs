@@ -22,15 +22,18 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
   title: {
-    default: 'Guaranteed Rent & Short-Let Management London | Taj Cribs',
+    default: 'Guaranteed Rent & Short-Let Management UK | Taj Cribs',
     template: '%s | Taj Cribs',
   },
   description:
-    'Guaranteed rent and short-let management for London landlords. Fixed monthly income, no voids, in-house housekeeping. Free 24-hour valuation.',
+    'Guaranteed rent and short-let management for landlords across the UK. Fixed monthly income, no voids, in-house housekeeping. Free 24-hour valuation.',
   keywords: [
+    'guaranteed rent uk',
     'guaranteed rent london',
     'guaranteed rent marylebone',
     'guaranteed rent pimlico',
+    'short let management uk',
+    'airbnb management uk',
     'short let management london',
     'airbnb management kensington',
     'airbnb management mayfair',
@@ -46,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Taj Cribs | Short-Let Management & Guaranteed Rent | London',
+    title: 'Taj Cribs | Short-Let Management & Guaranteed Rent | UK',
   },
   robots: { index: true, follow: true },
   alternates: { canonical: '/' },

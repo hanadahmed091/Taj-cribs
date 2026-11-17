@@ -22,9 +22,9 @@ import { SITE } from '@/lib/config'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export const metadata: Metadata = {
-  title: 'Serviced Accommodation Management London',
+  title: 'Serviced Accommodation Management UK',
   description:
-    'Serviced-accommodation management for London landlords. Multi-platform listings, in-house housekeeping, monthly net payout. Free valuation.',
+    'Serviced-accommodation management for landlords across the UK. Multi-platform listings, in-house housekeeping, monthly net payout. Free valuation.',
   alternates: { canonical: '/serviced-accommodation' },
 }
 
@@ -191,7 +191,7 @@ export default function ServicedAccommodationPage() {
             <SectionLabel className="!justify-start">Serviced Accommodation</SectionLabel>
             <h1 className="mt-6 text-hero font-extrabold tracking-tightest leading-[0.95]">
               Serviced Accommodation <br />
-              <span className="text-gold-500">Management in London.</span>
+              <span className="text-gold-500">Management across the UK.</span>
             </h1>
             <p className="mt-8 max-w-xl text-fluid-lg text-white/75 leading-relaxed">
               We operate London apartments on the serviced-accommodation
@@ -294,7 +294,7 @@ export default function ServicedAccommodationPage() {
               <p className="mt-6 text-fluid-lg text-navy-900/70 leading-relaxed">
                 Demand is strongest where corporate, medical and embassy
                 visitors cluster. We run the serviced-accommodation model
-                across London, including the areas below.
+                across the UK, including the London areas below.
               </p>
             </FadeIn>
           </div>
